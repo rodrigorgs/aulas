@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  codeMirrorEditors = [];
+
+  $('textarea.code').each((idx, el) => {
+    buildEditor(el);
+  });
+
+
+  $('textarea.code button.go').on('click', () => alert('oioi'));
+
+  function buildEditor(el) {
+    var language = 'javascript';
+
+    var codeMirror = CodeMirror.fromTextArea(el, {
+        lineNumbers: true,
+        mode: language,
+        gutters: ["CodeMirror-lint-markers"],
+        lint: true,
+        options: { esversion: 6 },
+        matchBrackets: true,
+        autoRefresh: true,
+        tabSize: 2,
+        indentWithTabs: false,
+        hint: true,
+        extraKeys: {
+          "Ctrl-Space": "autocomplete"
+        }
+      });
+
+    codeMirror.setSize("100%", "auto");
+    codeMirrorEditors.push(codeMirror);
+
+    buildButtons(codeMirror);
+  }
+
+  function buildButtons(codeMirror) {
+    var editor = codeMirror.getWrapperElement();
+    var button = $('<button class="go">Rodar</button>');
+    button.insertAfter(editor);
+    button.on('click', () => {
+      eval(codeMirror.getValue());
+    });
+  }
+</script>

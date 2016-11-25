@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
+prova-pratica.md
+prova-pratica-2a.md
+*.sublime-workspace
+_drafts/
+bower_components/

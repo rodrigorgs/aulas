@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<title>{{ page.title }}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+<!-- Theses are just icons config - created with realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="{{site.baseurl}}/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="{{site.baseurl}}/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="{{site.baseurl}}/assets/images/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="{{site.baseurl}}/assets/images/icons/mstile-144x144.png">
+<meta name="msapplication-config" content="{{site.baseurl}}/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/submissao/submissao.css">
+<!-- You can remove or leave at is -->
+<!-- Stylesheets system - please don't remove :) -->
+<link rel="stylesheet" href="{{site.baseurl}}/assets/main.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/codemirror/codemirror.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/codemirror/addons/show-hint.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/codemirror/addons/lint.css">
+<link rel="stylesheet" href="{{site.baseurl}}/assets/codemirror/addons/fullscreen.css">
+
+<script type="text/javascript">
+// Adds the implementation for Array.prototype.concatAll()
+function defineConcatAll() {
+	Array.prototype.concatAll = function () {
+		var results = [];
+
+		this.forEach(function(subArray) {
+			results.push.apply(results, subArray);
+		});
+
+		return results;
+	};
+}
+
+/**
+ * Add the implementation for Array.prototype.concatMap()
+ */
+function defineConcatMap() {
+	Array.prototype.concatMap = function(fnc) {
+		return this.
+			map(function (e) {
+				return fnc(e);
+			}).
+			// apply the concatAll function to flatten the two-dimensional array
+			concatAll();
+	};
+}
+
+/**
+ * This function will be executed at the begining of each verifier function
+ */
+function preVerifierHook() {
+	// Add helpers to prevent 'undefined is not a function' like errors
+	defineConcatAll();
+	defineConcatMap();
+}
+
+function showLessonErrorMessage(exp, got, note, div){
+	var preTag;
+	var expected = JSON.stringify(JSON.parse(exp), undefined, 4);
+
+	div.innerHTML = "<h4>Expected:</h4>";
+	preTag = document.createElement("pre");
+	preTag.innerHTML += expected;
+	div.appendChild(preTag);
+	div.innerHTML += "<h4>Got:</h4>";
+	preTag = document.createElement("pre");
+	preTag.innerHTML += got;
+	div.appendChild(preTag);
+	
+	div.innerHTML += (note !== "") ? ("<h4>Note</h4><p style=\"margin-left: 25px;\">" + note + "</p>") : ""; 
+	div.className = "info";
+}
+</script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/jquery-ui/jquery-ui.min.js"></script>
+<!-- Lisp -->
+<script type="text/javascript" src="{{site.baseurl}}/assets/javathcript/Javathcript.js"></script>
+<script type="text/lisp" src="{{site.baseurl}}/assets/javathcript/prelude.lsp"></script>
+<!-- Javascript Functional Programming -->
+<script type="text/javascript" src="{{site.baseurl}}/assets/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/ramda/ramda.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/async/async.min.js"></script>
+
+<script type="text/javascript">
+function isObject(obj) {
+  return obj === Object(obj);
+}
+function printObj(value) {
+	if (isObject(value)) {
+		value = value.toString();
+	}
+	console.log(value);
+}
+$(document).ready(function() {
+	$("code").click(function(e) {
+		var value = Javathcript.eval($(this).text());
+		printObj(value);
+	});
+});
+
+testesCertos = 0;
+testesErrados = 0;
+
+function zeraTestes() {
+	testesCertos = 0;
+	testesErrados = 0;
+}
+
+function imprimeResultadoTestes() {
+	if (testesCertos + testesErrados > 0) {
+		console.log("%c*** Testes certos: " + testesCertos + "/" + (testesCertos + testesErrados), "color: blue;");
+	}
+}
+
+function simplesEval(str, info) {
+	zeraTestes();
+	var cmd = "(function(){" + str + "})();";
+	eval(cmd);
+	imprimeResultadoTestes();
+	return "Success!";
+}
+function simplesEvalLisp(str, info) {
+	zeraTestes();
+	var val = Javathcript.eval(str);
+	printObj(val);
+	imprimeResultadoTestes();
+	return "Success!";
+}
+function multiEvalLisp(str, info) {
+	zeraTestes();
+	Javathcript.evalMulti(str);
+	imprimeResultadoTestes();
+	return "Success!";
+}
+
+function teste(expected, actual) {
+	if (JSON.stringify(expected) === JSON.stringify(actual)) {
+		testesCertos += 1;
+		console.log("%cOK!", "color: green;");
+	} else {
+		testesErrados += 1;
+		console.log("%cERRO! Esperado: " + JSON.stringify(expected) + "; obtido: " + JSON.stringify(actual), "color: red;");
+	}
+}
+
+</script>
+
+<!-- <xmp theme="united" style="display:none;"> -->
+<div class="page-content">
+<div class="post-content">
+
+<div id="loader-wrapper">
+<div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+</div>
+
+<!-- Login -->
+<div id="loginbar">
+    <span>Nome:</span>
+    <span id="loginbar-nome">?</span>
+    <span> | Matrícula:</span>
+    <span id="loginbar-matricula">?</span>
+
+    <span id="resposta-id"></span>
+	<button onclick="carregaRespostaSeguinte();" style="float: right;">>></button>
+	<button onclick="carregaRespostaAnterior();" style="float: right;"><<</button>
+	<button onclick="carregaRespostasId(prompt());" style="float: right;">Carregar</button>
+	<button onclick="rodaTudo();" style="float: right;">Rodar tudo</button>
+	<button onclick="trocaEvals();" style="float: right;">Trocar Evals</button>
+	<button onclick="destrocaEvals();" style="float: right;">Destrocar Evals</button>
+    <button onclick="enviaRespostas()" style="float: right;">Enviar respostas</button>
+	<button onclick="showLogin();" style="float: right;">Login</button>
+	<button onclick="logout();" style="float: right;">Logout</button>
+</div>
+<div id="dialog" title="Login" style="display: none">
+    <form autocomplete="off">
+        <input id="nome" type="text" size="25" placeholder="Nome Completo" /><br/>
+        <input id="matricula" type="text" size="25" placeholder="Matrícula" /><br/>
+        <input id="senha" type="password" size="25" placeholder="Senha" /><br/>
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
+    </form>
+</div>
+<script type="text/javascript" src="{{site.baseurl}}/assets/submissao/submissao.js"></script>
+<script type="text/javascript">
+	checaUsuario();
+</script>
+<!-- /Login -->
+
+{{ content }}
+
+<div id="START-EXERCISE"></div>
+<div id="END-EXERCISE"></div>
+
+</div>
+</div>
+<!-- </xmp> -->
+
+<!-- Since strapdown is stupid and can change the value of textarea, we need to make a backup of all code -->
+<!-- 
+<script type="text/javascript">
+	replaceAll = function(search, replacement, object) {
+	    return object.replace(new RegExp(search, 'g'), replacement);
+	};
+</script>
+
+ -->
+<!-- Libraries for interface -->
+<script src="{{site.baseurl}}/assets/codemirror/codemirror.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/commonlisp.js"></script>
+<!-- Some code mirrors addons -->
+<script src="{{site.baseurl}}/assets/codemirror/javascript.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/matchbrackets.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/autorefresh.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/javascript-hint.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/jshint.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/javascript-lint.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/lint.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/show-hint.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/fullscreen.js"></script>
+<script src="{{site.baseurl}}/assets/codemirror/addons/active-line.js"></script>
+
+<!-- APP LIBRARIES --> 
+<script src="{{site.baseurl}}/assets/app/wordlist.js"></script>
+
+<script type="text/javascript">
+	// Hide the remain exercises without remove markdown support
+	// Remember to use functional paradigm :p
+	(function (){
+		var x = document.getElementById("START-EXERCISE");
+		while(x.nextElementSibling.id != "END-EXERCISE"){
+			x.style.display = "none";
+			x = x.nextElementSibling;
+		}
+
+		// Since text area only have javascript code, is not necessary left "<a href="">"
+		// , or "<em>" 
+		x = document.getElementsByClassName("code");
+		_.each(x, el => {
+			el.value = el.value.replace(/(<a\ href=").*(">)/g, 		"");
+			el.value = el.value.replace(new RegExp("</a>", 'g'), 	"");
+			el.value = el.value.replace(new RegExp("<em>", 'g'), 	"*");
+			el.value = el.value.replace(new RegExp("</em>", 'g'), 	"*");
+		});
+	})();
+	
+	var codeMirrorEditors = [];
+	var lessons = document.getElementsByClassName("lesson");
+
+	function scrollTo(element, to, duration) {
+	    var difference 	= (to + 60) - element.scrollTop;
+	    var perTickSize = (difference / duration).toFixed();
+	    var perTickTime = (duration / difference).toFixed(2);
+	    var pageHeight	= window.innerHeight;
+
+	    var scrollingId = setInterval( _ => {
+	    	if((duration <= 0) || ((pageHeight + element.scrollTop) > element.offsetHeight)){
+	    		clearInterval(scrollingId);
+	    		return;
+	    	}
+	    	duration -= perTickTime;
+	    	element.scrollTop = element.scrollTop + perTickSize;
+	    }, perTickTime);		
+	}
+
+	_.each(lessons, function (el, idx) {
+		var code = el.children[0];
+		var output = el.children[1];
+		var info = {index: idx, element: el.children[2] };
+		var verifierScript = el.children[3].textContent;
+		var go = el.children[4];
+		
+		var langClasses = $(code).attr('class').split(/\s+/).filter(klass => klass.startsWith('lang-'));
+		var language = (window.codeMirrorLanguage || "javascript");
+		if (langClasses.length > 0) {
+			language = langClasses[0].substring(5);
+		}
+
+		code.style.visibility = null;
+		code.style.display = null;
+
+		CodeMirror.defaults.lint = true;
+
+		var codeMirror = CodeMirror.fromTextArea(code, {
+			    lineNumbers: true,
+			    mode: language,
+			    gutters: ["CodeMirror-lint-markers"],
+			    lint: true,
+			    options: { esversion: 6 },
+				matchBrackets: true,
+				autoRefresh: true,
+				tabSize: 4,
+				indentWithTabs: false,
+				hint: true,
+				extraKeys: {
+					// "F4": function(cm) {
+					// 	cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+					// },
+					"Esc": function(cm) {
+						if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+					},
+					"Ctrl-Space": "autocomplete"
+				}
+			});
+		codeMirror.setSize("100%", "auto");
+
+		codeMirrorEditors.push(codeMirror);
+
+		configureReadOnlyLines(codeMirror);
+
+		go.onclick = (ev) =>  {
+			try{
+				var verificador = eval("(" + verifierScript + ")");
+				output.textContent = verificador(codeMirror.getValue(), info, el);
+			} catch (ex) {
+				alert(ex);
+			}
+
+			// if((output.textContent !== "Success!") && (output.textContent !== "YUPPPEEEE!")){
+			// 	output.className = "error";
+			// 	output.textContent = "Error!";
+			// 	return;
+			// }
+
+			// output.className = "success";
+			// info.className = "output";
+		};
+	});
+
+	var input = document.getElementById("select");
+	function selectTheme() {
+		var theme = input.options[input.selectedIndex].textContent;
+		_.each(codeMirrorEditors, el => {
+			el.setOption("theme", theme)
+		});
+		location.hash = "#" + theme;
+	}
+	var choice = (location.hash && location.hash.slice(1)) ||
+	             (document.location.search &&
+	             decodeURIComponent(document.location.search.slice(1)));
+	if (choice) {
+		input.value = choice;
+		_.each(codeMirrorEditors, el => {
+			el.setOption("theme", choice)
+		});
+	}
+	CodeMirror.on(window, "hashchange", function() {
+		var theme = location.hash.slice(1);
+		if (theme) {
+			input.value = theme;
+			selectTheme();
+		}
+	});
+
+	// After all page got rendered remove loader
+	document.body.classList.add("loaded");
+
+	/**
+	 * This function assumes that lines containing three consecutive
+	 * slahes (---) are markers to delimit read-only text.
+	 * If a marker exists, then all lines not between consecutive markers
+	 * become read-only.
+	 * Example:
+	 * <textarea>
+	 *   This line is read-only
+	 *   ---
+	 *   This line is read-write
+	 *   ---
+	 *   This line is also read-only
+	 * </textarea>
+	 */
+	function configureReadOnlyLines(codeMirrorEditor) {
+		var i,
+			doc = codeMirrorEditor.doc,
+			lines = doc.children[0].lines.map(line => line.text);
+			separatorIndices = _.range(lines.length).filter(idx => lines[idx].indexOf("---") != -1);
+
+		if (separatorIndices.length > 0) {
+			separatorIndices = [0].concat(separatorIndices, lines.length - 1);
+			for (i = 0; i < separatorIndices.length - 1; i += 2) {
+				doc.markText({line: separatorIndices[i], ch: 0},
+					{line: separatorIndices[i + 1] + 1, ch: 0},
+					{readOnly: true, css: "opacity: 0.6"});
+			}
+		}
+	}
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+#loginbar {
+    position: fixed;
+    height: 25px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #ccc;
+    box-shadow: 2px 2px 2px #888;
+}
