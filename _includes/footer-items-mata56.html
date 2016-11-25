@@ -1,5 +1,24 @@
+<div id="bs-console">
+</div>
+
 <script type="text/javascript">
   codeMirrorEditors = [];
+
+  // --------- BiwaScheme
+
+  biwascheme = new BiwaScheme.Interpreter(on_error);
+
+  var on_error = function(e){
+    console.log('%c(Scheme) ' + e.message, 'color: red;')
+  };
+  
+  function bs_eval(str) {
+    var ret = biwascheme.evaluate(str);
+    return BiwaScheme.to_write(ret);
+  }
+
+  // ------------
+
 
   $('textarea.code').each((idx, el) => {
     buildEditor(el);
@@ -8,8 +27,20 @@
 
   $('textarea.code button.go').on('click', () => alert('oioi'));
 
+  function getLanguageFromClasses(classes) {
+    var language = "javascript";
+
+    var regex = /\blang-(.+?)\b/;
+    var match = regex.exec(classes);
+    if (match !== null && match.length >= 2) {
+      language = match[1];
+    }
+
+    return language;
+  }
+
   function buildEditor(el) {
-    var language = 'javascript';
+    var language = getLanguageFromClasses($(el).attr('class'));
 
     var codeMirror = CodeMirror.fromTextArea(el, {
         lineNumbers: true,
@@ -38,7 +69,21 @@
     var button = $('<button class="go">Rodar</button>');
     button.insertAfter(editor);
     button.on('click', () => {
-      eval(codeMirror.getValue());
+      runCode(codeMirror.getValue(), codeMirror.options.mode);
     });
+  }
+
+  function runCode(code, language) {
+    var ret;
+
+    if (language === "javascript") {
+      eval(code);
+    } else if (language === "scheme") {
+      $('#bs-console').html('');
+      ret = bs_eval(code);
+      console.log('%c' + $('#bs-console').text(), 'color: blue;');
+      console.log('%c=> ' + ret, 'color: black;');
+      $('#bs-console').html('');
+    }
   }
 </script>

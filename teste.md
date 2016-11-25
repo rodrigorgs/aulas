@@ -25,7 +25,16 @@ Considere agora o exemplo a seguir. O que acontecerá quando a linha 8 for execu
 
 <textarea class="code">
 function showRandom() {
-  console.log(Math.random() + 1.0f);	
+  console.log(Math.random() + 1.0);	
 }
 showRandom();
 </textarea>
+
+<textarea class="code lang-scheme">
+(define (alo nome) (display "Alo") (display " ") (display nome) (newline))
+(alo "Mundo")
+(+ 1 2)
+</textarea>
+
+<div id="bs-console">
+</div>
