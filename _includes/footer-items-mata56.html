@@ -1,14 +1,14 @@
 <script type="text/javascript">
 
-  function runCode(code, language, button) {
-    var ret;
+  function runCode(code, codeMirror) {
+    var language = codeMirror.options.mode;
 
     if (language === "javascript") {
-      JavaScriptEval.eval(code, button);
+      JavaScriptEval.eval(code, codeMirror);
     } else if (language === "scheme") {
-      SchemeEval.eval(code, button);
+      SchemeEval.eval(code, codeMirror);
     } else if (language === "ruby") {
-      RubyEval.eval(code, button);
+      RubyEval.eval(code, codeMirror);
     }
   }
 
