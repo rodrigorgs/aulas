@@ -1,8 +1,7 @@
 ---
-layout: exercises
-title:  "JavaScript: Nomes, vinculação, escopo e closures"
+layout: page
+title:  "Teste"
 date:   2016-10-07 16:40:00 -0300
-categories: aula
 ---
 
 O **contexto** ou **ambiente de referenciamento** de uma região de um programa corresponde ao conjunto de vinculações que pode-se acessar naquela região. Vejamos o exemplo anterior:
@@ -35,6 +34,3 @@ showRandom();
 (alo "Mundo")
 (+ 1 2)
 </textarea>
-
-<div id="bs-console">
-</div>
