@@ -1,16 +1,14 @@
 <script type="text/javascript">
 
-  function runCode(code, language) {
+  function runCode(code, language, button) {
     var ret;
 
     if (language === "javascript") {
-      eval(code);
+      JavaScriptEval.eval(code, button);
     } else if (language === "scheme") {
-      $('#bs-console').html('');
-      ret = bs_eval(code);
-      console.log('%c' + $('#bs-console').text(), 'color: blue;');
-      console.log('%c=> ' + ret, 'color: black;');
-      $('#bs-console').html('');
+      SchemeEval.eval(code, button);
+    } else if (language === "ruby") {
+      RubyEval.eval(code, button);
     }
   }
 

@@ -29,8 +29,21 @@ function showRandom() {
 showRandom();
 </textarea>
 
+## Exemplo em Scheme
+
 <textarea class="code lang-scheme">
 (define (alo nome) (display "Alo") (display " ") (display nome) (newline))
 (alo "Mundo")
 (+ 1 2)
+</textarea>
+
+## Exemplo em Ruby
+
+<textarea class="code lang-ruby">
+def alo(nome)
+  puts "alo #{nome}"
+end
+
+alo 'mundo'
+1 + 2
 </textarea>
