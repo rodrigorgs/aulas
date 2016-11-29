@@ -47,3 +47,17 @@ end
 alo 'mundo'
 1 + 2
 </textarea>
+
+## Exemplo em Ruby com sintaxe melhorada
+
+{:.editor}
+
+```ruby
+def alo(nome)
+  puts "alo #{nome}"
+end
+
+alo 'mundo'
+1 + 2
+```
+
