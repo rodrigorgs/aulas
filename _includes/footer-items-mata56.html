@@ -14,13 +14,14 @@
 
   // Experimental: replace markdown blockquotes with codemirror editors
   $(document).ready(() => {
-    var code = $('.editor').text().trim();
-    var klass = $('.editor').attr('class').replace('language', 'lang');
-    console.log(code);
-    var textarea = $('<textarea></textarea>');
-    textarea.attr('class', klass);
-    textarea.text(code);
-    $('.editor').replaceWith(textarea);
-    buildEditor(textarea[0]);
+    $('.editor').each((idx, el) => {
+      var code = $(el).text().trim();
+      var klass = $(el).attr('class').replace('language', 'lang');
+      var textarea = $('<textarea></textarea>');
+      textarea.attr('class', klass);
+      textarea.text(code);
+      $(el).replaceWith(textarea);
+      buildEditor(textarea[0]);      
+    });
   });
 </script>
