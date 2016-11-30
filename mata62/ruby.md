@@ -6,13 +6,27 @@ date:   2016-11-30 20:20:00 -0300
 
 Ruby é uma linguagem de programação dinâmica, interpretada e orientada a objetos, desenvolvida na década de 1990 por Yukihiro "Matz" Matsumoto no Japão.
 
-## Alô, mundo!
+## Como usar esta página
 
-Abra o console do seu navegador (Ctrl+Shift+J no Google Chrome) e execute o código a seguir.
+Esta página contém vários editores de código, que você pode editar e rodar.
 
-<textarea class="code lang-ruby">
+A saída do código é exibida no console de desenvolvimento do seu navegador. Para abrir o console, tecle `Ctrl+Shift+I` (Chrome ou Firefox) e clique na aba `Console`.
+
+Para rodar o código de um editor, você pode clicar no botão "Rodar" ou então clicar sobre o código e teclar `Ctrl+Enter`.
+
+O código Ruby é rodado remotamente, então pode demorar um pouco para o resultado aparecer.
+
+Você pode acessar um editor aprimorado em <https://repl.it/languages/ruby>.
+
+## Começando
+
+### Alô, mundo!
+
+{:.editor}
+
+```ruby
 puts 'Alo, mundo!'
-</textarea>
+```
 
 O método `puts` recebe como argumento uma string e imprime essa string.
 
@@ -24,17 +38,21 @@ As strings podem ser escritas com aspas simples -- `'` -- ou aspas duplas -- `"`
 
 Todos os valores (strings, números, `true`, dentre outros) são objetos; portanto, pode-se chamar métodos.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 # Isto é um comentário
 
 puts -42.abs
 puts 123.class
 puts "copo\nd'agua".upcase
-</textarea>
+```
 
-## Conversão de tipos
+### Conversão de tipos
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 # .to_s converte para string
 puts "20" + 17.to_s
 # .to_i converte para inteiro
@@ -43,26 +61,50 @@ puts "20".to_i + 17
 puts "10".to_f / 3
 # Somar string com número resulta em erro
 puts "20" + 17
-</textarea>
+```
 
-## Toda operação é uma chamada de método
+### Toda operação é uma chamada de método
 
 Toda operação é uma chamada de método e retorna um valor. Por exemplo, `1 + 3` é apenas uma forma conveniente de escrever `1.+(3)`, ou seja, chamar o método `+` do objeto `1` passando `3` como parâmetro.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 puts 1.+(3)
 puts 1 + 3
 puts 2 == 2
 puts 2.==(2)
-</textarea>
+```
 
 Em Ruby, todos os métodos possuem um valor de retorno, mesmo que seja `nil` (equivalente ao `null` do Java). Compare com Java, em que há métodos que não possuem retorno (`void`).
 
-## Strings
+### Variáveis e constantes
+
+Variáveis começam com letra minúscula. Constantes começam com letra maiúscula:
+
+{:.editor}
+
+```ruby
+# Variável
+contador = 0
+contador += 1
+
+# Constante
+PI = 3.14159
+PI = 2       # resulta em warning
+```
+
+Variáveis globais começam com `$`.
+
+## Alguns tipos de dados
+
+### Strings
 
 Há várias formas de definir strings em Ruby:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 a = "\nThis is a double-quoted string\n"
 a = %Q{\nThis is a double-quoted string\n}
 a = %{\nThis is a double-quoted string\n}
@@ -71,54 +113,64 @@ a = <<-BLOCK
 
 This is a double-quoted string
 BLOCK
-</textarea>
+```
 
 Strings suportam interpolação de variáveis:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 valor = 3.14159
 puts "pi é igual a #{valor}"
-</textarea>
+```
 
 A expressão `#{xyz}`, em uma string, é substituida pelo valor da expressão `xyz`. Também pode-se usar expressões mais complexaS:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 nome = "mundo"
 puts "ALO, #{nome.upcase}"
-</textarea>
+```
 
-## Símbolos
+### Símbolos
 
 Símbolos são como strings, porém imutáveis, isto é, não podem ser modificados uma vez criados. Eles são geralmente usados como identificadores ou valores de enumerações em um programa e, nesses casos, símbolos são mais eficientes que strings. Símbolos são iniciados por `:`. Exemplo:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 nome_pessoa1 = "Joao"
 sexo_pessoa1 = :masculino
 
 nome_pessoa2 = "Maria"
 sexo_pessoa2 = :feminino
-</textarea>
+```
 
-## Arrays
+### Arrays
 
 Arrays podem misturar elementos de diferentes tipos, inclusive outros arrays:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 a = [1, 'hi', 3.14, 1, 2, [4, 5]]
 
 puts a[2]             # => 3.14
 puts a.[](2)          # => 3.14
 p a.reverse        # => [[4, 5], 2, 1, 3.14, 'hi', 1]
 p a.flatten.uniq   # => [1, 'hi', 3.14, 2, 4, 5]
-</textarea>
+```
 
-Use o método `p` no lugar de `puts` para imprimir um valor em um formato mais adequado para *debugging*.
+Use o método `p` no lugar de `puts` para imprimir um valor em um formato mais adequado para *debugging*. `p x` é equivalente a `puts x.inspect`.
 
-## Hashes
+### Hashes
 
 Hashes são estruturas chave-valor, também chamadas em outras linguagens de mapas ou arrays associativos.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 # Hashes são delimitados por { e }
 # {} representa um hash vazio
 pessoa = {}
@@ -135,11 +187,15 @@ puts pessoa[:nome]
 # para hashes que usam símbolos como chaves:
 
 pessoa = { nome: 'Joao', idade: 18, sexo: :masculino }
-</textarea>
+```
 
-## if-then-else
+## Algumas estruturas
 
-<textarea class="code lang-ruby">
+### if-then-else
+
+{:.editor}
+
+```ruby
 idade = 17
 
 if idade < 16
@@ -149,9 +205,28 @@ elsif idade < 18
 else
   puts 'já é adulto'
 end
-</textarea>
+```
 
-## Blocos
+### if e unless em uma linha
+
+{:.editor}
+
+`unless` é o contrário de `if`, e significa "a não ser que".
+
+Tanto `if` quanto unless podem ser usados no final de uma instrução:
+
+```ruby
+nome = 'Maria'
+idade = 17
+
+puts "Bem-vinda, #{maria}."
+puts 'Acesso negado.' if idade < 18
+
+puts "Bem-vinda, #{maria}."
+puts 'Acesso negado.' unless idade >= 18
+```
+
+### Blocos
 
 Blocos são trechos de código que você pode passar para algum método. Há duas formas de escrever blocos:
 
@@ -171,7 +246,9 @@ O `|x|` é opcional. Entre `|` e `|`, fica a lista de parâmetros do bloco, sepa
 
 Exemplos de uso:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 3.times do
   puts "Alo mundo"
 end
@@ -182,13 +259,17 @@ end
 
 hash = {a: 1, b: 2, c: 3}
 hash.each_pair { |k, v| puts "#{k} = #{v}" }
-</textarea>
+```
 
-# Métodos
+## Organizando o código
+
+### Métodos
 
 Use `def` para definir métodos. Enquanto não vemos classes ou módulos, todos os métodos que definirmos serão métodos do módulo `Kernel`. Exemplo:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 # Vamos definir o método alo
 def alo
   puts "Alo, mundo!"
@@ -197,13 +278,15 @@ end
 # Agora, vamos chamar o método duas vezes
 alo
 alo
-</textarea>
+```
 
 Note que para chamar um método, basta escrever o nome dele. Você até poderia escrever `alo()`, como em Java, mas os parênteses em Ruby são opcionais nesse caso, e na prática ninguém usa parênteses para chamar métodos sem parâmetros.
 
-## Métodos com argumentos
+### Métodos com argumentos
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 # Note que o parâmetro pontuacao é opcional;
 # se não for passado, assume-se o valor padrão, "!"
 def alo(nome, pontuacao = "!")
@@ -213,7 +296,7 @@ end
 # Chamada
 alo("mundo", "!")
 alo("Terra", ".")
-</textarea>
+```
 
 Os parênteses na chamada à função `alo` são opcionais.
 
@@ -221,17 +304,44 @@ Os parênteses na chamada à função `alo` são opcionais.
 
 O valor da última expressão executada no método é retornado.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 def soma(a, b)
   a + b
 end
 
 puts soma(2, 3)
-</textarea>
+```
 
-## Classes
+### Métodos cujo parâmetro é um hash
 
-<textarea class="code lang-ruby">
+Quando o último parâmetro de um método é um hash, há uma forma conveniente de chamar o método:
+
+{:.editor}
+
+```ruby
+def mostra_pessoa(nome, dados)
+  puts "Dados de #{nome}:"
+  dados.each_pair do |chave, valor|
+    puts "- #{chave}: #{valor}"
+  end
+end
+
+# Chamada comum
+mostra_pessoa 'Joao', { idade: 18, sexo: :masc }
+# Quando o último parâmetro é um hash,
+# podemos omitir as chaves:
+mostra_pessoa 'Joao', idade: 18, sexo: :masc
+```
+
+## Programação orientada a objetos
+
+### Classes
+
+{:.editor}
+
+```ruby
 class Anfitriao
   def initialize(nome = "Mundo")
     @nome = nome
@@ -247,7 +357,7 @@ end
 a = Anfitriao.new("Joao")
 a.diz_ola
 a.diz_adeus
-</textarea>
+```
 
 Várias coisas acontecendo nesse código:
 
@@ -258,9 +368,11 @@ Várias coisas acontecendo nesse código:
 - Não é preciso declarar os atributos; eles passam a existir quando um valor é atribuído a eles
 - Para instanciar um objeto, chama-se o método `new` da classe.
 
-## Classes são abertas para modificação
+### Classes são abertas para modificação
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class String
   def gritado
     self.upcase + "!!!"
@@ -268,7 +380,7 @@ class String
 end
 
 puts "alo, mundo".gritado
-</textarea>
+```
 
 Note que `self` faz referência ao objeto atual. É o equivalente do `this` do Java.
 
@@ -276,7 +388,9 @@ Note que `self` faz referência ao objeto atual. É o equivalente do `this` do J
 
 Os atributos de uma classe não são visíveis fora dela.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Anfitriao
   def initialize(nome = "Mundo")
     @nome = nome
@@ -285,11 +399,13 @@ end
 
 a = Anfitriao.new("Joao")
 puts a.@nome   # Erro!!
-</textarea>
+```
 
 É preciso criar métodos para acessar (ler ou modificar) os atributos.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Anfitriao
   def initialize(nome = "Mundo")
     @nome = nome
@@ -308,7 +424,7 @@ a = Anfitriao.new("Joao")
 puts a.nome
 a.nome = "Jose"
 puts a.nome
-</textarea>
+```
 
 Note que `a.nome = "Jose"` é equivalente a `a.nome=("Jose")`.
 
@@ -318,7 +434,9 @@ Como *getters* e *setters* são tão comuns, existem métodos que criam eles par
 - `attr_writer`: cria setter
 - `attr_accessor`: cria getter e setter
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Anfitriao
   attr_reader :nome
   attr_writer :idade
@@ -336,9 +454,9 @@ puts a.sexo
 puts a.nome
 # Dá erro: método idade (getter) não existe
 puts a.idade
-</textarea>
+```
 
-## Atributos e métodos de classe
+### Atributos e métodos de classe
 
 Também chamados de atributos e métodos estáticos, eles são únicos para todos os objetos da mesma classe.
 
@@ -347,7 +465,9 @@ Também chamados de atributos e métodos estáticos, eles são únicos para todo
 
 Exemplo:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Anfitriao
   def initialize(nome)
     @@saudacao = "Alo"
@@ -375,13 +495,15 @@ maria.diz_alo
 Anfitriao.saudacao = "Ei"
 joao.diz_alo
 maria.diz_alo
-</textarea>
+```
 
-## Herança
+### Herança
 
 Use `class A < B` para definir uma classe `A` que é subclasse de `B`.
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Animal
   def anda
     puts "andando"
@@ -405,17 +527,19 @@ g.mia
 a = Animal.new
 a.anda
 a.mia   # Erro!
-</textarea>
+```
 
 Use `super` dentro de um método para chamar o método de mesmo nome na superclasse.
 
 As classes que não declaram superclasse herdam da classe `Object`.
 
-## Visibilidade
+### Visibilidade
 
 Ruby também possui os modificadores de visibilidade `public`, `protected` e `private`. Por padrão a visibilidade é `public`. Todos os métodos definidos após um modificador estão sujeitos à regra do modificado. Exemplo:
 
-<textarea class="code lang-ruby">
+{:.editor}
+
+```ruby
 class Teste
   def a
     puts 'a'
@@ -436,7 +560,7 @@ end
 t = Teste.new
 t.a
 t.c    # erro!
-</textarea>
+```
 
 
 
