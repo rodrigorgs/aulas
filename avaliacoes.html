@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Avaliações</h1>
+
+  <ul class="post-list">
+    {% assign sorted = (site.pages | sort: 'date') | reverse %}
+    {% for page in sorted %}
+    {% if page.categories contains 'avaliacao' %}
+      <li>
+        <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </h2>
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
