@@ -133,7 +133,7 @@ Dica: Para resolver esta questão, primeiro tente responder a seguinte pergunta:
 
 ## Outros predicados interessantes
 
-- `concatena(L1, L2, L3)` - L3 é a concatenção de L1 com L2
+- `concatena(L1, L2, L3)` - L3 é a concatenação de L1 com L2
 - `inverte(L1, L2)` - L2 é o inverso de L1
 - `remover(X, L1, L2)` - L2 é igual a L1 removendo-se o elemento X
 - `eh_sublista(L1, L2)` - L1 é sublista de L2
