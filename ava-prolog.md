@@ -5,6 +5,8 @@ date:   2017-01-06 16:40:00 -0300
 categories: avaliacao
 ---
 
+## Especificação
+
 Considere uma base de conhecimento acadêmica com fatos no seguinte formato:
 
 - `disciplina(X)`: `X` é uma disciplina. Exemplo: `disciplina(mata56)`.
@@ -26,3 +28,6 @@ Crie regras para os seguintes predicados:
 - `carga_horaria_horarios(ListaHorarios, C)`: a carga horária semanal dos horários listados é igual a `C`.
 - `carga_horaria_turmas(ListaTurmas, C)`: a carga horária semanal das turmas listadas é igual a `C`.
 
+## Corretor automático
+
+<http://162.243.187.95/>
