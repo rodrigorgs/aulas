@@ -31,3 +31,9 @@ Crie regras para os seguintes predicados:
 ## Corretor automático
 
 <http://162.243.187.95/>
+
+## Informações
+
+- Prazo: 22/1/2017
+- Entrega: via formulário online em <https://docs.google.com/forms/d/e/1FAIpQLSfko7K604ie0hlGakqtTS2CSUetkopksE20ivZhBvQaX6Y2Qg/viewform>
+- Equipes: 1 ou 2 pessoas
