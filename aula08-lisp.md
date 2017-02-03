@@ -17,7 +17,7 @@ Características: tipificação dinâmica, garbage collector, funções como cid
 
 ## Scheme
 
-Nesta disciplina estudaremos a linguagem Scheme, que é um dialeto de Lisp.
+Nesta disciplina estudaremos a linguagem Scheme, que é um dialeto de Lisp. Usaremos o [BiwaScheme](http://www.biwascheme.org/), que é um interpretador de Scheme escrito em JavaScript e que roda no navegador.
 
 ## Lisp: teoria
 
@@ -160,9 +160,11 @@ Se existir dependência entre as definições de constantes (isto é, pelo menos
 
 ## Referências
 
+- <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
+- <http://www.biwascheme.org/doc/reference.html>
 - <http://www.scribd.com/doc/54050141/Micro-Manual-LISP> (1978)
-- <http://www.jtra.cz/stuff/lisp/sclr/index.html>
 
+<!-- - <http://www.jtra.cz/stuff/lisp/sclr/index.html> -->
 <!-- - <http://kybernetikos.github.io/Javathcript/> (implementação usada nesta página) -->
 
 
