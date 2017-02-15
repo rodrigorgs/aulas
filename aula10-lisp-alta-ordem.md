@@ -190,5 +190,7 @@ Exemplo:
 
 Reescreva as funções `all` e `any` usando `reduce`.
 
+Extra: reescreva as funções `map` e `filter` usando reduce.
+
 <!-- https://www.quora.com/What-is-tail-recursion-Why-is-it-so-bad -->
 
