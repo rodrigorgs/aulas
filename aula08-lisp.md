@@ -160,8 +160,10 @@ Se existir dependência entre as definições de constantes (isto é, pelo menos
 
 ## Referências
 
-- <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
 - <http://www.biwascheme.org/doc/reference.html>
+- <https://www.st.cs.uni-saarland.de/edu/config-ss04/scheme-quickref.pdf>
+- <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
+- <https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/Towards_a_Standard_Library>
 - <http://www.scribd.com/doc/54050141/Micro-Manual-LISP> (1978)
 
 <!-- - <http://www.jtra.cz/stuff/lisp/sclr/index.html> -->
