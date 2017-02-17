@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "LISP (introdução)"
+title:  "Scheme (introdução)"
 date:   2017-02-01 16:40:00 -0300
 categories: aula
 ---
@@ -19,16 +19,16 @@ Características: tipificação dinâmica, garbage collector, funções como cid
 
 Nesta disciplina estudaremos a linguagem Scheme, que é um dialeto de Lisp. Usaremos o [BiwaScheme](http://www.biwascheme.org/), que é um interpretador de Scheme escrito em JavaScript e que roda no navegador.
 
-## Lisp: teoria
+## Scheme: teoria
 
-Dados em Lisp são expressões simbólicas (chamadas de *s-expressions*, ou *sexps*, do inglês *symbolic expressions*) que podem ser **átomos** ou **listas**.
+Dados em Scheme são expressões simbólicas (chamadas de *s-expressions*, ou *sexps*, do inglês *symbolic expressions*) que podem ser **átomos** ou **listas**.
 
-- Átomo: sequência de letras e dígitos e outros caracteres que não são usados em Lisp. Ex.: `1`, `altura`, `print`, `+`.
+- Átomo: sequência de letras e dígitos e outros caracteres que não são usados em Scheme. Ex.: `1`, `altura`, `print`, `+`.
 - Lista: `(` seguido de zero ou mais S-expressões separados por espaços, seguido de `)`. Exemplo: `(a)`, `(+ 2 3)`, `(display 5)`.
 
 Expressões podem ser avaliadas para um valor. Em particular, alguns átomos possuem valor. Exemplos: `1` (número um), `-3.14` (número 3,14 negativo). Outros átomos, como `abc`, não possuem valor, a princípio.
 
-Listas também podem ser avaliadas para valores. Em particular, um núcleo básico de Lisp pode ser definido a partir de regras de re-escrita de listas que seguem os seguintes padrões:
+Listas também podem ser avaliadas para valores. Em particular, um núcleo básico de Scheme pode ser definido a partir de regras de re-escrita de listas que seguem os seguintes padrões:
 
 - `(quote x)` ou `'x` ==> `x`, isto é, o valor da lista `(quote x)` é `x`, onde `x` é uma s-expressão qualquer. Exemplo: `(quote abc)` ==> `abc`; `(quote (a b c))` ==> `(a b c)`
 - `(car x)` ==> primeiro elemento da lista `x`. Exemplo: `(car (quote a b c))` ==> `a`
@@ -64,7 +64,7 @@ Para evitar definir uma função toda vez que ela é usada, podemos defini-la us
     (quote (a b c)))
 </textarea>
 
-Esse conjunto de regras define o núcleo da linguagem Lisp. Outras construções da linguagem podem ser definidas com base nessas regras.
+Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construções da linguagem podem ser definidas com base nessas regras.
 
 ## Abreviações comuns
 

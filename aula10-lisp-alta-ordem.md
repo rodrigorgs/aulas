@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Lisp (funções de alta ordem)"
+title:  "Scheme (funções de alta ordem)"
 date:   2017-02-15 16:40:00 -0300
 categories: aula
 ---

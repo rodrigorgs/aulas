@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Lisp (prática)"
+title:  "Scheme (prática)"
 date:   2017-02-08 16:40:00 -0300
 categories: aula
 ---
