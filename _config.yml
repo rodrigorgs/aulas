@@ -13,12 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MATA56 - Paradigmas de Linguagens de Programação (UFBA)
+title: Disciplinas (UFBA)
 email: rodrigo@dcc.ufba.br
 description: > # this means to ignore newlines until "baseurl:"
-  Material da disciplina MATA56 - Paradigmas de Linguagens de Programação,
-  professor Rodrigo Rocha Gomes e Souza, Universidade Federal da Bahia (UFBA).
-baseurl: "/mata56" # the subpath of your site, e.g. /blog
+  Material de disciplinas.
+baseurl: "/aulas" # the subpath of your site, e.g. /blog
 url: "https://rodrigorgs.github.io/" # the base hostname & protocol for your site
 twitter_username: xrodrigorgs
 github_username:  rodrigorgs
@@ -26,3 +25,15 @@ github_username:  rodrigorgs
 # Build settings
 markdown: kramdown
 theme: minima
+
+
+# Reveal.js
+
+reveal_path: lib/reveal.js/
+reveal_theme_path: lib/reveal.js/css/theme/ 
+reveal_theme: white.css
+reveal_transition: default
+# Embed Server-side speaker notes?
+reveal_notes_server: false
+reveal_options: 
+reveal_dependencies: 
