@@ -61,6 +61,13 @@ CD-MOJ (<http://moj.naquadah.com.br/>)
 
 ---
 
+# Alguns sites de programação competitiva
+
+- [SPOJ](http://br.spoj.com/)
+- [Outros](https://medium.com/coderbyte/the-10-most-popular-coding-challenge-websites-of-2016-fb8a5672d22f)
+
+---
+
 Baseado nos slides do prof. Karl Agüero
 
 </div>

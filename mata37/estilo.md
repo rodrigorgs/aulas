@@ -15,6 +15,8 @@ title: Estilo de codificação
 
 # Indentação
 
+Bug: <https://blog.codecentric.de/en/2014/02/curly-braces/>
+
 ---
 
 # Espaçamento
@@ -54,5 +56,9 @@ Sempre usar chaves depois do `if`, mesmo com uma linha
 ---
 
 # Lint
+
+- splint (C)
+- cppcheck (C++)
+- [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint) (C++)
 
 </div>

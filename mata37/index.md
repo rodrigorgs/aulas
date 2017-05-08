@@ -28,26 +28,27 @@ title: MATA37 - ILP - 2017.1
 <div style="float: left; padding: 5px; width: 30%;" markdown="1">
 **Avaliações**
 
-- ...<br/><span style="color: gray;">\[peso: 2\]</span>
 - Exercícios online individuais<br/><span style="color: gray;">\[peso: 3\]</span>
 - Duas provas práticas<br/><span style="color: gray;">\[peso: 5\]</span>
+- Trabalho prático (jogo)<br/><span style="color: gray;">\[peso: 2\]</span>
 </div>
 
 <div style="clear: left;"></div>
 
 # Conteúdo
 
-| Dia       | Conteúdo                                            |                                |
-| :-------  | :--------------------------------------------       | :----------------------        |
-| **08/05** | [Introdução à disciplina](intro-ilp)                |                                |
-|           | [Problemas](intro-problemas)                        |                                |
-|           | [Arquitetura de computadores](arquitetura)          | [Curso de Linguagem C][cursoC] |
-|           | [Linguagens de programação](#!linguagens)           |                                |
-| **10/05** | [Introdução ao Linux](#!intro-linux)                |                                |
-|           | [Introdução a algoritmos](#!algoritmo)              | [KTANE][ktane]                 |
-|           | [Resolução de problemas](#!qa)                      |                                |
-|           | [Introdução à linguagem C](#!intro-cpp)             |                                |
-|           | [Entrada e saída](#!entrada-saida.md)               |                                |
+<!-- |           | [Arquitetura de computadores](arquitetura)    |    |-->
+
+| Dia       | Conteúdo                                      |                                |
+| :-------  | :-------------------------------------------- | :----------------------        |
+| **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
+|           | [Problemas](intro-problemas)                  |                                |
+|           | [Linguagens de programação](#!linguagens)     |                                |
+| **10/05** | [Introdução ao Linux](#!intro-linux)          |                                |
+|           | [Introdução a algoritmos](#!algoritmo)        | [KTANE][ktane]                 |
+|           | [Resolução de problemas](#!qa)                |                                |
+|           | [Introdução à linguagem C](#!intro-cpp)       |                                |
+|           | [Entrada e saída](#!entrada-saida.md)         |                                |
 
 <!--
 | **15/05** | Tipos de Dados, Constantes, Variáveis, Operadores. |                                |

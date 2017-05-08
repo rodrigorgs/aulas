@@ -47,4 +47,10 @@ Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
 * H. Schildt. **C: Completo e Total**, 3th Ed, Makron Books do Brasil, 1997
 * **Apostila de C**. Adriano Joaquim de Oliveira Cruz, NCE-UFRJ, 2011, <http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf>
 
+---
+
+# Outras informações
+
+Site da disciplina: <v.ht/mata37>
+
 </div>
