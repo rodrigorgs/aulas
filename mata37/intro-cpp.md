@@ -39,6 +39,8 @@ int main() {
 
 Você pode usar um editor de código como o gedit, o Geany...
 
+---
+
 # Compilador gcc
 
 ```bash

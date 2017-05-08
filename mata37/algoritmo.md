@@ -70,7 +70,7 @@ Jogo [Keep Talking and Nobody Explodes](http://jogabilida.de/bomb)
 # Contra-exemplos
 
 - Se um dos passos não for bem-definido...
-- Se 
+- Se a execução nunca terminar
 
 ---
 
@@ -115,14 +115,14 @@ Eu respondi: "Porque eles tinham ovos."
 
 # Fluxograma
 
-![:height 93vh](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/LampFlowchart_pt.svg/250px-LampFlowchart_pt.svg.png)
+![:height 70vh](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/LampFlowchart_pt.svg/250px-LampFlowchart_pt.svg.png)
 
 
 ---
 
 # Fluxograma
 
-![:height 93vh](http://3.bp.blogspot.com/_iunkzWDVQMI/S5K_8yAHzwI/AAAAAAAAAHw/KP0xkGPtUPw/w1200-h630-p-k-no-nu/untitled.bmp)
+![:height 70vh](http://3.bp.blogspot.com/_iunkzWDVQMI/S5K_8yAHzwI/AAAAAAAAAHw/KP0xkGPtUPw/w1200-h630-p-k-no-nu/untitled.bmp)
 
 ---
 
@@ -194,6 +194,19 @@ Determinar se uma pessoa pode beber álcool no Brasil. Linguagem Scheme:
         "Sim")))
 ```
 
+---
+
+# Linguagem de programação
+
+Determinar se uma pessoa pode beber álcool no Brasil. Linguagem Ruby:
+
+```ruby
+idade = gets.to_i
+puts idade < 18 ? "Não" : "Sim"
+```
+
+---
+
 # Linguagem de programação
 
 Seu programa é executado por outro programa. Se você não seguir a linguagem corretamente, dá erro!
@@ -202,4 +215,14 @@ Seu programa é executado por outro programa. Se você não seguir a linguagem c
 - No exemplo em C++, troque `idade < 18` por `idadi < 18`
 - No exemplo em C++, apague as linhas em branco
 
+---
+
+# Linguagem C
+
+- De propósito geral 
+- Médio Nível 
+- Compilada 
+- Estruturada
+
 </div>
+

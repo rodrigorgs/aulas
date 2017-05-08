@@ -51,6 +51,6 @@ Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
 
 # Outras informações
 
-Site da disciplina: <v.ht/mata37>
+Site da disciplina: [v.ht/mata37](http://v.ht/mata37)
 
 </div>

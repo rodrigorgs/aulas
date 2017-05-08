@@ -13,8 +13,8 @@ title: MATA37 - ILP - 2017.1
 
 **Equipe**
 
-- Professor: Rodrigo Rocha
-- Monitores: Daniel Luis, Matheus Silva
+- Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
+- Monitores: Daniel Luis <danieldlmt@gmail.com>, Matheus Silva <msformigteen@live.com>
 <!-- Alex Silva Santos? -->
 </div>
 
@@ -43,9 +43,9 @@ title: MATA37 - ILP - 2017.1
 | :-------  | :-------------------------------------------- | :----------------------        |
 | **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
 |           | [Problemas](intro-problemas)                  |                                |
+|           | [Introdução a algoritmos](algoritmo)          |                                |
 |           | [Linguagens de programação](#!linguagens)     |                                |
 | **10/05** | [Introdução ao Linux](#!intro-linux)          |                                |
-|           | [Introdução a algoritmos](#!algoritmo)        | [KTANE][ktane]                 |
 |           | [Resolução de problemas](#!qa)                |                                |
 |           | [Introdução à linguagem C](#!intro-cpp)       |                                |
 |           | [Entrada e saída](#!entrada-saida.md)         |                                |
