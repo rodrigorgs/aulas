@@ -48,3 +48,11 @@ $on-laptop:        800px;
 h2 {
   text-decoration: underline;
 }
+
+$cell-padding:  6px;
+$border-color:  darkgray;
+
+table th { background-color: lightgray; padding: $cell-padding; border: 2px solid darkgray; }
+table td { background-color: white; padding: $cell-padding; border: 2px solid darkgray; }
+table { border: 3px solid darkgray; border-collapse: collapse; }
+
