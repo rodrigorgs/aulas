@@ -38,13 +38,13 @@ title: MATA37 - ILP - 2017.1
 # Conteúdo
 
 <!-- |           | [Arquitetura de computadores](arquitetura)    |    |-->
+<!-- |           | [Linguagens de programação](#!linguagens)     |                                | -->
 
 | Dia       | Conteúdo                                      |                                |
 | :-------  | :-------------------------------------------- | :----------------------        |
 | **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
 |           | [Problemas](intro-problemas)                  |                                |
 |           | [Introdução a algoritmos](algoritmo)          |                                |
-|           | [Linguagens de programação](#!linguagens)     |                                |
 | **10/05** | [Introdução ao Linux](#!intro-linux)          |                                |
 |           | [Resolução de problemas](#!qa)                |                                |
 |           | [Introdução à linguagem C](#!intro-cpp)       |                                |

@@ -4,22 +4,15 @@ title:  "Início"
 date:   2016-07-06 16:40:00 -0300
 ---
 
-## Editor de Scheme
+Disciplinas ministradas pelo professor [Rodrigo Rocha](https://rodrigorgs.github.io/) na UFBA.
 
-<textarea class="code lang-scheme">
-; Escreva aqui seu código Scheme
-; A saída aparecerá no console do navegador
-;  (Ctrl+Shift+I > Console)
-</textarea>
+# Disciplinas ofertadas em 2017.1
 
-## Informações sobre a disciplina
+- [MATA37: Introdução à Lógica de Programação](mata37)
+- [MATA56: Paradigmas de Linguagens de Programação](mata56)
+- [MATE94: Engenharia de Software Experimental](https://github.com/rodrigorgs/analise-quantitativa20171)
 
-Horários: QUA/SEX, 16:40-18:30
+# Semestres anteriores
 
-Local:
-
-- QUA: laboratório 140 do Instituto de Matemática
-- SEX: sala 119 do PAF I
-
-Site: [v.ht/mata56](http://v.ht/mata56)
+Ver página [Ensino](https://rodrigorgs.github.io/ensino).
 
