@@ -44,7 +44,7 @@ title: MATA37 - ILP - 2017.1
 | **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
 |           | [Problemas](intro-problemas)                  |                                |
 |           | [Introdução a algoritmos](algoritmo)          |                                |
-|           | [Introdução à linguagem C](intro-cpp)         |                                |
+|           | [Introdução à linguagem C](intro-cpp)         | [repl.it: C++ online][replit]  |
 | **10/05** | [Entrada e saída, variáveis][io]              |                                |
 |           | [Introdução à linha de comando][linux]        |                                |
 
@@ -91,6 +91,7 @@ title: MATA37 - ILP - 2017.1
 -->
 
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
+[replit]: https://repl.it/languages/cpp
 [ktane]: http://jogabilida.de/bomb
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
