@@ -14,8 +14,7 @@ title: MATA37 - ILP - 2017.1
 **Equipe**
 
 - Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
-- Monitores: Daniel Luis <danieldlmt@gmail.com>, Matheus Silva <msformigteen@live.com>
-<!-- Alex Silva Santos? -->
+- Monitores: Daniel Luis <danieldlmt@gmail.com>, Matheus Silva <msformigteen@live.com>, Alex Santos <alexsisantos@gmail.com>
 </div>
 
 <div style="float: left; padding: 5px; width: 30%;" markdown="1">
@@ -55,7 +54,7 @@ title: MATA37 - ILP - 2017.1
 | **17/05** | Lab: exercícios                                     |                                |
 | **22/05** | Estruturas de seleção                               | (congresso)                    |
 | **24/05** | Lab: Exercícios                                     | (congresso)                    |
-| **29/05** | Estruturas de repetição                             |                                |
+| **29/05** | Estruturas de seleção                             |                                |
 | **31/05** | Lab: Exercícios                                     |                                |
 | **05/06** | Estruturas de repetição                             |                                |
 | **07/06** | Lab: Exercícios                                     |                                |
