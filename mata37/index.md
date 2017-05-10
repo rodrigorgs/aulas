@@ -44,13 +44,15 @@ title: MATA37 - ILP - 2017.1
 | **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
 |           | [Problemas](intro-problemas)                  |                                |
 |           | [Introdução a algoritmos](algoritmo)          |                                |
-| **10/05** | [Introdução ao Linux](#!intro-linux)          |                                |
+|           | [Introdução à linguagem C](intro-cpp)         |                                |
+| **10/05** | [Entrada e saída, variáveis][io]              |                                |
+|           | [Introdução à linha de comando][linux]        |                                |
+
+<!-- 
 |           | [Resolução de problemas](#!qa)                |                                |
-|           | [Introdução à linguagem C](#!intro-cpp)       |                                |
 |           | [Entrada e saída](#!entrada-saida.md)         |                                |
 
-<!-- https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing -->
-
+ -->
 <!--
 | **15/05** | Tipos de Dados, Constantes, Variáveis, Operadores. |                                |
 | **17/05** | Lab: exercícios                                     |                                |
@@ -90,6 +92,8 @@ title: MATA37 - ILP - 2017.1
 
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
 [ktane]: http://jogabilida.de/bomb
+[io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
+[linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 
 <script type="text/javascript">
 function desabilitaLinksComecadosPor(prefixo) {
