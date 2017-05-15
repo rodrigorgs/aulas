@@ -34,19 +34,39 @@ title: MATA37 - ILP - 2017.1
 
 <div style="clear: left;"></div>
 
+# Links importantes
+
+- Tutoriais, apostilas e livros:
+  - [Curso C++](http://excript.com/curso-cpp.html)
+  - [Introdução a Ciência da Computação em C](https://www.ime.usp.br/~hitoshi/introducao/)
+  - [Curso de Linguagem C][cursoC]
+- [repl.it: C++ online][replit]
+- IDEs (ambientes integrados de desenvolvimento -- escolha ):
+  - [Instalação do Code::Blocks](https://panda.ime.usp.br/panda/static/data/codeblocks/windows.html)
+  - [Instalação do Dev-C++][devc]
+  - 
+
 # Conteúdo
 
 <!-- |           | [Arquitetura de computadores](arquitetura)    |    |-->
 <!-- |           | [Linguagens de programação](#!linguagens)     |                                | -->
 
-| Dia       | Conteúdo                                      |                                |
-| :-------  | :-------------------------------------------- | :----------------------        |
-| **08/05** | [Introdução à disciplina](intro-ilp)          | [Curso de Linguagem C][cursoC] |
-|           | [Problemas](intro-problemas)                  |                                |
-|           | [Introdução a algoritmos](algoritmo)          |                                |
-|           | [Introdução à linguagem C](intro-cpp)         | [repl.it: C++ online][replit]  |
-| **10/05** | [Entrada e saída, variáveis][io]              |                                |
-|           | [Introdução à linha de comando][linux]        |                                |
+| Dia       | Conteúdo                                           |                                 |
+| :-------  | :------------------------------------------------- | :------------------------------ |
+| **08/05** | [Introdução à disciplina](intro-ilp)               |                                 |
+|           | [Problemas](intro-problemas)                       |                                 |
+|           | [Introdução a algoritmos](algoritmo)               |                                 |
+|           | [Introdução à linguagem C](intro-cpp)              |                                 |
+| **10/05** | [Entrada e saída, variáveis][io]                   |                                 |
+|           | [Introdução à linha de comando][linux]             |                                 |
+| **15/05** | [Variáveis](variaveis)                             |                                 |
+|           | [Expressões aritméticas](aritmetica)               |                                 |
+| **17/05** | Lab: exercícios                                    |                                 |
+| **22/05** | [Desvio condicional][desvio]                       |                                 |
+| **24/05** | Lab: Exercícios                                    |                                 |
+
+[io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
+[desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
 
 <!-- 
 |           | [Resolução de problemas](#!qa)                |                                |
@@ -54,10 +74,6 @@ title: MATA37 - ILP - 2017.1
 
  -->
 <!--
-| **15/05** | Tipos de Dados, Constantes, Variáveis, Operadores. |                                |
-| **17/05** | Lab: exercícios                                     |                                |
-| **22/05** | Estruturas de seleção                               | (congresso)                    |
-| **24/05** | Lab: Exercícios                                     | (congresso)                    |
 | **29/05** | Estruturas de seleção                             |                                |
 | **31/05** | Lab: Exercícios                                     |                                |
 | **05/06** | Estruturas de repetição                             |                                |
@@ -90,11 +106,12 @@ title: MATA37 - ILP - 2017.1
 | **06/09** |                                               |                                     |
 -->
 
+
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
 [replit]: https://repl.it/languages/cpp
-[ktane]: http://jogabilida.de/bomb
-[io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
+
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
+[devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/
 
 <script type="text/javascript">
 function desabilitaLinksComecadosPor(prefixo) {
