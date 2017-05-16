@@ -19,7 +19,7 @@ Definindo mais formalmente, pode-se dizer que dois termos podem ser unificados s
     + ex.: `X` e 1, `X` e `masc(harry)`, `X` e `Y`
     + nesse caso, a variável é **instanciada** com o termo
 - ambos são termos complexos com o mesmo nome e mesmo número de argumentos, e os termos correspondentes podem ser unificados.
-    + ex.: `pai(james, harry)` e `pai(X, harry)` (note que `harry` pode ser unificado com `X`).
+    + ex.: `pai(james, harry)` e `pai(X, harry)` (note que `james` pode ser unificado com `X`).
 
 O predicado `=` pode ser usado para determinar se dois termos podem ser unificados. Exemplos:
 
