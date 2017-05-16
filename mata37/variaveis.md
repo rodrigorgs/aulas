@@ -88,6 +88,20 @@ Assim, o tipo `char` representa valores de -127 a 128, e `unsigned char` represe
 
 ## Declaração de variáveis
 
+Antes de usar uma variável no seu programa, é necessário declará-la. A declaração indica o tipo e o nome da variável. Formato geral:
+
+```
+<tipo> <identificador1>, <identificador2>, ..., <identificadorN>;
+```
+
+Exemplo de declaração:
+
+```c++
+int idade;
+float altura, peso;
+double pi = 3.14159, e = 2.718;
+```
+
 ---
 
 ## Inicialização de variáveis

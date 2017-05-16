@@ -9,6 +9,7 @@ title: Expressões aritméticas em C++
 Expressões aritméticas podem ser:
 
 - um número
+- uma variável numérica
 - uma operação aritmética envolvendo duas expressões aritméticas
 - a aplicação de uma função a uma expressão aritmética
 
