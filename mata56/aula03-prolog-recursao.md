@@ -122,4 +122,16 @@ deAviao(losAngeles, auckland).
 
 Escreva um predicado `viagem/2` que determina se é possível viajar de um lugar para outro combinando trajetos de carro, trem e avião. Por exemplo, seu programa deve responder sim à consulta `viagem(valmont, raglan)`.
 
-**Exercício 23.5**. 
+**Exercício 24**. 
+
+Considere o modelo lógico de Pokémons descrito a seguir. Cada Pokémon é de um tipo (fogo, gelo, água, dentre outros), como exemplificado pelo predicado `tipo(charmander, fogo)`. Alguns Pokémons podem evoluir para outros Pokemóns, como indicado pelo predicado `evoluiPara(charmander, charmeleon)`. As evoluções são sempre do mesmo tipo do Pokémon original. Considerando uma base de conhecimento que só informe o tipo dos Pokémons que não são evolução de outros Pokémons, defina o predicado `tipoTotal(P, T)`, que indica que o Pokémon `P` é do tipo `T`, considerando os tipos e as evoluções da base de conhecimento. Crie predicados auxiliares se necessário. No exemplo a seguir,
+
+```prolog
+% Base de conhecimento
+tipo(charmander, fogo).
+tipo(jynx, gelo).
+evoluiPara(charmander, charmeleon).
+evoluiPara(charmeleon, charizard).
+```
+
+a consulta `tipoTotal(charizard, T)` retorna `T = fogo`, pois o `charizard` é uma evolução do `charmander`, que é do tipo `fogo`.

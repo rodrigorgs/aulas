@@ -29,7 +29,7 @@ O predicado `=` pode ser usado para determinar se dois termos podem ser unificad
 - `X = Y.`
 - Negação: `\=`. `\=(X, Y)` é equivalente a `not(=(X, Y))`
 
-Exercícios: livro Learn Prolog Now!, p. 31
+[Exercício 2.1 do livro Learn Prolog Now!, página 31](http://www.dis.uniroma1.it/~gemignani/documents/lucia/LearnPrologNow.pdf#page=37).
 
 ## Busca
 
@@ -37,7 +37,7 @@ Exercícios: livro Learn Prolog Now!, p. 31
     + Lembrete: regra = `cabeça :- corpo.`
 - Se unificar com um fato, retorna as instâncias das variáveis.
 - Se unificar com a cabeça de uma regra, consulta o corpo da regra (recursivamente).
-- Ver exemplos em <http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf> (a partir da p. 6)
+- Ver Exemplo 2 em <http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf> (a partir da p. 6)
 - Use `trace.` / `notrace.` para ativar/desativar o rastreamento das consultas.
 - A busca pode ser construída como uma árvore
 
@@ -60,3 +60,13 @@ Qual o retorno da consulta `eh_irma_de(petunia, X).`?
 O retorno é `false.`, pois `X = Y`, tornando a primeira meta de `eh_irma_de` falsa; em uma conjunção lógica, basta uma parte ser falsa para a expressão toda ser falsa.
 
 O problema é que as variáveis `X` e `Y` ainda não estão instanciadas quando o interpretador Prolog vai tentar provar a meta `X \= Y`. Para resolver esse problema, deve-se mover o termo `X \= Y` para o final da cláusula, pois nesse momento as variáveis `X` e `Y` já terão sido instanciadas por causa da meta `tem_mesmo_progenitor_que(X, Y)`.
+
+### Exercício
+
+Quais das próximas operações de unificação serão bem sucedidas e quais irão falhar? Para as que forem bem sucedidas, quais são as instanciações de variáveis resultantes?
+
+- `ponto(A, B) = ponto(1, 2)`
+- `ponto(A, B) = ponto(X, Y, Z)`
+- `mais(2, 2) = 4`
+- `+(2, D) = +(E, 2)`
+- `t(p(-1,0), P2, P3) = t(P1, p(1, 0), p(0, Y))`
