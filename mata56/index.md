@@ -39,16 +39,16 @@ title: MATA56 - PLP - 2017.1
 
 
 
-| Dia       | Conteúdo                                          |                         |
-| :-------  | :--------------------------------------------     | :---------------------- |
-| **08/05** | [Apresentação da disciplina](disciplina)          |                         |
-|           | [História das LPs](https://goo.gl/9qSZmy)         |                         |
-| **10/05** | [Prolog: introdução](aula02-prolog)               | [SWISH][swish]          |
-| **15/05** | Prolog: exercícios                                |                         |
-| **17/05** | [Prolog: recursão](aula03-prolog-recursao)        |                         |
-|           | [Prolog: unificação e busca](aula04-prolog-busca) |                         |
-| **22/05** | Prolog: exercícios                                | (congresso)             |
-| **24/05** | Prolog: dúvidas                                   | (congresso)             |
+| Dia       | Conteúdo                                                         |                            |
+| :-------  | :--------------------------------------------                    | :----------------------    |
+| **08/05** | [Apresentação da disciplina](disciplina)                         |                            |
+|           | [História das LPs](https://goo.gl/9qSZmy)                        |                            |
+| **10/05** | [Prolog: introdução](aula02-prolog)                              | [SWISH][swish]             |
+| **15/05** | Prolog: exercícios                                               |                            |
+| **17/05** | [Prolog: recursão](aula03-prolog-recursao)                       |                            |
+|           | [Prolog: unificação e busca](aula04-prolog-busca)                |                            |
+| **22/05** | Prolog: exercícios                                               | Aula com Daniel            |
+| **24/05** | [Prolog: aritmética](aula05-prolog-aritmetica) (leitura em casa) | Não haverá aula presencial |
 
 Prolog: unificação e busca.
 
