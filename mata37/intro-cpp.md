@@ -263,20 +263,4 @@ com várias
 linhas */
 ```
 
----
-
-# Expressões aritméticas
-
-```c++
-#include <iostream>
-
-using namespace std;
-
-int main() {
-  cout << "O dobro de cinco: " << 2 * 5 << endl;
-
-  return 0;
-}
-```
-
 </div>

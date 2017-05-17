@@ -56,9 +56,9 @@ title: MATA37 - ILP - 2017.1
 | **08/05** | [Introdução à disciplina](intro-ilp)               |                                 |
 |           | [Problemas](intro-problemas)                       |                                 |
 |           | [Introdução a algoritmos](algoritmo)               |                                 |
-|           | [Introdução à linguagem C](intro-cpp)              |                                 |
-| **10/05** | [Entrada e saída, variáveis][io]                   |                                 |
-|           | [Introdução à linha de comando][linux]             |                                 |
+|           | ["Alô mundo" em C++](intro-cpp)                    |                                 |
+| **10/05** | [Introdução à linha de comando][linux]             |                                 |
+|           | [Entrada e saída, variáveis][io]                   |                                 |
 | **15/05** | [Variáveis](variaveis)                             |                                 |
 |           | [Expressões aritméticas](aritmetica)               |                                 |
 | **17/05** | Lab: exercícios                                    |                                 |

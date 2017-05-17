@@ -9,7 +9,7 @@ title: Tipos de dados, constantes, variáveis e operadores aritméticos
 
 Uma variável é um espaço de armazenamento na memória associado a
 
-- um nome (identificador da variável)
+- um nome (chamado de **identificador** da variável)
 - um valor
 - um tipo
 
@@ -99,14 +99,184 @@ Exemplo de declaração:
 ```c++
 int idade;
 float altura, peso;
-double pi = 3.14159, e = 2.718;
+char a, b, c, d;
+```
+
+---
+
+## Atribuição
+
+**Atribuição** de um valor a uma variável é o ato modificar o valor de uma variável. Isso é feito com o operador `=` (*igual*). A atribuição de uma variável pode ser feita várias vezes. Exemplo:
+
+```c++
+int x, y;
+x = 1;
+y = 2;
+x = x + y;
 ```
 
 ---
 
 ## Inicialização de variáveis
 
-Referência: <http://www.cplusplus.com/doc/tutorial/variables/>
+A primeira atribuição de uma variável é chamada de **inicialização** da variável. Todas as variáveis devem ser inicializadas antes de serem usadas (antes de serem usadas em expressões, antes de serem impressas na tela...), pois uma variável que não foi inicializada pode conter qualquer valor.
+
+No exemplo abaixo, qual é o valor de `y`? Pode ser -4, 2345, -1038... não dá pra saber.
+
+```c++
+int x, y;
+y = x + 1;
+cout << y << endl;
+```
+
+---
+
+## Inicialização de variáveis
+
+A inicialização de variáveis pode ser feita junto com sua declaração. Exemplo:
+
+```
+double pi = 3.14159, r = 2.5, area = 2 * pi * r * r;
+```
+
+---
+
+## Atribuições compostas
+
+Atribuições compostas modificam o valor de uma variável através de uma operação matemática. Elas são apenas formas mais sucintas de escrever certas atribuições. Exemplos:
+
+| atribuição composta |      é equivalente a       |
+|---------------------|----------------------------|
+| `x += 3`            | `x = x + 3`                |
+| `x += y * 2`        | `x = x + y * 2`            |
+| `preco -= desconto` | `preco = preco - desconto` |
+| `num /= 2`          | `num = num / 2`            |
+| `a *= b + 1`        | `a = a * (b + 1)`          |
+
+---
+
+## Incremento e decremento
+
+São formas ainda mais sucintas de adicionar ou subtrair 1 unidade de uma variável. Assim, as três linhas a seguir são equivalentes:
+
+```c++
+x = x + 1;
+x += 1;
+x++;
+```
+
+As três linhas a seguir também são equivalentes:
+
+```c++
+x = x - 1;
+x -= 1;
+x--;
+```
+
+---
+
+## Incremento e decremento como expressões
+
+Os operadores `++` e `--` podem ser em expressões aritméticas, e podem ser usados como sufixo (ex.: `x++`) ou prefixo de variáveis (ex.: `++x`), com diferenças sutis. Exemplos:
+
+```c++
+int x = 5, y;
+y = x++;
+cout << x << " " << y << endl;
+```
+
+É equivalente a
+
+```c++
+int x = 5, y;
+y = x;
+x = x + 1;
+cout << x << " " << y << endl;
+```
+
+---
+
+## Incremento e decremento como expressões
+
+No entanto,
+
+```c++
+int x = 5, y;
+y = ++x;
+cout << x << " " << y << endl;
+```
+
+é equivalente a
+
+```c++
+int x = 5, y;
+x = x + 1;
+y = x;
+cout << x << " " << y << endl;
+```
+
+---
+
+## Constantes
+
+Constantes são como variáveis, exceto que elas devem ser inicializadas na declaração e o seu valor não pode mudar. A declaração é feita escrevendo-se a palavra `const` antes da declaração. Exemplo:
+
+```c++
+const float PI = 3.14f, E = 2.7f;
+const double NUMERO_DE_AVOGADRO = 6.02e23;
+```
+
+Por convenção, geralmente usam-se letras maiúsculas para nomear constantes, mas isso não é obrigatório.
+
+---
+
+## define
+
+A palavra `#define` pode ser usada para definir macros e constantes. Exemplo:
+
+```c++
+#include <iostream>
+using namespace std;
+
+#define PI 3.14159
+
+int main() {
+	cout << "PI = " << PI << endl;
+	return 0;
+}
+```
+
+O que acontece nesse caso é que o compilador troca todas as referências a PI (exceto entre parênteses) no programa pelo seu valor (`3.14159`). 
+
+---
+
+## define
+
+Existem usos mais avançados do `#define`, mas sugiro usar com moderação, pois seu programa pode ficar difícil de entender!
+
+```c++
+#include <iostream>
+using namespace std;
+
+#define INTEIRO int
+#define INCREMENTA_X x++
+
+int main() {
+	INTEIRO x = 1;
+	INCREMENTA_X;
+	cout << x << endl;
+	return 0;
+}
+```
+
+O que acontece nesse caso é que o compilador troca todas as referências a PI (exceto entre parênteses) no programa pelo seu valor (`3.14159`). 
+
+---
+
+## Referências
+
+- <http://www.cplusplus.com/doc/tutorial/variables/>
+- <http://www.cplusplus.com/doc/tutorial/operators/>
 
 <!--
 
