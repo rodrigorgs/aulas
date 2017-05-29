@@ -44,7 +44,6 @@ title: MATA37 - ILP - 2017.1
 - IDEs (ambientes integrados de desenvolvimento -- escolha ):
   - [Instalação do Code::Blocks](https://panda.ime.usp.br/panda/static/data/codeblocks/windows.html)
   - [Instalação do Dev-C++][devc]
-  - 
 
 # Conteúdo
 

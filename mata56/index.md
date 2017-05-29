@@ -35,31 +35,30 @@ title: MATA56 - PLP - 2017.1
 
 <div style="clear: left;"></div>
 
+# Links importantes
+
+- [SWISH][swish]: interpretador de Prolog online
+
 # Conteúdo
 
-
-
-| Dia       | Conteúdo                                                         |                            |
-| :-------  | :--------------------------------------------                    | :----------------------    |
-| **08/05** | [Apresentação da disciplina](disciplina)                         |                            |
-|           | [História das LPs](https://goo.gl/9qSZmy)                        |                            |
-| **10/05** | [Prolog: introdução](aula02-prolog)                              | [SWISH][swish]             |
-| **15/05** | Prolog: exercícios                                               |                            |
-| **17/05** | [Prolog: recursão](aula03-prolog-recursao)                       |                            |
-|           | [Prolog: unificação e busca](aula04-prolog-busca)                |                            |
-| **22/05** | Prolog: exercícios                                               | Aula com Daniel            |
-| **24/05** | [Prolog: aritmética](aula05-prolog-aritmetica) (leitura em casa) | Não haverá aula presencial |
-
-Prolog: unificação e busca.
+| Dia       | Conteúdo                                                         |                                                                               |
+| :-------  | :--------------------------------------------                    | :----------------------                                                       |
+| **08/05** | [Apresentação da disciplina](disciplina)                         |                                                                               |
+|           | [História das LPs](https://goo.gl/9qSZmy)                        |                                                                               |
+| **10/05** | [Prolog: introdução](aula02-prolog)                              |                                                                               |
+| **15/05** | Prolog: exercícios                                               |                                                                               |
+| **17/05** | [Prolog: recursão](aula03-prolog-recursao)                       |                                                                               |
+|           | [Prolog: unificação e busca](aula04-prolog-busca)                |                                                                               |
+| **22/05** | Prolog: exercícios                                               | Aula com Daniel                                                               |
+| **24/05** | [Prolog: aritmética](aula05-prolog-aritmetica) (leitura em casa) | Não haverá aula presencial                                                    |
+| **29/05** | Prolog: exercícios                                               | [kahoot](https://create.kahoot.it/#quiz/af8c85ae-cedb-40e3-820d-de75b3fbbf9a) |
+| **31/05** | [Prolog: listas](aula06-prolog-listas)                           |                                                                               |
+| **05/06** | Prolog: exercícios                                               |                                                                               |
+| **07/06** | Prolog: revisão.                                                 |                                                                               |
+| **12/06** | Prolog: revisão.                                                 |                                                                               |
+| **14/06** | **Prova de Prolog**                                              | **PROVA**                                                                     |
 
 <!--
-| **29/05** | Prolog: unificação e busca                             |             |
-| **31/05** | Prolog: aritmética.                                    |             |
-| **05/06** | Prolog: listas.                                        |             |
-| **07/06** | Prolog: revisão.                                       |             |
-| **12/06** | Prolog: revisão.                                       |             |
-|           | Prolog: revisão.                                       |             |
-| **14/06** | Prova de Prolog                                        | PROVA       |
 |           | Conceitos de LPs. Sintaxe.                             |             |
 | **19/06** | Semântica: identificadores e vinculação.               |             |
 | **21/06** | Conceitos de LPs. Tempo de vida de variáveis           |             |
