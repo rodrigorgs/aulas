@@ -86,6 +86,8 @@ antepassado(X,Y) :- progenitor(X,Y).
 
 Do ponto de vista lógico, as quatro definições são equivalentes. Crie quatro versões diferentes da base de conhecimento, cada uma com uma das definições de `antepassado`, e teste a regra `antepassado` realizando tanto consultas que retornam `sim` quanto consultas que retornam `não`. O que acontece em cada caso? Use o `trace` para entender como o Prolog executa as consultas.
 
+<!-- As opções 1 e 4 funcionam; as opções 2 e 3 estão sujeitas a loops infinitos. -->
+
 **Exercício 22**. Considere a seguinte base de conhecimento:
 
 ```prolog

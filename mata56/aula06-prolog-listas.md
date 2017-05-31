@@ -25,7 +25,16 @@ categories: aula
 
 ## Operador |
 
-O operador `|` pode ser usado para decompor uma lista em cabeça e cauda.
+Uma lista **não-vazia** pode ser representada de forma a apresentar explicitamente a sua cabeça e a sua cauda, usando a sintaxe `[Cabeça|Cauda]`. Exemplos:
+
+```prolog
+% lista [b]
+[b|[]]
+% lista [a, b]
+[a|[b|[]]]
+```
+
+Essa sintaxe é útil em consultas quando queremos decompor uma lista em cabeça e cauda.
 
 ```prolog
 ?- [Head|Tail] = [mia, vincent, jules, yolanda].
@@ -137,6 +146,16 @@ Dica: Para resolver esta questão, primeiro tente responder a seguinte pergunta:
 - `inverte(L1, L2)` - L2 é o inverso de L1
 - `remover(X, L1, L2)` - L2 é igual a L1 removendo-se o elemento X
 - `eh_sublista(L1, L2)` - L1 é sublista de L2
-- `permutar(L, P)` -
 - `intersecao(L1, L2, L3)` - L3 contém apenas os elementos que aparecem em L1 e L2
 - `palindrome([r,o,t,a,t,o,r])` - verdadeiro se a lista é igual a seu inverso
+
+Envolvendo aritmética:
+
+- `comprimento(L)`
+- `somatorio(L)`
+
+
+
+
+
+<!-- - `permutar(L, P)` - -->

@@ -99,6 +99,8 @@ Para usar as funções matemáticas, você precisa incluir a seguinte linha no i
 - Logaritmos: `log(x)` (logaritmo natural, base e), `log10(x)` (base 10)
 - Arredondamento: `ceil(x)` (arredonda pra cima), `floor(x)` (arredonda pra baixo), onde `x` é do tipo `double`
 
+OBS.: a função `abs(x)` (tipo `int`) está definida no arquivo `cstdlib` (use `#include <cstdlib>`.
+
 Referência: <http://www.cplusplus.com/reference/cmath/>
 
 </div>
