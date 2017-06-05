@@ -68,6 +68,16 @@ CD-MOJ (<http://moj.naquadah.com.br/>)
 
 ---
 
+# Observações
+
+- Para o MOJ, use a extensão `.cpp`
+- Para o MOJ, use o Firefox
+- Observe os valores limite das entradas
+- Pode ser necessário usar `cout << fixed << setprecision(N) << ...`
+- Pode imprimir antes de ler todas as entradas; pode alternar `cin` e `cout`
+
+---
+
 Baseado nos slides do prof. Karl Agüero
 
 </div>

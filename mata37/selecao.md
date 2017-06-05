@@ -13,6 +13,10 @@ title: Estruturas de seleção
 
 ---
 
+# Avaliação em curto-circuito
+
+---
+
 # Exemplo: 8-ball
 
 O usuário faz uma pergunta e o programa responde uma das seguintes frases:

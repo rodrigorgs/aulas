@@ -71,6 +71,24 @@ cout << "Isto sao duas\nlinhas" << endl;
 
 ---
 
+# Imprimindo números com precisão definida
+
+```c++
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+  cout << fixed << setprecision(2) << 3.5 << endl;
+  return 0;
+}
+```
+
+O programa acima imprimirá `3.50`, isto é, com 2 casas decimais. Note que para usar `fixed` e `setprecision`, é necessário adicionar `#include <iomanip>`
+
+---
+
 # Lendo do teclado
 
 O código abaixo lê 3 números. O usuário deve digitar os três números separados por espaços em branco ou quebras de linha. O programa só avança para a próxima linha depois que todos os números forem digitados.

@@ -86,7 +86,23 @@ antepassado(X,Y) :- progenitor(X,Y).
 
 Do ponto de vista lógico, as quatro definições são equivalentes. Crie quatro versões diferentes da base de conhecimento, cada uma com uma das definições de `antepassado`, e teste a regra `antepassado` realizando tanto consultas que retornam `sim` quanto consultas que retornam `não`. O que acontece em cada caso? Use o `trace` para entender como o Prolog executa as consultas.
 
-<!-- As opções 1 e 4 funcionam; as opções 2 e 3 estão sujeitas a loops infinitos. -->
+<!-- As opções 1 e 4 funcionam; as opções 2 e 3 estão sujeitas a loops infinitos. 
+
+A opção 4 está sujeita a loop infinito no caso de recursões infinitas, mesmo quando a resposta deveria ser true/false. Exemplo:
+
+eh_sucessor(Q, P) :- Q is P + 1.
+
+eh_maior(Q, P) :- 
+  eh_sucessor(X, P),
+  eh_maior(Q, X).
+eh_maior(Q, P) :-
+  eh_sucessor(Q, P).
+
+% consulta: eh_maior(5, 3).
+% nesse caso dá loop infinito
+% se trocar a ordem das duas últimas cláusulas, responde true antes de dar loop infinito. O melhor é começar a cláusula recursiva com not(eh_sucessor(Q, P)).
+
+-->
 
 **Exercício 22**. Considere a seguinte base de conhecimento:
 
