@@ -103,7 +103,7 @@ membro(X,[yolanda,trudy,vincent,jules]).
 
 ```prolog
 a2b([], []).
-a2b([a|A], [b,B]) :- a2b(A, B).
+a2b([a|A], [b|B]) :- a2b(A, B).
 ```
 
 ## Exercícios
