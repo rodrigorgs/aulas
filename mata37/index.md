@@ -65,7 +65,7 @@ title: MATA37 - ILP - 2017.1
 | **24/05** | Lab: Exercícios                                    |                                 |
 | **29/05** | Lab: Exercícios                                    |                                 |
 | **31/05** | Lab: Exercícios                                    |                                 |
-| **05/06** | Estruturas de repetição                            |                                 |
+| **05/06** | [Estruturas de repetição](repeticao)               |                                 |
 | **07/06** | Lab: Exercícios                                    |                                 |
 | **12/06** | Lab: Exercícios                                    |                                 |
 | **14/06** | Lab: Exercícios                                    |                                 |
