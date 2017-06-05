@@ -151,8 +151,8 @@ Dica: Para resolver esta questão, primeiro tente responder a seguinte pergunta:
 
 Envolvendo aritmética:
 
-- `comprimento(L)`
-- `somatorio(L)`
+- `comprimento(L, N)`
+- `somatorio(L, N)`
 
 
 
