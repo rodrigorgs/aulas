@@ -9,6 +9,8 @@
       SchemeEval.eval(code, codeMirror);
     } else if (language === "ruby") {
       RubyEval.eval(code, codeMirror);
+    } else if (language === "cpp" || language === "text/x-c++src") {
+      CppEval.eval(code, window.input || '');
     }
   }
 
