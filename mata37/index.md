@@ -40,7 +40,9 @@ title: MATA37 - ILP - 2017.1
   - [Curso C++](http://excript.com/curso-cpp.html)
   - [Introdução a Ciência da Computação em C](https://www.ime.usp.br/~hitoshi/introducao/)
   - [Curso de Linguagem C][cursoC]
-- [repl.it: C++ online][replit]
+- Editores de C++ online:
+	- [repl.it: C++ online][replit]
+	- [JSCPP](https://felixhao28.github.io/JSCPP/)
 - IDEs (ambientes integrados de desenvolvimento -- escolha ):
   - [Instalação do Code::Blocks](https://panda.ime.usp.br/panda/static/data/codeblocks/windows.html)
   - [Instalação do Dev-C++][devc]
