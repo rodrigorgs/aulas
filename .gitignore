@@ -7,3 +7,6 @@ prova-pratica-2a.md
 *.sublime-workspace
 _drafts/
 bower_components/
+
+_private
+a.out
