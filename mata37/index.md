@@ -62,15 +62,19 @@ title: MATA37 - ILP - 2017.1
 |           | [Entrada e saída, variáveis][io]                   |                                 |
 | **15/05** | [Variáveis](variaveis)                             |                                 |
 |           | [Expressões aritméticas](aritmetica)               |                                 |
-| **17/05** | Lab: exercícios                                    |                                 |
+| **17/05** | Exercícios                                         |                                 |
 | **22/05** | [Desvio condicional][desvio]                       |                                 |
-| **24/05** | Lab: Exercícios                                    |                                 |
-| **29/05** | Lab: Exercícios                                    |                                 |
-| **31/05** | Lab: Exercícios                                    |                                 |
+| **24/05** | Exercícios                                         |                                 |
+| **29/05** | Exercícios                                         |                                 |
+| **31/05** | Exercícios                                         |                                 |
 | **05/06** | [Estruturas de repetição](repeticao)               |                                 |
-| **07/06** | Lab: Exercícios                                    |                                 |
-| **12/06** | Lab: Exercícios                                    |                                 |
-| **14/06** | Lab: Exercícios                                    |                                 |
+| **07/06** | Exercícios                                         |                                 |
+| **12/06** | Exercícios                                         |                                 |
+| **14/06** | Exercícios                                         |                                 |
+| **19/06** | [Vetores][vetores]                                 |                                 |
+| **21/06** | Exercícios                                         |                                 |
+| **26/06** | Exercícios                                         |                                 |
+| **28/06** | Exercícios                                         |                                 |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
@@ -81,16 +85,7 @@ title: MATA37 - ILP - 2017.1
 
  -->
 <!--
-| **29/05** | Estruturas de seleção                             |                                |
-| **31/05** | Lab: Exercícios                                     |                                |
-| **05/06** | Estruturas de repetição                             |                                |
-| **07/06** | Lab: Exercícios                                     |                                |
-| **12/06** |                                               |                                     |
-| **14/06** |                                               |                                     |
-| **19/06** |                                               |                                     |
-| **21/06** |                                               |                                     |
-| **26/06** |                                               |                                     |
-| **28/06** |                                               |                                     |
+
 | **03/07** |                                               |                                     |
 | **05/07** |                                               |                                     |
 | **10/07** |                                               |                                     |
@@ -116,6 +111,7 @@ title: MATA37 - ILP - 2017.1
 
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
 [replit]: https://repl.it/languages/cpp
+[vetores]: https://docs.google.com/presentation/d/1QRhykZHZEJnj_noNEO5ebwdqX5iik9G8QEp5NXe1aPw/edit
 
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 [devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/

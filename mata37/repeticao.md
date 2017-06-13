@@ -333,11 +333,124 @@ while (i < n) {
 
 ---
 
-# variáveis com propósitos especiais
+# Variáveis com propósitos especiais
 
 - contador
 - acumulador
 - sinalizador (flag)
+
+---
+
+# Contador
+
+É uma variável que conta o número de iterações de um loop. Ex.:
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int num, cont;
+  
+  cont = 0;
+  while ((cin >> num) && num != 0) {
+    cout << num << " ao quadrado = " << num * num << endl; 
+    cont++;
+  }
+
+  cout << cont << " numeros digitados." << endl;
+
+  return 0;
+}
+```
+
+---
+
+# Contador
+
+Pode contar apenas algumas iterações.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int num, cont;
+  
+  cont = 0;
+  while ((cin >> num) && num != 0) {
+    cout << num << " ao quadrado = " << num * num << endl; 
+    if (num % 2 == 0) {
+      cont++;
+    }
+  }
+
+  cout << cont << " numeros pares digitados." << endl;
+
+  return 0;
+}
+```
+
+---
+
+# Acumulador
+
+Guarda um resultado parcial a cada iteração do loop.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int num, maximo;
+  
+  maximo = 0;
+  while ((cin >> num) && num > 0) {
+    if (num > maximo) {
+      maximo = num;
+    }
+  }
+
+  cout << "Valor maximo: " << maximo << endl;
+
+  return 0;
+}
+```
+
+---
+
+# Sinalizador (flag)
+
+Indica se uma situação ocorreu ou não.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int num;
+  bool possuiImpar;
+  
+  possuiImpar = false;
+  while ((cin >> num) && num > 0) {
+    if (num % 2 == 1) {
+      possuiImpar = true;
+    }
+  }
+
+  if (possuiImpar) {
+    cout << "A sequencia possui numero impar" << endl;
+  } else {
+    cout << "A sequencia NAO possui numero impar" << endl;
+  }
+
+  return 0;
+}
+```
 
 ---
 
@@ -463,7 +576,34 @@ int main() {
 
 ---
 
-# Artifício
+# laços aninhados
+
+Você pode usar loops dentro de loops. Exemplo: desenhar um triângulo na tela com o caracteres `#`.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int lado = 6;
+  int x, y;
+
+  for (y = 0; y < lado; y++) {
+    for (x = 0; x <= y; x++) {
+      cout << "#";
+    }
+    cout << endl;
+  }
+  return 0;
+}
+```
+
+Quantas vezes o `cout << "#"` vai ser executado?
+
+---
+
+# Artifício para leitura de sequências de números finalizadas com zero
 
 Leia um número e imprima o dobro, repetidamente. Pare quando o número for 0:
 
@@ -506,7 +646,6 @@ Extra: qual é a melhor estratégia para o usuário?
 ## Exercício: um elefante incomoda muita gente
 
 Crie um programa que imprime a seguinte letra de música, de 1 até 30:
-
 
 ```
 1 elefante incomoda muita gente

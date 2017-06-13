@@ -13,7 +13,7 @@ int main() {
 	cout << "Digite o valor maximo: ";
 	cin >> maximo;
 
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < 20; i++) {
 		cout << rand() % maximo + 1 << endl;
 	}
 
