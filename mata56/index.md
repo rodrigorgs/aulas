@@ -57,10 +57,10 @@ title: MATA56 - PLP - 2017.1
 | **07/06** | Prolog: revisão.                                                 |                                                                               |
 | **12/06** | Prolog: revisão.                                                 |                                                                               |
 | **14/06** | **Prova de Prolog**                                              | **PROVA**                                                                     |
+| **19/06** | [Conceitos de LPs][conceitos]                                    |                                                                               |
 
 <!--
 |           | Conceitos de LPs. Sintaxe.                             |             |
-| **19/06** | Semântica: identificadores e vinculação.               |             |
 | **21/06** | Conceitos de LPs. Tempo de vida de variáveis           |             |
 | **26/06** | Gerenciamento de memória.                              |             |
 | **28/06** | Conceitos de LPs. Escopo e tipo.                       |             |
@@ -87,6 +87,7 @@ title: MATA56 - PLP - 2017.1
 -->
 
 [swish]: http://swish.swi-prolog.org/
+[conceitos]: http://slides.com/rodrigorgs/conceitos-de-linguagens-de-programacao
 
 <script type="text/javascript">
 function desabilitaLinksComecadosPor(prefixo) {
