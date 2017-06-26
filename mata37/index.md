@@ -36,6 +36,7 @@ title: MATA37 - ILP - 2017.1
 
 # Links importantes
 
+- [Código-fonte produzido durante a aula](codigo/)
 - Tutoriais, apostilas e livros:
   - [Curso C++](http://excript.com/curso-cpp.html)
   - [Introdução a Ciência da Computação em C](https://www.ime.usp.br/~hitoshi/introducao/)
