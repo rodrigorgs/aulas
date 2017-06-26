@@ -73,7 +73,7 @@ title: MATA37 - ILP - 2017.1
 | **14/06** | Exercícios                                         |                                 |
 | **19/06** | [Vetores][vetores]                                 |                                 |
 | **21/06** | Exercícios                                         |                                 |
-| **26/06** | Exercícios                                         |                                 |
+| **26/06** | Vetores, [SDL](sdl/)                               |                                 |
 | **28/06** | Exercícios                                         |                                 |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
@@ -86,7 +86,7 @@ title: MATA37 - ILP - 2017.1
  -->
 <!--
 
-| **03/07** |                                               |                                     |
+| **03/07** | [Strings][strings]                                              |                                     |
 | **05/07** |                                               |                                     |
 | **10/07** |                                               |                                     |
 | **12/07** |                                               |                                     |
@@ -108,10 +108,13 @@ title: MATA37 - ILP - 2017.1
 | **06/09** |                                               |                                     |
 -->
 
+<!-- Strings, matrizes, ordenação, busca binária, função/recursão -->
+
 
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
 [replit]: https://repl.it/languages/cpp
 [vetores]: https://docs.google.com/presentation/d/1QRhykZHZEJnj_noNEO5ebwdqX5iik9G8QEp5NXe1aPw/edit
+[strings]: https://docs.google.com/presentation/d/1nu6lvyXXjpH-fjRcaCdlEyCxdRlWtYWbeZUzMKuHQ-U/edit
 
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 [devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/
