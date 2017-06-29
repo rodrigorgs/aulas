@@ -34,7 +34,7 @@ int main() {
   pos.y = 160;
   for (i = 0; i < 320; i++) {
     pos.x = i;
-    SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0x00, 0x00, 0x00));
+    SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0, 0, 0));
     SDL_BlitSurface(image, NULL, screenSurface, &pos);
     SDL_UpdateWindowSurface(window);
     SDL_Delay(10);

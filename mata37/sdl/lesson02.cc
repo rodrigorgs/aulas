@@ -1,4 +1,7 @@
+#include <iostream>
 #include <SDL.h>
+
+using namespace std;
 
 SDL_Window *window = NULL;
 SDL_Surface *screenSurface = NULL;
@@ -22,15 +25,15 @@ int main() {
   init();
   
   SDL_Surface *image = SDL_LoadBMP("hello.bmp");
-  if (!image) {
-    printf("Error loading image: %s\n", SDL_GetError());
+  if (image == NULL) {
+    cout << "Error loading image: " << SDL_GetError() << endl;
     SDL_Quit();
   }
 
   SDL_BlitSurface(image, NULL, screenSurface, NULL);
   SDL_UpdateWindowSurface(window);
 
-  SDL_Delay(2000);
+  SDL_Delay(4000);
   SDL_FreeSurface(image);
   SDL_FreeSurface(screenSurface);
   SDL_DestroyWindow(window);
