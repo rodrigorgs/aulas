@@ -56,3 +56,7 @@ table th { background-color: lightgray; padding: $cell-padding; border: 2px soli
 table td { background-color: white; padding: $cell-padding; border: 2px solid darkgray; }
 table { border: 3px solid darkgray; border-collapse: collapse; }
 
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: blue !important;
+  text-decoration: underline;
+}
