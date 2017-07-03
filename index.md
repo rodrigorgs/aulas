@@ -10,7 +10,7 @@ Disciplinas ministradas pelo professor [Rodrigo Rocha](https://rodrigorgs.github
 
 - [MATA37: Introdução à Lógica de Programação](mata37)
 - [MATA56: Paradigmas de Linguagens de Programação](mata56)
-- [MATE94: Engenharia de Software Experimental](https://github.com/rodrigorgs/analise-quantitativa20171)
+- [MATE94: Engenharia de Software Experimental](https://github.com/rodrigorgs/analise-quantitativa)
 
 # Semestres anteriores
 

@@ -61,7 +61,7 @@ title: MATA56 - PLP - 2017.1
 | **21/06** | Conceitos de LPs.                                                |                                                                               |
 | **26/06** | Conceitos de LPs.                                                |                                                                               |
 | **28/06** | Conceitos de LPs.                                                |                                                                               |
-| **03/07** | Scheme: introdução                                               |                                                                               |
+| **03/07** | [Scheme: introdução](aula08-lisp)                                |                                                                               |
 | **05/07** | Scheme: introdução                                               |                                                                               |
 | **10/07** | Scheme: exercícios de recursão                                   |                                                                               |
 | **12/07** | **Prova sobre conceitos**                                        | **PROVA**                                                                     |

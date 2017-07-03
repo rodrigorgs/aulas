@@ -5,7 +5,7 @@ date:   2017-02-01 16:40:00 -0300
 categories: aula
 ---
 
-# Programação funcional: Lisp (1958)
+# LISP (1958)
 
 Programação simbólica, programação funcional.
 
@@ -18,6 +18,61 @@ Características: tipificação dinâmica, garbage collector, funções como cid
 ## Scheme
 
 Nesta disciplina estudaremos a linguagem Scheme, que é um dialeto de Lisp. Usaremos o [BiwaScheme](http://www.biwascheme.org/), que é um interpretador de Scheme escrito em JavaScript e que roda no navegador.
+
+## Programação funcional
+
+<!-- http://lukajcb.github.io/blog/functional/2016/07/31/what-makes-a-language-functional.html -->
+
+<!-- https://en.wikipedia.org/wiki/Functional_programming -->
+
+## Analogia: álgebra
+
+Aplicação de regras para transformar expressões em expressões mais simples.
+
+Exemplo:
+
+```
+(a + b)² - (a + b)²
+```
+
+Temos uma regra que diz que (x + y)² pode ser reescrito como x² + 2xy + y². Aplicando essa regra, obtemos:
+
+```
+(a + b)² - (a + b)² =
+a² + 2ab + b² - (a² + 2ab + b²) =
+a² + 2ab + b² - a² - 2ab - b² =
+a² - a² + 2ab - 2ab + b² - b² =
+0 + 0 + 0 =
+0
+```
+
+Também temos uma regra que diz que x - x = 0. Aplicando essa regra no início, podemos resolver a expressão mais rapidamente:
+
+```
+(a + b)² - (a + b)² =
+0
+```
+
+## Cálculo lambda
+
+Enquanto uma máquina de Turing define uma sequência de operações que modificam o estado da computação (a fita da máquina), o cálculo lambda define regras para reescrever expressões.
+
+Adaptado de <https://en.wikipedia.org/wiki/Lambda_calculus>
+
+Uma expressão lambda é um dos seguintes elementos:
+
+| Nome      | Sintaxe | Descrição                                                           |
+| :-------  | :-----  | :------------------------------                                     |
+| Variável  | a       | Um nome que representa um valor                                     |
+| Abstração | (λx.M)  | Definição de uma função com variável x e corpo M (expressão lambda) |
+| Aplicação | (M N)   | Aplicação de função. M e N são expressões lambda                    |
+
+Regras de reescrita ou redução permitem transformar uma expressão lambda em outra mais simples:
+
+- Conversão alfa: renomear variáveis na expressão. Exemplo: (λx.Mx) → (λy.My)
+- Conversão beta: substituir ocorrências da variável no corpo da função pela expressão à qual a função é aplicada. Exemplo: ((λx.xx) ab) → abab
+
+Estratégias de redução: estrita ou não-estrita
 
 ## Scheme: teoria
 

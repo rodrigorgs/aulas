@@ -76,6 +76,8 @@ title: MATA37 - ILP - 2017.1
 | **21/06** | Exercícios                                         |                                 |
 | **26/06** | Vetores, [SDL](sdl/)                               |                                 |
 | **28/06** | Exercícios                                         |                                 |
+| **03/07** | [Strings][strings]                                              |                                     |
+| **05/07** |                                               |                                     |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
@@ -87,8 +89,6 @@ title: MATA37 - ILP - 2017.1
  -->
 <!--
 
-| **03/07** | [Strings][strings]                                              |                                     |
-| **05/07** |                                               |                                     |
 | **10/07** |                                               |                                     |
 | **12/07** |                                               |                                     |
 | **17/07** |                                               |                                     |
