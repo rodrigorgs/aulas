@@ -38,6 +38,7 @@ title: MATA56 - PLP - 2017.1
 # Links importantes
 
 - [SWISH][swish]: interpretador de Prolog online
+- [BiwaScheme](biwascheme): interpretador de Scheme online
 
 # Conteúdo
 
@@ -62,7 +63,7 @@ title: MATA56 - PLP - 2017.1
 | **26/06** | Conceitos de LPs.                                                |                                                                               |
 | **28/06** | Conceitos de LPs.                                                |                                                                               |
 | **03/07** | [Scheme: introdução](aula08-lisp)                                |                                                                               |
-| **05/07** | Scheme: introdução                                               |                                                                               |
+| **05/07** | [Scheme: exercícios](aula09-lisp-ex)                                               |                                                                               |
 | **10/07** | Scheme: exercícios de recursão                                   |                                                                               |
 | **12/07** | **Prova sobre conceitos**                                        | **PROVA**                                                                     |
 
