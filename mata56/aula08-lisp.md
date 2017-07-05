@@ -90,11 +90,11 @@ Listas também podem ser avaliadas para valores. Em particular, um núcleo bási
 - `(cdr x)` ==> lista restante após remover primeiro elemento da lista `x`. Exemplo: `(cdr (quote (a b c)))` ==> `(b c)`
 - `(cons x y)` ==> lista resultante de se adicionar o valor de `x` ao início da lista `y`. Exemplo: `(cons (quote a) (quote (b c)))` ==> `(a b c)`
 - `(equal? x y)` ==> `#t` se `x` e `y` têm o mesmo valor; `#f` caso contrário.
-- `(cond (p1 e1) (p2 e2) ...)` => valor de ei, onde pi é o primeiro dos ps cujo valor não é Nil.
+- `(cond (p1 e1) (p2 e2) ...)` => valor de ei, onde pi é o primeiro dos ps cujo valor não é '())'.
 - `((lambda (v1 ... vn) e) e1 ... en)` ==> valor de e em um ambiente no qual as variáveis v1 ... vn assumem os valores das expressões e1 ... en. Exemplo: `((lambda (x y) (cons (car x) y)) (quote (a b)) (quote (c d)))`
 - `((define f (lambda ...) e1 .. en)` é o mesmo que lambda..., com a regra adicional que, sempre que a expressão `(f a1 ... an)` for avaliada, f é substituído por `(define f lambda...)`. Isso permite definir funções recursivas. Exemplo: `((define f (lambda (x) (cond ((atom x) x) ((quote t) (ff (car x)))))) (quote ((a b) c)))`
 
-<!-- - `(atom x)` ==> `t` se `x` é um átomo; `Nil' caso contrário -->
+<!-- - `(atom x)` ==> `t` se `x` é um átomo; `'())'' caso contrário -->
 
 Note, a princípio, uma lista não tem valor definido, a não ser se enquadre em um dos casos listados acima.
 
@@ -124,9 +124,9 @@ Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construçõ
 ## Abreviações comuns
 
 - `'e` é equivalente a `(quote e)`. Exemplos: `'abc`, `'(1 2 3)`.
-- `(list e1 ... en)` é equivalente a `(cons e1 (cons ... (cons en Nil)))`. Exemplo: `(list 1 2 3)` é equivalente a `(cons 1 (cons 2 (cons 3 Nil)))`, que é equivalente a `(quote (1 2 3))`, que é equivalente a `'(1 2 3)`.
-- `(define (null x) (equal? x Nil))`
-- `(define (and p q) (cond p q) (t Nil))`
+- `(list e1 ... en)` é equivalente a `(cons e1 (cons ... (cons en '())')))`. Exemplo: `(list 1 2 3)` é equivalente a `(cons 1 (cons 2 (cons 3 '())')))`, que é equivalente a `(quote (1 2 3))`, que é equivalente a `'(1 2 3)`.
+- `(define (null x) (equal? x '())'))`
+- `(define (and p q) (cond p q) (t '())'))`
     - também há definições para `not` e `or`
 - `(define (cadr x) (car (cdr x)))`
     - `(define (caar x) (car (car x)))`
@@ -140,10 +140,10 @@ Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construçõ
 
 ## Manipulação de strings
 
-- (length s): comprimento da string s. 
-    - Ex.: `(length "Fulano")`
-- (concat s1 ... sn): concatena as strings s1 ... sn.
-    - Ex.: `(concat  "Alo"   ", "   "Mundo")`
+- (string-length s): comprimento da string s. 
+    - Ex.: `(string-length "Fulano")`
+- (string-append s1 ... sn): concatena as strings s1 ... sn.
+    - Ex.: `(string-length  "Alo"   ", "   "Mundo")`
 - `(substring s inicio fim)`: retorna uma substring de s
     - Ex.: `(substring ">>Alo, Mundo" 2 5)`
 
@@ -154,8 +154,8 @@ Usamos aspas para representar strings. Exemplo: `"alo mundo"`.
 - Operadores aritméticos: +, -, /, *, % (resto da divisão)
     - Ex.: `(+ 2 3)`, `(+ 2 (- 4 1))`, `(* 1 (+ 2 (/ 6 2)))`
     - Ex.: `(* 1 2 3 4)` (+ e * permitem mais de dois argumentos)
-- Comparadores: <, >, <=, >=, =, /= (diferente)
-    - Ex.: `(< 2 3)`, `(/= 5 (+ 2 3))`
+- Comparadores: <, >, <=, >=, =
+    - Ex.: `(< 2 3)`, `(= 5 (+ 2 3))`
 - Funcões matemáticas: sin cos tan asin acos atan floor max min log abs ceil pow exp atan2 random sqrt round
     - Ex.: `(sin (/ (* 2 3.141592) 8))`, `(max 3 5)`
 
