@@ -86,8 +86,8 @@ Expressões podem ser avaliadas para um valor. Em particular, alguns átomos pos
 Listas também podem ser avaliadas para valores. Em particular, um núcleo básico de Scheme pode ser definido a partir de regras de re-escrita de listas que seguem os seguintes padrões:
 
 - `(quote x)` ou `'x` ==> `x`, isto é, o valor da lista `(quote x)` é `x`, onde `x` é uma s-expressão qualquer. Exemplo: `(quote abc)` ==> `abc`; `(quote (a b c))` ==> `(a b c)`
-- `(car x)` ==> primeiro elemento da lista `x`. Exemplo: `(car (quote a b c))` ==> `a`
-- `(cdr x)` ==> lista restante após remover primeiro elemento da lista `x`. Exemplo: `(cdr (quote (a b c)))` ==> `(b c)`
+- `(car x)` ==> primeiro elemento da lista `x`. Exemplo: `(car '(a b c))` ==> `a`
+- `(cdr x)` ==> lista restante após remover primeiro elemento da lista `x`. Exemplo: `(cdr '(a b c))` ==> `(b c)`
 - `(cons x y)` ==> lista resultante de se adicionar o valor de `x` ao início da lista `y`. Exemplo: `(cons (quote a) (quote (b c)))` ==> `(a b c)`
 - `(equal? x y)` ==> `#t` se `x` e `y` têm o mesmo valor; `#f` caso contrário.
 - `(cond (p1 e1) (p2 e2) ...)` => valor de ei, onde pi é o primeiro dos ps cujo valor não é '())'.
