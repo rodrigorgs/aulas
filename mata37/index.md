@@ -76,8 +76,10 @@ title: MATA37 - ILP - 2017.1
 | **21/06** | Exercícios                                         |                                 |
 | **26/06** | Vetores, [SDL](sdl/)                               |                                 |
 | **28/06** | Exercícios                                         |                                 |
-| **03/07** | [Strings][strings]                                              |                                     |
-| **05/07** |                                               |                                     |
+| **03/07** | [Strings][strings]                                 |                                 |
+| **05/07** | Exercícios                                         |                                 |
+| **10/07** | [Matrizes][matrizes]                               |                                 |
+| **12/07** |                                                    |                                 |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
@@ -89,8 +91,6 @@ title: MATA37 - ILP - 2017.1
  -->
 <!--
 
-| **10/07** |                                               |                                     |
-| **12/07** |                                               |                                     |
 | **17/07** |                                               |                                     |
 | **19/07** |                                               |                                     |
 | **24/07** |                                               |                                     |
@@ -116,6 +116,7 @@ title: MATA37 - ILP - 2017.1
 [replit]: https://repl.it/languages/cpp
 [vetores]: https://docs.google.com/presentation/d/1QRhykZHZEJnj_noNEO5ebwdqX5iik9G8QEp5NXe1aPw/edit
 [strings]: https://docs.google.com/presentation/d/1nu6lvyXXjpH-fjRcaCdlEyCxdRlWtYWbeZUzMKuHQ-U/edit
+[matrizes]: https://docs.google.com/presentation/d/1wfDe5AFXdvvVaOf-Jdc-vQCUyOJlMF8Nz9Vqy_8fT-0/edit
 
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 [devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/
