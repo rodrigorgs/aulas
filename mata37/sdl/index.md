@@ -39,10 +39,20 @@ sudo apt-get install libsdl2*dev
 
 ---
 
+# Instalação (Windows)
+
+Tente um desses tutoriais:
+
+- <https://www.youtube.com/watch?v=acLgxNubi1U>
+- <https://abaixonivel.wordpress.com/2009/11/28/instalando-e-configurando-o-codeblocks-com-sdl-no-windows/>
+- <https://abaixonivel.wordpress.com/2012/07/20/preparando-se-para-usar-sdl2-parte2/>
+
+---
+
 # Compilação (macOS ou Linux)
 
 ```bash
-g++ alomundo.c `sdl2-config --cflags --libs`
+g++ alomundo.cc `sdl2-config --cflags --libs`
 ```
 
 ---
@@ -62,7 +72,7 @@ Os parâmetros `-I` e `-L` definem os caminhos. O parâmetro `-lSDL2` informa qu
 Exemplo para Windows com MinGW:
 
 ```bash
-gcc prog.c -o prog -IC:\mingw\include\SDL2
+g++ prog.cc -o prog -IC:\mingw\include\SDL2
     -LC:\mingw\lib -lmingw32 -lSDL2main -lSDL2
 ```
 

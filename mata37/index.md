@@ -29,7 +29,7 @@ title: MATA37 - ILP - 2017.1
 
 - Exercícios online individuais<br/><span style="color: gray;">\[peso: 3\]</span>
 - Duas provas práticas<br/><span style="color: gray;">\[peso: 5\]</span>
-- Trabalho prático (jogo)<br/><span style="color: gray;">\[peso: 2\]</span>
+- [Trabalho prático (jogo)](trabalho20171)<br/><span style="color: gray;">\[peso: 2\]</span>
 </div>
 
 <div style="clear: left;"></div>

@@ -9,6 +9,17 @@ A ILP Game é uma biblioteca de funções que simplificam o desenvolvimento de a
 
 A ILP Game possui poucas funções; na prática, você ainda precisará usar a SDL diretamente em várias situações, seguindo as orientações em sua [documentação](https://wiki.libsdl.org/APIByCategory).
 
+## Dependências
+
+Antes de usar a ILP Game, você precisa de:
+
+- compilador de C++
+- biblioteca SDL
+- biblioteca SDL\_image
+- biblioteca SDL\_ttf
+
+Na dúvida sobre como instalar as dependências? Verifique nossos [slides sobre SDL](https://rodrigorgs.github.io/aulas/mata37/sdl/).
+
 ## Como usar?
 
 Para usar, copie o arquivo [ilpgame.h](ilpgame.h) para o diretório onde está o seu arquivo fonte (`.cc` ou `.cpp`) e adicione a seguinte linha ao início do arquivo fonte:
