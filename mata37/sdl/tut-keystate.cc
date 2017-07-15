@@ -12,12 +12,10 @@ void destroy() {
   SDL_FreeSurface(img);
 }
 
-bool processEvent(SDL_Event event) {
+void processEvent(SDL_Event event) {
   if (isQuitEvent(event)) {
-    return false; // encerra o game loop
-  };
-
-  return true; // continua o game loop
+    endGameLoop();
+  }
 }
 
 void update() {
@@ -28,11 +26,11 @@ void update() {
   if (keyboard[SDL_SCANCODE_LEFT]) playerx -= velocidade;
   if (keyboard[SDL_SCANCODE_RIGHT]) playerx += velocidade;
 
-  cleanScreen();
-  drawImage(img, playerx, playery);
-  updateScreen();
-
   SDL_Delay(1000.0 / 60);
+}
+
+void draw() {
+  drawImage(img, playerx, playery);
 }
 
 int main() {

@@ -11,14 +11,17 @@ void destroy() {
   TTF_CloseFont(font);
 }
 
-bool processEvent(SDL_Event event) {
-  return !isQuitEvent(event);
+void processEvent(SDL_Event event) {
+  if (isQuitEvent(event)) {
+    endGameLoop();
+  }
 }
 
 void update() {
-  cleanScreen();
+}
+
+void draw() {
   drawText("Hello, World!", font, whiteColor, 10, 30);
-  updateScreen();
 }
 
 int main() {

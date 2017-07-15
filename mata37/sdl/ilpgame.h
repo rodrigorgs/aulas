@@ -12,12 +12,23 @@ using namespace std;
 
 SDL_Window *window = NULL;
 SDL_Surface *screen = NULL;
+SDL_Renderer *renderer = NULL;
+
+bool gameLoopQuit = false;
+
+////////////////////////////////////////////
+// Funções definidas pelo usuário
+////////////////////////////////////////////
+
+void init();
+void destroy();
+void processEvent(SDL_Event event);
+void update();
+void draw();
 
 ////////////////////////////////////////////
 // Inicializacao
 ////////////////////////////////////////////
-
-void destroy();
 
 void quit() {
   destroy();
@@ -29,6 +40,10 @@ void quit() {
   if (screen) {
     SDL_FreeSurface(screen);
     screen = NULL;
+  }
+  if (renderer) {
+    SDL_DestroyRenderer(renderer);
+    renderer = NULL;
   }
   if (window) {
     SDL_DestroyWindow(window);
@@ -59,9 +74,15 @@ void initSDL_base(int width, int height) {
     exit(1);
   }
 
-  window = SDL_CreateWindow("Tutorial", 0, 0, width, height, SDL_WINDOW_SHOWN);
+  window = SDL_CreateWindow("Tutorial", 0, 0, width, height, 0);
   if (!window) {
     cerr << "Error creating window: " << SDL_GetError() << endl;
+    exit(1);
+  }
+
+  renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+  if (!renderer) {
+    cerr << "Error creating renderer: " << SDL_GetError() << endl;
     exit(1);
   }
 
@@ -94,22 +115,22 @@ SDL_Surface *loadBMP(string filename) {
 }
 
 // Adaptado de http://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index2.php
-SDL_Surface *loadImage(string path) {
+SDL_Surface *loadImage(string filename) {
   SDL_Surface* optimizedSurface = NULL;
 
-  SDL_Surface* loadedSurface = IMG_Load(path.c_str());
+  SDL_Surface* loadedSurface = IMG_Load(filename.c_str());
   if (!loadedSurface) {
-    printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError());
+    printf( "Unable to load image %s! SDL_image Error: %s\n", filename.c_str(), IMG_GetError());
     exit(1);
   }
 
   optimizedSurface = SDL_ConvertSurface(loadedSurface, screen->format, 0);
   if (!optimizedSurface) {
-    printf( "Unable to optimize image %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
+    printf( "Unable to optimize image %s! SDL Error: %s\n", filename.c_str(), SDL_GetError() );
     exit(1);
   }
 
-  SDL_FreeSurface( loadedSurface );
+  SDL_FreeSurface(loadedSurface);
 
   return optimizedSurface;
 }
@@ -127,57 +148,86 @@ TTF_Font *loadFont(string filename, int size) {
 // Desenho
 //////////////////////////////////////
 
-void cleanScreen() {
-  SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0x00, 0x00, 0x00));
-}
-
 void cleanScreen(int r, int g, int b) {
   SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, r, g, b));
+}
+
+void cleanScreen() {
+  cleanScreen(0, 0, 0);
 }
 
 void updateScreen() {
   SDL_UpdateWindowSurface(window);
 }
 
-void drawText(string texto, TTF_Font *font, SDL_Color cor, int x, int y) {
+void drawText(string text, TTF_Font *font, SDL_Color color, int x, int y) {
   SDL_Rect pos = {x, y, 0, 0};
-  SDL_Surface *text = TTF_RenderText_Solid(font, texto.c_str(), cor);
-  if (!text) {
-    cerr << "Erro rendertext" << endl;
+  SDL_Surface *textSurface = TTF_RenderText_Solid(font, text.c_str(), color);
+  if (!textSurface) {
+    cerr << "Erro: drawText" << endl;
     exit(1);
   }
-  SDL_BlitSurface(text, NULL, screen, &pos);
+  SDL_BlitSurface(textSurface, NULL, screen, &pos);
 }
 
 void drawImage(SDL_Surface *surface, int x, int y) {
-  SDL_Rect dest = {x, y, 0, 0};
-  SDL_BlitSurface(surface, NULL, screen, &dest);
+  if (surface) {
+    SDL_Rect dest = {x, y, 0, 0};
+    SDL_BlitSurface(surface, NULL, screen, &dest);
+  } else {
+    cerr << "Erro: drawImage com surface == NULL" << endl;
+  }
+}
+
+void drawCenteredImage(SDL_Surface *surface, int x, int y) {
+  drawImage(surface, x - surface->w / 2, y - surface->h / 2);
+}
+
+//////////////////////////////////////
+// Desenho geométrico
+//////////////////////////////////////
+
+void drawLine(int x1, int y1, int x2, int y2, int r, int g, int b) {
+  SDL_SetRenderDrawColor(renderer, r, g, b, SDL_ALPHA_OPAQUE);
+  SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
 }
 
 //////////////////////////////////////
 // Game loop
 //////////////////////////////////////
 
-void init();
-bool processEvent(SDL_Event event);
-void update();
-
 bool isQuitEvent(SDL_Event event) {
   return event.type == SDL_QUIT || (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE);
 }
 
+void endGameLoop() {
+  gameLoopQuit = true;
+}
+
 void gameLoop() {
   SDL_Event event;
-  bool gameLoopQuit = false;
+  gameLoopQuit = false;
 
   init();
 
   while (!gameLoopQuit) {
-    while (SDL_PollEvent(&event) != 0) {
-      gameLoopQuit = !processEvent(event);
+    while (SDL_PollEvent(&event) != 0 && !gameLoopQuit) {
+      processEvent(event);
     }
 
-    update();
+    if (!gameLoopQuit) {
+      update();
+    }
+
+    if (!gameLoopQuit) {
+      SDL_RenderClear(renderer);
+      cleanScreen();
+      draw();
+      SDL_RenderPresent(renderer);
+      updateScreen();
+    }
   }
+
+  // destroy() is called by quit(), which is called because of atexit()
 }
 

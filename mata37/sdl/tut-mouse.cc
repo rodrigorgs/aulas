@@ -13,12 +13,10 @@ void destroy() {
   SDL_FreeSurface(hero);
 }
 
-bool processEvent(SDL_Event event) {
+void processEvent(SDL_Event event) {
   if (isQuitEvent(event)) {
-    return false; // encerra o game loop
-  };
-
-  return true; // continua o game loop
+    endGameLoop();
+  }
 }
 
 void update() {
@@ -33,7 +31,7 @@ void update() {
   }
 
   cleanScreen();
-  drawImage(img, x, y);
+  drawCenteredImage(img, x, y);
   updateScreen();
 }
 
