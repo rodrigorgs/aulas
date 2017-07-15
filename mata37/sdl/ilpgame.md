@@ -7,7 +7,7 @@ title: Biblioteca ILP Game
 
 A ILP Game é uma biblioteca de funções que simplificam o desenvolvimento de aplicações multimídia com a biblioteca [SDL](https://www.libsdl.org/).
 
-A ILP Game possui poucas funções; na prática, você ainda precisará usar a SDL diretamente em várias situações, seguindo as orientações em sua [documentação](https://wiki.libsdl.org/APIByCategory).
+A ILP Game possui poucas funções; na prática, você ainda precisará usar a SDL diretamente em várias situações, seguindo as orientações [nestes slides](https://rodrigorgs.github.io/aulas/mata37/sdl/) e na [documentação da SDL](https://wiki.libsdl.org/APIByCategory).
 
 ## Dependências
 
