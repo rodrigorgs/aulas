@@ -79,7 +79,10 @@ title: MATA37 - ILP - 2017.1
 | **03/07** | [Strings][strings]                                 |                                 |
 | **05/07** | Exercícios                                         |                                 |
 | **10/07** | [Matrizes][matrizes]                               |                                 |
-| **12/07** |                                                    |                                 |
+| **12/07** | Exercícios                                         |                                 |
+| **17/07** | [Structs](structs)                                 |                                 |
+|           | [Funções](funcoes)                                 |                                 |
+| **19/07** | Exercícios                                         |                                 |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
@@ -91,8 +94,6 @@ title: MATA37 - ILP - 2017.1
  -->
 <!--
 
-| **17/07** |                                               |                                     |
-| **19/07** |                                               |                                     |
 | **24/07** |                                               |                                     |
 | **26/07** |                                               |                                     |
 | **31/07** |                                               |                                     |
