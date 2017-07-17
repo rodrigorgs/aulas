@@ -2,4 +2,4 @@
 sourcefile=$1
 shift
 
-g++ $sourcefile `sdl2-config --cflags --libs` -lSDL2_ttf -lSDL2_image $@
+g++ $sourcefile `sdl2-config --cflags --libs` -lSDL2_ttf -lSDL2_image -lSDL2_mixer $@

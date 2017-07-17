@@ -62,7 +62,7 @@ int main() {
 No Mac ou no Linux:
 
 ```bash
-g++ seuarquivo.cc `sdl2-config --cflags --libs` -lSDL2_ttf -lSDL2_image
+g++ seuarquivo.cc `sdl2-config --cflags --libs` -lSDL2_ttf -lSDL2_image -lSDL2_mixer
 ```
 
 ## Como funciona?
@@ -90,7 +90,7 @@ Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans
 - [Desenhar imagem sob o cursor do mouse](tut-mouse.cc) (ao segurar o botão esquerdo do mouse, a imagem muda)
 - [Escrever na tela](tut-texto.cc)
 - [Contador de tempo](tut-texto.cc)
-
+- [Áudio](tut-audio.cc)
 
 Demonstrações:
 

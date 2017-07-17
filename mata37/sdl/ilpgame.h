@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include <SDL_mixer.h>
 #include <iostream>
 #include <sstream>
 
@@ -36,6 +37,10 @@ void quit() {
   if (TTF_WasInit()) {
     TTF_Quit();
   }
+  while (Mix_Init(0)) {
+    Mix_Quit();
+  }
+  Mix_CloseAudio();
 
   if (screen) {
     SDL_FreeSurface(screen);
@@ -68,6 +73,19 @@ void initSDL_image() {
   }
 }
 
+void initSDL_mixer() {
+  int flags = 0;
+  int initted = Mix_Init(flags);
+  if ((initted & flags) != flags) {
+    cerr << "SDL mixer init error: " << Mix_GetError() << endl;
+    exit(1);
+  }
+  if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1) {
+    cerr << "SDL init audio error: " << SDL_GetError() << endl;
+    exit(1);
+  }
+}
+
 void initSDL_base(int width, int height) {
   if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
     cerr << "SDL init error: " << SDL_GetError() << endl;
@@ -94,6 +112,7 @@ void initSDL(int width, int height) {
   initSDL_base(width, height);
   initSDL_image();
   initSDL_ttf();
+  initSDL_mixer();
 }
 
 void initSDL() {
@@ -190,6 +209,28 @@ void drawCenteredImage(SDL_Surface *surface, int x, int y) {
 void drawLine(int x1, int y1, int x2, int y2, int r, int g, int b) {
   SDL_SetRenderDrawColor(renderer, r, g, b, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+}
+
+//////////////////////////////////////
+// Audio
+//////////////////////////////////////
+
+Mix_Music *loadMusic(string filename) {
+  Mix_Music *music = Mix_LoadMUS(filename.c_str());
+  if (!music) {
+    cerr << "Error loading " << filename << endl;
+    exit(1);
+  }
+  return music;
+}
+
+Mix_Chunk *loadSound(string filename) {
+  Mix_Chunk *chunk = Mix_LoadWAV(filename.c_str());
+  if (!chunk) {
+    cerr << "Error loading " << filename << endl;
+    exit(1);
+  }
+  return chunk;
 }
 
 //////////////////////////////////////
