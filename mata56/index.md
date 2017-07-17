@@ -63,13 +63,13 @@ title: MATA56 - PLP - 2017.1
 | **26/06** | Conceitos de LPs.                                                |                                                                               |
 | **28/06** | Conceitos de LPs.                                                |                                                                               |
 | **03/07** | [Scheme: introdução](aula08-lisp)                                |                                                                               |
-| **05/07** | [Scheme: exercícios](aula09-lisp-ex)                                               |                                                                               |
+| **05/07** | [Scheme: exercícios](aula09-lisp-ex)                             |                                                                               |
 | **10/07** | Scheme: exercícios de recursão                                   |                                                                               |
 | **12/07** | **Prova sobre conceitos**                                        | **PROVA**                                                                     |
+| **17/07** | Scheme: [funções de alta ordem](aula10-lisp-alta-ordem)          |                                                                               |
+|           | Scheme: [recursão profunda](aula11-lisp-rec-prof)                |                                                                               |
 
 <!--
-| **17/07** | Scheme: funções de alta ordem                          |   |
-| **19/07** | Scheme: recursão profunda                              |   |
 | **24/07** | JS: introdução, funções de alta ordem, escopo          |   |
 | **26/07** | JS: closures                                           |   |
 | **31/07** | JS: currying, aplicação parcial, composição de funções |   |
