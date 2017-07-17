@@ -2,6 +2,8 @@
 
 SDL_Surface *hero;
 SDL_Surface *brick;
+SDL_Surface *img;
+int x, y;
 
 void init() {
   hero = loadImage("hero.bmp");
@@ -20,8 +22,6 @@ void processEvent(SDL_Event event) {
 }
 
 void update() {
-  SDL_Surface *img;
-  int x, y;
   Uint32 mouse = SDL_GetMouseState(&x, &y);
 
   if (mouse & SDL_BUTTON(SDL_BUTTON_LEFT)) {
@@ -29,10 +29,10 @@ void update() {
   } else {
     img = hero;
   }
+}
 
-  cleanScreen();
+void draw() {
   drawCenteredImage(img, x, y);
-  updateScreen();
 }
 
 int main() {
