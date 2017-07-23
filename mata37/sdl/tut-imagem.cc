@@ -22,7 +22,7 @@ void draw() {
   drawImage(img, 0, 0);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
   return 0;

@@ -35,7 +35,7 @@ void update() {
 void draw() {
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL(320, 200);
   gameLoop();
   return 0;

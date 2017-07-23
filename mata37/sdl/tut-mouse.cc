@@ -35,7 +35,7 @@ void draw() {
   drawCenteredImage(img, x, y);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
 

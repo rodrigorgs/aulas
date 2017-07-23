@@ -9,7 +9,7 @@ SDL_Surface *screenSurface = NULL;
 void init() {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 		printf("SDL init video error: %s\n", SDL_GetError());
-    SDL_Quit();
+        SDL_Quit();
 	}
 
   window = SDL_CreateWindow("Tutorial", 0, 0, 320, 240, SDL_WINDOW_SHOWN);
@@ -21,9 +21,9 @@ void init() {
   screenSurface = SDL_GetWindowSurface(window);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   init();
-  
+
   SDL_Surface *image = SDL_LoadBMP("hello.bmp");
   if (image == NULL) {
     cout << "Error loading image: " << SDL_GetError() << endl;
@@ -38,6 +38,6 @@ int main() {
   SDL_FreeSurface(screenSurface);
   SDL_DestroyWindow(window);
   SDL_Quit();
-	
+
 	return 0;
 }

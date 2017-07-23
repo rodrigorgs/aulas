@@ -1,6 +1,6 @@
 #include <SDL.h>
 
-int main() {
+int main(int argc, char *argv[]) {
   int intensidade;
   SDL_Window *window;
   SDL_Surface *superficie;

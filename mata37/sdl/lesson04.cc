@@ -24,7 +24,7 @@ void init() {
   }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   SDL_Event event;
   bool quit = false;
 

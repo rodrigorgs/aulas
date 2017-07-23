@@ -24,7 +24,7 @@ void draw() {
   drawText("Hello, World!", font, whiteColor, 10, 30);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
 

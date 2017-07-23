@@ -82,7 +82,7 @@ void draw() {
   SDL_Delay(1000 / 60);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL(WINDOW_WIDTH, WINDOW_HEIGHT);
 
   gameLoop();

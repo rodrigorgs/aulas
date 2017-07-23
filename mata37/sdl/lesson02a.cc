@@ -18,7 +18,7 @@ void init() {
   screenSurface = SDL_GetWindowSurface(window);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   SDL_Rect pos;
   int i;
 

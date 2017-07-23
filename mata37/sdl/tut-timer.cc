@@ -29,7 +29,7 @@ void draw() {
   drawText(textoContador, font, whiteColor, 10, 30);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
 

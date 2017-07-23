@@ -50,7 +50,7 @@ void draw() {
 O seu `main()` deve ficar assim:
 
 ```c++
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
   return 0;

@@ -4,6 +4,7 @@
 #include <SDL_mixer.h>
 #include <iostream>
 #include <sstream>
+#include <cstdlib> // exit
 
 // https://stackoverflow.com/questions/5590381/easiest-way-to-convert-int-to-string-in-c
 #define tostring(x) static_cast<std::ostringstream&>( \
@@ -33,7 +34,7 @@ void draw();
 
 void quit() {
   destroy();
-  
+
   if (TTF_WasInit()) {
     TTF_Quit();
   }
@@ -92,7 +93,7 @@ void initSDL_base(int width, int height) {
     exit(1);
   }
 
-  window = SDL_CreateWindow("Tutorial", 0, 0, width, height, 0);
+  window = SDL_CreateWindow("Tutorial", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
   if (!window) {
     cerr << "Error creating window: " << SDL_GetError() << endl;
     exit(1);
@@ -104,7 +105,7 @@ void initSDL_base(int width, int height) {
     exit(1);
   }
 
-  screen = SDL_GetWindowSurface(window);  
+  screen = SDL_GetWindowSurface(window);
 }
 
 void initSDL(int width, int height) {
@@ -139,13 +140,15 @@ SDL_Surface *loadImage(string filename) {
 
   SDL_Surface* loadedSurface = IMG_Load(filename.c_str());
   if (!loadedSurface) {
-    printf( "Unable to load image %s! SDL_image Error: %s\n", filename.c_str(), IMG_GetError());
+    cerr << "Unable to load image " << filename << endl;
+    cerr << "SDL_image Error: " << IMG_GetError() << endl;
     exit(1);
   }
 
   optimizedSurface = SDL_ConvertSurface(loadedSurface, screen->format, 0);
   if (!optimizedSurface) {
-    printf( "Unable to optimize image %s! SDL Error: %s\n", filename.c_str(), SDL_GetError() );
+    cerr << "Unable to optimize image " << filename << endl;
+    cerr << "SDL Error: " << SDL_GetError() << endl;
     exit(1);
   }
 

@@ -33,7 +33,7 @@ void draw() {
   drawImage(img, playerx, playery);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
   initSDL();
   gameLoop();
 

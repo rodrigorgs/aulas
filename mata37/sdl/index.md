@@ -41,11 +41,15 @@ sudo apt-get install libsdl2*dev
 
 # Instalação (Windows)
 
-Tente um desses tutoriais:
+- [Instalação do compilador de C++ (MinGW)](https://youtu.be/bEs-5IU_l9w) (vídeo)
+- [Instalação da SDL](https://youtu.be/gvEWGHAPO8k) (vídeo)
 
+<!--
+- <https://youtu.be/ybYMOKEW9IY> (em inglês)
 - <https://www.youtube.com/watch?v=acLgxNubi1U>
 - <https://abaixonivel.wordpress.com/2009/11/28/instalando-e-configurando-o-codeblocks-com-sdl-no-windows/>
 - <https://abaixonivel.wordpress.com/2012/07/20/preparando-se-para-usar-sdl2-parte2/>
+-->
 
 ---
 
@@ -57,24 +61,13 @@ g++ alomundo.cc `sdl2-config --cflags --libs`
 
 ---
 
-# Compilação
-
-Usar o comando `sdl2-config` é a forma recomendada de configurar os parâmetros de compilação para sua plataforma. O que esse comando faz é definir o diretório onde estão os arquivos de cabeçalho (`.h`) e os arquivos de biblioteca (`.a`, `.so`, `.dylib`, `.dll`, a depender da plataforma) da SDL. Rodar esse comando resulta nos seguintes parâmetros de compilação:
+# Compilação (Windows)
 
 ```bash
--I/caminho/para/cabecalhos/da/SDL2
--L/caminho/para/bibliotecas/da/SDL2
--lSDL2
+g++ alomundo.cc -I "C:\MinGW\include\SDL2" -mwindows -lmingw32 -lSDL2main -lSDL2
 ```
 
-Os parâmetros `-I` e `-L` definem os caminhos. O parâmetro `-lSDL2` informa que queremos usar a biblioteca SDL2.
-
-Exemplo para Windows com MinGW:
-
-```bash
-g++ prog.cc -o prog -IC:\mingw\include\SDL2
-    -LC:\mingw\lib -lmingw32 -lSDL2main -lSDL2
-```
+Esse comando assume que o MinGW está instalado em `C:\MinGW` e que os arquivos de desenvolvimento da SDL foram copiados para os respectivos subdiretórios (`include`, `lib`, `bin`).
 
 ---
 
@@ -83,7 +76,7 @@ g++ prog.cc -o prog -IC:\mingw\include\SDL2
 ```c++
 #include <SDL.h>
 
-int main() {
+int main(int argc, char *argv[]) {
   SDL_Window *window;
   SDL_Surface *screenSurface;
 
