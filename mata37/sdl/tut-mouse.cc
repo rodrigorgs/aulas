@@ -6,8 +6,8 @@ SDL_Surface *img;
 int x, y;
 
 void init() {
-  hero = loadImage("hero.bmp");
-  brick = loadImage("brick.bmp");
+  hero = loadImage("hero.png");
+  brick = loadImage("brick.png");
 }
 
 void destroy() {

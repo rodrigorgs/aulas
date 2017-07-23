@@ -22,7 +22,12 @@ typedef struct {
 
 Objeto carro;
 
+Mix_Music *musica;
+
 void init() {
+  musica = loadMusic("beat.wav");
+  Mix_PlayMusic(musica, -1);
+
   carro.x = WINDOW_WIDTH / 2;
   carro.y = WINDOW_HEIGHT / 2;
   carro.vel = 0.0f;
@@ -30,6 +35,7 @@ void init() {
 }
 
 void destroy() {
+  Mix_FreeMusic(musica);
 }
 
 void processEvent(SDL_Event event) {

@@ -19,7 +19,7 @@ typedef struct {
 Objeto jogador;
 
 void init() {
-  jogador.img = loadImage("hero.bmp");
+  jogador.img = loadImage("hero.png");
   jogador.x = 0;
   jogador.y = WINDOW_HEIGHT / 3;
   jogador.velx = 3;

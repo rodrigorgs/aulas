@@ -6,6 +6,10 @@
 #include <sstream>
 #include <cstdlib> // exit
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
 // https://stackoverflow.com/questions/5590381/easiest-way-to-convert-int-to-string-in-c
 #define tostring(x) static_cast<std::ostringstream&>( \
         (std::ostringstream() << std::dec << x)).str()
@@ -88,7 +92,9 @@ void initSDL_mixer() {
 }
 
 void initSDL_base(int width, int height) {
-  if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
+  Uint32 flags = SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_EVENTS;
+
+  if (SDL_Init(flags) < 0) {
     cerr << "SDL init error: " << SDL_GetError() << endl;
     exit(1);
   }
@@ -218,6 +224,19 @@ void drawLine(int x1, int y1, int x2, int y2, int r, int g, int b) {
 // Audio
 //////////////////////////////////////
 
+#ifdef __EMSCRIPTEN__
+// Disable music for now
+Mix_Music *loadMusic(string filename) {
+  return NULL;
+}
+Mix_Chunk *loadSound(string filename) {
+  return NULL;
+}
+#define Mix_PlayChannel(a, b, c) cerr << "Mix_PlayChannel is disabled." << endl
+#define Mix_PlayMusic(a, b) cerr << "Mix_PlayMusic is disabled." << endl
+#define Mix_FreeChunk(a) cerr << "Mix_FreeChunk is disabled." << endl
+#define Mix_FreeMusic(a) cerr << "Mix_FreeMusic is disabled." << endl
+#else
 Mix_Music *loadMusic(string filename) {
   Mix_Music *music = Mix_LoadMUS(filename.c_str());
   if (!music) {
@@ -235,42 +254,64 @@ Mix_Chunk *loadSound(string filename) {
   }
   return chunk;
 }
+#endif
+
 
 //////////////////////////////////////
 // Game loop
 //////////////////////////////////////
 
 bool isQuitEvent(SDL_Event event) {
+#ifdef __EMSCRIPTEN__
+  return false;
+#else
   return event.type == SDL_QUIT || (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE);
+#endif
 }
 
 void endGameLoop() {
   gameLoopQuit = true;
 }
 
-void gameLoop() {
+void gameLoopIteration(void *arg) {
   SDL_Event event;
+
+  while (SDL_PollEvent(&event) != 0 && !gameLoopQuit) {
+    processEvent(event);
+  }
+
+  if (!gameLoopQuit) {
+    update();
+  }
+
+  if (!gameLoopQuit) {
+    SDL_RenderClear(renderer);
+    cleanScreen();
+    draw();
+    SDL_RenderPresent(renderer);
+    updateScreen();
+  }
+
+#ifdef __EMSCRIPTEN__
+  if (gameLoopQuit) {
+    emscripten_cancel_main_loop();
+  }
+#endif
+}
+
+void gameLoop() {
   gameLoopQuit = false;
 
   init();
 
+#ifdef __EMSCRIPTEN__
+  int simulate_infinite_loop = 1;
+  emscripten_set_main_loop_arg(gameLoopIteration, NULL, -1, simulate_infinite_loop);
+#else
   while (!gameLoopQuit) {
-    while (SDL_PollEvent(&event) != 0 && !gameLoopQuit) {
-      processEvent(event);
-    }
-
-    if (!gameLoopQuit) {
-      update();
-    }
-
-    if (!gameLoopQuit) {
-      SDL_RenderClear(renderer);
-      cleanScreen();
-      draw();
-      SDL_RenderPresent(renderer);
-      updateScreen();
-    }
+    gameLoopIteration(NULL);
   }
+#endif
 
   // destroy() is called by quit(), which is called because of atexit()
 }

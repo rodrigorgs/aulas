@@ -3,7 +3,7 @@
 SDL_Surface *img;
 
 void init() {
-  img = loadImage("hero.bmp");
+  img = loadImage("hero.png");
 }
 
 void destroy() {

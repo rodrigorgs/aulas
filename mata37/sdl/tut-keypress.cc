@@ -5,7 +5,7 @@ int playerx = 0, playery = 0;
 int velocidade = 16;
 
 void init() {
-  img = loadImage("hero.bmp");
+  img = loadImage("hero.png");
 }
 
 void destroy() {
