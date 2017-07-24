@@ -84,35 +84,24 @@ title: MATA37 - ILP - 2017.1
 |           | [Funções](funcoes)                                 |                                 |
 | **19/07** | Exercícios                                         |                                 |
 | **24/07** | [Ordenação][ordenacao] ([2][ordenacao2])           |                                 |
+| **26/07** |                                                    |                                 |
+| **31/07** |                                                    |                                 |
+| **02/08** |                                                    |                                 |
+| **07/08** | [Busca binária][busca]                             |                                 |
+| **09/08** |                                                    |                                 |
+| **14/08** |                                                    |                                 |
+| **16/08** |                                                    |                                 |
+| **21/08** | [Ordenação][ordenacao]                             |                                 |
+| **23/08** |                                                    |                                 |
+| **28/08** |                                                    |                                 |
+| **30/08** |                                                    |                                 |
+| **04/09** |                                                    |                                 |
+| **06/09** |                                                    |                                 |
+
+<!-- aritmética, desvio, repetição, vetores, strings, matrizes, ordenação, busca binária, função/recursão -->
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
-
-<!-- 
-|           | [Resolução de problemas](#!qa)                |                                |
-|           | [Entrada e saída](#!entrada-saida.md)         |                                |
-
- -->
-<!--
-
-| **26/07** |                                               |                                     |
-| **31/07** |                                               |                                     |
-| **02/08** |                                               |                                     |
-| **07/08** |                                               |                                     |
-| **09/08** |                                               |                                     |
-| **14/08** |                                               |                                     |
-| **16/08** |                                               |                                     |
-| **21/08** |                                               |                                     |
-| **23/08** |                                               |                                     |
-| **28/08** |                                               |                                     |
-| **30/08** |                                               |                                     |
-| **04/09** |                                               |                                     |
-| **06/09** |                                               |                                     |
--->
-
-<!-- Strings, matrizes, ordenação, busca binária, função/recursão -->
-
-
 [cursoC]: http://equipe.nce.ufrj.br/adriano/c/apostila/texfiles/apostilaC.pdf
 [replit]: https://repl.it/languages/cpp
 [vetores]: https://docs.google.com/presentation/d/1QRhykZHZEJnj_noNEO5ebwdqX5iik9G8QEp5NXe1aPw/edit
@@ -120,6 +109,8 @@ title: MATA37 - ILP - 2017.1
 [matrizes]: https://docs.google.com/presentation/d/1wfDe5AFXdvvVaOf-Jdc-vQCUyOJlMF8Nz9Vqy_8fT-0/edit
 [ordenacao]: https://docs.google.com/presentation/d/1SBfYu_MiDFzfiV8P3zhs2Wu0yvtAHrFOO7rSkibDd3U/edit
 [ordenacao2]: https://www.slideshare.net/xrodrigorgs/aula-busca-e-ordenao
+[busca]: https://docs.google.com/presentation/d/1GhlmL_Xxh5bnonbjCIJOlgMMUGJoPXy_nZpswZ6306g/edit
+[recursao]: https://docs.google.com/presentation/d/1wbRqdCPIQQwXvfeJthUAsM9w4YGkd6n6IpXDpVITq1M/edit
 
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 [devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/
