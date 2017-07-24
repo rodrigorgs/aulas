@@ -67,10 +67,10 @@ title: MATA56 - PLP - 2017.1
 | **10/07** | Scheme: exercícios de recursão                                   |                                                                               |
 | **12/07** | **Prova sobre conceitos**                                        | **PROVA**                                                                     |
 | **17/07** | Scheme: [funções de alta ordem](aula10-lisp-alta-ordem)          |                                                                               |
-|           | Scheme: [recursão profunda](aula11-lisp-rec-prof)                |                                                                               |
+| **19/07** | Scheme: [recursão profunda](aula11-lisp-rec-prof)                |                                                                               |
+| **24/07** | JS: introdução e funções de alta ordem                           |                                                                               |
 
 <!--
-| **24/07** | JS: introdução, funções de alta ordem, escopo          |   |
 | **26/07** | JS: closures                                           |   |
 | **31/07** | JS: currying, aplicação parcial, composição de funções |   |
 | **02/08** | (paralisação)                                          |   |

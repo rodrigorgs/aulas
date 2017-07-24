@@ -83,6 +83,7 @@ title: MATA37 - ILP - 2017.1
 | **17/07** | [Structs](structs)                                 |                                 |
 |           | [Funções](funcoes)                                 |                                 |
 | **19/07** | Exercícios                                         |                                 |
+| **24/07** | [Ordenação][ordenacao] ([2][ordenacao2])           |                                 |
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
 [desvio]: https://docs.google.com/presentation/d/1ziW7-IQMEHCXYp4YvUxgl8FZhu_WaWdX9vtNjRWo6cA/edit?usp=sharing
@@ -94,7 +95,6 @@ title: MATA37 - ILP - 2017.1
  -->
 <!--
 
-| **24/07** |                                               |                                     |
 | **26/07** |                                               |                                     |
 | **31/07** |                                               |                                     |
 | **02/08** |                                               |                                     |
@@ -118,6 +118,8 @@ title: MATA37 - ILP - 2017.1
 [vetores]: https://docs.google.com/presentation/d/1QRhykZHZEJnj_noNEO5ebwdqX5iik9G8QEp5NXe1aPw/edit
 [strings]: https://docs.google.com/presentation/d/1nu6lvyXXjpH-fjRcaCdlEyCxdRlWtYWbeZUzMKuHQ-U/edit
 [matrizes]: https://docs.google.com/presentation/d/1wfDe5AFXdvvVaOf-Jdc-vQCUyOJlMF8Nz9Vqy_8fT-0/edit
+[ordenacao]: https://docs.google.com/presentation/d/1SBfYu_MiDFzfiV8P3zhs2Wu0yvtAHrFOO7rSkibDd3U/edit
+[ordenacao2]: https://www.slideshare.net/xrodrigorgs/aula-busca-e-ordenao
 
 [linux]: https://tutorial.djangogirls.org/pt/intro_to_command_line/
 [devc]: http://linguagemc.com.br/tutorial-de-instalacao-do-dev-c/
