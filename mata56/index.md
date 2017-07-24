@@ -68,7 +68,7 @@ title: MATA56 - PLP - 2017.1
 | **12/07** | **Prova sobre conceitos**                                        | **PROVA**                                                                     |
 | **17/07** | Scheme: [funções de alta ordem](aula10-lisp-alta-ordem)          |                                                                               |
 | **19/07** | Scheme: [recursão profunda](aula11-lisp-rec-prof)                |                                                                               |
-| **24/07** | JS: introdução e funções de alta ordem                           |                                                                               |
+| **24/07** | [JS: introdução e funções de alta ordem](aula12-js-intro)        |                                                                               |
 
 <!--
 | **26/07** | JS: closures                                           |   |
