@@ -1,5 +1,5 @@
 ---
-layout: remark
+layout: page
 title: Ordenação
 ---
 

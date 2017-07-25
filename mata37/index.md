@@ -83,7 +83,7 @@ title: MATA37 - ILP - 2017.1
 | **17/07** | [Structs](structs)                                 |                                 |
 |           | [Funções](funcoes)                                 |                                 |
 | **19/07** | Exercícios                                         |                                 |
-| **24/07** | [Ordenação][ordenacao] ([2][ordenacao2])           |                                 |
+| **24/07** | [Ordenação](ordenacao)                             |                                 |
 | **26/07** |                                                    |                                 |
 | **31/07** |                                                    |                                 |
 | **02/08** |                                                    |                                 |
