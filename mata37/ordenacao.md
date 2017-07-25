@@ -5,7 +5,7 @@ title: Ordenação
 
 # Ordenação
 
-- Slides: [Ordenação (prof. Rubisley)]<https://docs.google.com/presentation/d/1SBfYu_MiDFzfiV8P3zhs2Wu0yvtAHrFOO7rSkibDd3U/edit>
+- Slides: [Ordenação (prof. Rubisley)](https://docs.google.com/presentation/d/1SBfYu_MiDFzfiV8P3zhs2Wu0yvtAHrFOO7rSkibDd3U/edit)
 - Slides: [Busca e Ordenação (prof. Rodrigo)](https://www.slideshare.net/xrodrigorgs/aula-busca-e-ordenao)
 - Material complementar:
 	- Vídeo: [Select-sort with Gypsy folk dance](https://www.youtube.com/watch?v=Ns4TPTC8whw) (é uma variação do que vimos em aula)
