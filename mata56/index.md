@@ -69,9 +69,9 @@ title: MATA56 - PLP - 2017.1
 | **17/07** | Scheme: [funções de alta ordem](aula10-lisp-alta-ordem)          |                                                                               |
 | **19/07** | Scheme: [recursão profunda](aula11-lisp-rec-prof)                |                                                                               |
 | **24/07** | [JS: introdução e funções de alta ordem](aula12-js-intro)        |                                                                               |
+| **26/07** | [JS: closures](aula13-js-closures)                               |                                                                               |
 
 <!--
-| **26/07** | JS: closures                                           |   |
 | **31/07** | JS: currying, aplicação parcial, composição de funções |   |
 | **02/08** | (paralisação)                                          |   |
 | **07/08** | JS: revisão de currying, introdução a concorrência     |   |
