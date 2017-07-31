@@ -10,7 +10,7 @@ int main() {
 	int temp;
 	int imenor;
 
-	for (i = 0; i < N; i++) {
+	for (i = 0; i < N - 1; i++) {
 		imenor = i;
 		for (j = i; j < N; j++) {
 			if (vetor[j] < vetor[imenor]) {
