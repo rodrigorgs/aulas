@@ -2,14 +2,8 @@
 
 Eu,
 
-<div class="lesson">
 <textarea class="code">
 digite seu nome completo</textarea>
-<div class="output"></div>
-<div class="output"></div>
-<pre class="verifier">function(str, info) {  }</pre>
-<button class="go" style="display: none;">Rodar</button>
-</div>
 
 declaro que, durante o horário de aplicação da prova:
 
