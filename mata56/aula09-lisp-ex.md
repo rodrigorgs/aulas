@@ -66,7 +66,7 @@ Função `(obesidade peso altura)`, que retorna `'abaixoDoPeso` se o IMC é meno
   (let ((indice (imc peso altura)))
     (cond
      ((< indice 20) 'abaixoDoPeso)
-     ((< indice 30) 'neutro)
+     ((<= indice 30) 'neutro)
      (else 'obeso))))
 ; testes
 (teste 'abaixoDoPeso (obesidade 40 1.80))
