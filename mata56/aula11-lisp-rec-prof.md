@@ -51,7 +51,7 @@ Consideramos três casos:
 
 **IMPORTANTE!!!**: Para checar se `x` é uma lista não-vazia, use `(pair? x)` (retorna `t` somente se `x` for uma lista não-vazia).
 
-## Sua vez
+## Exemplo: conta-prof
 
 Implemente a função `(conta-prof x lista)`, que indica o número de ocorrências de `x` na lista `lista`, que pode ou não ser profunda.
 
@@ -72,13 +72,7 @@ Implemente a função `(conta-prof x lista)`, que indica o número de ocorrênci
 (teste 2 (conta-prof 'c '(c ((b a)) (d (e (c))) g)))
 </textarea>
 
-A resposta está abaixo.
-
-## Exemplo: conta-prof (resposta)
-
-Implemente a função `(conta-prof x lista)`, que indica o número de ocorrências de `x` na lista `lista`, que pode ou não ser profunda. (resposta abaixo)
-
-<textarea class="code lang-scheme">
+<textarea class="answer">
 (define (conta-prof x lista)
   (cond
     ; lista vazia
@@ -97,6 +91,7 @@ Implemente a função `(conta-prof x lista)`, que indica o número de ocorrênci
 (teste 0 (conta-prof 'j '(c ((b a)) (d (e (c))) g)))
 (teste 2 (conta-prof 'c '(c ((b a)) (d (e (c))) g)))
 </textarea>
+
 
 ## Exemplo: membro-prof
 
@@ -123,11 +118,7 @@ Implemente a função `(membro-prof x lista)`, que indica se `x` aparece na expr
 (teste #t (membro-prof '() '(())))
 </textarea>
 
-## Exemplo: membro-prof (resposta)
-
-Implemente a função `(membro-prof x lista)`, que indica se `x` aparece na expressão `lista`, que pode ou não ser profunda.
-
-<textarea class="code lang-scheme">
+<textarea class="answer">
 (define (membro-prof x lista)
   (cond
     ; nenhum átomo é membro da lista vazia
@@ -149,21 +140,6 @@ Implemente a função `(membro-prof x lista)`, que indica se `x` aparece na expr
 (teste #t (membro-prof '() '(())))
 </textarea>
 
-<!--
-<textarea class="code lang-scheme">
-(define (membro-prof x expr)
-  (cond
-    ((not (pair? expr)) (equal? x expr))
-    (else (or
-      (membro-prof x (car expr))
-      (membro-prof x (cdr expr))))))
-
-(print (membro-prof 5 '(1 2 3)))
-(print (membro-prof 5 '(1 2 3 (4 5))))
-(print (membro-prof 5 '(1 2 (3 (5 4)))))
-</textarea>
--->
-
 ## Dica
 
 Note que as duas funções de recursão profunda são muito parecidas. O que muda de uma pra outra:
@@ -184,11 +160,7 @@ Antes de implementar, responda: que função você vai usar para combinar os res
 (teste '(0 (0 3 (5 0))) (subst 1 0 '(1 (1 3 (5 1)))))
 </textarea>
 
-## Exemplo: subst (resposta)
-
-Crie uma função, `(subst x y expr)`, que substitui as ocorrências de `x` por `y` na expressão `expr`, usando recursão profunda.
-
-<textarea class="code lang-scheme">
+<textarea class="answer">
 (define (subst x y lista)
   (cond
     ; lista vazia

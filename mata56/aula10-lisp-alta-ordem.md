@@ -25,12 +25,18 @@ Escreva a função `(todos-pares l)`, que indica que todos os elementos da lista
 (teste #f (todos-pares '(1 2 4 6)))
 </textarea>
 
-<!-- 
+<textarea class="answer">
 (define (todos-pares l)
   (cond
     ((null? l) #t)
     (else (and (par (car l)) (todos-pares (cdr l))))))
- -->
+; testes
+(define (par x) (= (mod x 2) 0))
+
+(teste #t (todos-pares '()))
+(teste #t (todos-pares '(2 4 6)))
+(teste #f (todos-pares '(1 2 4 6)))
+</textarea>
 
 ## Funções de alta ordem
 
@@ -63,12 +69,22 @@ Implemente a função `(all f l)`, que retorna verdadeiro se, e somente se, a li
     '(8 5 9 3)))
 </textarea>
 
-<!-- 
+<textarea class="answer">
 (define (all f l)
   (cond
     ((null? l) #t)
     (else (and (f (car l)) (all f (cdr l))))))
- -->
+; testes
+(define (par x) (= (mod x 2) 0))
+(teste #t (all par '()))
+(teste #t (all par '(2 4 6)))
+(teste #f (all par '(1 2 4 6)))
+; você também pode usar funções anônimas (funções lambda)
+(teste #t
+  (all
+    (lambda (x) (< x 10))
+    '(8 5 9 3)))
+</textarea>
 
 ## Reimplemente todos-pares
 
@@ -99,12 +115,17 @@ Implemente a função `(any f l)` (indica se a função `f` retorna verdadeiro p
 (teste #t (any par '(1 3 6 9)))
 </textarea>
 
-<!-- 
+<textarea class="answer">
 (define (any f l)
   (cond
     ((null? l) #f)
     (else (or (f (car l)) (any f (cdr l))))))
- -->
+; testes
+(define (par x) (= (mod x 2) 0))
+(teste #f (any par '()))
+(teste #f (any par '(1 3 5)))
+(teste #t (any par '(1 3 6 9)))
+</textarea>
 
 ## Função map
 
@@ -127,12 +148,20 @@ OBS.: Use a função `(cons elem lista)` para construir uma lista cujo primeiro 
 (teste '(2 4 6 8 10) (map dobro '(1 2 3 4 5)))
 </textarea>
 
-<!-- 
+<textarea class="answer">
 (define (map f l)
   (cond
     ((null? l) '())
     (else (cons (f (car l)) (map f (cdr l))))))
- -->
+
+(define (dobro n) (* n 2))
+
+; testes
+(teste '() (map dobro '()))
+(teste '(6) (map dobro '(3)))
+(teste '(6 6) (map dobro '(3 3)))
+(teste '(2 4 6 8 10) (map dobro '(1 2 3 4 5)))
+</textarea>
 
 ## Função filter
 
@@ -140,16 +169,20 @@ OBS.: Use a função `(cons elem lista)` para construir uma lista cujo primeiro 
 
 Implemente a função `(filter f l)` (retorna uma cópia da lista `l` contendo apenas os elementos para os quais a função `f` retorna `#t`). Use `cons`.
 
-<!-- 
-; em Scheme:
+<textarea class="code lang-scheme">
 (define (filter f l)
   (cond
-    ((null? l) l)
-    ((f (car l)) (cons (car l) (filter f (cdr l)) ) )
-    (else (filter f (cdr l)))))
- -->
+    ((null? l) 'IMPLEMENTE)
+    ((f (car l)) 'IMPLEMENTE))
+    (else 'IMPLEMENTE))
+; testes
+(teste '(3 6 9)
+  (filter
+    (lambda (x) (< x 10))
+    '(3 12 6 15 9)))
+</textarea>
 
-<textarea class="code lang-scheme">
+<textarea class="answer">
 (define (filter f l)
   (cond
     ((null? l) l)
