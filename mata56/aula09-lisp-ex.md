@@ -61,6 +61,7 @@ Função `(obesidade peso altura)`, que retorna `'abaixoDoPeso` se o IMC é meno
 </textarea>
 
 <textarea class="answer">
+(define (imc peso altura) (/ peso (* altura altura)))
 (define (obesidade peso altura)
   (let ((indice (imc peso altura)))
     (cond
