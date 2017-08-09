@@ -52,7 +52,7 @@
 
 ## Web
 
-1. Acesse <http://localhost:8000/mata56/list.php?apostila=prova-funcional>. Troque `prova-funcional` pelo nome da apostila configurado no código-fonte da prova, em uma linha iniciada por `window.apostila = `.
+1. Acesse <http://localhost:8000/aulas/lib/submissao/list.php?apostila=prova-funcional>. Troque `prova-funcional` pelo nome da apostila configurado no código-fonte da prova, em uma linha iniciada por `window.apostila = `.
 2. Pegue os ids listados e coloque-os no arquivo `assets/submissao/submissao.js`, onde tem `respostaIds = `.
 3. Troque os testes em `assets/submissao/submissao.js`, onde tem `officialTests = `.
 
