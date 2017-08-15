@@ -255,6 +255,12 @@ let x = filmes.map(/* complete o código */);
 teste(["Die Hard", "Bad Boys", "The Chamber", "Fracture"], x);
 </textarea>
 
+<textarea class="answer">
+let x = filmes.map(f => f.titulo);
+// alternativa: let x = R.map(f => f.titulo, filmes);
+teste(["Die Hard", "Bad Boys", "The Chamber", "Fracture"], x);
+</textarea>
+
 ### filter
 
 Use a função `filter` para selecionar apenas os filmes com notas superior a 4.
@@ -283,12 +289,57 @@ let respostaCorreta = [
 teste(respostaCorreta, x);
 </textarea>
 
+<textarea class="answer">
+let x = filmes.filter(f => f.nota > 4);
+// alternativa:
+// let x = R.filter(f => f.nota > 4, filmes);
+
+let respostaCorreta = [
+{
+    "id": 654356453,
+    "titulo": "Bad Boys",
+    "capa": "http://cdn-0.nflximg.com/images/2891/BadBoys.jpg",
+    "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+    "nota": 5.0,
+    "bookmark": [{ id:432534, time:65876586 }]
+},
+{
+    "id": 675465,
+    "titulo": "Fracture",
+    "capa": "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
+    "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+    "nota": 4.5,
+    "bookmark": [{ id:432534, time:65876586 }]
+}
+];
+teste(respostaCorreta, x);
+</textarea>
+
 ### map e filter
 
 Agora combine map e filter para retornar apenas os títulos dos filmes com nota superior a 4.
 
 <textarea class="code">
 let x = 0; /* altere esta linha */
+
+teste(["Bad Boys", "Fracture"], x);
+</textarea>
+
+<textarea class="answer">
+let x = filmes.filter(f => f.nota > 4).map(f => f.titulo);
+// alternativa 1:
+//let x = R.map(f => f.titulo, R.filter(f => f.nota > 4, filmes));
+//let funcaoComposta = R.pipe(
+//  lista => R.filter(f => f.nota > 4, lista),
+//  lista => R.map(f => f.titulo, lista)
+//);
+//let x = funcaoComposta(filmes);
+// alternativa 2
+//let funcaoComposta = R.pipe(
+//  R.filter(f => f.nota > 4),
+//  R.map(f => f.titulo)
+//);
+//let x = funcaoComposta(filmes);
 
 teste(["Bad Boys", "Fracture"], x);
 </textarea>
@@ -352,6 +403,11 @@ let maiorNota = filmes.map(f => f.nota)
 
 teste(5, maiorNota);
 </textarea>
+
+<textarea class="answer">
+// TODO
+</textarea>
+
 
 (Você também pode tentar calcular a maior nota sem usar funções de alta ordem. O código será muito mais longo.)
 

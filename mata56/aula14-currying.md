@@ -227,6 +227,16 @@ var qtdQuadradosImpares = R.pipe(/*...*/);
 teste(4, qtdQuadradosImpares([2, 3, 5, 8, 13, 21]));
 </textarea>
 
+<textarea class="answer">
+// --- complete o código:
+var qtdQuadradosImpares = R.pipe(
+  R.map(x => x * x),
+  R.filter(x => x % 2 == 1),
+  R.length);
+// ---
+teste(4, qtdQuadradosImpares([2, 3, 5, 8, 13, 21]));
+</textarea>
+
 A biblioteca Ramda também possui a função `compose`, que faz a mesma coisa que a função `pipe`, porém recebendo os argumentos na ordem inversa.
 
 Exercícios: <https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch5.html>
@@ -250,6 +260,16 @@ teste(["Muito", "bem"], wordsOriginal("Muito bem"));
 teste(["Muito", "bem"], words("Muito bem"));
 </textarea>
 
+<textarea class="answer">
+var wordsOriginal = function(str) {
+  return R.split(' ', str);
+};
+var words = R.split(' ');
+
+teste(["Muito", "bem"], wordsOriginal("Muito bem"));
+teste(["Muito", "bem"], words("Muito bem"));
+</textarea>
+
 ## Exercício 1a
 
 Use `map` para criar uma nova função, `wordsArray`, que aplica words a cada elemento da array de entrada.
@@ -260,6 +280,13 @@ var wordsArray = ...;
 
 teste([["Muito", "bem"], ["Vamos", "continuar"]], wordsArray(["Muito bem", "Vamos continuar"]));
 </textarea>
+
+<textarea class="answer">
+var wordsArray = R.map(R.split(' ');
+
+teste([["Muito", "bem"], ["Vamos", "continuar"]], wordsArray(["Muito bem", "Vamos continuar"]));
+</textarea>
+
 
 ## Exercício 2
 
@@ -277,6 +304,17 @@ teste(["quadrado", "ubíquo"], filterQs(["quadrado", "círculo", "ubíquo", "ok"
 teste(["quadrado", "ubíquo"], filterQsPointfree(["quadrado", "círculo", "ubíquo", "ok"]));
 </textarea>
 
+<textarea class="answer">
+var filterQs = function(xs) {
+  return R.filter(function(x) {
+    return R.match(/q/i, x).length > 0;
+  }, xs);
+};
+
+var filterQsPointfree = R.filter(R.pipe(R.match(/q/i), R.length))
+teste(["quadrado", "ubíquo"], filterQs(["quadrado", "círculo", "ubíquo", "ok"]));
+teste(["quadrado", "ubíquo"], filterQsPointfree(["quadrado", "círculo", "ubíquo", "ok"]));
+</textarea>
 
 ## Exercício 3
 
@@ -294,6 +332,21 @@ var max = function(xs) {
 };
 
 var maxPointfree = R.pipe(/* complete o código */);
+teste(10, maxPointfree([3, -99, 10, 9]));
+</textarea>
+
+<textarea class="answer">
+var _mantemMaior = function(x, y) {
+  return x >= y ? x : y;
+};
+
+var max = function(xs) {
+  return R.reduce(function(acc, x) {
+    return _mantemMaior(acc, x);
+  }, -Infinity, xs);
+};
+
+var maxPointfree = R.reduce(_mantemMaior, -Infinity);
 teste(10, maxPointfree([3, -99, 10, 9]));
 </textarea>
 
