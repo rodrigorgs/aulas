@@ -30,7 +30,7 @@ title: MATA56 - PLP - 2017.1
 - Prova escrita de Prolog <span style="color: gray;">\[peso: 2\]</span>
 - Prova escrita de conceitos <span style="color: gray;">\[peso: 2\]</span>
 - Prova prática de Scheme <span style="color: gray;">\[peso: 3\]</span>
-- Trabalho de JavaScript <span style="color: gray;">\[peso: 3\]</span>
+- [Trabalho de JavaScript](trabalho-js) <span style="color: gray;">\[peso: 3\]</span>
 </div>
 
 <div style="clear: left;"></div>
@@ -72,20 +72,17 @@ title: MATA56 - PLP - 2017.1
 | **26/07** | [JS: closures](aula13-js-closures)                                        |                                                                               |
 | **31/07** | Revisão de Scheme                                                         |                                                                               |
 | **02/08** | [JS: currying, aplicação parcial, composição de funções](aula14-currying) |                                                                               |
-
-<!--
-| **02/08** | (paralisação)                                          |   |
-| **07/08** | JS: revisão de currying, introdução a concorrência     |   |
-| **09/08** | JS: concorrência                                       |   |
-| **14/08** | JS: concorrência                                       |   |
-| **16/08** | Revisão: JS funcional e concorrência                   |   |
-| **21/08** |                                                        |   |
-| **23/08** |                                                        |   |
-| **28/08** |                                                        |   |
-| **30/08** |                                                        |   |
-| **04/09** |                                                        |   |
-| **06/09** |                                                        |   |
--->
+| **02/08** |                                                                           |                                                                               |
+| **07/08** |                                                                           |                                                                               |
+| **09/08** |                                                                           |                                                                               |
+| **14/08** |                                                                           |                                                                               |
+| **16/08** | [JS: concorrência](aula15-concorrencia)                                   |                                                                               |
+| **21/08** |                                                                           |                                                                               |
+| **23/08** |                                                                           |                                                                               |
+| **28/08** |                                                                           |                                                                               |
+| **30/08** |                                                                           |                                                                               |
+| **04/09** |                                                                           |                                                                               |
+| **06/09** | ENTREGA DO TRABALHO                                                       |                                                                               |
 
 [swish]: http://swish.swi-prolog.org/
 [conceitos]: http://slides.com/rodrigorgs/conceitos-de-linguagens-de-programacao
