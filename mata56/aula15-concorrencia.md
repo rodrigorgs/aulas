@@ -103,11 +103,11 @@ Dependendo de quando ocorrem trocas de contexto entre as tarefas 1 e 2, o result
 
 JavaScript permite escrever programas concorrentes, com uma diferença fundamental: não há preempção, isto é, o ambiente de execução JavaScript executa cada tarefa completamente antes de executar outra tarefa (semântica *run-to-completion*). Isso torna a escrita de programas concorrentes simples muito mais fácil, uma vez que diminui o número de sequências de execução possíveis.
 
-O modelo de concorrência do JavaScript é baseado em um *loop de eventos*, que é baseado em uma lista da tarefas. O ambiente de execução executa todas as tarefas em sequência, até terminarem as tarefas da fila. Nesse momento, o controle é passado para o navegador, para cuidar de atualizações da interface, leitura de dispositivos de entrada, acesso a rede, entre outras responsabilidades. Então o navegador acessa a fila de tarefas novamente, e executa as tarefas da fila até o final, e assim por diante.
+O modelo de concorrência do JavaScript é baseado em um **loop de eventos**, que adiciona e remove itens de uma **fila de tarefas**. O ambiente de execução executa todas as tarefas em sequência, até terminarem as tarefas da fila. Nesse momento, o controle é passado para o navegador, para cuidar de atualizações da interface, leitura de dispositivos de entrada, acesso a rede, entre outras responsabilidades. Então o navegador acessa a fila de tarefas novamente, e executa as tarefas da fila até o final, e assim por diante.
 
 ## Run-to-completion
 
-Como já dito anteriormente, o JavaScript não interrompe um código sendo executado, nem mesmo para lidar com a interface do usuário! Execute o exemplo abaixo e tente **rolar a página** enquanto a função está sendo executada:
+Como já dito anteriormente, o JavaScript não interrompe um código sendo executado, nem mesmo para lidar com a interface do usuário! Execute o exemplo abaixo e tente *rolar a página* enquanto a função está sendo executada:
 
 <textarea class="code">
 function funcaoDemorada() {
@@ -137,7 +137,7 @@ var codigo = download('http://jsonplaceholder.typicode.com/todos/1');
 console.log(codigo);
 ```
 
-O fato é que o download da página pode demorar até alguns segundos, e não queremos deixar a interface do navegador travada enquanto esperamos o download concluir. É por isso que normalmente as funções de download via AJAX são assíncronas, isto é, elas retornam imediatamente para que a próxima instrução possa ser executada. No entanto, no exemplo acima, provavelmente não dará tempo de terminar o download da página no momento que a segunda linha for executada. É por isso que é mais comum usar *callbacks*, isto é, passar para a função *ajax* uma função que será chamada quando o download for concluído. Algo assim:
+O fato é que o download da página pode demorar até alguns segundos, e não queremos deixar a interface do navegador travada enquanto esperamos o download concluir. É por isso que normalmente as funções de download via AJAX são **assíncronas**, isto é, elas retornam imediatamente para que a próxima instrução possa ser executada. No entanto, no exemplo acima, provavelmente não dará tempo de terminar o download da página no momento que a segunda linha for executada. É por isso que é mais comum usar **callbacks**, isto é, passar para a função *ajax* uma função que será chamada quando o download for concluído. Algo assim:
 
 <script type="text/javascript">
 function download(url, f) {
@@ -156,7 +156,7 @@ Note que, nesse exemplo, o texto `fim` será exibido antes do conteúdo da pági
 
 ## Exemplos
 
-A função JavaScript `setTimeout(f, ms)` chama a função `f` após pelo menos `ms` milissegundos. (Ou melhor, adiciona `f` à lista de eventos após `ms` milissegundos.)
+A função JavaScript `setTimeout(f, ms)` adiciona `f` à fila de tarefas após `ms` milissegundos.
 
 O que acontece quando você roda o seguinte código?
 
@@ -180,7 +180,7 @@ setTimeout(function () {
 x = 2;
 </textarea>
 
-Chamar `setTimeout` com instante 0 não faz com que a função seja chamada instantaneamente; em vez disso, a função é inserida no final da fila de tarefas e só será executada depois. Conceitualmente, podemos dividir o programa em partes que serão executadas *agora* (linhas 1, 2, 4, 5 e 6) e partes que serão executadas *depois* (linha 4). Diz-se que o `console.log` na linha 4 está sendo chamado de forma *assíncrona*.
+Chamar `setTimeout` com instante 0 não faz com que a função seja chamada instantaneamente; em vez disso, a função é inserida no final da fila de tarefas e só será executada depois. Conceitualmente, podemos dividir o programa em partes que serão executadas *agora* (linhas 1, 2, 4, 5 e 6) e partes que serão executadas *depois* (linha 3). Diz-se que o `console.log` na linha 3 está sendo chamado de forma *assíncrona*.
 
 E no código, a seguir, qual é o resultado?
 
@@ -194,6 +194,37 @@ setTimeout(
 );
 while (new Date() - inicio < 1000) {};
 </textarea>
+
+E no código a seguir?
+
+<textarea class="code">
+for (var i = 1; i <= 3; i++) {
+  setTimeout(
+    function() {
+      console.log(i);
+    }, 0);
+}
+</textarea>
+
+<!-- 
+var inicio = new Date();
+function resultado() {
+  var fim = new Date();
+  console.log('resultado:', fim - inicio, 'ms');
+}
+function espera2000() {
+  var fim;
+  fim = new Date();
+  console.log('while inicio: ', fim - inicio, 'ms');
+  while (new Date() - inicio < 2000) {};
+  fim = new Date();
+  console.log('while:', fim - inicio, 'ms');
+}
+setTimeout(resultado, 500);
+setTimeout(espera2000, 499);
+while (new Date() - inicio < 1000) {};
+
+ -->
 
 ## Não-determinismo
 
@@ -271,15 +302,17 @@ function multiplica(callback) {
 function imprime() {
     console.log(x);
 }
+console.log('a');
 adiciona(function () {
-  console.log('a');
+  console.log('b');
   multiplica(function () {
-    console.log('b');
-    imprime();
     console.log('c');
+    imprime();
+    console.log('d');
   });
-  console.log('d');
+  console.log('e');
 });
+console.log('f');
 </textarea>
 
 À medida que combinamos sequencialmente várias funções assíncronas, o nível de indentação do programa vai aumentando, um problema conhecido como [pyramid of doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)) ou [callback hell](http://callbackhell.com/).
