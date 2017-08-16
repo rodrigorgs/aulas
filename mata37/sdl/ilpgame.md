@@ -89,7 +89,7 @@ Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans
 - [Movimentar imagem de acordo com o estado das teclas direcionais](tut-keystate.cc) (experimente andar na diagonal)
 - [Desenhar imagem sob o cursor do mouse](tut-mouse.cc) (ao segurar o botão esquerdo do mouse, a imagem muda)
 - [Escrever na tela](tut-texto.cc)
-- [Contador de tempo](tut-texto.cc)
+- [Contador de tempo](tut-timer.cc)
 - [Áudio](tut-audio.cc)
 
 Demonstrações:
