@@ -82,13 +82,16 @@ Informações adicionais:
 
 ## Exemplos
 
+Todos os arquivos se encontram em <https://github.com/rodrigorgs/aulas/tree/master/mata37/sdl>.
+
 Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans.ttf`](FreeSans.ttf), [`hero.bmp`](hero.bmp) e [`brick.bmp`](brick.bmp)):
 
 - [Carregar e mostrar uma imagem](tut-imagem.cc) (aperte Esc para sair)
 - [Movimentar imagem ao pressionar tecla direcional](tut-keypress.cc)
 - [Movimentar imagem de acordo com o estado das teclas direcionais](tut-keystate.cc) (experimente andar na diagonal)
 - [Desenhar imagem sob o cursor do mouse](tut-mouse.cc) (ao segurar o botão esquerdo do mouse, a imagem muda)
-- [Escrever na tela](tut-texto.cc)
+- [Desenhar texto](tut-texto.cc)
+- [Escrever com o teclado](tut-escrever.cc): aceita teclas de A a Z e backspace
 - [Contador de tempo](tut-timer.cc)
 - [Áudio](tut-audio.cc)
 
@@ -96,6 +99,12 @@ Demonstrações:
 
 - [Bola quicando](demo-quica.cc): simula gravidade e coeficiente de restituição
 - [Carro](demo-carro.cc): controle um carro usando as setas direcionais
+- [Animação](demo-anima.cc): animação de uma pessoa andando formada por 4 imagens
+
+Jogos:
+
+- [Labirinto](jogo-labirinto.cc): movimente com setas direcionais
+- [Runner](jogo-runner.cc): mova para os lados para se desviar dos obstáculos
 
 ## Funções: Guia de Referência
 

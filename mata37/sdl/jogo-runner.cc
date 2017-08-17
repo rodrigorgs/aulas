@@ -5,7 +5,12 @@
 
 #define QTD_MAX_ARVORES 8
 
-SDL_Surface *img;
+#define ARVORE_LARGURA 60
+#define ARVORE_ALTURA 49
+
+#define CARRO_LARGURA 16
+#define CARRO_ALTURA 32
+
 SDL_Surface *imgCarro;
 SDL_Surface *imgArvore;
 SDL_Surface *background;
@@ -21,8 +26,8 @@ float velocidadeVertical = 1.0;
 float aceleracaoVertical = 0.05f;
 
 void inicializaArvore(int i) {
-  arvores[i].largura = 60;
-  arvores[i].altura = 49;
+  arvores[i].largura = ARVORE_LARGURA;
+  arvores[i].altura = ARVORE_ALTURA;
   arvores[i].x = rand() % 300;
   arvores[i].y = -arvores[i].largura - (rand() % 800);
 }
@@ -30,15 +35,14 @@ void inicializaArvore(int i) {
 void init() {
   srand(time(NULL));
 
-  img = loadImage("hero.png");
   background = loadImage("background.jpg");
   imgCarro = loadImage("carro.png");
-  imgArvore = loadImage("arvore.jpg");
+  imgArvore = loadImage("arvore.png");
   
   jogador.x = 100;
   jogador.y = 420;
-  jogador.largura = 32;
-  jogador.altura = 32;
+  jogador.largura = CARRO_LARGURA;
+  jogador.altura = CARRO_ALTURA;
 
   for (int i = 0; i < QTD_MAX_ARVORES; i++) {
     inicializaArvore(i);
@@ -46,7 +50,6 @@ void init() {
 }
 
 void destroy() {
-  SDL_FreeSurface(img);
   SDL_FreeSurface(background);
   SDL_FreeSurface(imgCarro);
   SDL_FreeSurface(imgArvore);
