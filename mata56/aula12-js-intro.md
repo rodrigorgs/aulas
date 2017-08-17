@@ -201,6 +201,18 @@ function meuMap(funcao, lista) {
 teste([2, 4, 6], meuMap(x => x * 2, [1, 2, 3]));
 </textarea>
 
+<textarea class="answer">
+function meuMap(funcao, lista) {
+  let resultado = [];
+  for (let i = 0; i < lista.length; i++) {
+    resultado.push(funcao(lista[i]));
+  }
+  return resultado;
+}
+
+teste([2, 4, 6], meuMap(x => x * 2, [1, 2, 3]));
+</textarea>
+
 ## Filmes
 
 (Baseado em <http://reactivex.io/learnrx/>.)
@@ -405,9 +417,12 @@ teste(5, maiorNota);
 </textarea>
 
 <textarea class="answer">
-// TODO
-</textarea>
+let maiorNota = filmes
+    .map(f => f.nota)
+    .reduce((acc, x) => x > acc ? x : acc);
 
+teste(5, maiorNota);
+</textarea>
 
 (Você também pode tentar calcular a maior nota sem usar funções de alta ordem. O código será muito mais longo.)
 

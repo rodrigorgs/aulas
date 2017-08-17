@@ -282,7 +282,7 @@ teste([["Muito", "bem"], ["Vamos", "continuar"]], wordsArray(["Muito bem", "Vamo
 </textarea>
 
 <textarea class="answer">
-var wordsArray = R.map(R.split(' ');
+var wordsArray = R.map(R.split(' '));
 
 teste([["Muito", "bem"], ["Vamos", "continuar"]], wordsArray(["Muito bem", "Vamos continuar"]));
 </textarea>
