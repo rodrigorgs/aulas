@@ -89,6 +89,7 @@ Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans
 - [Carregar e mostrar uma imagem](tut-imagem.cc) (aperte Esc para sair)
 - [Movimentar imagem ao pressionar tecla direcional](tut-keypress.cc)
 - [Movimentar imagem de acordo com o estado das teclas direcionais](tut-keystate.cc) (experimente andar na diagonal)
+  + Veja também os códigos de teclas na [documentação do SDL_Keycode](https://wiki.libsdl.org/SDL_Keycode).
 - [Desenhar imagem sob o cursor do mouse](tut-mouse.cc) (ao segurar o botão esquerdo do mouse, a imagem muda)
 - [Desenhar texto](tut-texto.cc)
 - [Escrever com o teclado](tut-escrever.cc): aceita teclas de A a Z e backspace
