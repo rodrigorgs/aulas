@@ -92,7 +92,7 @@ Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans
   + Veja também os códigos de teclas na [documentação do SDL_Keycode](https://wiki.libsdl.org/SDL_Keycode).
 - [Desenhar imagem sob o cursor do mouse](tut-mouse.cc) (ao segurar o botão esquerdo do mouse, a imagem muda)
 - [Desenhar texto](tut-texto.cc)
-- [Escrever com o teclado](tut-escrever.cc): aceita teclas de A a Z e backspace
+- [Escrever com o teclado](tut-escreve.cc): aceita teclas de A a Z e backspace
 - [Contador de tempo](tut-timer.cc)
 - [Áudio](tut-audio.cc)
 
