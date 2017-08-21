@@ -77,7 +77,7 @@ title: MATA56 - PLP - 2017.1
 | **09/08** |                                                                           |                                                                               |
 | **14/08** |                                                                           |                                                                               |
 | **16/08** | [JS: concorrência](aula15-concorrencia)                                   |                                                                               |
-| **21/08** |                                                                           |                                                                               |
+| **21/08** | [JS: padrões de concorrência](aula16-concorrencia-padroes)                |                                                                               |
 | **23/08** |                                                                           |                                                                               |
 | **28/08** |                                                                           |                                                                               |
 | **30/08** |                                                                           |                                                                               |
