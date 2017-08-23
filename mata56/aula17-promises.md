@@ -10,26 +10,28 @@ Até agora consideramos que as funções assíncronas sempre serão bem-sucedida
 
 Um padrão comum para possibilitar o tratamento de erros em funções assíncronas é usar dois callbacks: um que será chamado em caso de sucesso, e o outro que será chamado em caso de erro.
 
-No exemplo abaixo, a função `fazDownload` tem 50% de chance de ser bem-sucedida:
+No exemplo abaixo, a função assíncrona `sorteia0` retorna um número aleatório entre 0 e `maximo`, mas tem 20% de chance de falhar. Ela recebe dois callbacks: a função `resolve`, que será chamada em caso de sucesso, e a função `reject`, que será chamada em caso de falha.
 
 <textarea class="code">
-function fazDownload(url, cbSucesso, cbErro) {
-  var bemSucedido = Math.random() < 0.5;
-
+function sorteia0(maximo, resolve, reject) {
+  console.log('sorteia0', maximo, 'inicio');
   setTimeout(() => {
+    var bemSucedido = Math.random() < 0.8;
+    var valor = Math.round(Math.random() * maximo);
+    console.log('sorteia0', maximo, 'fim', bemSucedido ? valor : 'erro');
     if (bemSucedido)
-      cbSucesso();
+      resolve(valor);
     else
-      cbErro();
+      reject(new Error("Falha na geração"));
   }, 1000 * Math.random());
 }
 
-fazDownload("http://example.com/",
-  () => console.log("Download bem sucedido!"),
-  () => console.log("ERRO!"));
+sorteia0(100,
+  num => console.log("OK!", num),
+  erro => console.log("ERRO!", erro.message));
 </textarea>
 
-Se quisermos agora encadear uma sequência de downloads, de tal forma que um download só inicie quando o download anterior for concluído com sucesso, o código tende a ficar difícil de ler e entender. 
+Se quisermos agora encadear uma sequência de sorteios, de tal forma que um sorteio só inicie quando o sorteio anterior for concluído com sucesso, o código tende a ficar difícil de ler e entender. 
 
 ## Promises
 
@@ -39,117 +41,85 @@ Promises são objetos (da classe `Promise`) que encapsulam uma chamada a uma fun
 
 Uma promise pode estar em um dos seguintes estados:
 
-- pendente: a operação ainda não foi finalizada
-- resolvida: a operação foi finalizada com sucesso
-- rejeitada: a operação foi finalizada com erro
+- **pendente**: a operação ainda não foi finalizada
+- **resolvida**: a operação foi finalizada com sucesso
+- **rejeitada**: a operação foi finalizada com erro
 
-Uma promise que se encontra no estado resolvida ou rejeitada (isto é, não está pendente) é dita estabelecida. 
+Uma promise que se encontra no estado resolvida ou rejeitada (isto é, não está pendente) é dita **estabelecida**. 
 
-Podemos reescrever a função assíncrona `fazDownload` de forma que ela retorne uma *promise*. O código que usa a função deve então chamar os métodos `then()` e `catch()` da classe `Promise` para tratar o resultado:
+Podemos reescrever a função assíncrona `sorteia` de forma que ela retorne uma *promise*. O código que usa a função deve então chamar os métodos `then()` e `catch()` da classe `Promise` para tratar o resultado:
+
+- `then(f)` recebe uma função, `f` que deve ser executada quando a promise é resolvida
+- `catch(f)` recebe uma função, `f` que deve ser executada quando a promise é rejeitada
+- Tanto `then(f)` quanto `catch(f)` retornam uma promise que será resolvida com o valor retornado por `f`.
+
+**Execute o código a seguir para carregar a função `sorteia`, que será usada nos outros exemplos**.
 
 <textarea class="code">
-function fazDownload(url) {
-  var bemSucedido = Math.random() < 0.5;
-
-  return new Promise((cbSucesso, cbErro) => {
-    setTimeout(function () {
+function sorteia(maximo) {
+  return new Promise((resolve, reject) => {
+    console.log('sorteia', maximo, 'inicio');
+    setTimeout(() => {
+      var bemSucedido = Math.random() < 0.8;
+      var valor = Math.round(Math.random() * maximo);
+      console.log('sorteia', maximo, 'fim', bemSucedido ? valor : 'erro');
       if (bemSucedido)
-        cbSucesso();
+        resolve(valor);
       else
-        cbErro();
+        reject(new Error("Falha na geração"));
     }, 1000 * Math.random());
-  });
+  })
 }
+window.sorteia = sorteia; // define no escopo global
+console.log('Função sorteia carregada!');
+</textarea>
 
-fazDownload("http://example.com/")
-  .then(() => console.log("Download bem sucedido!"))
-  .catch(() => console.log("ERRO!"));
+<textarea class="code">
+sorteia(100)
+  .then(num => console.log("OK!", num))
+  .catch(erro => console.log("ERRO!", erro.message));
 </textarea>
 
 ## Execução sequencial de promises
 
-Se o seu `then()` retornar uma Promise, você pode encadear promises, que serão executadas de forma sequencial:
+Como o `then()` retorna uma promise, você pode encadear chamadas a `then()/catch()`, que serão executadas de forma sequencial:
 
 <textarea class="code">
-function fazDownload(url) {
-  var bemSucedido = Math.random() < 0.5;
-
-  return new Promise((cbSucesso, cbErro) => {
-    console.log('fazDownload', url, 'inicio');
-    setTimeout(function () {
-      if (bemSucedido)
-        cbSucesso();
-      else
-        cbErro();
-      console.log('fazDownload', url, 'fim', bemSucedido);
-    }, 1000 * Math.random());
-  });
-}
-
-fazDownload("http://example.com/1")
-  .then(() => fazDownload("http://example.com/2"))
-  .then(() => fazDownload("http://example.com/3"))
-  .then(() => console.log("OK!"))
-  .catch(() => console.log("ERRO!"));
+sorteia(10)
+  .then(x => sorteia(20))
+  .then(x => sorteia(30))
+  .then(x => console.log("OK!", x))
+  .catch(e => console.log("ERRO!", e.message));
 </textarea>
 
 ## Execução paralela de promises: Promise.all
 
-`Promise.all` recebe um array de promises e cria um novo promise que termina somente quando todos os promises da array terminam. Em outras palavras, `Promise.all` permite executar várias operações assíncronas em paralelo e executar alguma operação (usando o `then()`) quando todas elas forem concluídas.
+`Promise.all` recebe um array de promises e cria um novo promise que termina somente quando todos os promises da array terminam. Em outras palavras, `Promise.all` permite executar várias operações assíncronas em paralelo e executar alguma operação (usando o `then()`) quando todas elas forem resolvidas. A função passada ao `then()` recebe os valores de todos os promises em um array. Se alguma operação for rejeitada, a promise resultante também será rejeitada, imediatamente.
 
 <textarea class="code">
-function fazDownload(url) {
-  var bemSucedido = Math.random() < 0.5;
-
-  return new Promise((cbSucesso, cbErro) => {
-    console.log('fazDownload', url, 'inicio');
-    setTimeout(function () {
-      if (bemSucedido)
-        cbSucesso();
-      else
-        cbErro();
-      console.log('fazDownload', url, 'fim');
-    }, 1000 * Math.random());
-  });
-}
-
 Promise.all([
-    fazDownload("http://example.com/1"),
-    fazDownload("http://example.com/2"),
-    fazDownload("http://example.com/3")])
-  .then(() => console.log("OK!"))
-  .catch(() => console.log("ERRO!"));
+    sorteia(10),
+    sorteia(20),
+    sorteia(30)])
+  .then(nums => console.log("OK!", nums))
+  .catch(e => console.log("ERRO!", e.message));
 </textarea>
 
 ## Execução paralela de promises: Promise.race
 
-Assim como `Promise.all`, `Promise.race` também cria uma nova promise a partir de um array de promises, e permite executar as promises do array em paralelo. A diferença é que a nova promise é concluída logo que qualquer promise do array for concluída.
+Assim como `Promise.all`, `Promise.race` também cria uma nova promise a partir de um array de promises, e permite executar as promises do array em paralelo. A diferença é que a nova promise é estabelecida (resolvida ou rejeitada) logo que qualquer promise do array for estabelecida.
 
 <textarea class="code">
-function fazDownload(url) {
-  var bemSucedido = Math.random() < 0.5;
-
-  return new Promise((cbSucesso, cbErro) => {
-    console.log('fazDownload', url, 'inicio');
-    setTimeout(function () {
-      if (bemSucedido)
-        cbSucesso();
-      else
-        cbErro();
-      console.log('fazDownload', url, 'fim');
-    }, 1000 * Math.random());
-  });
-}
-
 Promise.race([
-    fazDownload("http://example.com/1"),
-    fazDownload("http://example.com/2"),
-    fazDownload("http://example.com/3")])
-  .then(() => console.log("OK!"))
-  .catch(() => console.log("ERRO!"));
+    sorteia(10),
+    sorteia(20),
+    sorteia(30)])
+  .then(nums => console.log("OK!", nums))
+  .catch(e => console.log("ERRO!", e.message));
 </textarea>
 
 ## Referências
 
 - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises>
 - <https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261>
+
