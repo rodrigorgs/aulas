@@ -98,6 +98,25 @@ title: MATA37 - ILP - 2017.1
 | **04/09** |                                                    |                                 |
 | **06/09** |                                                    |                                 |
 
+<!--
+Recursão:
+
+https://softwareengineering.stackexchange.com/questions/25052/in-plain-english-what-is-recursion
+
+Condição de parada.
+
+Fatorial.
+Imprimir alfabeto ao contrário usando recursão.
+Somatório. (exercício).
+Fibonacci. (exercício)
+Flood fill. (intermediário)
+Busca binária. (intermediário)
+Hanoi. (avançado)
+
+Recursão vs iteração. (overhead de chamada de função)
+
+ -->
+
 <!-- aritmética, desvio, repetição, vetores, strings, matrizes, ordenação, busca binária, função/recursão -->
 
 [io]: https://docs.google.com/presentation/d/1k1Pvv6SlGuumYC_zk_OW2GZYb7ue-pS2JaxO-ITTnLc/edit?usp=sharing
