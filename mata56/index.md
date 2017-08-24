@@ -72,7 +72,6 @@ title: MATA56 - PLP - 2017.1
 | **26/07** | [JS: closures](aula13-js-closures)                                        |                                                                               |
 | **31/07** | Revisão de Scheme                                                         |                                                                               |
 | **02/08** | [JS: currying, aplicação parcial, composição de funções](aula14-currying) |                                                                               |
-| **02/08** |                                                                           |                                                                               |
 | **07/08** |                                                                           |                                                                               |
 | **09/08** |                                                                           |                                                                               |
 | **14/08** |                                                                           |                                                                               |
@@ -82,7 +81,7 @@ title: MATA56 - PLP - 2017.1
 | **28/08** |                                                                           |                                                                               |
 | **30/08** |                                                                           |                                                                               |
 | **04/09** |                                                                           |                                                                               |
-| **06/09** | ENTREGA DO TRABALHO                                                       |                                                                               |
+| **06/09** | ENTREGA DO [TRABALHO](trabalho-js)                                        |                                                                               |
 
 [swish]: http://swish.swi-prolog.org/
 [conceitos]: http://slides.com/rodrigorgs/conceitos-de-linguagens-de-programacao
