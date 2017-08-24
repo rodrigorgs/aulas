@@ -78,7 +78,7 @@ title: MATA56 - PLP - 2017.1
 | **14/08** |                                                                           |                                                                               |
 | **16/08** | [JS: concorrência](aula15-concorrencia)                                   |                                                                               |
 | **21/08** | [JS: padrões de concorrência](aula16-concorrencia-padroes)                |                                                                               |
-| **23/08** |                                                                           |                                                                               |
+| **23/08** | [Promises](aula17-promises), [async/await](aula18-async-await)            |                                                                               |
 | **28/08** |                                                                           |                                                                               |
 | **30/08** |                                                                           |                                                                               |
 | **04/09** |                                                                           |                                                                               |

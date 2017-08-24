@@ -20,7 +20,7 @@ function sleep(t) {
 function imprimeAB() {
   return sleep(300)
     .then(() => console.log("a"))
-    .then(sleep(200))
+    .then(() => sleep(200))
     .then(() => console.log("b"))
 }
 
