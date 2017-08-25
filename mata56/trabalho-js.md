@@ -457,8 +457,69 @@ recarregaDados();
 
 ## Promises
 
-Reescreva as funções de carga de dados para usar *promises*.
+Reescreva as funções `carregaDisciplinas` e `carregaTurmas` para usar *promises*, e então reescreva a função `recarregaDados` para usar as funções que você implementou.
 
 <div class="lesson"><textarea class="code">
-// ...
+// Nesta função, altere somente a assinatura e a última linha
+function carregaDisciplinas(callback) {
+  var x = [
+    {
+      id: 'mata56',
+      nome: 'Paradigmas de Linguagens de Programação',
+      semestre: 5
+    },
+    {
+      id: 'mata62',
+      nome: 'Engenharia de Software I',
+      semestre: 4
+    },
+  ];
+
+  setTimeout(() => callback(x), Math.random() * (MAX_DELAY - MIN_DELAY) + MIN_DELAY);
+}
+
+// Nesta função, altere somente a assinatura e a última linha
+function carregaTurmas(codigoDisciplina, callback) {
+  console.log('carregaTurmas', codigoDisciplina);
+  var x = [
+    {
+      disciplina: 'mata56',
+      turma: 't01',
+      dias: ['qua', 'sex'],
+      horario: '16:40'
+    },
+    {
+      disciplina: 'mata56',
+      turma: 't02',
+      dias: ['qua', 'sex'],
+      horario: '20:20'
+    },
+    {
+      disciplina: 'mata62',
+      turma: 't02',
+      dias: ['seg', 'qua'],
+      horario: '18:30'
+    }
+  ];
+
+  var ret = R.filter(obj => obj.disciplina == codigoDisciplina, x);
+
+  setTimeout(() => callback(ret), Math.random() * (MAX_DELAY - MIN_DELAY) + MIN_DELAY);
+}
+
+reiniciaAplicacao = () => {
+  exDisciplinas = [];
+  exTurmas = [];
+  substituiHTML('Ola, Mundo!');
+};
+
+recarregaDados = () => {
+  reiniciaAplicacao();
+
+  // --- Implemente usando a sua versão das funções, com promises
+  carregaDisciplinas....
+  carregaTurmas...
+  atualiza(exDisciplinas, exTurmas);
+  // ---
+};
 </textarea></div>
