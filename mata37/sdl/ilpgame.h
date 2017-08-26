@@ -196,6 +196,7 @@ void drawText(string text, TTF_Font *font, SDL_Color color, int x, int y) {
     exit(1);
   }
   SDL_BlitSurface(textSurface, NULL, screen, &pos);
+  SDL_FreeSurface(textSurface);
 }
 
 void drawImage(SDL_Surface *surface, int x, int y) {
