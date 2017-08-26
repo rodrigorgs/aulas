@@ -20,6 +20,8 @@ SDL_Window *window = NULL;
 SDL_Surface *screen = NULL;
 SDL_Renderer *renderer = NULL;
 
+Uint32 lastTime = 0;
+Uint32 minDeltaTime = 0;
 bool gameLoopQuit = false;
 
 ////////////////////////////////////////////
@@ -259,6 +261,18 @@ Mix_Chunk *loadSound(string filename) {
 
 
 //////////////////////////////////////
+// Frames per second (FPS)
+//////////////////////////////////////
+
+void limitFPS(int fps) {
+  minDeltaTime = 1000 / fps;
+}
+
+void disableFPSLimiting() {
+  minDeltaTime = 0;
+}
+
+//////////////////////////////////////
 // Game loop
 //////////////////////////////////////
 
@@ -277,6 +291,10 @@ void endGameLoop() {
 void gameLoopIteration(void *arg) {
   SDL_Event event;
 
+  if (minDeltaTime > 0) {
+    lastTime = SDL_GetTicks();
+  }
+
   while (SDL_PollEvent(&event) != 0 && !gameLoopQuit) {
     processEvent(event);
   }
@@ -291,6 +309,13 @@ void gameLoopIteration(void *arg) {
     draw();
     SDL_RenderPresent(renderer);
     updateScreen();
+  }
+
+  if (!gameLoopQuit && minDeltaTime > 0) {
+    Uint32 deltaTime = SDL_GetTicks() - lastTime;
+    if (deltaTime < minDeltaTime) {
+      SDL_Delay(minDeltaTime - deltaTime);
+    }
   }
 
 #ifdef __EMSCRIPTEN__

@@ -94,6 +94,7 @@ Exemplos básicos (alguns exemplos requerem arquivos adicionais, como [`FreeSans
 - [Desenhar texto](tut-texto.cc)
 - [Escrever com o teclado](tut-escreve.cc): aceita teclas de A a Z e backspace
 - [Contador de tempo](tut-timer.cc)
+- [Limitar FPS](tut-limitfps.cc): limita a taxa de atualização do jogo (FPS) para que ele rode na mesma velocidade em todos os computadores
 - [Áudio](tut-audio.cc)
 
 Demonstrações:
