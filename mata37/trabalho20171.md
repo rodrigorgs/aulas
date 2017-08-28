@@ -11,9 +11,9 @@ Sua tarefa é criar um jogo digital. Mas você não estará sozinho nessa jornad
 
 Você deve criar um **jogo** simples usando a biblioteca SDL (valor: **1,6**) e um **vídeo de demonstração** do jogo (valor: **0,4**). Recomenda-se usar a [biblioteca ILP Game](sdl/ilpgame) para tornar esse processo mais fácil. Clique [aqui](sdl/ilpgame) para aprender mais.
 
-Envie a formação da sua equipe (**de 1 a 4 pessoas**) e uma breve descrição do jogo para mim: <rodrigo@dcc.ufba.br> (ou me comunique em aula). Eu vou avaliar se a ideia é válida para a disciplina (nem muito fácil e nem muito difícil).
+Envie a formação da sua equipe (**de 1 a 4 pessoas**) e uma breve descrição do jogo para mim: <rodrigorgs@ufba.br> (ou me comunique em aula). Eu vou avaliar se a ideia é válida para a disciplina (nem muito fácil e nem muito difícil).
 
-O jogo deve ser entregue **até o dia 29/08/2017** por e-mail para <rodrigo@dcc.ufba.br>. Anexe um **arquivo `.zip`** contendo os seguintes itens:
+O jogo deve ser entregue **até o dia 29/08/2017** por e-mail para <rodrigorgs@ufba.br>. Anexe um **arquivo `.zip`** contendo os seguintes itens:
 
 - código-fonte (incluindo o arquivo `ilpgame.h`, se for usado)
 - arquivos necessários para rodar o jogo (imagens, fontes de texto etc.)
