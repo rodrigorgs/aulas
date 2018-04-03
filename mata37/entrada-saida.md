@@ -5,6 +5,14 @@ title: Entrada e saída
 
 <div>
 
+# Entrada e saída
+
+- Entrada e saída se referem ao fluxo de dados em um programa de computador
+- Dispositivos de **entrada** incluem teclado, mouse, câmera, microfone, leitor de digitais...
+- Dispositivos de **saída** incluem monitor, caixa de som, impressora...
+
+---
+
 # Console
 
 Os programas que vamos criar rodam no console (termos relacionados: terminal, linha de comando).
@@ -91,7 +99,7 @@ O programa acima imprimirá `3.50`, isto é, com 2 casas decimais. Note que para
 
 # Lendo do teclado
 
-O código abaixo lê 3 números. O usuário deve digitar os três números separados por espaços em branco ou quebras de linha. O programa só avança para a próxima linha depois que todos os números forem digitados.
+O código abaixo lê 3 números. O usuário deve digitar os três números separados por espaços em branco ou quebras de linha. O programa só avança para a próxima linha (`cout << ...`) depois que todos os números forem digitados.
 
 ```c++
 int x, y, z;

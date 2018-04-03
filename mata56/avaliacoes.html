@@ -7,7 +7,10 @@ layout: default
   <h1 class="page-heading">Avaliações</h1>
 
   <ul class="post-list">
-    {% assign sorted = (site.pages | sort: 'date') | reverse %}
+    {% comment %}
+      {% assign sorted = (site.pages | sort: 'date') | reverse %}
+    {% endcomment %}
+    {% assign sorted = site.pages %}
     {% for page in sorted %}
     {% if page.categories contains 'avaliacao' %}
       <li>

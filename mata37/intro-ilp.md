@@ -9,7 +9,14 @@ title: Introdução à disciplina MATA37
 
 ## Introdução à Lógica de Programação
 
-Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
+Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
+
+---
+
+# Objetivos da disciplina
+
+- Escrever pequenos programas de computador
+- Resolver problemas através programas (raciocínio computacional)
 
 ---
 
@@ -25,10 +32,54 @@ Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
 
 ---
 
-# Objetivos da disciplina
+# Pra que aprender a programar?
 
-- Escrever pequenos programas
-- Resolver problemas através programas (raciocínio computacional)
+- Criar experiências digitais
+- Automatizar tarefas
+- Gerenciar informação
+- Moldar comunicação
+
+---
+
+# Pra que aprender a programar?
+
+- Se existe um programa pronto, eu posso usá-lo
+- Se não existe, devo criá-lo (programá-lo)
+- Se existe um programa próximo, talvez eu possa modificá-lo
+
+---
+
+# Criar experiências digitais
+
+- Jogos
+- Mods de jogos
+- Efeitos e animações em sites
+- Efeitos de áudio, síntese de áudio
+
+---
+
+# Automatizar tarefas
+
+- Como escolher os sobrenomes do meu filho
+- Renomear arquivos de foto para ficar no padrão ano-mês-dia
+- Baixar extratos do banco (simulando usuário acessando o site)
+- Internet das coisas; automação residencial
+- Raspagem de dados; operação serenata de amor; jornalismo de dados (ex.: salários dos profs. da UFBA)
+- Carros autônomos
+
+---
+
+# Gerenciar informação
+
+- Sistemas de informação em geral (gerenciador de eventos, lojas virtuais etc.)
+- Aplicativos móveis
+
+---
+
+# Moldar comunicação
+
+- Chatbots
+- Apps de memes
 
 ---
 

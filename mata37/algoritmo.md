@@ -11,7 +11,7 @@ Um algoritmo é uma sequência de passos bem definidos para resolver um problema
 
 <!-- Algoritmos devem ser expressos dentro de uma quantidade **finita** de espaço e tempo. -->
 
-Algoritmos transformam valores de entrada em valores de saída (como funções).
+Na computação, algoritmos transformam valores de entrada em valores de saída (como funções).
 
 ---
 
@@ -26,11 +26,7 @@ Algoritmos transformam valores de entrada em valores de saída (como funções).
   - 1 colher (sopa) bem cheia de fermento em pó
 - Saída: bolo simples
 - Instruções: <http://www.tudogostoso.com.br/receita/29124-bolo-simples.html>
-
----
-
-# Exemplo: troco
-
+- Os passos são bem definidos?
 
 ---
 
@@ -42,21 +38,46 @@ Algoritmos transformam valores de entrada em valores de saída (como funções).
 
 ---
 
-# Exemplo: adivinhe o número
+# Alguns elementos básicos de algoritmos
+
+Você consegue identificar nos exemplos os seguintes elementos?
+
+- Sequência de passos
+- Dados
+- Condicionais (`se` isso `então` aquilo)
+- Repetição (`repita` até, repita X vezes...)
 
 ---
+
+# Exemplo: Keep Talking and Nobody Explodes
+
+Jogo [Keep Talking and Nobody Explodes](http://jogabilida.de/bomb)
+
+---
+
+# Exemplo: troco
+
+Como dar um troco usando o menor número possível de cédulas e moedas?
+
+Ex.: R$ 3,30 = R$ 2 + R$ 1 + R$ 0,25 + R$ 0,05
+
+- Entrada: ?
+- Saída: ?
+- Instruções: ?
+
+---
+
+<!-- 
+# Exemplo: adivinhe o número
+
+ -->
 
 # Exemplo: ordenação
 
 - Entrada: lista de coisas bagunçada
 - Saída: lista de coisas em ordem
 - Instruções: várias opções...
-
----
-
-# Exemplo: KTANE
-
-Jogo [Keep Talking and Nobody Explodes](http://jogabilida.de/bomb)
+- Você consegue explicar para outra pessoa o passo-a-passo de como ordenar uma lista de coisas?
 
 ---
 
@@ -64,13 +85,6 @@ Jogo [Keep Talking and Nobody Explodes](http://jogabilida.de/bomb)
 
 - Dança
 - Exercício físico
-
----
-
-# Contra-exemplos
-
-- Se um dos passos não for bem-definido...
-- Se a execução nunca terminar
 
 ---
 
@@ -117,7 +131,6 @@ Eu respondi: "Porque eles tinham ovos."
 
 ![:height 70vh](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/LampFlowchart_pt.svg/250px-LampFlowchart_pt.svg.png)
 
-
 ---
 
 # Fluxograma
@@ -127,6 +140,8 @@ Eu respondi: "Porque eles tinham ovos."
 ---
 
 # Pseudolinguagem
+
+Baseada na linguagem natural, porém mais bem definida
 
 ```
 vá ate o mercado
@@ -152,7 +167,7 @@ Código ou código-fonte é o texto do programa.
 
 # Linguagem de programação
 
-Existem muitas linguagens de programação.
+Existem muitas linguagens de programação. Você já ouviu falar em quais linguagens de programação?
 
 <https://repl.it/languages/>
 
@@ -214,15 +229,7 @@ Seu programa é executado por outro programa. Se você não seguir a linguagem c
 - No exemplo em C++, remova um dos `;`
 - No exemplo em C++, troque `idade < 18` por `idadi < 18`
 - No exemplo em C++, apague as linhas em branco
-
----
-
-# Linguagem C
-
-- De propósito geral 
-- Médio Nível 
-- Compilada 
-- Estruturada
+- O que acontece em cada um dos casos?
 
 </div>
 

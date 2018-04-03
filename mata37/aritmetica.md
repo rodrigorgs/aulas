@@ -9,6 +9,7 @@ title: Expressões aritméticas em C++
 Expressões aritméticas podem ser:
 
 - um número
+  - inteiro (`int`) ou racional (`float`, `double`)
 - uma variável numérica
 - uma operação aritmética envolvendo duas expressões aritméticas
 - a aplicação de uma função a uma expressão aritmética
@@ -82,6 +83,28 @@ double z = 3;  // converte int (3) para double (3.0)
 - `10.0 / 4.0` ==> `2.5`
 
 Referência: <http://www.cplusplus.com/doc/tutorial/operators/>
+
+---
+
+## Precedência de operadores
+
+- 1º nível: \* / % (maior precedência)
+- 2º nível: + - (menor precedência)
+- Duas operações no mesmo nível: executar da esquerda para a direita
+
+Exemplos:
+
+- 1 + 2 * 3 = ?
+- 6 * 6 / 12 = ?
+- 4 / 2 * 3 = ?
+
+---
+
+## Divisão e resto da divisão
+
+- Como determinar se um número é par?
+- Como extrair o dígito das unidades de um número?
+- Como extrair o dígito das dezenas de um número?
 
 ---
 

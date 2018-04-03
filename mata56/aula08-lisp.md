@@ -92,7 +92,7 @@ Listas também podem ser avaliadas para valores. Em particular, um núcleo bási
 - `(equal? x y)` ==> `#t` se `x` e `y` têm o mesmo valor; `#f` caso contrário.
 - `(cond (p1 e1) (p2 e2) ...)` => valor de ei, onde pi é o primeiro dos ps cujo valor não é '())'.
 - `((lambda (v1 ... vn) e) e1 ... en)` ==> valor de e em um ambiente no qual as variáveis v1 ... vn assumem os valores das expressões e1 ... en. Exemplo: `((lambda (x y) (cons (car x) y)) (quote (a b)) (quote (c d)))`
-- `((define f (lambda ...) e1 .. en)` é o mesmo que lambda..., com a regra adicional que, sempre que a expressão `(f a1 ... an)` for avaliada, f é substituído por `(define f lambda...)`. Isso permite definir funções recursivas. Exemplo: `((define f (lambda (x) (cond ((atom x) x) ((quote t) (ff (car x)))))) (quote ((a b) c)))`
+- `((define f (lambda ...) e1 .. en)` é o mesmo que lambda..., com a regra adicional que, sempre que a expressão `(f a1 ... an)` for avaliada, f é substituído por `(define f lambda...)`. Isso permite definir mais facilmente funções recursivas. Exemplo: `((define f (lambda (x) (cond ((atom x) x) ((quote t) (ff (car x)))))) (quote ((a b) c)))`
 
 <!-- - `(atom x)` ==> `t` se `x` é um átomo; `'())'' caso contrário -->
 

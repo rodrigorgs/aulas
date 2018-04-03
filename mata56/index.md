@@ -5,86 +5,68 @@ title: MATA56 - PLP - 2017.1
 
 # Informações básicas
 
-<div style="float: left; padding: 5px; width: 30%;" markdown="1">
-**Aulas**
+- Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
+- Entre no [Google Classroom](https://classroom.google.com/) e inscreva-se nesta turma clicando no botão `+` e digitando o código `yxt8ii`.
 
-- SEG, 13:00, IME lab 140
-- QUA, 13:00, PAF sala 109
+# Avaliações
 
-**Equipe**
+- Prova escrita de Prolog <span style="color: gray;">\[peso: 3\]</span>
+- Exercícios práticos de Scheme <span style="color: gray;">\[peso: 1\]</span>
+- Prova escrita de programação funcional <span style="color: gray;">\[peso: 3\]</span>
+- Prova escrita de programação concorrente <span style="color: gray;">\[peso: 3\]</span>
 
-- Professor: Rodrigo Rocha <rodrigo@dcc.ufba.br>
-- Monitor: Daniel Amador <danielsegundoemail@gmail.com>
-</div>
-
-<div style="float: left; padding: 5px; width: 30%;" markdown="1">
-**Grupo da disciplina**
-
-- Inscreva-se no [grupo de discussão disciplina](https://groups.google.com/d/forum/mata56t01-20171)!
-- Cheque seu e-mail diariamente: o grupo pode ser usado para comunicações importantes.
-</div>
-
-<div style="float: left; padding: 5px; width: 30%;" markdown="1">
-**Avaliações**
-
-- Prova escrita de Prolog <span style="color: gray;">\[peso: 2\]</span>
-- Prova escrita de conceitos <span style="color: gray;">\[peso: 2\]</span>
-- Prova prática de Scheme <span style="color: gray;">\[peso: 3\]</span>
-- [Trabalho de JavaScript](trabalho-js) <span style="color: gray;">\[peso: 3\]</span>
-</div>
-
-<div style="clear: left;"></div>
+<!-- Tipos de questão:
+* qual o resultado desse código / como funciona?
+* escreva código segundo essa especificação
+  * corrija o código
+ -->
 
 # Links importantes
 
-- [SWISH][swish]: interpretador de Prolog online
+- [SWISH](http://swish.swi-prolog.org/): interpretador de Prolog online
 - [BiwaScheme](biwascheme): interpretador de Scheme online
 
 # Conteúdo
 
-| Dia       | Conteúdo                                                                  |                                                                               |
-| :-------  | :--------------------------------------------                             | :----------------------                                                       |
-| **08/05** | [Apresentação da disciplina](disciplina)                                  |                                                                               |
-|           | [História das LPs](https://goo.gl/9qSZmy)                                 |                                                                               |
-| **10/05** | [Prolog: introdução](aula02-prolog)                                       |                                                                               |
-| **15/05** | Prolog: exercícios                                                        |                                                                               |
-| **17/05** | [Prolog: recursão](aula03-prolog-recursao)                                |                                                                               |
-|           | [Prolog: unificação e busca](aula04-prolog-busca)                         |                                                                               |
-| **22/05** | Prolog: exercícios                                                        | Aula com Daniel                                                               |
-| **24/05** | [Prolog: aritmética](aula05-prolog-aritmetica) (leitura em casa)          | Não haverá aula presencial                                                    |
-| **29/05** | Prolog: exercícios                                                        | [kahoot](https://create.kahoot.it/#quiz/af8c85ae-cedb-40e3-820d-de75b3fbbf9a) |
-| **31/05** | [Prolog: listas](aula06-prolog-listas)                                    |                                                                               |
-| **05/06** | Prolog: exercícios                                                        |                                                                               |
-| **07/06** | Prolog: revisão.                                                          |                                                                               |
-| **12/06** | Prolog: revisão.                                                          |                                                                               |
-| **14/06** | **Prova de Prolog**                                                       | **PROVA**                                                                     |
-| **19/06** | [Conceitos de LPs][conceitos]                                             |                                                                               |
-| **21/06** | Conceitos de LPs.                                                         |                                                                               |
-| **26/06** | Conceitos de LPs.                                                         |                                                                               |
-| **28/06** | Conceitos de LPs.                                                         |                                                                               |
-| **03/07** | [Scheme: introdução](aula08-lisp)                                         |                                                                               |
-| **05/07** | [Scheme: exercícios](aula09-lisp-ex)                                      |                                                                               |
-| **10/07** | Scheme: exercícios de recursão                                            |                                                                               |
-| **12/07** | **Prova sobre conceitos**                                                 | **PROVA**                                                                     |
-| **17/07** | Scheme: [funções de alta ordem](aula10-lisp-alta-ordem)                   |                                                                               |
-| **19/07** | Scheme: [recursão profunda](aula11-lisp-rec-prof)                         |                                                                               |
-| **24/07** | [JS: introdução e funções de alta ordem](aula12-js-intro)                 |                                                                               |
-| **26/07** | [JS: closures](aula13-js-closures)                                        |                                                                               |
-| **31/07** | Revisão de Scheme                                                         |                                                                               |
-| **02/08** | [JS: currying, aplicação parcial, composição de funções](aula14-currying) |                                                                               |
-| **07/08** |                                                                           |                                                                               |
-| **09/08** |                                                                           |                                                                               |
-| **14/08** |                                                                           |                                                                               |
-| **16/08** | [JS: concorrência](aula15-concorrencia)                                   |                                                                               |
-| **21/08** | [JS: padrões de concorrência](aula16-concorrencia-padroes)                |                                                                               |
-| **23/08** | [Promises](aula17-promises), [async/await](aula18-async-await)            |                                                                               |
-| **28/08** |                                                                           |                                                                               |
-| **30/08** |                                                                           |                                                                               |
-| **04/09** |                                                                           |                                                                               |
-| **06/09** | ENTREGA DO [TRABALHO](trabalho-js)                                        |                                                                               |
+Introdução
 
-[swish]: http://swish.swi-prolog.org/
-[conceitos]: http://slides.com/rodrigorgs/conceitos-de-linguagens-de-programacao
+- [Apresentação da disciplina](disciplina)
+- [História das LPs](https://goo.gl/9qSZmy)
+
+Paradigma baseado em lógica
+
+- [Prolog: introdução](aula02-prolog)
+- [Prolog: recursão](aula03-prolog-recursao) - [kahoot](https://create.kahoot.it/details/prolog-conceitos/76411391-65da-4134-9f23-cae462725e24)
+- [Prolog: unificação e busca](aula04-prolog-busca)
+- [Prolog: aritmética](aula05-prolog-aritmetica) - [kahoot](https://create.kahoot.it/details/prolog-unificacao-e-aritmetica/af8c85ae-cedb-40e3-820d-de75b3fbbf9a)
+- [Prolog: listas](aula06-prolog-listas) - [kahoot](https://create.kahoot.it/details/prolog-listas/33b33e8f-63df-465d-8116-3fed63a4a0de)
+
+Paradigma funcional (introdução com Scheme)
+
+- [Scheme: introdução](aula08-lisp)
+- [Scheme: exercícios](aula09-lisp-ex)
+- [Scheme: funções de alta ordem](aula10-lisp-alta-ordem)
+- [Scheme: recursão profunda](aula11-lisp-rec-prof) (extra)
+
+Conceitos
+
+- [Conceitos de LPs](http://slides.com/rodrigorgs/conceitos-de-linguagens-de-programacao)
+
+Paradigma funcional (tópicos avançados com JavaScript)
+
+- [JS: introdução (slides)](https://docs.google.com/presentation/d/1tK-mleL0MPsohCff0E8tuxeyijwprZwsIqmIwoy46gA/edit?usp=sharing)
+- [JS: introdução e funções de alta ordem](aula12-js-intro)
+- [JS: closures](aula13-js-closures)
+- [JS: currying, aplicação parcial, composição de funções](aula14-currying)
+
+Programação assíncrona
+
+- [JS: concorrência](aula15-concorrencia)
+- [JS: padrões de concorrência](aula16-concorrencia-padroes)
+- [JS: promises](aula17-promises)
+- [JS: async/await](aula18-async-await)
+- .
+- [JS: iterators e generators](aulaxx-generators)
 
 <script type="text/javascript">
 function desabilitaLinksComecadosPor(prefixo) {

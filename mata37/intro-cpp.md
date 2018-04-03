@@ -5,25 +5,26 @@ title: Introdução a C
 
 <div>
 
-# C ou C++?
+# Linguagem de programação
 
-- C++ é um superconjunto de C
-- Vamos usar C com alguns poucos recursos de C++
-- Por isso, precisaremos de um compilador de C++
+Neste curso vamos usar a linguagem de programação C++.
+
+- C++ foi projetada entre 1979 e 1985 por Bjarne Stroustrup.
+- C++ é uma extensão da linguagem C, lançada em 1972, projetada por Dennis Ritchie.
+- Boa parte do que estudaremos vem da linguagem C; usaremos apenas alguns recursos próprios do C++.
 
 ---
 
-# Compiladores
+# Executando um programa em C++
 
-- GNU C Compiler (gcc)
-- Clang / LLVM
-- Compilador do Visual Studio
+- Para iniciar os estudos, vamos usar o site [repl.it](https://repl.it/languages/cpp)
 
 ---
 
 # Alô mundo
 
-Crie um arquivo chamado `alo.cc` com o seguinte conteúdo:
+Crie um arquivo com o seguinte conteúdo:
+<!-- chamado `alo.cc` -->
 
 ```c++
 #include <iostream>
@@ -37,39 +38,17 @@ int main() {
 }
 ```
 
-Você pode usar um editor de código como o gedit, o Geany...
+<!-- Você pode usar um editor de código como o gedit, o Geany... -->
 
 ---
 
-# Compilador gcc
+# Rode o seu programa
 
-```bash
-g++ alo.cc
-./a.out
-```
+Clique no botão `play`.
 
 ---
 
-# Compilador gcc
-
-```bash
-g++ alo.cc -o alo
-./alo
-```
-
----
-
-# Compilador gcc
-
-```bash
-g++ -Wall alo.cc -o alo
-./alo
-```
-
----
-
-
-# Alô mundo
+# Alô mundo - explicação
 
 ```c++
 #include <iostream>
@@ -93,7 +72,7 @@ inclui as funções de entrada e saída de dados (I/O, do inglês *input/output*
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -118,7 +97,7 @@ permite abreviar algumas palavras da biblioteca padrão (std, do inglês *standa
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -143,7 +122,7 @@ indica o início da função `main`, onde o programa inicia a sua execução.
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -164,11 +143,11 @@ A linha
   cout << "Alo mundo!" << endl;
 ```
 
-Imprime a frase `Alo mundo!` na tela, finalizada por uma quebra de linha (`endl`, do inglês *end line*).
+Imprime a frase `Alo mundo!` na tela, finalizada por uma quebra de linha (`endl`, do inglês *end line*). Alternativa: cout << "Alo mundo!\n";
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -193,7 +172,7 @@ retorna o código 0 para o sistema operacional (por convenção, indica que o pr
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -218,7 +197,7 @@ inclui as funções de entrada e saída de dados.
 
 ---
 
-# Alô mundo
+# Alô mundo - explicação
 
 
 ```c++
@@ -262,5 +241,7 @@ São ignorados pelo compilador. Dois propósitos principais:
 com várias
 linhas */
 ```
+
+Mostrar exemplo dentro do alô mundo.
 
 </div>

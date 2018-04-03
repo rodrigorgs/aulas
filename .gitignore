@@ -11,3 +11,6 @@ bower_components/
 _private
 a.out
 analise-quantitativa
+.Rproj.user
+
+lista_emails_*.txt

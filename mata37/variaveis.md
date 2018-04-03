@@ -13,7 +13,7 @@ Uma variável é um espaço de armazenamento na memória associado a
 - um valor
 - um tipo
 
-O valor da variável pode mudar durante a execução do programa
+O valor da variável pode mudar durante a execução do programa.
 
 ---
 
@@ -51,6 +51,12 @@ O tipo `float` representa números fracionários.
 | double                       | números fracionários           | Tão ou mais preciso que float  |
 | long double                  | números fracionários           | Tão ou mais preciso que double |
 | bool                         | valor-verdade (true/false)     | .                              |
+
+---
+
+## Tipos
+
+O tipo `string` representa uma cadeia de caracteres (texto). Para usá-lo, você precisa adicionar `#include <string>` no início do código-fonte. No tipo string, cada caractere ocupa 1 byte.
 
 ---
 
@@ -114,6 +120,20 @@ x = 1;
 y = 2;
 x = x + y;
 ```
+
+---
+
+Como [ler e executar código](https://medium.com/bits-and-behavior/teaching-a-strategy-for-reading-code-fbc9f4044cab)
+
+```c++
+int x = 1;
+int y = 2;
+int z = x;
+x = y;
+y = z;
+```
+
+Qual o valor de x, y e z ao final da execução do programa?
 
 ---
 
@@ -227,6 +247,8 @@ const double NUMERO_DE_AVOGADRO = 6.02e23;
 ```
 
 Por convenção, geralmente usam-se letras maiúsculas para nomear constantes, mas isso não é obrigatório.
+
+Desafio: tente alterar o valor da constante depois de definido.
 
 ---
 

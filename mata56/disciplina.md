@@ -12,7 +12,7 @@ Compreender e aplicar conceitos e paradigmas de linguagens de programação, de 
 - Aulas expositivas, exercícios e práticas em laboratório
 - Avaliações teóricas e práticas
 
-# Bibliografia
+# Referências
 
 Software:
 
@@ -41,7 +41,7 @@ JavaScript, programação funcional e concorrência:
 - [Mozilla Developer Network's JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - Functional JavaScript: Introducing Functional Programming with Underscore.js
 
-LISP:
+Scheme:
 
 - <http://www.biwascheme.org/doc/reference.html>
 - <https://www.st.cs.uni-saarland.de/edu/config-ss04/scheme-quickref.pdf>
