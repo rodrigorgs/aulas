@@ -82,7 +82,7 @@ Realize também a consulta `humano(X)`. Qual é o retorno?
 
 Um programa em Prolog é uma **base de conhecimento** que contém **cláusulas** finalizadas por ponto (`.`). Essas cláusulas representam o que sabemos sobre o mundo.
 
-Uma cláusula pode ser um **fato** ou uma **regra**. Uma regra possui **cabeça** e **corpo**, no formato `cabeça :- corpo`, onde corpo.
+Uma cláusula pode ser um **fato** ou uma **regra**. Uma regra possui **cabeça** e **corpo**, no formato `cabeça :- corpo`. A interpretação da regra é "se o corpo é verdadeiro, então a cabeça é verdadeira".
 
 Identificadores começados por letras minúsculas são **átomos**, que representam objetos específicos do nosso mundo. Identificadores começados por letras maiúsculas são **variáveis**.
 
