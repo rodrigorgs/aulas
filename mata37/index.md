@@ -41,7 +41,7 @@ title: MATA37 - ILP - 2017.1
 - Exercício: [Alô mundo - jogo dos 7 erros](https://repl.it/@rodrigorocha/alomundo7erros)
 - [Expressões aritméticas](aritmetica)
 - .
-- [Variáveis](variáveis)
+- [Variáveis](variaveis)
 - [Uma estratégia para ler código](https://medium.com/bits-and-behavior/teaching-a-strategy-for-reading-code-fbc9f4044cab)
 - [Entrada e saída](entrada-saida)
 - .
