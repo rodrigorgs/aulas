@@ -9,7 +9,7 @@ categories: aula
 
 Ao responder a uma consulta, o interpretador Prolog pode precisar **instanciar** variáveis, isto é, atribuir valor às variáveis.
 
-Dizemos que dois termos podem ser **unificados** se eles são iguais ou se contêm variáveis que podem ser instanciadas de formar a tornar os termos idênticos.
+Dizemos que dois termos podem ser **unificados** se eles são iguais ou se contêm variáveis que podem ser instanciadas de forma a tornar os termos idênticos.
 
 Definindo mais formalmente, pode-se dizer que dois termos podem ser unificados se, e somente se uma das condições for verdadeira:
 

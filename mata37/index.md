@@ -45,10 +45,13 @@ title: MATA37 - ILP - 2017.1
 - [Uma estratégia para ler código](https://medium.com/bits-and-behavior/teaching-a-strategy-for-reading-code-fbc9f4044cab)
 - [Entrada e saída](entrada-saida)
 - .
-- [Introdução à linha de comando][linux]
+- [Estilo de codificação](estilo)
+- [Quiz sobre variáveis, aritmética e entrada/saída](https://play.kahoot.it/#/k/71e43c0a-cd6c-4286-a3bf-d159b793dcf7)
+- [Erros comuns nos exercícios](erros-comuns)
 - [Compilador de C++](compilador)
+- .
+- [Introdução à linha de comando][linux]
 - [Como instalar um compilador de C++ no Windows (MinGW, g++)](https://www.youtube.com/watch?v=bEs-5IU_l9w)
-- [Problemas de competição de programação](intro-problemas)
 - .
 - [Desvio condicional][desvio]
 - [Estruturas de repetição](repeticao)
