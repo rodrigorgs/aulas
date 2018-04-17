@@ -18,7 +18,7 @@ Exemplo de entrada:
 Exemplo de saída:
 
 ```
-2
+DIF = 2
 ```
 
 ---

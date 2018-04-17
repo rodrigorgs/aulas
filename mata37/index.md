@@ -48,12 +48,13 @@ title: MATA37 - ILP - 2017.1
 - [Estilo de codificação](estilo)
 - [Quiz sobre variáveis, aritmética e entrada/saída](https://play.kahoot.it/#/k/71e43c0a-cd6c-4286-a3bf-d159b793dcf7)
 - [Erros comuns nos exercícios](erros-comuns)
-- [Compilador de C++](compilador)
+- .
+- [Estruturas de seleção (desvio condicional)][selecao]
 - .
 - [Introdução à linha de comando][linux]
+- [Compilador de C++](compilador)
 - [Como instalar um compilador de C++ no Windows (MinGW, g++)](https://www.youtube.com/watch?v=bEs-5IU_l9w)
 - .
-- [Desvio condicional][desvio]
 - [Estruturas de repetição](repeticao)
 - [Vetores][vetores]
 - [Strings][strings]
