@@ -211,7 +211,7 @@ Se esquecer de escrever o break, a execução continua nas instruções do próx
 
 # Expressões lógicas
 
-Dentro dos parêntese do if e do else-if devem-se escrever *expressões lógicas*, isto é, expressões que retornam *verdadeiro* (`true`) ou *falso* (`false`) -- tipo `bool` (booleano). Para isso, podemos usar *operadores relacionais* e *operadores lógicos*.
+Dentro dos parênteses do if e do else-if devem-se escrever *expressões lógicas*, isto é, expressões que retornam *verdadeiro* (`true`) ou *falso* (`false`) -- tipo `bool` (booleano). Para isso, podemos usar *operadores relacionais* e *operadores lógicos*.
 
 Além disso, por questões de compatibilidade, é possível escrever expressões aritméticas no lugar de expressões lógicas. Nesse caso, 0 (zero) equivale a falso e qualquer outro número equivale a verdadeiro.
 

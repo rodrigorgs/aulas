@@ -49,7 +49,7 @@ title: MATA37 - ILP - 2017.1
 - [Quiz sobre variáveis, aritmética e entrada/saída](https://play.kahoot.it/#/k/71e43c0a-cd6c-4286-a3bf-d159b793dcf7)
 - [Erros comuns nos exercícios](erros-comuns)
 - .
-- [Estruturas de seleção (desvio condicional)](selecao)
+- [Estruturas de seleção (desvio condicional): if, else, switch, ?:](selecao)
 - .
 - [Introdução à linha de comando][linux]
 - [Compilador de C++](compilador)
