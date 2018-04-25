@@ -333,6 +333,44 @@ while (i < n) {
 
 ---
 
+# Artifício para leitura de sequências de números finalizadas com zero
+
+Leia um número e imprima o dobro, repetidamente. Pare quando o número for 0:
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int i;
+
+  while ((cin >> i) && i != 0) {
+    cout << i * 2 << endl;
+  }
+
+  return 0;
+}
+```
+
+`(cin >> i)` lê um número da entrada padrão, atribui o número à variável `i`, e retorna falso se a leitura não é bem sucedida.
+
+---
+
+# Artifício para leitura de sequências de números finalizadas com zero
+
+Outra forma de fazer:
+
+```c++
+while (cin >> i, i != 0) {
+    ...
+}
+```
+
+Em C++, 'instrução1, instrução2' significa executar `instrução1`, depois executar `instrução2` e retornar o valor de `instrução2` (isto é, é o valor da `instrução2` que vai ser testado pelo `while`).
+
+---
+
 # Variáveis com propósitos especiais
 
 - contador
@@ -600,30 +638,6 @@ int main() {
 ```
 
 Quantas vezes o `cout << "#"` vai ser executado?
-
----
-
-# Artifício para leitura de sequências de números finalizadas com zero
-
-Leia um número e imprima o dobro, repetidamente. Pare quando o número for 0:
-
-```c++
-#include <iostream>
-
-using namespace std;
-
-int main() {
-  int i;
-
-  while ((cin >> i) && i != 0) {
-    cout << i * 2 << endl;
-  }
-
-  return 0;
-}
-```
-
-`(cin >> i)` lê um número da entrada padrão, atribui o número à variável `i`, e retorna falso se a leitura não é bem sucedida.
 
 ---
 
