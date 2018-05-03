@@ -371,6 +371,60 @@ Em C++, 'instrução1, instrução2' significa executar `instrução1`, depois e
 
 ---
 
+# Orientação para problemas de correção automática (estilo maratona)
+
+Nos problemas de correção automática, você não precisa ler todas as entradas antes de escrever as saídas. Você pode alternar leitura e escrita.
+
+Lembre-se que a saída é tudo o que seu programa escreve (usando, por exemplo, `cout`). É isso que vai ser comparado com a saída esperada.
+
+---
+
+# Orientação para problemas de correção automática (estilo maratona)
+
+Exemplo: leia um número e imprima o dobro. Entrada finaliza com 0.
+
+Exemplo de entrada:
+
+```
+3
+-5
+0
+```
+
+Exemplo de saída:
+
+```
+6
+-10
+```
+
+---
+
+# Orientação para problemas de correção automática (estilo maratona)
+
+Solução:
+
+```c++
+#include <iostream>
+
+using namspace std;
+
+int main() {
+  int x;
+  while (cin >> x, x != 0) {
+      cout << x * 2 << endl;
+  }
+  return 0;
+}
+```
+
+
+Nos problemas de correção automática, você não precisa ler todas as entradas antes de escrever as saídas. Você pode alternar leitura e escrita.
+
+Lembre-se que a saída é tudo o que seu programa escreve (usando, por exemplo, `cout`). É isso que vai ser comparado com a saída esperada.
+
+---
+
 # Variáveis com propósitos especiais
 
 - contador
