@@ -37,7 +37,7 @@ O predicado `=` pode ser usado para determinar se dois termos podem ser unificad
     + Lembrete: regra = `cabeça :- corpo.`
 - Se unificar com um fato, retorna as instâncias das variáveis.
 - Se unificar com a cabeça de uma regra, consulta o corpo da regra (recursivamente).
-- Ver Exemplo 2 em <http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf> (a partir da p. 6)
+- Ver [exemplos](http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf#page=6).
 - Use `trace.` / `notrace.` para ativar/desativar o rastreamento das consultas.
 - A busca pode ser construída como uma árvore
 

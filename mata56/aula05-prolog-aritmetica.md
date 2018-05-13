@@ -90,7 +90,7 @@ X is 1 + 2.
 1 + 2 is X.
 ```
 
-Ver também exercícios da página 78 do livro Learn Prolog Now.
+Ver também exercícios da [página 78 do livro Learn Prolog Now](http://www.diag.uniroma1.it/gemignani/documents/lucia/LearnPrologNow.pdf#page=84).
 
 ## Exercícios
 
