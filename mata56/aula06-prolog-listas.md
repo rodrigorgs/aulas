@@ -23,7 +23,7 @@ categories: aula
     + **cabeça** (*head*): primeiro elemento da lista
     + **cauda** (*tail*): lista que sobra quando retiramos a cabeça
 
-## Operador |
+## Operador | (pipe)
 
 Uma lista **não-vazia** pode ser representada de forma a apresentar explicitamente a sua cabeça e a sua cauda, usando a sintaxe `[Cabeça|Cauda]`. Exemplos:
 
@@ -115,15 +115,15 @@ a2b([a|A], [b|B]) :- a2b(A, B).
 **Exercício 33**. Considere a seguinte base de conhecimento:
 
 ```prolog
-traducao(one,um)
-traducao(two,dois)
-traducao(three,tres)
-traducao(four,quatro)
-traducao(five,cinco)
-traducao(six,seis)
-traducao(seven,sete)
-traducao(eight,oito)
-traducao(nine,nove)
+traducao(one,um).
+traducao(two,dois).
+traducao(three,tres).
+traducao(four,quatro).
+traducao(five,cinco).
+traducao(six,seis).
+traducao(seven,sete).
+traducao(eight,oito).
+traducao(nine,nove).
 ```
 
 Crie uma regra, `lista_traducao(E,P)`, que traduz uma lista de numerais em inglês na lista correspondente com os numerais em português. Por exemplo, `lista_traducao([one,nine,two],X)` deve retornar `X = [um,nove,dois]`.
@@ -148,11 +148,14 @@ Dica: Para resolver esta questão, primeiro tente responder a seguinte pergunta:
 - `eh_sublista(L1, L2)` - L1 é sublista de L2
 - `intersecao(L1, L2, L3)` - L3 contém apenas os elementos que aparecem em L1 e L2
 - `palindrome([r,o,t,a,t,o,r])` - verdadeiro se a lista é igual a seu inverso
+- `elemEm(L, N, X)` - X é o N-ésimo elemento de L
+- `elemPos(L, N, X)` - N é a posição do elemento X em L
 
 Envolvendo aritmética:
 
 - `comprimento(L, N)`
 - `somatorio(L, N)`
+- `media(L, N)`
 
 
 

@@ -32,9 +32,10 @@ humano(joao).
 Você está fazendo uma *consulta*: `joao` é humano? Na área de **resultados**, o interpretador vai responder `true.`.
 
 Outras consultas para testar:
-    + `humano(shrek).`
-    + `humano(caetano).`
-    + `humano(X).`
+
+- `humano(shrek).`
+- `humano(caetano).`
+- `humano(X).`
 
 `false` significa "não é possível provar que é verdadeiro" (*hipótese do mundo fechado*).
 

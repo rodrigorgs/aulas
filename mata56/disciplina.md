@@ -28,7 +28,7 @@ Prolog:
 
 Conceitos de linguagens de programação:
 
-- Programming Language Pragmatics (https://www.cs.rochester.edu/u/scott/pragmatics/3e/), Michael L. Scott, 3ª edição.
+- Programming Language Pragmatics ([site](https://www.cs.rochester.edu/u/scott/pragmatics/3e/)), Michael L. Scott, 3ª edição.
 - Linguagens de Programação: Princípios e Paradigmas, Tucker e Noonan, 2a edição, McGraw Hill
 - Conceitos de Linguagens de Programação, Robert Sebesta, ed. Bookman, 4a edição
 
