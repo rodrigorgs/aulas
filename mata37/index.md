@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MATA37 - ILP - 2017.1
+title: MATA37 - ILP - 2018.1
 ---
 
 # Informações básicas
@@ -56,7 +56,9 @@ title: MATA37 - ILP - 2017.1
 - [Como instalar um compilador de C++ no Windows (MinGW, g++)](https://www.youtube.com/watch?v=bEs-5IU_l9w)
 - .
 - [Estruturas de repetição](repeticao)
-- [Vetores][vetores]
+- .
+- [Vetores][vetores] -- [exercícios extras](https://www.ime.usp.br/~macmulti/exercicios/vetores/)
+- .
 - [Strings][strings]
 - [Matrizes][matrizes]
 - [Structs](structs)
