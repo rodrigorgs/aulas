@@ -123,9 +123,9 @@ Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construçõ
 
 ## Abreviações comuns
 
-- `'e` é equivalente a `(quote e)`. Exemplos: `'abc`, `'(1 2 3)`.
+- `'exp` é equivalente a `(quote exp)`. Exemplos: `'abc`, `'(1 2 3)`.
 - `(list e1 ... en)` é equivalente a `(cons e1 (cons ... (cons en '())')))`. Exemplo: `(list 1 2 3)` é equivalente a `(cons 1 (cons 2 (cons 3 '())')))`, que é equivalente a `(quote (1 2 3))`, que é equivalente a `'(1 2 3)`.
-- `(define (null x) (equal? x '())'))`
+- `(define (null? x) (equal? x '())'))`
 - `(define (and p q) (cond p q) (t '())'))`
     - também há definições para `not` e `or`
 - `(define (cadr x) (car (cdr x)))`
@@ -138,6 +138,20 @@ Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construçõ
     - ...
 - `(if cond expr1 expr2)` retorna expr1 se a condição é verdadeira, e expr2 caso contrário
 
+## Comentários
+
+Comentários são iniciados por `;`
+
+## Números e matemática
+
+- Operadores aritméticos: +, -, /, *, mod (resto da divisão)
+    - Ex.: `(+ 2 3)`, `(+ 2 (- 4 1))`, `(* 1 (+ 2 (/ 6 2)))`
+    - Ex.: `(* 1 2 3 4)` (+ e * permitem mais de dois argumentos)
+- Comparadores: <, >, <=, >=, =
+    - Ex.: `(< 2 3)`, `(= 5 (+ 2 3))`
+- Funcões matemáticas: sin cos tan asin acos atan floor max min log abs ceil pow exp atan2 random sqrt round
+    - Ex.: `(sin (/ (* 2 3.141592) 8))`, `(max 3 5)`
+
 ## Manipulação de strings
 
 - (string-length s): comprimento da string s. 
@@ -149,15 +163,29 @@ Esse conjunto de regras define o núcleo da linguagem Scheme. Outras construçõ
 
 Usamos aspas para representar strings. Exemplo: `"alo mundo"`.
 
-## Números e matemática
+## Sequenciamento de expressões
 
-- Operadores aritméticos: +, -, /, *, % (resto da divisão)
-    - Ex.: `(+ 2 3)`, `(+ 2 (- 4 1))`, `(* 1 (+ 2 (/ 6 2)))`
-    - Ex.: `(* 1 2 3 4)` (+ e * permitem mais de dois argumentos)
-- Comparadores: <, >, <=, >=, =
-    - Ex.: `(< 2 3)`, `(= 5 (+ 2 3))`
-- Funcões matemáticas: sin cos tan asin acos atan floor max min log abs ceil pow exp atan2 random sqrt round
-    - Ex.: `(sin (/ (* 2 3.141592) 8))`, `(max 3 5)`
+Use `(begin exp1 exp2 ...)` para escrever várias expressões onde apenas uma é esperada. Apenas a última expressão é retornada.
+
+## Entrada e saída
+
+Saída (`display`/`print` e `newline`):
+
+```
+(display "Alo")
+(newline) ; imprime quebra de linha
+(print 2)
+(display '(a b c))
+```
+
+Entrada (`read` -- não funciona nos editores desta página):
+
+```
+(define x (read))
+(display (* x 2))
+(newline)
+(display (* x 4))
+```
 
 ## Escopo
 

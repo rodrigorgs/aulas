@@ -35,7 +35,7 @@ int nums[5];
 
 e acessá-los assim:
 
-```
+```c++
 cin >> nums[0] >> nums[1];
 nums[0] = nums[0] + nums[1] * 3;
 cout << nums[0] * 3 << endl;
@@ -51,7 +51,11 @@ A declaração de um vetor se dá da seguinte forma:
 
 *tipo* nomeDoVetor[*tamanho*];
 
-Exemplo: ```double notas[20];```
+Exemplo: 
+
+```c++
+double notas[20];
+```
 
 ---
 
@@ -92,14 +96,17 @@ nomeDoVetor[indice]
 
 *Índice* é o número que determina a posição de um elemento do vetor que se deseja acessar. Em C++, os vetores são sempre indexados a partir de zero (ou seja, o primeiro índice é zero).
 
-Note que entre colchetes você pode usar qualquer expressão aritmética que retorne um índice válido. Exemplo:
+Note que entre colchetes você pode usar **qualquer expressão aritmética** que retorne um índice válido. Exemplo:
 
-```
+```c++
 int vetor[] = {7, 4, 0, 5, 8, 3, 2, 1, 3};
 int i;
 cin >> i;
 cout << vetor[i] << endl;
 cout << vetor[i + 1] << endl;
+```
+
+O que esse programa faz?
 
 ---
 
@@ -136,8 +143,8 @@ int main() {
     cin >> valores[i];
   }
 
-  for (i = 9; i >= 0; i++) {
-    cout << valores[i];
+  for (i = 9; i >= 0; i--) {
+    cout << valores[i] << endl;
   }
 
   return 0;
@@ -176,7 +183,60 @@ cout << x[10] << endl;
 
 # Usar vetor para substituir if
 
+Com `if`:
 
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int pedido, qtd;
+
+  cout << "Digite o pedido (0 = suco, 1 = água): ";
+  cin >> pedido;
+  cout << "Digite a quantidade: ";
+  cin >> qtd;
+
+  cout << "Valor: ";
+  if (pedido == 0) {
+    cout << qtd * 2.00 << endl;
+  } else if (pedido == 1) {
+    cout << qtd * 1.50 << endl;
+  }
+
+  return 0;
+}
+```
+
+---
+
+# Usar vetor para substituir if
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int pedido, qtd;
+  double valorUnit[2];
+
+  cout << "Digite o pedido (0 = suco, 1 = água): " 
+  cin >> pedido;
+  cout << "Digite a quantidade: ";
+  cin >> qtd;
+
+  cout << "Valor: ";
+  if (valor >= 0 && valor <= 1) {
+    cout << valorUnit[pedido] * qtd << endl;
+  }
+
+  return 0;
+}
+```
+
+Ao usar a entrada para indexar o vetor, cheque se o índice está dentro dos limites!
 
 ---
 
@@ -188,6 +248,5 @@ cout << x[10] << endl;
 
 - [Cédulas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1018): resolva usando vetor para tornar o código compacto;
 - Ler as notas dos alunos e plotar um histograma
-
 
 </div>
