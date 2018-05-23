@@ -66,6 +66,6 @@ int estado = digitalRead(7);
 
 Considere agora que pode haver um número maior de LEDs, e que eles podem estar ligados em outros pinos (não necessariamente em ordem crescente). Crie um vetor para representar os pinos em que os LEDs estão ligados e altere seu código para usar essa informação.
 
-# Passo 5 - volume
+# Passo 5 - potenciômetro
 
 Adicione um potenciômetro e religue os LEDs em pinos PWM. Acenda os LEDs com a intensidade proporcional ao valor lido no pino do potenciômetro.
