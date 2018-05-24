@@ -57,7 +57,7 @@ title: MATA37 - ILP - 2018.1
 - .
 - [Estruturas de repetição](repeticao)
 - .
-- [Vetores][vetores] -- [exercícios extras](https://www.ime.usp.br/~macmulti/exercicios/vetores/)
+- [Vetores](vetores) -- [exercícios extras](https://www.ime.usp.br/~macmulti/exercicios/vetores/)
 - .
 - [Strings][strings]
 - [Matrizes][matrizes]
