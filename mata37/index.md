@@ -59,7 +59,8 @@ title: MATA37 - ILP - 2018.1
 - .
 - [Vetores](vetores) -- [exercícios extras](https://www.ime.usp.br/~macmulti/exercicios/vetores/)
 - .
-- [Strings][strings]
+- [Strings][strings] -- [material complementar](strings)
+- .
 - [Matrizes][matrizes]
 - [Structs](structs)
 - [Funções](funcoes)
