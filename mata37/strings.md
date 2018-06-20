@@ -67,14 +67,23 @@ cin >> x;
 
 # Leitura de strings
 
-`cin >>` lê a entrada até encontrar um espaço em branco (espaço, tab, quebra de linha etc.), mas não remove esse espaço em branco da entrada. Isso causa problemas ao usar o `getline` após o `cin >>`. Para resolver, use `cin.ignore`:
+`cin >>` lê a entrada até encontrar um espaço em branco (espaço, tab, quebra de linha etc.), mas não remove esse espaço em branco da entrada.
+
+`getline(cin, variavel)` lê a entrada até encontrar uma quebra de linha, e remove a quebra de linha da entrada. A variável recebe todo o conteúdo antes da quebra de linha.
+
+
+---
+
+# Leitura de strings
+
+Isso causa problemas ao usar o `getline` após o `cin >>`. Para resolver, use `cin.ignore()` (descarta o próximo caractere da entrada) ou então `cin >> ws` (descarta todos os caracteres em branco consecutivos da entrada):
 
 ```c++
 int idade;
 string nome;
 
 cin >> idade;
-cin.ignore(100, '\n')
+cin.ignore();
 getline(cin, x);
 ```
 
