@@ -367,7 +367,7 @@ A função `reduce` aplica uma função dada a um acumulador e cada elemento do 
 - `f` é uma função que recebe dois parâmetros:
     - `acum`: o valor atual do acumulador
     - `x`: o elemento sendo processado atualmente no array
-    - (na verdade a função `f` recebe 4 argumentos, mas vamos ignorar os outros dois)
+    - (na verdade a função `f` recebe 4 argumentos, mas vamos ignorar os outros dois. Se quiser mais detalhes, [clique aqui](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce))
 - o retorno da função `f` é atribuído ao acumulador para ser usado na próxima invocação de `f`
 - `reduce` retorna o valor final do acumulador
 

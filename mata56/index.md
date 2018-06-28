@@ -65,7 +65,6 @@ Programação assíncrona
 - [JS: padrões de concorrência](aula16-concorrencia-padroes)
 - [JS: promises](aula17-promises)
 - [JS: async/await](aula18-async-await)
-- .
 - [JS: iterators e generators](aulaxx-generators)
 
 <script type="text/javascript">
