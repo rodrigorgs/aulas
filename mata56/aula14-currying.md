@@ -122,7 +122,7 @@ console.log(celsiusToFahrenreit2(25));
 console.log(primeiroGrauCurried(1.8, 32)(25));
 </textarea>
 
-## Aplicação prática: pipeline de transformação de arrays
+## Aplicação prática: uso com map
 
 Currying é útil em conjunção de funções de alta ordem. Considere a função `arr.map(f)`, que retorna um array resultante da aplicação da função `f` a cada elemento de `arr`. A função `map` chama `f` passando um único argumento; como podemos então usar nossa função `primeiroGrau` para mapear elementos de um array? Usando currying:
 
