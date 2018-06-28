@@ -17,8 +17,27 @@ Antes de usar a ILP Game, você precisa de:
 - biblioteca SDL
 - biblioteca SDL\_image
 - biblioteca SDL\_ttf
+- biblioteca SDL\_mixer
 
-Na dúvida sobre como instalar as dependências? Verifique nossos [slides sobre SDL](https://rodrigorgs.github.io/aulas/mata37/sdl/).
+**Instalação das dependências no macOS:**
+
+```bash
+brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf
+```
+
+**Instalação das dependências no Ubuntu Linux:**
+
+```bash
+sudo apt-get install libsdl2*dev
+```
+
+**Instalação das dependências no Windows:**
+
+- [Instalação do compilador de C++ (MinGW)](https://youtu.be/bEs-5IU_l9w) (vídeo)
+- [Instalação da SDL](https://youtu.be/gvEWGHAPO8k) (vídeo)
+
+
+Veja também os [slides sobre SDL](https://rodrigorgs.github.io/aulas/mata37/sdl/).
 
 ## Como usar?
 
@@ -64,6 +83,8 @@ No Mac ou no Linux:
 ```bash
 g++ seuarquivo.cc `sdl2-config --cflags --libs` -lSDL2_ttf -lSDL2_image -lSDL2_mixer
 ```
+
+No Windows: veja o vídeo [Instalação da SDL](https://youtu.be/gvEWGHAPO8k); no comando de compilação, você precisará incluir `-lSDL2_ttf -lSDL2_image -lSDL2_mixer`
 
 ## Como funciona?
 
