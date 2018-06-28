@@ -5,15 +5,12 @@ date:   2017-03-10 16:40:00 -0300
 categories: aula
 ---
 
-# Programação funcional
-
-## Currying
-
-**Currying** é o processo de transformar uma função que espera vários argumentos em uma que, quando chamada com menos argumentos, retorna uma nova função que recebe os argumentos restantes.
+**Currying** é o processo de transformar uma função que espera vários argumentos em uma função que espera um único argumento e retorna outra função *curried*. Por exemplo, uma função que recebe três argumentos, ao sofrer currying, resulta em uma função que recebe um argumento e retorna uma função que recebe um argumento, que por sua vez retorna uma função que recebe um argumento e retorna o resultado da função original.
 
 **Aplicação parcial** de uma função corresponde a chamar a função passando menos argumentos do que a função recebe.
 
-A aplicação parcial de uma função que sofreu currying resulta em uma outra função.
+<!-- A aplicação parcial de uma função que sofreu currying resulta em uma outra função.
+ -->
 
 Considere a função `produto`:
 
@@ -35,6 +32,8 @@ console.log(dobro);
 
 A chamada `produto(2)` equivale à chamada `produto(2, undefined)`, resultado na multiplicação `2 * undefined`, cujo resultado é `NaN` (not a number).
 
+## Usando closures para implementar funções curried
+
 Uma versão **curried** da função (i.e., função resultante do currying) pode ser escrita usando-se *closures*:
 
 <textarea class="code">
@@ -47,6 +46,19 @@ var dobro = produto(2);
 console.log(dobro(8));
 console.log(produto(2)(8));
 </textarea>
+
+Outra forma de escrever:
+
+<textarea class="code">
+const produto = a => (b => a * b);
+// os parênteses são opcionais; a seta (=>) é associativa à direita.
+
+var dobro = produto(2);
+console.log(dobro(8));
+console.log(produto(2)(8));
+</textarea>
+
+### Exercício básico de currying
 
 Vamos praticar? Considere a seguinte função de 3 argumentos, que calcula o valor de uma função de primeiro grau em determinado ponto:
 
@@ -72,6 +84,8 @@ var resultado = primeiroGrauCurried(3)(2)(42);
 console.log(resultado);
 </textarea>
 
+## Aplicação prática de currying: conversor de temperaturas
+
 Dá pra ver que, na versao curried, a maneira de chamar a função fica diferente: usamos `(3)(2)(42)` em vez de `(3, 2, 42)`. Isso porque cada chamada exceto a última retorna uma função, e por precisamos fazer 3 chamadas em vez de uma.
 
 A vantagem de escrever uma função *curried* é que fica mais fácil construir funções com base nas funções curried fixando alguns argumentos. Por exemplo, a função `celsiusParaFahrenheit` pode ser escrita assim:
@@ -85,6 +99,8 @@ console.log(celsiusParaFahrenheit(25));
 </textarea>
 
 Até agora nós realizamos o currying the funções de forma manual, reescrevendo o código das funções. Em algumas linguagens, como Haskell, todas as funções são curried (e, portanto, admitem aplicação parcial). Isso não acontece com Javascript, mas há bibliotecas capazes de realizar o currying de qualquer função.
+
+## A biblioteca Ramda
 
 A biblioteca [Ramda](http://ramdajs.com/) possui uma função, `R.curry`, que recebe uma função e retorna uma versão curried dessa função.
 
@@ -106,6 +122,8 @@ console.log(celsiusToFahrenreit2(25));
 console.log(primeiroGrauCurried(1.8, 32)(25));
 </textarea>
 
+## Aplicação prática: pipeline de transformação de arrays
+
 Currying é útil em conjunção de funções de alta ordem. Considere a função `arr.map(f)`, que retorna um array resultante da aplicação da função `f` a cada elemento de `arr`. A função `map` chama `f` passando um único argumento; como podemos então usar nossa função `primeiroGrau` para mapear elementos de um array? Usando currying:
 
 <textarea class="code">
@@ -123,6 +141,8 @@ fahrenreit = celsius.map(R.partial(primeiroGrau, [1.8, 32]));
 console.log(fahrenreit);
 
 </textarea>
+
+## Ordem dos parâmetros
 
 Se você quer criar funções que podem ser curried, vale a pena pensar na ordem dos seus argumentos. O ideal é deixar concentrar os argumentos que tendem a ser fixados no início, e deixar os argumentos que variam mais no final da lista de argumentos. Note o exemplo da função `primeiroGrau(a, b, x)`: normalmente, quando chamamos a função várias vezes, fixamos `a` e `b` e variamos `x`; por isso `x` foi colocado como último argumento.
 
@@ -151,6 +171,8 @@ Lembre-se do conceito de composição de funções da matemática: se eu tenho a
 
 A biblioteca Ramda fornece uma função de alta ordem para compor duas ou mais funções quaisquer: `R.pipe`. No exemplo da matemática, c(x) = R.pipe(f, g, h). O exemplo da última inicial de um nome fica assim:
 
+(shell scripting também usa o conceito de pipe)
+
 <textarea class="code">
 function getUltimoNome(nomeCompleto) { return nomeCompleto.split(" ").splice(-1)[0]; }
 function getPrimeiraLetra(string) { return string[0]; }
@@ -160,6 +182,8 @@ console.log(getUltimaInicial("Sir Arthur Conan Doyle"));
 </textarea>
 
 Esse estilo de programar é chamado de *pointfree*, pois a função `getUltimaInicial` é definida sem declarar quais são os seus parâmetros.
+
+## Exercício de composição de funções
 
 Agora é com você. Crie uma função para retornar a quantidade de elementos de um array cujo quadrado é ímpar. (Vamos ignorar o fato de que o quadrado de um número é ímpar se, e somente se o número é impar.)
 
@@ -178,6 +202,8 @@ var qtdQuadradosImpares = R.pipe(/* complete o código */);
 // ---
 teste(4, qtdQuadradosImpares([2, 3, 5, 8, 13, 21]));
 </textarea>
+
+## Composição de funções e número de parâmetros
 
 Na composição de funções, o retorno da primeira função é passado como parâmetro na chamada da segunda função, o retorno da segunda função é passado como parâmetro na chamada da terceira função, e assim por diante.
 
