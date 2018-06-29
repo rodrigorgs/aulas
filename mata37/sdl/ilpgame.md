@@ -47,6 +47,8 @@ Para usar, copie o arquivo [ilpgame.h](ilpgame.h) para o diretório onde está o
 #include "ilpgame.h"
 ```
 
+(Se você tiver múltiplos arquivos `.cc` ou `.cpp`, insira a linha `#define ILPGAME_HEADER_ONLY` antes do `#include` em todos os seus arquivos `.cc`/`.cpp` exceto um.)
+
 Você também precisará definir as seguintes funções:
 
 ```c++

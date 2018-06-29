@@ -1,3 +1,11 @@
+//
+// Para projetos com múltiplos arquivos de implementação (.cc, .cpp, .cxx etc.),
+// insira a linha
+//
+//   #define ILPGAME_HEADER_ONLY
+//
+// antes do #include "ilpgame.h" em todos os arquivos exceto um.
+//
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
@@ -10,19 +18,10 @@
 #include <emscripten.h>
 #endif
 
-// https://stackoverflow.com/questions/5590381/easiest-way-to-convert-int-to-string-in-c
-#define tostring(x) static_cast<std::ostringstream&>( \
-        (std::ostringstream() << std::dec << x)).str()
-
 using namespace std;
 
-SDL_Window *window = NULL;
-SDL_Surface *screen = NULL;
-SDL_Renderer *renderer = NULL;
-
-Uint32 lastTime = 0;
-Uint32 minDeltaTime = 0;
-bool gameLoopQuit = false;
+// https://stackoverflow.com/questions/5590381/easiest-way-to-convert-int-to-string-in-c
+#define tostring(x) to_string(x)
 
 ////////////////////////////////////////////
 // Funções definidas pelo usuário
@@ -35,8 +34,51 @@ void update();
 void draw();
 
 ////////////////////////////////////////////
+// Cabeçalho
+////////////////////////////////////////////
+
+void initSDL_ttf();
+void initSDL_image();
+void initSDL_mixer();
+void initSDL_base(int width, int height);
+void initSDL(int width, int height);
+void initSDL();
+void cleanScreen(int r, int g, int b);
+void cleanScreen();
+void updateScreen();
+void drawText(string text, TTF_Font *font, SDL_Color color, int x, int y);
+void drawImage(SDL_Surface *surface, int x, int y);
+void drawCenteredImage(SDL_Surface *surface, int x, int y);
+void drawLine(int x1, int y1, int x2, int y2, int r, int g, int b);
+void limitFPS(int fps);
+void disableFPSLimiting();
+void endGameLoop();
+void gameLoopIteration(void *arg);
+void gameLoop();
+
+bool isQuitEvent(SDL_Event event);
+SDL_Surface *loadBMP(string filename);
+SDL_Surface *loadImage(string filename);
+TTF_Font *loadFont(string filename, int size);
+Mix_Music *loadMusic(string filename);
+Mix_Chunk *loadSound(string filename);
+Mix_Music *loadMusic(string filename);
+Mix_Chunk *loadSound(string filename);
+
+// inspired by ILPGAME_HEADER_ONLY
+#ifndef ILPGAME_HEADER_ONLY
+
+////////////////////////////////////////////
 // Inicializacao
 ////////////////////////////////////////////
+
+SDL_Window *window = NULL;
+SDL_Surface *screen = NULL;
+SDL_Renderer *renderer = NULL;
+
+Uint32 lastTime = 0;
+Uint32 minDeltaTime = 0;
+bool gameLoopQuit = false;
 
 void quit() {
   destroy();
@@ -342,3 +384,4 @@ void gameLoop() {
   // destroy() is called by quit(), which is called because of atexit()
 }
 
+#endif
