@@ -3,6 +3,10 @@ layout: page
 title: MATA37 - ILP - 2018.1
 ---
 
+# Trabalho prático
+
+**Veja a [especificação do trabalho](trabalho20181)**
+
 # Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
@@ -12,7 +16,7 @@ title: MATA37 - ILP - 2018.1
 
 - Exercícios online individuais<br/><span style="color: gray;">\[peso: 3\]</span>
 - Duas provas práticas<br/><span style="color: gray;">\[peso: 5\]</span>
-- Trabalho prático<br/><span style="color: gray;">\[peso: 2\]</span>
+- Trabalho prático<br/><span style="color: gray;">\[peso: 2\]</span> -- **veja a [especificação do trabalho](trabalho20181)**
 
 # Links importantes
 

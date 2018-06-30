@@ -184,7 +184,7 @@ Agora escreva no console:
 alo.prototype
 ```
 
-Então visualize a propriedade `constructor` > `__proto__` > `[[Scopes]]` > `Closure`. Veja que a variável `nome` foi capturada, mas a variável `varlocal` não, pois ela não é usada dentro da função `mostraNome()`.
+Então visualize a propriedade `constructor` > `[[Scopes]]` > `Closure`. Veja que a variável `nome` foi capturada, mas a variável `varlocal` não, pois ela não é usada dentro da função `mostraNome()`.
 
 Extra: inclua uma linha `console.log(eval(prompt()))` dentro da função `mostraNome()` e então visualize o escopo da função.
 

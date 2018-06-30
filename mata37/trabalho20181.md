@@ -9,7 +9,9 @@ Sua tarefa é criar um jogo digital. Mas você não estará sozinho nessa jornad
 
 ## Especificação
 
-Você deve criar um **jogo** simples usando a biblioteca SDL (valor: **1,6**) e um **vídeo de demonstração** do jogo (valor: **0,4**). Recomenda-se usar a **[biblioteca ILP Game](sdl/ilpgame)** para tornar esse processo mais fácil. Clique [aqui](sdl/ilpgame) para aprender mais.
+Você deve criar um **jogo** simples usando a **[biblioteca ILP Game](sdl/ilpgame)** (valor: **1,6**) e um **vídeo de demonstração** do jogo (valor: **0,4**).
+
+**[Clique aqui para acessar a documentação da biblioteca ILP Game](sdl/ilpgame)**
 
 Envie a formação da sua equipe (**de 1 a 4 pessoas**) e uma breve descrição do jogo para mim: <rodrigorgs@ufba.br> (ou me comunique em aula). Eu vou avaliar se a ideia é válida para a disciplina (nem muito fácil e nem muito difícil).
 
