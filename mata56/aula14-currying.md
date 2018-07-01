@@ -86,7 +86,7 @@ console.log(resultado);
 
 ## Aplicação prática de currying: conversor de temperaturas
 
-Dá pra ver que, na versao curried, a maneira de chamar a função fica diferente: usamos `(3)(2)(42)` em vez de `(3, 2, 42)`. Isso porque cada chamada exceto a última retorna uma função, e por precisamos fazer 3 chamadas em vez de uma.
+Dá pra ver que, na versao curried, a maneira de chamar a função fica diferente: usamos `(3)(2)(42)` em vez de `(3, 2, 42)`. Isso porque cada chamada, exceto a última, retorna uma função, e por isso precisamos fazer 3 chamadas em vez de uma.
 
 A vantagem de escrever uma função *curried* é que fica mais fácil construir funções com base nas funções curried fixando alguns argumentos. Por exemplo, a função `celsiusParaFahrenheit` pode ser escrita assim:
 
@@ -98,7 +98,7 @@ var celsiusParaFahrenheit = primeiroGrauCurried(1.8)(32);
 console.log(celsiusParaFahrenheit(25));
 </textarea>
 
-Até agora nós realizamos o currying the funções de forma manual, reescrevendo o código das funções. Em algumas linguagens, como Haskell, todas as funções são curried (e, portanto, admitem aplicação parcial). Isso não acontece com Javascript, mas há bibliotecas capazes de realizar o currying de qualquer função.
+Até agora nós realizamos o currying das funções de forma manual, reescrevendo o código das funções. Em algumas linguagens, como [Haskell](https://wiki.haskell.org/Currying), todas as funções são curried (e, portanto, [admitem aplicação parcial](https://wiki.haskell.org/Partial_application)). Isso não acontece com Javascript, mas há bibliotecas capazes de realizar o currying de qualquer função.
 
 ## A biblioteca Ramda
 
@@ -171,7 +171,7 @@ Lembre-se do conceito de composição de funções da matemática: se eu tenho a
 
 A biblioteca Ramda fornece uma função de alta ordem para compor duas ou mais funções quaisquer: `R.pipe`. No exemplo da matemática, c(x) = R.pipe(f, g, h). O exemplo da última inicial de um nome fica assim:
 
-(shell scripting também usa o conceito de pipe)
+([shell scripting também usa](https://en.wikibooks.org/wiki/Bash_Shell_Scripting#A_preview_of_pipelines) o conceito de pipe)
 
 <textarea class="code">
 function getUltimoNome(nomeCompleto) { return nomeCompleto.split(" ").splice(-1)[0]; }
@@ -185,7 +185,9 @@ Esse estilo de programar é chamado de *pointfree*, pois a função `getUltimaIn
 
 ## Exercício de composição de funções
 
-Agora é com você. Crie uma função para retornar a quantidade de elementos de um array cujo quadrado é ímpar. (Vamos ignorar o fato de que o quadrado de um número é ímpar se, e somente se o número é impar.)
+Agora é com você. Crie uma função para retornar a quantidade de elementos de um array cujo quadrado é ímpar.
+
+> Você pode ignorar o fato de que o quadrado de um número é ímpar se, e somente se o número é impar.
 
 <textarea class="code">
 function comprimento(array) {
@@ -238,9 +240,9 @@ function filtraImpar(array) {
 function quadrado(array) {
   return R.map(x => x * x, array);
 }
-// --- complete o código:
+
 var qtdQuadradosImpares = R.pipe(quadrado, filtraImpar, comprimento);
-// ---
+
 teste(4, qtdQuadradosImpares([2, 3, 5, 8, 13, 21]));
 </textarea>
 
@@ -273,7 +275,7 @@ Pipes são extremamente úteis para escrever transformações de dados. Na lingu
 
 ## Exercício 1
 
-Refatore o código para remover todos os argumentos através da aplicação parcial da função
+Refatore o código para remover todos os argumentos através da aplicação parcial da função.
 Considere a função `wordsOriginal`, abaixo, e escreva a função equivalente `words`, através da aplicação parcial de `R.split`:
 
 <textarea class="code">

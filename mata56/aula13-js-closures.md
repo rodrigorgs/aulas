@@ -66,7 +66,7 @@ function externa() {
 externa();
 </textarea>
 
-Para buscar da variável `xint`, o interpretador Javascript primeiro procura nas variáveis definidas dentro da função `interna`. Não encontrando, ele vai procurar variáveis definidas no contexto da função `externa`. Se ainda não encontrar, procura nas variáveis globais. Ou seja, o ambiente de referenciamento inclui o escopo atual e mais todos os escopos externos.
+Para buscar a variável `xext`, o interpretador Javascript primeiro procura nas variáveis definidas dentro da função `interna`. Não encontrando, ele vai procurar variáveis definidas no contexto da função `externa`. Se ainda não encontrar, procura nas variáveis globais. Ou seja, o ambiente de referenciamento inclui o escopo atual e mais todos os escopos externos.
 
 Então o que vai acontecer no seguinte código?
 
@@ -196,7 +196,7 @@ Mais um exemplo:
 function criaAlertRandom() {
     var x = Math.random();
     return function() {
-        alert("Número sorteado: " + x);
+        console.log("Número sorteado: " + x);
     };
 }
 var funcAlert1 = criaAlertRandom();
@@ -259,8 +259,7 @@ function criaObjetoContador(nome) {
         console.log(nome + ": " + c);
     }
 
-    return {"incrementa": incrementa,
-        "mostra": mostra};
+    return {incrementa, mostra};
 }
 var contadorA = criaObjetoContador("A");
 var contadorB = criaObjetoContador("B");
