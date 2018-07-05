@@ -48,6 +48,10 @@ declaramos que
 - não disponibilizamos nossas respostas para colegas externos à equipe e
 - não realizamos quaisquer outras atividades desonestas para nos beneficiar ou prejudicar outros.
 
+## ATENÇÃO
+
+Neste exercício, você só pode escrever nas caixas de texto nas regiões entre `// --- Complete o código` e `// ---`.
+
 ## Introdução: meuhorarioJS
 
 Oi, tudo bom? Você conhece o [meuhorario](http://meuhorario.dcc.ufba.br/)? Trata-se de um site feito para o aluno da UFBA simular sua matrícula, escolhendo as disciplinas e turmas que deseja cursar no próximo semestre.
