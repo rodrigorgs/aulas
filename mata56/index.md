@@ -12,7 +12,7 @@ title: MATA56 - PLP - 2017.1
 
 - Prova escrita de Prolog <span style="color: gray;">\[peso: 3\]</span>
 - Exercícios práticos de Scheme <span style="color: gray;">\[peso: 1\]</span>
-- Prova escrita de programação funcional <span style="color: gray;">\[peso: 3\]</span>
+- [Exercício de programação funcional](trabalho-js-20181) <span style="color: gray;">\[peso: 3\]</span>
 - Prova escrita de programação concorrente <span style="color: gray;">\[peso: 3\]</span>
 
 <!-- Tipos de questão:
