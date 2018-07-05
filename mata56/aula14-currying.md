@@ -359,7 +359,7 @@ var max = function(xs) {
   }, -Infinity, xs);
 };
 
-var maxPointfree = R.pipe(/* complete o código */);
+var maxPointfree = /* complete o código */;
 teste(10, maxPointfree([3, -99, 10, 9]));
 </textarea>
 
