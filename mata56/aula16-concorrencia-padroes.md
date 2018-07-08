@@ -233,17 +233,17 @@ join([adiciona1, adiciona2], () => { console.log(x) });
 
 # Exercícios
 
-Nesta aula vamos usar o site [JSONPlaceholder](http://jsonplaceholder.typicode.com/) para dar suporte a nossos exemplos práticos.
+Nesta aula vamos usar o site [JSONPlaceholder](https://jsonplaceholder.typicode.com/) para dar suporte a nossos exemplos práticos.
 
 Para simplificar o código, definimos a variável global ROOT como sendo a URL do JSONPlaceholder.
 
 <script type="text/javascript">
-    ROOT = 'http://jsonplaceholder.typicode.com';
+    ROOT = 'https://jsonplaceholder.typicode.com';
 </script>
 
 As funções `$.get(url, f)` e `$.post(url, f)` realizam uma requisição AJAX à `url` e, quando a resposta chega, chama a função `f` passando o objeto associado à resposta.
 
-Para ver o que a chamada `$.get(ROOT + '/users', ...)` retorna, basta acessar <http://jsonplaceholder.typicode.com/users> no seu navegador.
+Para ver o que a chamada `$.get(ROOT + '/users', ...)` retorna, basta acessar <https://jsonplaceholder.typicode.com/users> no seu navegador.
 
 ## Exemplo simples
 

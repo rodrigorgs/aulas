@@ -5,7 +5,14 @@ date:   2017-03-22 16:40:00 -0300
 categories: aula
 ---
 
-# Programação concorrente
+<!-- 
+Java:
+
+https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html
+http://www.vogella.com/tutorials/JavaConcurrency/article.html
+http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+
+ -->
 
 Motivação: programas interativos (user interface), aguardar downloads, ler arquivos, executar vários programas ao mesmo tempo.
 
@@ -133,7 +140,7 @@ Na programação web com JavaScript, é muito comum escrever funções que são 
 Considere o exemplo de baixar uma página da web via AJAX (*asynchronous JavaScript and XML*) e mostrar seu conteúdo no console. Um maneira ingênua de fazer isso seria (em pseudocódigo):
 
 ```javascript
-var codigo = download('http://jsonplaceholder.typicode.com/todos/1');
+var codigo = download('https://jsonplaceholder.typicode.com/todos/1');
 console.log(codigo);
 ```
 
