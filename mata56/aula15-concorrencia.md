@@ -153,7 +153,7 @@ function download(url, f) {
 </script>
 
 <textarea class="code">
-download('http://jsonplaceholder.typicode.com/todos/1', function (dados)  {
+download('https://jsonplaceholder.typicode.com/todos/1', function (dados)  {
     console.log(dados);
 });
 console.log('fim');

@@ -299,7 +299,7 @@ function recebeResultado(user) {
 function imprimeResultado() {
   console.log('Emails: ' + emails.join(',') + '.');
 }
-pagantes.forEach(function (idx, userId) {
+pagantes.forEach(function (userId) {
   $.get(ROOT + '/users/' + userId, recebeResultado);
 });
 imprimeResultado();
