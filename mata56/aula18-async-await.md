@@ -58,9 +58,9 @@ Baseado no exemplo da aula de [padrões de concorrência](aula16-concorrencia-pa
 
 <textarea class="code">
 async function main() {
-  let users = await $.get('http://jsonplaceholder.typicode.com/users?username=Delphine')
+  let users = await $.get('https://jsonplaceholder.typicode.com/users?username=Delphine')
   let id = users[0].id;
-  let albums = await $.get('http://jsonplaceholder.typicode.com/albums?userId=' + id);
+  let albums = await $.get('https://jsonplaceholder.typicode.com/albums?userId=' + id);
   return albums.map(a => a.title);
 }
 
