@@ -22,7 +22,7 @@ function chamaDepois(f) {
 }
 </script>
 
-Essa função emula o comportamento de um download ou de um clique do mouse: não podemos prever quando esses eventos acontecerão.
+Essa função emula o comportamento de um download ou de um clique do mouse: **não podemos prever quando esses eventos acontecerão**.
 
 Agora considere que as funções de adicionar e multiplicar números foram implementadas em um computador remoto, e precisamos fazer requisições para esses computadores para realizar as operações. Eis um exemplo prático de programa concorrente no qual a ordem de execução das tarefas afeta o resultado:
 
@@ -93,9 +93,13 @@ adiciona(function () {
 console.log('f');
 </textarea>
 
-À medida que combinamos sequencialmente várias funções assíncronas, o nível de indentação do programa vai aumentando, um problema conhecido como [pyramid of doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)) ou [callback hell](http://callbackhell.com/).
+> Qual será a ordem de textos exibidos no console?
 
-Outro exemplo:
+À medida que combinamos sequencialmente várias funções assíncronas, o nível de indentação do programa vai aumentando, um problema conhecido como [pyramid of doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)), [callback hell](http://callbackhell.com/) ou mesmo hadouken indentation:
+
+![]({{site.baseurl}}/files/hadouken-indentation.jpg)
+
+No exemplo abaixo, o que será mostrado no console?
 
 <textarea class="code">
 // AJAX fake
@@ -182,7 +186,9 @@ adiciona1();
 adiciona2();
 </textarea>
 
-Desafio: na solução anterior, usamos variáveis globais e colocamos a chamada a `imprime` no próprio código das funções `adiciona1` e `adiciona2`. Tente generalizar essa solução:
+### Desafio
+
+Na solução anterior, usamos variáveis globais e colocamos a chamada a `imprime` no próprio código das funções `adiciona1` e `adiciona2`. Tente generalizar essa solução:
 
 - Crie uma função `join(funcoes, callback)`, que recebe um array de funções (`funcoes`) e uma função (`callback`)
 - Cada função do array recebe como parâmetro uma função `f`, e chama `f` quando termina de executar
@@ -262,7 +268,7 @@ console.log(2);
 
 O exemplo a seguir deveria buscar o id do usuário com username `Delphine` e então mostrar o título dos álbuns desse usuário:
 
-  <textarea class="code">
+<textarea class="code">
 var id, albums;
 $.get(ROOT + '/users?username=Delphine', function (data) {
   id = data[0].id;
@@ -273,7 +279,7 @@ $.get(ROOT + '/albums?userId=' + id, function (data) {
 console.log(albums);
 </textarea>
 
-<textarea class="code">
+<textarea class="answer">
 var id, albums;
 $.get(ROOT + '/users?username=Delphine', function (data) {
   id = data[0].id;
