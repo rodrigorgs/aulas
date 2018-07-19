@@ -16,14 +16,7 @@ http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-
 
 Motivação: programas interativos (user interface), aguardar downloads, ler arquivos, executar vários programas ao mesmo tempo.
 
-Concorrência é assunto da disciplina de sistemas operacionais. Aqui vamos abordagem alguns aspectos do ponto de vista de linguagens de programação.
-
-Referências:
-
-- <https://blog.getify.com/concurrently-javascript-1/>
-- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop>
-- <https://www.cs.colorado.edu/~kena/classes/5828/f15/lectures/29-asyncjavascriptcallbacks.pdf>
-- <https://www.cs.colorado.edu/~kena/classes/5828/f15/lectures/30-asyncjavascriptpromises.pdf>
+Concorrência é assunto da disciplina de sistemas operacionais. Aqui vamos abordar alguns aspectos do ponto de vista de linguagens de programação.
 
 ## Paralelismo
 
@@ -35,9 +28,9 @@ Por exemplo, se queremos criar miniaturas de uma coleção de 100 imagens, e tem
 
 Um programa é concorrente quando é composto de tarefas que podem ser executadas em ordens diferentes. Considere um programa que baixa duas imagens da internet e cria uma nova imagem composta das duas imagens, lado a lado. O programa pode ser decomposto nas seguintes tarefas:
 
-a. Baixa imagem 1
-b. Baixa imagem 2
-c. Cria imagem combinada
+    a. Baixa imagem 1
+    b. Baixa imagem 2
+    c. Cria imagem combinada
 
 Note que as tarefas (a) e (b) podem ser executadas em qualquer ordem (a, b ou b, a), sem afetar o resultado. Um programa concorrente deve garantir apenas que a tarefa (c) é executada após (a) e (b), mas deve funcionar independentemente da ordem de execução de (a) e (b). Note que a ordem depende de fatores externos ao programa: talvez a imagem (a) demore mais para ser baixada, por estar localizada em um servidor mais lento.
 
@@ -48,8 +41,8 @@ Como não é possível determinar a ordem de execução das instruções (i.e., 
 ```
 a = 4;
 
-execute concorrentemente { a = a + 3; } // 1
-execute concorrentemente { a = a * 2; } // 2
+execute concorrentemente { a = a + 3; } // Tarefa 1
+execute concorrentemente { a = a * 2; } // Tarefa 2
 ```
 
 Existem duas sequências possíveis para execução das tarefas 1 e 2: 1, 2 ou 2, 1. A primeira ordem resulta no valor 14; a segunda resulta no valor 11. Isso é chamado de *condição de corrida*.
@@ -75,8 +68,8 @@ Considere novamente o seguinte exemplo:
 ```
 a = 4;
 
-execute concorrentemente { a = a + 3; } // 1
-execute concorrentemente { a = a * 2; } // 2
+execute concorrentemente { a = a + 3; } // Tarefa 1
+execute concorrentemente { a = a * 2; } // Tarefa 2
 ```
 
 Cada tarefa pode ser decomposta em várias instruções de baixo nível:
@@ -84,12 +77,12 @@ Cada tarefa pode ser decomposta em várias instruções de baixo nível:
 ```
 a = 4;
 
-execute concorrentemente { // 1
+execute concorrentemente { // Tarefa 1
     copie o valor da variável 'a' para o registrador 1
     incremente o registrador 1 em 3 unidades
     copie o valor do registrador 1 para a variável 'a'
 }
-execute concorrentemente { // 2
+execute concorrentemente { // Tarefa 2
     copie o valor da variável 'a' para o registrador 2
     multiplique o registrador 2 por 2
     copie o valor do registrador 2 para a variável 'a'
@@ -98,7 +91,8 @@ execute concorrentemente { // 2
 
 Dependendo de quando ocorrem trocas de contexto entre as tarefas 1 e 2, o resultado pode ser muito diferente do esperado. Exemplo:
 
-| **Tarefa 1**                                       | **Tarefa 2**                                       | **Valores**         |
+|   Tarefa 1                                         |   Tarefa 2                                         |   Valores           |
+|----------------------------------------------------|----------------------------------------------------|---------------------|
 | copie o valor da variável 'a' para o registrador 1 |                                                    | a=4, **r1=4**       |
 | incremente o registrador 1 em 3 unidades           |                                                    | a=4, **r1=7**       |
 |                                                    | copie o valor da variável 'a' para o registrador 2 | a=4, r1=7, **r2=4** |
@@ -233,3 +227,10 @@ while (new Date() - inicio < 1000) {};
 
  -->
 
+
+### Referências:
+
+- <https://blog.getify.com/concurrently-javascript-1/>
+- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop>
+- <https://www.cs.colorado.edu/~kena/classes/5828/f15/lectures/29-asyncjavascriptcallbacks.pdf>
+- <https://www.cs.colorado.edu/~kena/classes/5828/f15/lectures/30-asyncjavascriptpromises.pdf>
