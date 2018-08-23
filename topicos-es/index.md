@@ -22,6 +22,7 @@ title: MATB25 - Tópicos em Engenharia de Software - 2018.2
 - Controle de versão e Git:
   + [Criar um repositório com git init](https://classroom.github.com/a/TWxmNZN0): crie um repositório com um arquivo `README.md` e submeta para o GitHub usando esse link
   + [Clonar um repositório e realizar modificações](https://github.com/matb25-20182/clone)
+  + Submeter um pull request, aplicando boas práticas (especificação pendente)
 
 # Notas de aula (atualizadas constantemente)
 
