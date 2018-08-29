@@ -8,6 +8,10 @@ title: MATB25 - Tópicos em Engenharia de Software - 2018.2
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>. Monitora: Douglésia Thiália <thialia@hotmail.com>.
 - Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `tejduhw`.
 
+Ementa:
+
+> Gerência de configuração de software: controle de mudança, controle de versão, integração contínua. Git: operações básicas, branching, merging, rebasing, workflows. Teste de software: caixa preta, branca e cinza; cobertura de testes; teste de unidade, integração, sistemas, aceitação; mocks, stubs, fakes; fixtures, factories. Revisão de código e análise estática.
+
 # Avaliações
 
 - Controle de versão e Git:
