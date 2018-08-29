@@ -5,10 +5,11 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 
 # Informações básicas
 
+- Site: [v.ht/matc89](http://v.ht/matc89)
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
 - Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `4u96q2`.
 
-Conteúdo: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis. Desenvolvimento de aplicativos híbridos com Ionic e Cordova.
+**Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis. Desenvolvimento de aplicativos híbridos com Ionic e Cordova.
 
 # Avaliações
 
