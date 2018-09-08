@@ -13,7 +13,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 
 # Avaliações
 
-- (2,0) Desenvolvimento de pequenos apps com Android SDK
+- (2,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
 - (2,0) Desenvolvimento de pequenos apps com Ionic
 - (2,5) Seminário
 - (3,5) Desenvolvimento de um app completo
