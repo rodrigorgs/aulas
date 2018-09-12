@@ -15,11 +15,13 @@ Note que, para a correção oficial, os testes serão executados no emulador Gen
 
 A entrega dos exercícios será feita através do [GitHub Classroom](https://classroom.github.com/) (não confundir com Google Classroom). Confira abaixo o link para a página do exercício no GitHub Classroom, que inclui informações como o prazo de entrega.
 
-Você precisará usar o sistema de controle de versão Git para submeter o seu código como resposta dos exercícios. Na dúvida, consulte [estes slides sobre controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit).
+Cada exercício já possui um código base. **Você deve construir sua solução a partir desse código base**. Certifique-se de não alterar as classes de teste.
+
+Para entregar o exercício, crie um ou mais commits com suas modificações e submeta para o repositório usando o comando `git push`. Na dúvida, consulte [estes slides sobre controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit).
 
 ## Exercícios 1 - Alô, Mundo!
 
-Link do GitHub Classroom para entrega deste exercício: <https://classroom.github.com/a/lOkGWDTh>
+Link do GitHub Classroom deste exercício: <https://classroom.github.com/a/lOkGWDTh>
 
 <!-- http://asciiflow.com/ -->
 
