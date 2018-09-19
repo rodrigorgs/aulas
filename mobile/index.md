@@ -16,13 +16,22 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 - (2,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
 - (2,0) Desenvolvimento de pequenos apps com Ionic
 - (2,5) Seminário
+    + Sugestão de tema: câmera, geolocalização, serviços em background, ReactNative, NativeScript, Xamarin
 - (3,5) Desenvolvimento de um app completo
 
 # Notas de aula
 
 - [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) (mercado de apps)
-- [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
 - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
+- Android
+    + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
+    + [ListView](https://speakerdeck.com/rodrigorgs/listview-android-sdk) ([arquivo original do Keynote](https://drive.google.com/file/d/0BxqQol81uO5UUG0tTnExR2xXblE/view?usp=sharing))
+    + [SQLite](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
+    + [Serviços Web](https://speakerdeck.com/rodrigorgs/servico-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UNnhLeFJMMzZ4Yk0))
+    + [Acessando serviços Web](https://speakerdeck.com/rodrigorgs/cliente-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5USXBOWV9WU0RIWFU))
+    + [Multithreading](https://speakerdeck.com/rodrigorgs/multithreading-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UOG0tcFdYVVg4Z1U))
+
+
 
 # Referências
 
