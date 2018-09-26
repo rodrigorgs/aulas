@@ -85,4 +85,8 @@ Como sempre, o app deve funcionar segundo a especificação mesmo se o usuário 
 
 ## Exercício 3 - Lista de tarefas
 
-(especificação pendente)
+Link do GitHub Classroom deste exercício: <https://classroom.github.com/a/jnqwqDOp>
+
+A descrição do exercício se encontra dentro do próprio repositório, no arquivo `README.md`
+
+
