@@ -23,6 +23,9 @@ Ementa:
 
 # Exercícios (valendo ponto)
 
+- Testes automatizados
+  - [Alguns exemplos de classes para testar](https://github.com/rodrigorgs/exemplos-teste-software) (não vale ponto)
+  - [Exercícios do JSISFILA](ex-sisfila)
 - Controle de versão e Git (**entrega** até o final da aula do dia 21/9/2018):
   + Exercícios no GitHub
     * [Criar um repositório com git init](https://classroom.github.com/a/TWxmNZN0): crie um repositório com um arquivo `README.md` e submeta para o GitHub usando esse link
