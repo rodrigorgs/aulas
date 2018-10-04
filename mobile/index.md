@@ -20,6 +20,18 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
     - Outras tecnologias: Kotlin, ReactNative, NativeScript, Xamarin, Flutter
 - (3,5) Desenvolvimento de um app completo
 
+# Equipes
+
+- Daniel David, Thiago de Oliveira, Ayrton: câmera
+- Gildásio, Kaio, Karen: serviços em background
+- Francisleide, Elayne, Paulo Vinicius: Xamarin
+- Elias, Luis Oscar, Ana Iris, Laise: Bluetooth
+- Rafael, Venâncio, Isys, Rafael Dourado: geolocalização
+- Ubirajara, Ramon, Tiago Andrade: Kotlin
+- Clovis, Roberto Bruno, Caio: Firebase
+- José Roberto, Antônio Lucas: React Native
+
+
 # Notas de aula
 
 - [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) (mercado de apps)
