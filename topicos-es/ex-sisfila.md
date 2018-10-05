@@ -10,9 +10,7 @@ Nota para o instrutor: especificar limites de cobertura: <https://www.eclemma.or
 
 ## Exercício 1
 
-Implemente os requisitos iniciais e criar testes automatizados para eles. Use como base o código em <https://classroom.github.com/g/pcl40VAm>. Você pode criar novos métodos e atributos se necessário.
-
-Para este exercício você deve usar a prática *test-first* do TDD e, para fins didáticos, você deve "committar" testes e funcionalidade separadamente: crie um commit somente com testes, seguido de um commit somente com implementação de funcionalidade, e repita.
+Implemente os requisitos iniciais e crie testes automatizados para eles. Use como base o código em <https://classroom.github.com/g/pcl40VAm>. Você pode criar novos métodos e atributos se necessário. Para fins didáticos, sugere-se o uso de TDD.
 
 ## Requisitos iniciais
 
