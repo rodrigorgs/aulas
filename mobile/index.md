@@ -24,11 +24,12 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 - 07/11 - Daniel David, Thiago de Oliveira, Ayrton: câmera
 - 07/11 - Clovis, Roberto Bruno, Caio, Kênia: Firebase
 - 14/11 - Gildásio, Kaio, Karen, Suzanne: serviços em background
+- 14/11 - Elias, Luis Oscar, Ana Iris, Laise: Bluetooth
 - 21/11 - Rafael, Venâncio, Isys, Rafael Dourado: geolocalização
 - 21/11 - Francisleide, Elayne, Paulo Vinicius: Xamarin
 - Ubirajara, Ramon, Tiago Andrade: Kotlin
-- Elias, Luis Oscar, Ana Iris, Laise: Bluetooth
 - Telson, Ivanildo: Instant App
+- 28/11 - 
 
 
 # Notas de aula
