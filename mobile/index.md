@@ -15,12 +15,10 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 
 - (2,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
 - (2,0) Desenvolvimento de pequenos apps com Ionic
-- (2,5) Seminário - equipes até 4 pessoas, duração de 30 minutos. Deve explicar os principais conceitos relacionados ao tema e mostrar, com código-fonte, como construir um app simples relacionado ao tema. Sugestões de tema:
-    - Recursos do Android: câmera, geolocalização, serviços em background, JobScheduler, BroadcastReceiver, notificações locais, teste com Espresso, Firebase, Cloud to Device Messaging, Bluetooth, Áudio/vídeo
-    - Outras tecnologias: Kotlin, ReactNative, NativeScript, Xamarin, Flutter
-- (3,5) Desenvolvimento de um app completo
+- (2,5) Seminário - equipes até 4 pessoas, duração de 30 minutos. Deve explicar os principais conceitos relacionados ao tema e mostrar, com código-fonte, como construir um app simples relacionado ao tema
+- (3,5) [Desenvolvimento de um app completo](trabalho-apps)
 
-# Equipes
+# Seminários
 
 - 31/10 - José Roberto, Antônio Lucas: React Native
 - 07/11 - Daniel David, Thiago de Oliveira, Ayrton: câmera
