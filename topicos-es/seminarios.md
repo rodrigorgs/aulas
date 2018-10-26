@@ -15,7 +15,7 @@ Temas sugeridos:
 
 - (NN/NN) **Property-based testing** - Gabriel Dahia, Gabriel Lecomte, Roberto Sales, Pedro Vidal
 - Como testes influenciam o design
-- Teste de carga, teste de estresse (por exemplo, usando o jMeter)
+- Teste de carga, teste de estresse (por exemplo, usando o jMeter) - Daniel David, Ícaro Luan, Leonardo Costa, Wiliam Gomes
 - Teste para mobile (por exemplo, usando o Appium)
 - Teste de penetração (pentest) - Fernando Passos
 - Test smells
