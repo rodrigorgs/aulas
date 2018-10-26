@@ -19,20 +19,20 @@ Ementa:
   - (2,0) Respostas de exercícios selecionados do site Learn Git Branching
 - Testes automatizados
   - (4,0) Exercícios práticos de implementação no GitHub
-  - (3,0) Seminário
+  - (3,0) [Seminário](seminarios)
 
 # Exercícios (valendo ponto)
 
-- Testes automatizados
+- Testes automatizados (4,0)
   - [Alguns exemplos de classes para testar](https://github.com/rodrigorgs/exemplos-teste-software) (não vale ponto)
-  - [Exercícios do JSISFILA](ex-sisfila)
-- Controle de versão e Git (**entrega** até o final da aula do dia 21/9/2018):
+  - (1,0) [Exercício 1 do JSISFILA](ex-sisfila)
+- Controle de versão e Git (3,0):
   + Exercícios no GitHub
-    * [Criar um repositório com git init](https://classroom.github.com/a/TWxmNZN0): crie um repositório com um arquivo `README.md` e submeta para o GitHub usando esse link
-    * [Clonar um repositório e realizar modificações](https://github.com/matb25-20182/clone)
-    * [Submeter um pull request, aplicando boas práticas](ex-pull-request)
+    * (0,25) [Criar um repositório com git init](https://classroom.github.com/a/TWxmNZN0): crie um repositório com um arquivo `README.md` e submeta para o GitHub usando esse link
+    * (0,25) [Clonar um repositório e realizar modificações](https://github.com/matb25-20182/clone)
+    * (0,50) [Submeter um pull request, aplicando boas práticas](ex-pull-request)
   + Exercícios selecionados do site
-    * [Clique para ver a especificação dos exercícios](ex-gitbranch)
+    * (2,00) [Clique para ver a especificação dos exercícios](ex-gitbranch)
 
 # Notas de aula (atualizadas constantemente)
 
