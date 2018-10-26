@@ -17,7 +17,7 @@ Temas sugeridos:
 - Como testes influenciam o design
 - Teste de carga, teste de estresse (por exemplo, usando o jMeter)
 - Teste para mobile (por exemplo, usando o Appium)
-- Teste de penetração (pentest)
+- Teste de penetração (pentest) - Fernando Passos
 - Test smells
 - Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)
 - Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar)
