@@ -7,6 +7,7 @@ Informações gerais:
 
 - Apresentações com duração de até 20 minutos
 - Equipes de até 4 pessoas
+- Valor: 3,0
 - Datas: 14/12 e 21/12.
 - Abordar os seguinte tópicos sobre o conceito escolhido: o que é, para que serve, como se usa (mostrar exemplo prático, no nível de implementação, se possível)
 
