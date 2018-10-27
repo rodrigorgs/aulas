@@ -26,4 +26,4 @@ Temas sugeridos:
 - Teste exploratório
 - Engenharia de caos (ver <http://principlesofchaos.org/> e Chaos Monkey - Netflix)
 - Criação automática de casos de teste (ver Sapienz - Facebook)
-- Integração contínua
+- (14/12) **Integração contínua** - Mayara
