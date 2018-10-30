@@ -21,7 +21,7 @@ Temas sugeridos:
 - Test smells
 - Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)
 - Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva
-- (21/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
+- (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
 - Teste exploratório
 - Engenharia de caos (ver <http://principlesofchaos.org/> e Chaos Monkey - Netflix)
