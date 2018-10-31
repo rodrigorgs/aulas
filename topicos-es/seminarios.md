@@ -24,6 +24,6 @@ Temas sugeridos:
 - (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
 - Teste exploratório
-- Engenharia de caos (ver <http://principlesofchaos.org/> e Chaos Monkey - Netflix)
+- (14/12) **Engenharia de caos** (ver <http://principlesofchaos.org/> e **Chaos Monkey** - Netflix) - Kênia Guimarães, Pedro Augusto, Roberto Bruno e Weslley Silva
 - Criação automática de casos de teste (ver Sapienz - Facebook)
 - (14/12) **Integração contínua** - Mayara
