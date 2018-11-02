@@ -19,7 +19,7 @@ Temas sugeridos:
 - Teste para mobile (por exemplo, usando o Appium)
 - Teste de penetração (pentest) - Fernando Passos
 - Test smells
-- Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)
+- (14/12) - **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
 - Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva
 - (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
