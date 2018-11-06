@@ -20,7 +20,7 @@ Temas sugeridos:
 - Teste de penetração (pentest) - Fernando Passos
 - Test smells
 - (14/12) - **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
-- Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva
+- Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva, David Sodré
 - (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
 - Teste exploratório
