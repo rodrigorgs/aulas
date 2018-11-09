@@ -6,11 +6,13 @@ Neste exercício você desenvolverá e testará um sistema baseado no SISFILA, o
 
 Durante a aula criaremos um *design* orientado a objetos a partir da especificação. Todos devem seguir esse *design* na hora de implementar e testar.
 
-Nota para o instrutor: especificar limites de cobertura: <https://www.eclemma.org/jacoco/trunk/doc/check-mojo.html>
-
 ## Exercício 1
 
 Implemente os requisitos iniciais e crie testes automatizados para eles. Use como base o código em <https://classroom.github.com/g/pcl40VAm>. Você pode criar novos métodos e atributos se necessário. Para fins didáticos, sugere-se o uso de TDD.
+
+## Exercício 2
+
+Partindo do código criado no exercício 1 (<https://classroom.github.com/g/pcl40VAm>), crie uma branch a partir do commit inicial do repositório, chamada `spies`. Nessa branch, crie duas classes de teste, chamadas `SituacaoTest` e `EnfileiraTest`, nas quais você deve testar, respectivamente, os métodos `situacaoNaFila()` e `enfileira()`. Cada classe deve testar o método correspondente de forma isolada, criando *spies* do Mockito para garantir que nenhuma outra parte do código é exercitada pelos testes. Além disso, deve-se atingir 100% de cobertura nos dois métodos somente com os testes dessas classes. Ao usar *spies*, lembre-se de usar a forma `doReturn(x).when(obj).metodo()`.
 
 ## Requisitos iniciais
 

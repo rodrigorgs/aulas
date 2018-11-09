@@ -27,9 +27,8 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 - 14/11 - Elias, Luis Oscar, Ana Iris, Laise: Bluetooth
 - 21/11 - Rafael, Venâncio, Isys, Rafael Dourado: geolocalização
 - 21/11 - Francisleide, Elayne, Paulo Vinicius: Xamarin
-- Ubirajara, Ramon, Tiago Andrade: Kotlin
-- Telson, Ivanildo: Instant App
-- 28/11 - 
+- 28/11 - Ubirajara, Ramon, Tiago Andrade: Kotlin
+- 28/11 - Telson, Ivanildo: Instant App
 
 
 # Notas de aula
