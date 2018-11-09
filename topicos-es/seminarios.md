@@ -8,7 +8,7 @@ Informações gerais:
 - Apresentações com duração de até 20 minutos
 - Equipes de até 4 pessoas
 - Valor: 3,0
-- Datas: 14/12 e 21/12.
+- Datas: 7,12, 14/12 e 21/12.
 - Abordar os seguinte tópicos sobre o conceito escolhido: o que é, para que serve, como se usa (mostrar exemplo prático, no nível de implementação, se possível)
 
 Temas sugeridos:
@@ -17,10 +17,10 @@ Temas sugeridos:
 - Como testes influenciam o design
 - (21/12) **Teste de carga, teste de estresse** - Daniel David, Ícaro Luan, Leonardo Costa, Wiliam Gomes
 - Teste para mobile (por exemplo, usando o Appium)
-- Teste de penetração (pentest) - Fernando Passos
+- **Teste de penetração (pentest)** - Fernando Passos
 - Test smells
 - (14/12) **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
-- Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva, David Sodré
+- **Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar)** - Mateus Barreto, Jônatas Silva, David Sodré
 - (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
 - Teste exploratório

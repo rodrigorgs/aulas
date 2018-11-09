@@ -26,9 +26,9 @@ Ementa:
 - Testes automatizados (4,0) - em equipes
   - [Alguns exemplos de classes para testar](https://github.com/rodrigorgs/exemplos-teste-software) (não vale ponto)
   - (1,0) [Exercício 1 do JSISFILA](ex-sisfila)
-  - (0,5) [Exercício 2 do JSISFILA](ex-sisfila) (spies)
-  - (0,5) [Exercício de mock do projeto mock-leilao](ex-mock-leilao)
-  - [Exercício do SISFILA com Selenium](ex-sisfila-selenium)
+  - (0,8) [Exercício 2 do JSISFILA](ex-sisfila) (spies) - **prazo**: 23/11 antes da aula
+  - (0,5) [Exercício de mock do projeto mock-leilao](ex-mock-leilao) - **prazo**: 23/11 antes da aula
+  - (1,7) [Exercício do SISFILA com Selenium](ex-sisfila-selenium) - **prazo**: 30/11 antes da aula
 - Controle de versão e Git (3,0):
   + Exercícios no GitHub
     * (0,25) [Criar um repositório com git init](https://classroom.github.com/a/TWxmNZN0): crie um repositório com um arquivo `README.md` e submeta para o GitHub usando esse link

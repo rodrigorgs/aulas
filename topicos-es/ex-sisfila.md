@@ -12,7 +12,7 @@ Implemente os requisitos iniciais e crie testes automatizados para eles. Use com
 
 ## Exercício 2
 
-Partindo do código criado no exercício 1 (<https://classroom.github.com/g/pcl40VAm> - veja o prazo da atividade no link), crie uma branch a partir do commit inicial do repositório, chamada `spies`. Nessa branch, crie duas classes de teste, chamadas `SituacaoTest` e `EnfileiraTest`, nas quais você deve testar, respectivamente, os métodos `situacaoNaFila()` e `enfileira()`. Cada classe deve testar o método correspondente de forma isolada, criando *spies* do Mockito para garantir que nenhuma outra parte do código é exercitada pelos testes. Além disso, deve-se atingir 100% de cobertura nos dois métodos somente com os testes dessas classes. Ao usar *spies*, lembre-se de usar a forma `doReturn(x).when(obj).metodo()`.
+Partindo do código criado no exercício 1 (<https://classroom.github.com/g/pcl40VAm>), crie uma branch a partir do commit inicial do repositório, chamada `spies`. Nessa branch, crie duas classes de teste, chamadas `SituacaoTest` e `EnfileiraTest`, nas quais você deve testar, respectivamente, os métodos `situacaoNaFila()` e `enfileira()`. Cada classe deve testar o método correspondente de forma isolada, criando *spies* do Mockito para garantir que nenhuma outra parte do código é exercitada pelos testes. Além disso, deve-se atingir 100% de cobertura nos dois métodos somente com os testes dessas classes. Ao usar *spies*, lembre-se de usar a forma `doReturn(x).when(obj).metodo()`.
 
 ## Requisitos iniciais
 
