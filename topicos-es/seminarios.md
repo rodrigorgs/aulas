@@ -15,11 +15,11 @@ Temas sugeridos:
 
 - (NN/NN) **Property-based testing** - Gabriel Dahia, Gabriel Lecomte, Roberto Sales, Pedro Vidal
 - Como testes influenciam o design
-- Teste de carga, teste de estresse (por exemplo, usando o jMeter) - Daniel David, Ícaro Luan, Leonardo Costa, Wiliam Gomes
+- (21/12) **Teste de carga, teste de estresse** - Daniel David, Ícaro Luan, Leonardo Costa, Wiliam Gomes
 - Teste para mobile (por exemplo, usando o Appium)
 - Teste de penetração (pentest) - Fernando Passos
 - Test smells
-- (14/12) - **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
+- (14/12) **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
 - Ferramenta de análise estática (ex.: Findbugs, PMD, Checkstyle, Sonar) - Mateus Barreto, Jônatas Silva, David Sodré
 - (14/12) **Depuração (debugging)** - Ana Iris, Ian Pierre, Antonio Lucas e Ari.
 - Behavior-driven development (BDD)
