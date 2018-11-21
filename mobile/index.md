@@ -16,6 +16,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2018.2
 - (2,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
 - (2,0) Desenvolvimento de pequenos apps com Ionic. Prazo 14/12/2018.
     - [Exercício 1 - Hello World](https://classroom.github.com/a/ZJyKDn3h)
+    - [Exercício 2 - Navegação](https://classroom.github.com/a/Q-ofkJBi)
 - (2,5) Seminário - equipes até 4 pessoas, duração de 30 minutos. Deve explicar os principais conceitos relacionados ao tema e mostrar, com código-fonte, como construir um app simples relacionado ao tema
 - (3,5) [Desenvolvimento de um app completo](trabalho-apps)
 
