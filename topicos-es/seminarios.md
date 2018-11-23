@@ -16,7 +16,7 @@ Temas sugeridos:
 - (07/12) **Property-based testing** - Gabriel Dahia, Gabriel Lecomte, Roberto Sales, Pedro Vidal
 - Como testes influenciam o design
 - (21/12) **Teste de carga, teste de estresse** - Daniel David, Ícaro Luan, Leonardo Costa, Wiliam Gomes
-- **Teste para mobile (por exemplo, usando o Appium)** - Caio Souza, Lucas Lara, Joselito Junior 
+- (14/12) **Teste para mobile (por exemplo, usando o Appium)** - Caio Souza, Lucas Lara, Joselito Junior 
 - **Teste de penetração (pentest)** - Fernando Passos, Katharine Schramm
 - Test smells
 - (14/12) **Ferramenta para auxiliar a criação de objetos para testes (ex.: <http://beanmother.io/>)** - Bruno Guilera
