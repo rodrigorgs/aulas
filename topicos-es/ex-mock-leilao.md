@@ -17,3 +17,10 @@ Sua tarefa é implementar 4 testes para o método `encerra()` da classe `Encerra
 - `naoDeveEncerrarLeiloesQueComecaramMenosDeUmaSemanaAtras`: dado que o repositório possui dois leilões recentes (criados há menos de 7 dias), ao chamar `EncerradorDeLeilao.encerra()`, os dois leilões não devem estar encerrados, e não deve haver nenhuma atualização de dados no repositório de leilões.
 - `deveEnviarUmEmailParaCadaLeilao`: dado que o repositório possui exatamente um leilão antigo, ao chamar `EncerradorDeLeilao.encerra()`, deve ser enviado exatamente um e-mail referente a esse leilão.
 - `deveContinuarSeDaoFalharNaAtualizacao`: dado que o repositório possui dois leilões antigos, ao chamar `EncerradorDeLeilao.encerra()`, dado que ao atualizar os dados do primeiro leilão é lançada uma `RuntimeException`, o segundo leilão deve ser atualizado no repositório e deve ser enviado um e-mail referente ao segundo leilão, mas não ao primeiro leilão.
+
+--------------
+
+# Script de correção
+
+O script de correção do exercício está disponível para download: [testa-mock-leilao.rb](testa-mock-leilao.rb). Trata-se de um script escrito em Ruby, que deve ser executado na raiz do projeto Java. O script cria mutantes e executa os testes; espera-se que cada mutante provoque a falha de um teste.
+
