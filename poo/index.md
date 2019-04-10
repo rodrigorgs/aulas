@@ -23,7 +23,13 @@ Critérios de correção: Sonar (ponto extra)
 
 # Notas de aula (atualizadas constantemente)
 
-Disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
+Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
+
+Outros slides ou notas de aula:
+
+- [Herança parte 1](aula-heranca-parte1)
+- [Herança parte 2](aula-heranca-parte2)
+
 
 # Bibliografia recomendada
 

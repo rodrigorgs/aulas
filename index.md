@@ -8,6 +8,7 @@ Disciplinas ministradas pelo professor [Rodrigo Rocha](https://rodrigorgs.github
 
 # Disciplinas
 
+- [MATA55: Programação Orientada a Objetos](poo)
 - [MATC89: Aplicações para Dispositivos Móveis](mobile)
 - [MATB25: Tópicos em Engenharia de Software](topicos-es) - controle de versão e testes
 - [MATA62: Engenharia de Software I](mata62)

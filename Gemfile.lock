@@ -47,8 +47,5 @@ DEPENDENCIES
   jekyll (= 3.2.1)
   minima
 
-RUBY VERSION
-   ruby 2.3.0p0
-
 BUNDLED WITH
-   1.16.1
+   1.17.2
