@@ -1,78 +1,21 @@
 # Polimorfismo
 
-- Em POO, polimorfismo é um mecanismo de linguagem que permite que objetos de diferentes classes respondam de forma diferente à mesma mensagem. (O termo mais preciso seria *polimorfismo de subtipo*)
-- Em outras palavras, há diferentes implementações para a mesma interface (o mesmo método com código diferente).
-- Para isso, deve-se usar a sobreposição de métodos.
-- (Polimorfismo é um dos conceitos mais difíceis de definir, e você encontrará diferentes definições e diferentes tipos de polimorfismo)
-
-<!-- Polymorphism describes a pattern in object oriented programming in which classes have different functionality while sharing a common interface.
-
-Outra definição: polimorfismo é quando você pode tratar um objeto como se fosse uma versão genérica de algo, mas quando você acessa um membro, o membro mais específico é associado, de acordo com o tipo do objeto.
-
-
-Polymorphism is when you can treat an object as a generic version of something, but when you access it, the code determines which exact type it is and calls the associated code. -->
-
-<!-- https://stackoverflow.com/questions/1031273/what-is-polymorphism-what-is-it-for-and-how-is-it-used -->
+- Em POO, cada classe define um tipo de dados
+- A herança estabelece um relacionamento de subtipo entre duas classes.
+- Se Aluno estende Pessoa, dizemos que Aluno é um subtipo de Pessoa
+- Dizemos também Aluno é um conceito mais concreto (mais detalhado), e que Pessoa é um conceito mais abstrato (menos detalhado)
 
 ---
 
 # Polimorfismo
 
-Exemplo:
+Na POO, o polimorfismo permite que referências de tipos de classes mais abstratas representem o comportamento das classes concretas que referenciam. Assim, é possível tratar vários tipos de maneira homogênea (através da interface do tipo mais abstrato). (definição da Wikipédia)
 
-```java
-class Animal {
-  public void anda() { /* ... */ }
-  public void fazBarulho() {
-    System.out.println("Zzzzzzz");
-  }
-}
-class Cao extends Animal {
-  @Override
-  public void fazBarulho() {
-    System.out.println("Au-au");
-  }
-}
-class Gato extends Animal {
-  @Override
-  public void fazBarulho() {
-    System.out.println("Miau");
-  }
-}
-```
-
-`fazBarulho()` é um método polimórfico: ele é implementado de forma diferente a depender da classe.
-
-<!--
-```java
-public class Poligono {
-  private Lado[] lados;
-  public double area() { /* ... */ }
-}
-public class Retangulo extends Poligono {
-  public double area() {
-    return lados[0].getMedida() * lados[1].getMedida();
-  }
-}
-public class Triangulo extends Poligono {
-  public double area() {
-    return 0.5 * lados[0].getMedida() * lados[1].getMedida() * Math.sin(lados[1].anguloCom(lados[0]));
-  }
-}
-```
--->
-
-
-# Relação de subtipo
-
-- A herança estabelece um relacionamento de subtipo entre duas classes. No exemplo anterior, a classe Animal define um tipo, e Gato é subtipo de Animal. 
-- Dessa forma, um objeto do tipo Gato pode se passar como um objeto do tipo Animal (afinal, um gato **é um** animal).
+Dentro desse conceito, objetos de classes diferentes (porém relacionadas por meio de herança) podem responder de forma diferente à mesma mensagem (ou seja, as classes podem ter implementações diferentes para o mesmo método, por meio da sobreposição de métodos).
 
 ---
 
-# Relação de subtipo
-
-Exemplo:
+# Exemplo
 
 ```java
 class Animal {
@@ -90,7 +33,22 @@ class Cao extends Animal {
     System.out.println("Au-au");
   }
 }
+```
 
+---
+
+# Exemplo
+
+- No exemplo anterior, a classe Animal define um tipo, e Gato é subtipo de Animal. 
+- Dessa forma, um objeto do tipo `Gato` pode ser usado em qualquer ponto do programa onde se espera um objeto do tipo `Animal` (afinal, um gato **é um** animal).
+
+---
+
+# Exemplo
+
+O método treina espera um `Animal`. O que acontece se passar um `Gato` ou um `Cao`?
+
+```java
 class Treinador {
   public void treina(Animal animal) {
     animal.anda();
@@ -114,9 +72,9 @@ public class Main {
 
 ---
 
-# Relação de subtipo
+# Exemplo
 
-Da mesma forma, pode-se atribuir um objeto da classe Gato a uma variável do tipo Animal. Nesse caso, no entanto, só é possível acessar os membros definidos na classe Animal:
+Da mesma forma, pode-se atribuir um objeto da classe `Gato` a uma variável do tipo `Animal`. Nesse caso, no entanto, só é possível acessar os membros definidos na classe `Animal`:
 
 ```java
 Gato gato1 = new Gato();
@@ -212,13 +170,7 @@ fulano instanceof Object
 
 ---
 
-# late binding (vinculação tardia)
-
-Ao realizar uma chamada de método, em algum momento essa chamada é vinculada ao código que será executado. Se um mesmo método tiver várias implementações (porque foi sobreposto), essa vinculação só ocorre durante a execução do programa (pois o compilador não tem como determinar uma única implementação que será usada todas as vezes). É o que chamamos de vinculação tardia (*late binding*)
-
----
-
-# late binding (vinculação tardia)
+# Late binding (vinculação tardia)
 
 Considere o seguinte código:
 
@@ -256,7 +208,29 @@ public class Main {
 }
 ```
 
-Pergunta: o gato vai miar ou vai falar "Zzzzzz"?
+- Dizemos que `fazBarulho` é um método polimórfico.
+- **Pergunta**: o gato vai miar ou vai falar "Zzzzzz"?
+
+---
+
+# Late binding (vinculação tardia)
+
+Ao realizar uma chamada de método, em algum momento essa chamada é vinculada ao código que será executado. Se um mesmo método tiver várias implementações (porque foi sobreposto), essa vinculação só ocorre durante a execução do programa (pois o compilador não tem como determinar uma única implementação que será usada todas as vezes). É o que chamamos de **vinculação tardia** (*late binding*) ou **vinculação dinâmica**.
+
+---
+
+# Late binding (vinculação tardia)
+
+Quando temos uma linha assim:
+
+```java
+Pessoa x = new Aluno();
+```
+
+Temos uma referência do tipo `Pessoa` para um objeto do tipo `Aluno`. Isso é permitido se `Aluno` for subclasse direta ou indireta de `Pessoa`.
+
+- Dizemos que o tipo estático de x é `Pessoa`
+- Dizemos que o tipo dinâmico de x é `Aluno`. Esse é o tipo usado para decidir qual implementação de um método utilizar.
 
 ---
 
@@ -287,4 +261,55 @@ Como vamos modelar esse problema?
 
 # Outro exemplo: arqueiros e guerreiros
 
-- Nesse caso vamos composição e herança: Pessoa possui arma, e arma pode ser flecha ou espada. Atacar significa usar a arma.
+- Nesse caso vamos composição e herança: Pessoa possui Arma, e Arma pode ser Flecha ou Espada. Atacar significa usar a arma.
+
+
+<!--
+```java
+public class Poligono {
+  private Lado[] lados;
+  public double area() { /* ... */ }
+}
+public class Retangulo extends Poligono {
+  public double area() {
+    return lados[0].getMedida() * lados[1].getMedida();
+  }
+}
+public class Triangulo extends Poligono {
+  public double area() {
+    return 0.5 * lados[0].getMedida() * lados[1].getMedida() * Math.sin(lados[1].anguloCom(lados[0]));
+  }
+}
+```
+-->
+
+
+<!-- 
+
+# Exemplo
+
+```java
+class Animal {
+  public void anda() { /* ... */ }
+  public void fazBarulho() {
+    System.out.println("Zzzzzzz");
+  }
+}
+class Cao extends Animal {
+  @Override
+  public void fazBarulho() {
+    System.out.println("Au-au");
+  }
+}
+class Gato extends Animal {
+  @Override
+  public void fazBarulho() {
+    System.out.println("Miau");
+  }
+}
+```
+
+`fazBarulho()` é um método polimórfico: ele é implementado de forma diferente a depender da classe.
+
+
+ -->
