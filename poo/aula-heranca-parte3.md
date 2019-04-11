@@ -80,7 +80,7 @@ Da mesma forma, pode-se atribuir um objeto da classe `Gato` a uma variável do t
 Gato gato1 = new Gato();
 Animal gato2 = new Gato();
 
-gato1.anda()
+gato1.anda();
 gato1.mia();
 
 gato2.anda();
