@@ -1,3 +1,8 @@
+---
+layout: page
+title: Herança - parte 3
+---
+
 # Polimorfismo
 
 - Em POO, cada classe define um tipo de dados

@@ -27,10 +27,10 @@ Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/ope
 
 Outros slides ou notas de aula:
 
-- [Herança parte 1](aula-heranca-parte1/)
-- [Herança parte 2 (sobreposição)](aula-heranca-parte2/)
-- [Herança parte 3 (polimorfismo)](aula-heranca-parte3/)
-- [Herança parte 4 (classes abstratas e interfaces)](aula-heranca-parte4/)
+- [Herança parte 1](aula-heranca-parte1)
+- [Herança parte 2 (sobreposição)](aula-heranca-parte2)
+- [Herança parte 3 (polimorfismo)](aula-heranca-parte3)
+- [Herança parte 4 (classes abstratas e interfaces)](aula-heranca-parte4)
 
 
 # Bibliografia recomendada
