@@ -32,6 +32,8 @@ Outros slides ou notas de aula:
 - [Herança parte 3 (polimorfismo)](aula-heranca-parte3)
 - [Herança parte 4 (classes abstratas e interfaces)](aula-heranca-parte4)
 - [Refatoração](aula-refactoring)
+- [Enums](aula-enums)
+- [Excecoes](aula-excecoes)
 
 
 # Bibliografia recomendada
