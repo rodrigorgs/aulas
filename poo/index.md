@@ -33,8 +33,9 @@ Outros slides ou notas de aula:
 - [Herança parte 4 (classes abstratas e interfaces)](aula-heranca-parte4)
 - [Refatoração](aula-refactoring)
 - [Enums](aula-enums)
-- [Excecoes](aula-excecoes)
-
+- [Exceções](aula-excecoes)
+- [Classes internas](aula-classes-internas)
+- [Generics](aula-generics)
 
 # Bibliografia recomendada
 
