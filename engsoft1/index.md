@@ -8,14 +8,15 @@ title: MATA62 - Engenharia de Software I - T02 - 2019.2
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
 - Monitor: Wiliam Gomes <wiliamgomesc19@gmail.com>
 - Aulas: TER/QUI, 18:30 a 20:20.
+- Ambiente online: **a definir**
 
  <!-- Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `sq0eh`. -->
 
 # Avaliações
 
-<!-- 
-- (peso X,0) XXX
--->
+- (2,0) Prova escrita: UML + princípios de projeto
+- (3,0) Exercícios online de padrões de projeto
+- (5,0) [Projeto incremental](projeto-20192)
 
 <!-- 
 # Bibliografia básica
@@ -35,16 +36,9 @@ Pearson/Prentice-Hall, 2004.
     - diagrama de sequência
     - outros diagramas
 - Arquitetura de software - ênfase em MVC e camadas
-- Projeto de software orientado a objetos
-  - Princípios SOLID
-  - Padrões de projeto
-- Teste de software <!-- confirmar -->
-
-<!-- 
-
-- <https://martinfowler.com/articles/is-quality-worth-cost.html>
--->
-
+- [Princípios de projeto orientado a objetos](principios-projeto)
+- Padrões de projeto
+- Teste de software - testes de unidade
 
 <!-- 
 

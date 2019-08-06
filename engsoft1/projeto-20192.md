@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projeto: sistema acadêmico (2019.2)
+title: "Projeto: sistema acadêmico (2019.2)"
 ---
 
 Equipes de até 6 pessoas
@@ -14,8 +14,6 @@ Orientação acadêmica: guardar histórico do aluno, notas, registrar intençã
 Outros: banca de TCC, avaliação de professores
 
  -->
-
-# Entregas
 
 ## Entrega 0
 
