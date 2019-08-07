@@ -8,9 +8,7 @@ title: MATA62 - Engenharia de Software I - T02 - 2019.2
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
 - Monitor: Wiliam Gomes <wiliamgomesc19@gmail.com>
 - Aulas: TER/QUI, 18:30 a 20:20.
-- Ambiente online: **a definir**
-
- <!-- Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `sq0eh`. -->
+- Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `gu543c`.
 
 # Avaliações
 
@@ -30,7 +28,7 @@ Pearson/Prentice-Hall, 2004.
 
 # Conteúdo
 
-- [Introdução à engenharia de software](introducao-es)
+- [Introdução à engenharia de software](introducao-es) <!-- 1ª aula até slide 46 -->
 - UML
     - [diagrama de classes](uml-classes)
     - diagrama de sequência
