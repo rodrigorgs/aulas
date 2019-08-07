@@ -5,6 +5,7 @@ title: MATA62 - Engenharia de Software I - T02 - 2019.2
 
 # Informações básicas
 
+- Site: <v.ht/engsoft1>
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
 - Monitor: Wiliam Gomes <wiliamgomesc19@gmail.com>
 - Aulas: TER/QUI, 18:30 a 20:20.
