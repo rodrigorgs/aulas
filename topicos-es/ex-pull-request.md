@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercício: pull request
+title: "Exercício: pull request"
 ---
 
 Neste exercício, você deve usar o Git e sua conta no GitHub para concretizar o cenário a seguir. Use boas práticas de criação de commits e de colaboração através de pull requests -- elas serão consideradas na avaliação.

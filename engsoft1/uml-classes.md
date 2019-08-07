@@ -1,6 +1,6 @@
 ---
 layout: page
-title: UML: Diagrama de classes
+title: "UML: Diagrama de classes"
 ---
 
 ## Leitura recomendada
