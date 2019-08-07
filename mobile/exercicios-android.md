@@ -11,6 +11,7 @@ Para executar os casos de teste através do Android Studio, clique com o botão 
 
 Note que, para a correção oficial, os testes serão executados no emulador Genymotion, usando a máquina virtual "Custom Phone - 4.1.1 - API 16 - 768x1280".
 
+{% comment %}
 ## Forma de entrega
 
 A entrega dos exercícios será feita através do [GitHub Classroom](https://classroom.github.com/) (não confundir com Google Classroom). Confira abaixo o link para a página de cada exercício no GitHub Classroom, que inclui informações como o prazo de entrega.
@@ -22,8 +23,6 @@ Para entregar o exercício, crie um ou mais commits com suas modificações e su
 ## Exercícios 1 - Alô, Mundo!
 
 Link do GitHub Classroom deste exercício: <https://classroom.github.com/a/lOkGWDTh>
-
-<!-- http://asciiflow.com/ -->
 
 ```
 +---------------------+
@@ -90,3 +89,4 @@ Link do GitHub Classroom deste exercício: <https://classroom.github.com/a/jnqwq
 A descrição do exercício se encontra dentro do próprio repositório, no arquivo `README.md`
 
 
+{% endcomment %}

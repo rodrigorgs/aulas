@@ -1,13 +1,9 @@
 ---
 layout: page
-title: MATC89 - Desenvolvimento de um app - 2018.2
+title: MATC89 - Desenvolvimento de um app - 2019.2
 ---
 
 # Submissão da proposta de app
-
-Prazo: 30/10, 23:59
-
-Valor: 1,0
 
 Entregas:
 
