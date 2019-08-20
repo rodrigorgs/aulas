@@ -12,6 +12,8 @@ title: Princípios de projeto orientado a objetos
 - Robert C. Martin. [The principles of OOD](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod) (SOLID principles)
 - Robert C. Martin. [Design Principles and Design Patterns](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf)
     - rigidity, fragility, immobility, and viscosity
+- Maurício Aniche. Orientação a Objetos e SOLID para Ninjas.
+- [SOLID, GRASP, and Other Basic Principles of Object-Oriented Design](https://dzone.com/articles/solid-grasp-and-other-basic-principles-of-object-o)
 - Martin Fowler. [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
 - Martin Fowler; Kent Beck. [Refactoring: Improving the Design of Existing Code](http://www.laputan.org/pub/patterns/fowler/smells.pdf) (capítulo 3: Bad
 Smells in Code)
