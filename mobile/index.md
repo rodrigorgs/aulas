@@ -30,6 +30,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
 - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
 - Android
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
+        + Guardando o estado de uma Activity antes de ela ser destruída para poder restaurar o estado quando ela for construída novamente (enquanto o aplicativo está sendo executado): [onSave/RestoreInstanceState](instance-state)
     + [ListView](https://speakerdeck.com/rodrigorgs/listview-android-sdk) ([arquivo original do Keynote](https://drive.google.com/file/d/0BxqQol81uO5UUG0tTnExR2xXblE/view?usp=sharing))
     + [SQLite](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
     + [Serviços Web](https://speakerdeck.com/rodrigorgs/servico-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UNnhLeFJMMzZ4Yk0))
