@@ -24,7 +24,7 @@ Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTL
 - [Introdução à engenharia de software](introducao-es)
 - UML
     - [diagrama de classes](uml-classes)
-    - diagrama de sequência
+    - [diagrama de sequência](uml-sequencia)
     - outros diagramas
 - Arquitetura de software - ênfase em MVC e camadas
 - [Princípios de projeto orientado a objetos](principios-projeto)

@@ -14,6 +14,7 @@ title: "UML: Diagrama de classes"
 
 - [OMG® Unified Modeling Language® (OMG UML®) - v2.5.1](https://www.omg.org/spec/UML/2.5.1/PDF)
 - [Difference between Association, Composition and Aggregation in Java, UML and Object Oriented Programming](https://javarevisited.blogspot.com/2014/02/ifference-between-association-vs-composition-vs-aggregation.html)
+- [Association classes](https://www.ibm.com/support/knowledgecenter/SSCLKU_7.5.5/com.ibm.xtools.modeler.doc/topics/cassnclss.html)
 
 ## Material de aula
 
