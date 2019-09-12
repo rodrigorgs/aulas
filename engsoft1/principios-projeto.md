@@ -5,7 +5,7 @@ title: Princípios de projeto orientado a objetos
 
 ## Leitura recomendada
 
-- Livro [Engenharia de Software Moderna](https://engsoftmoderna.info/) (prof. Marco Tulio Valente, UFMG) [slides](https://docs.google.com/presentation/d/1pCz8hpS7ufqmTlLizmbWw54O54l6-twUbMr1ChmdYCw/edit#slide=id.g4ffa9ac22f_0_0) 
+- Livro [Engenharia de Software Moderna](https://engsoftmoderna.info/) (prof. Marco Tulio Valente, UFMG) [slides](https://docs.google.com/presentation/d/1pCz8hpS7ufqmTlLizmbWw54O54l6-twUbMr1ChmdYCw/edit#slide=id.g4ffa9ac22f_0_0) e [texto](https://docs.google.com/document/d/e/2PACX-1vTwzbOdLCUNLQEPBY933dEgJNAHKDNHsJA56dQqRZWqYawBvmg-m-HU66emL8-X6zVxUkA-UPRoz5_B/pub)
 
 ## Leitura complementar
 
@@ -20,3 +20,59 @@ Smells in Code)
 - Acoplamento, coesão e métricas (CBO, LCOM)
     - [Métricas para Programas Orientados a Objetos (CK)](https://homepages.dcc.ufmg.br/~figueiredo/disciplinas/aulas/metricas-ck_v01.pdf)
 - David Parnas. [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
+
+<!-- 
+
+- Propriedades de projeto (integridade conceitual, ocultamento de informação, coesão, acoplamento, EXTENSIBILIDADE)
+- Princípios de projeto
+
+.......
+
+# Exemplo de ocultamento de informação
+
+class Pessoa {
+  String nome;
+  int idade;
+
+  int getIdade() {
+    return idade;
+  }
+}
+
+==> 
+
+class Pessoa {
+  String nome;
+  Date dataNascimento;
+
+  int getIdade() {
+    return Math.floor((Date.now() - dataNascimento) / 365);
+  }
+}
+
+.......
+
+Encapsulamento de Collections. Exemplo do deque de cartas.
+
+.......
+ 
+# Exemplo de coesão
+
+- Falta de coesão: a classe Disciplina lê a disciplina de um arquivo.
+- Coesão: Disciplina representa os dados. Para ler, usa-se DisciplinaReader.
+
+..........
+
+# Inversão de dependência
+
+DisciplinaReader deve ser uma interface, implementada por DisciplinaArquivoReader, DisciplinaBDReader...
+
+# Herança vs composição
+
+Stack extends ArrayList?
+
+# LSP
+
+Exemplo: quadrado extends retângulo
+
+ -->
