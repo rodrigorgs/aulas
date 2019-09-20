@@ -25,7 +25,7 @@ Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTL
 - UML
     - [diagrama de classes](uml-classes)
     - [diagrama de sequência](uml-sequencia)
-    - outros diagramas
+    - [outros diagramas](uml-outros)
 - Arquitetura de software - ênfase em MVC e camadas
 - [Princípios de projeto orientado a objetos](principios-projeto)
 - Padrões de projeto

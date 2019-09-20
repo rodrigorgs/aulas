@@ -23,6 +23,12 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
     * Exercício 2: Navegação
     * Exercício 3: Lista
 -->
+
+# Orientações
+
+- [Guia de Laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
+- [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
+
 # Notas de aula
 
 - [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) (mercado de apps)

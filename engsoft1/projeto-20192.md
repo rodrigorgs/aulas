@@ -29,8 +29,27 @@ Para testar (parcialmente) se sua modelagem está correta, verifique se é poss�
 
 Na aula do dia 17/09, sua equipe deve apresentar e explicar o diagrama de classes para a turma, esclarecendo quaisquer dúvidas que possam surgir.
 
-## Entrega 1
+## Entrega 1: entrega e apresentação no dia 22/10
 
+Nesta entrega, você adicionará as seguintes funcionalidades:
+
+- **Leitura de dados** do sistema a partir de [arquivo texto](/aulas/mata37/web/dados.txt) fornecido pelo professor. Ver [código de exemplo](le-dados.java) <!-- Single responsibility principle: usar classe dedicada para leitura -->
+- Criação de **alunos** da universidade, com nome, número de matrícula (é um identificador único) e senha. Cada aluno pertence a apenas um curso. <!-- override de equals -->
+- Criação de **histórico** de um aluno: lista de componentes curriculares cursados por semestre, indicando código, nome, carga horária, natureza, nota e conceito (aprovado, reprovado por nota, reprovado por falta, dispensa, trancamento). Só existe nota quando o conceito é aprovado ou reprovado por nota.
+    - Impressão do histórico, com cálculo da carga horária total (optativa e obrigatória) e CR (nota média) do aluno. Considere que o CR é calculado através da média simples das notas. <!-- disciplinas devem ser imutáveis --> <!-- entrega 2: usar composite -->
+    - A impressão dos histórico deve poder ser feita em dois formatos diferentes: TXT e HTML <!-- Entrega 2: implementar template method -->
+- Impressão do **currículo** do curso, que lista disciplinas obrigatórias, por semestre, e optativas, informando, para cada disciplina, o código, o nome, e a carga horária. <!-- Law of demeter: curso.getComponente().getCargaHoraria()  -->
+<!-- - Cálculo de escalonamento do curso. Cada curso adota critérios diferentes. -->
+  <!-- padrão Strategy, open/closed principle -->
+<!-- - Autenticação de alunos e do coordenador. -->
+
+Neste momento não é necessário criar nenhuma interface com o usuário. No entanto, você deve seguir princípios de projeto orientado a objetos. Alguns aspectos a observar (note que a lista não é completa):
+
+- Certas classes devem ser imutáveis
+- Defina o critério de igualidade das classes quando isso for relevante
+- Use conjuntos ou listas de acordo com a situação
+
+<!-- 
 - Leitura de dados do sistema a partir de arquivo texto fornecido pelo professor
 - Interface gráfica
 - Qualquer um pode visualizar currículos dos cursos e informações sobre cada disciplina
@@ -39,19 +58,24 @@ Na aula do dia 17/09, sua equipe deve apresentar e explicar o diagrama de classe
 - Sistema exibe número de alunos que já cursaram cada disciplina
 - Documentação:
 - Apresentação: demonstração do sistema
+ -->
 
 ## Entrega 2
 
-- Aluno indica disciplinas que pretende cursar no próximo semestre (matrícula)
+A definir.
+
+<!-- - Aluno indica disciplinas que pretende cursar no próximo semestre (matrícula)
 - Sistema emite sinal sonoro (ou não, a depender da configuração do sistema) cada vez que uma nova matrícula é realizada
 - Coordenador aprova ou não matrícula
 - Coordenador insere notas dos alunos
 - Coordenador encerra semestre atual e inicia novo semestre
 - Aluno visualiza histórico
-- Apresentação: demonstração do sistema
+- Apresentação: demonstração do sistema -->
 
 ## Entrega 3
 
-- Projeto completo, com testes de unidade
+A definir.
+
+<!-- - Projeto completo, com testes de unidade
 - Critério: cobertura de testes
-- Apresentação: demonstração do sistema
+- Apresentação: demonstração do sistema -->
