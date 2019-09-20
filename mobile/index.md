@@ -41,6 +41,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
     + [SQLite](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
     + [Serviços Web](https://speakerdeck.com/rodrigorgs/servico-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UNnhLeFJMMzZ4Yk0))
     + [Acessando serviços Web](https://speakerdeck.com/rodrigorgs/cliente-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5USXBOWV9WU0RIWFU))
+      - [Exemplo de código](rest.zip)
     + [Multithreading](https://speakerdeck.com/rodrigorgs/multithreading-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UOG0tcFdYVVg4Z1U))
 - iOS
     + [Start Developing iOS Apps (Swift)](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/)
