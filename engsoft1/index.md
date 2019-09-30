@@ -19,17 +19,17 @@ title: MATA62 - Engenharia de Software I - T02 - 2019.2
 
 # Conteúdo
 
-Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit)
-
 - [Introdução à engenharia de software](introducao-es)
 - UML
     - [diagrama de classes](uml-classes)
     - [diagrama de sequência](uml-sequencia)
     - [outros diagramas](uml-outros)
-- Arquitetura de software - ênfase em MVC e camadas
 - [Princípios de projeto orientado a objetos](principios-projeto)
+- Arquitetura de software - ênfase em MVC e camadas
 - Padrões de projeto
 - Teste de software - testes de unidade
+
+Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit)
 
 # Semestres anteriores
 

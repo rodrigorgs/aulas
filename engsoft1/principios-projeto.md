@@ -3,6 +3,26 @@ layout: page
 title: Princípios de projeto orientado a objetos
 ---
 
+## Leitura recomendada
+
+- Livro [Engenharia de Software Moderna](https://engsoftmoderna.info/) (prof. Marco Tulio Valente, UFMG) [slides](https://docs.google.com/presentation/d/1pCz8hpS7ufqmTlLizmbWw54O54l6-twUbMr1ChmdYCw/edit#slide=id.g4ffa9ac22f_0_0) e [texto](https://docs.google.com/document/d/e/2PACX-1vTwzbOdLCUNLQEPBY933dEgJNAHKDNHsJA56dQqRZWqYawBvmg-m-HU66emL8-X6zVxUkA-UPRoz5_B/pub)
+- [Sintomas de design de software podre](https://blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/)
+- [Pensamento funcional: imutabilidade](https://imasters.com.br/back-end/pensamento-funcional-imutabilidade) (ler até o final da seção "Classe imutável 'tradicional'")
+- [equals e hashCode](https://blog.algaworks.com/entendendo-o-equals-e-hashcode/)
+
+## Leitura complementar
+
+- Robert C. Martin. [The principles of OOD](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod) (SOLID principles)
+- Robert C. Martin. [Design Principles and Design Patterns](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf)
+    - rigidity, fragility, immobility, and viscosity
+- Maurício Aniche. Orientação a Objetos e SOLID para Ninjas.
+- [SOLID, GRASP, and Other Basic Principles of Object-Oriented Design](https://dzone.com/articles/solid-grasp-and-other-basic-principles-of-object-o)
+- Martin Fowler. [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
+- Martin Fowler; Kent Beck. [Refactoring: Improving the Design of Existing Code](http://www.laputan.org/pub/patterns/fowler/smells.pdf) (capítulo 3: Bad Smells in Code)
+- Acoplamento, coesão e métricas (CBO, LCOM)
+    - [Métricas para Programas Orientados a Objetos (CK)](https://homepages.dcc.ufmg.br/~figueiredo/disciplinas/aulas/metricas-ck_v01.pdf)
+- David Parnas. [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
+
 ## Notas de aula
 
 - Ao projetar um sistema orientado a objetos, devemos observar algumas **propriedades de projeto**:
@@ -10,7 +30,7 @@ title: Princípios de projeto orientado a objetos
   - **ocultamento de informação**: aspectos da implementação que são propensos a mudanças devem ser escondidos dos clientes, de forma que alterações nessas implementações não devem requerer modificações nos clientes.
   - **coesão**: cada classe deve ter uma única responsabilidade; assim, para cada classe haverá apenas uma razão para alterá-la
   - **acoplamento fraco**: cada classe deve depender de pouca ou nenhuma informação de outras classes, de forma que seja mais fácil substituir as dependências. Ver também: ocultamento de informação.
-- Ao avaliar um projeto, devemos verificar se ele apresenta certos [**sintomas** de projetos ruins](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf):
+- Ao avaliar um projeto, devemos verificar se ele apresenta certos [**sintomas** de projetos ruins (*design podre*)](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf):
   - **rigidez**: um software rígido é aquele que é difícil de alterar; mesmo um pequena mudança (para corrigir um bug simples, por exemplo) requer outras mudanças, que requer outras mudanças... Com um software rígido, é difícil estimar quanto tempo uma mudança vai levar para ser implementada.
   - **fragilidade**: um software frágil é aquele que no qual uma mudança em uma parte do código introduz bugs em diversas outras partes, mesmo partes que não têm nada a ver com a parte que foi alterada.
   - **imobilidade**: um software imóvel é aquele que possui muitas partes difíceis de serem reusadas em outros contextos (possivelmente devido a fortes acoplamentos). Isso pode ser observado quando se deseja implementar uma funcionalidade muito similar a outra que já foi implementada, mas é mais fácil reimplementar a funcionalidade do que reusar o que já foi implementado.
@@ -34,25 +54,6 @@ title: Princípios de projeto orientado a objetos
   - **DRY** (Don't repeat yourself): evitar duplicação de código (usar abstrações para evitar repetição). "Cada porção de conhecimento em um sistema deve possuir uma representação única, de autoridade e livre de ambiguidades em todo o sistema"
   - **KISS** (Keep it simple, st\*\*\*\*): busque soluções simples; evite complexidade desnecessária.
   - **YAGNI** (You aren't gonna need it): não implemente algo pensando que pode ser útil no futuro; implementado quando (e se) for necessário.
-  
-
-
-## Leitura recomendada
-
-- Livro [Engenharia de Software Moderna](https://engsoftmoderna.info/) (prof. Marco Tulio Valente, UFMG) [slides](https://docs.google.com/presentation/d/1pCz8hpS7ufqmTlLizmbWw54O54l6-twUbMr1ChmdYCw/edit#slide=id.g4ffa9ac22f_0_0) e [texto](https://docs.google.com/document/d/e/2PACX-1vTwzbOdLCUNLQEPBY933dEgJNAHKDNHsJA56dQqRZWqYawBvmg-m-HU66emL8-X6zVxUkA-UPRoz5_B/pub)
-
-## Leitura complementar
-
-- Robert C. Martin. [The principles of OOD](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod) (SOLID principles)
-- Robert C. Martin. [Design Principles and Design Patterns](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf)
-    - rigidity, fragility, immobility, and viscosity
-- Maurício Aniche. Orientação a Objetos e SOLID para Ninjas.
-- [SOLID, GRASP, and Other Basic Principles of Object-Oriented Design](https://dzone.com/articles/solid-grasp-and-other-basic-principles-of-object-o)
-- Martin Fowler. [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
-- Martin Fowler; Kent Beck. [Refactoring: Improving the Design of Existing Code](http://www.laputan.org/pub/patterns/fowler/smells.pdf) (capítulo 3: Bad Smells in Code)
-- Acoplamento, coesão e métricas (CBO, LCOM)
-    - [Métricas para Programas Orientados a Objetos (CK)](https://homepages.dcc.ufmg.br/~figueiredo/disciplinas/aulas/metricas-ck_v01.pdf)
-- David Parnas. [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
 
 <!-- 
 
