@@ -48,7 +48,7 @@ title: Princípios de projeto orientado a objetos
 - Outros princípios de projeto orientado a objetos:
   - [**Lei de Demeter**](https://dzone.com/articles/the-genius-of-the-law-of-demeter): "fale com seus amigos; não fale com amigos de amigos". Dentro de um método de um objeto (cliente), só chame métodos de objetos que são: (1) recebidos como parâmetro, ou (2) criados localmente, ou (3) atributos do objeto, ou (4) variáveis globais (ex.: atributos estáticos).
   - **Favoreça composição a herança**.
-  - **Encapsule o que muda**. Similar a *ocultamento de informação*.
+  - **Encapsule o que muda**. Separe o código propenso a mudar do código que provavelmente não vai mudar.
   - **Programe para interfaces, não para implementações**. Ver *DIP*.
 - Princípios mais gerais (não se aplicam somente a orientação a objetos)
   - **DRY** (Don't repeat yourself): evitar duplicação de código (usar abstrações para evitar repetição). "Cada porção de conhecimento em um sistema deve possuir uma representação única, de autoridade e livre de ambiguidades em todo o sistema"
@@ -57,6 +57,14 @@ title: Princípios de projeto orientado a objetos
 
 <!-- 
 
+- Anomalias de código (também conhecido como bad smells, code smells, antipadrões...)
+  - Refused bequest (legado recusado). Ocorre quando uma classe estende outra, mas usa apenas alguns dos métodos da superclasse. É uma violação do princípio da substituição de Liskov.
+  - Feature envy (inveja de funcionalidade). Ocorre quando um método acessa dados de outras classes mais do que dados da própria classe.
+  - God class. Ocorre quando uma classe possui muitas responsabilidades, acessa objetos de muitas outras classes. É uma violação do princípio da responsabilidade única.
+  - https://blog.codinghorror.com/code-smells/
+  - http://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf
+  - http://mikamantyla.eu/BadCodeSmellsTaxonomy.html
+  - https://sourcemaking.com/refactoring/smells
 - Propriedades de projeto (integridade conceitual, ocultamento de informação, coesão, acoplamento, EXTENSIBILIDADE)
 - Princípios de projeto
 
@@ -93,6 +101,7 @@ title: Princípios de projeto orientado a objetos
 - SOLID: Dependency Inversion Principle
   - Dois formatos de arquivo de entrada para ler
   - Ou dois formatos de arquivo de saída... (TXT e HTML)
+  - https://ardalis.com/new-is-glue
 
 - ACCS pode ser cursada duas vezes
 

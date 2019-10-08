@@ -19,6 +19,8 @@ title: MATA62 - Engenharia de Software I - T02 - 2019.2
 
 # Conteúdo
 
+Veja também: [código-fonte usado durante a aula](https://github.com/rodrigorgs/engsoft1-exemplos)
+
 - [Introdução à engenharia de software](introducao-es)
 - UML
     - [diagrama de classes](uml-classes)
