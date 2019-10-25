@@ -23,7 +23,7 @@
 
 ## Execução da prova
 
-1. O aluno deve acessar o endereço `$IP:$PORTA/mata56`, onde `$IP` é o IP da máquina e `$PORTA` é a porta na qual o servidor web está rodando.
+1. O aluno deve acessar o endereço `$IP:$PORTA/aulas`, onde `$IP` é o IP da máquina e `$PORTA` é a porta na qual o servidor web está rodando.
 2. O aluno deve clicar no botão `Login`, preencher seus dados e clicar em cancelar.
 3. O professor irá até cada um dos alunos, clicará em `Login`, preencherá a senha definida no arquivo `login.php` e clicará em `Enviar`. Se a senha estiver correta, os dados do aluno aparecerão no topo, do lado esquerdo.	
 4. A partir daí o aluno deve realizar a prova e, ao final, clicar no botão `Enviar respostas`.	
