@@ -60,9 +60,37 @@ Neste momento não é necessário criar nenhuma interface com o usuário. No ent
 - Apresentação: demonstração do sistema
  -->
 
-## Entrega 2
+## Entrega 2: entrega e apresentação no dia 19/11
 
-A definir.
+Na entrega 2 você vai criar uma interface gráfica com o usuário usando o Java Swing ou o JavaFX. Se optar por usar o Java Swing, você pode usar a extensão [WindowBuilder](https://www.eclipse.org/windowbuilder/) para Eclipse.
+
+Considere que a interface gráfica será usada exclusivamente pelo coordenador do curso, que possui todas as permissões. Conside os seguintes casos:
+
+- Coordenador cadastra aluno, informando nome, número de matrícula e semestre de ingresso
+  - Sistema exibe mensagem de erro se alguma das informações estiver em branco ou se o aluno já foi cadastrado
+- Coordenador lista alunos
+- Coordenador seleciona aluno para visualizar informações sobre ele
+- Coordenador visualiza histórico de um aluno
+  - O formato pode ser HTML ou TXT
+- Coordenador lista currículo do curso
+- Coordenador visualiza escalonamento de matrícula do curso
+  - Há dois critérios: por ordem decrescente de CR (desempatando por ordem crescente de semestre) ou por ordem crescente de semestre (desempatando por ordem decrescente de CR)
+
+Considere uma arquitetura da seguinte forma:
+
+- As classes que representam entidades do sistema (ex.: aluno, universidade, curso...) devem estar em um pacote chamado `*.domain (onde * é o nome do pacote principal de sua aplicação, como `br.ufba.mata62.team1`)
+- As telas do sistema devem estar em um pacote chamado `*.controller`, com sufixo `Controller` (ex.: `CurriculoController`)
+- As operações do sistema devem estar em classes do pacote `*.service`, com sufixo `Service` (ex.: `AlunoService`)
+- Código de acesso a arquivo deve estar em classes do pacote `*.repository`, com sufixo `Repository`
+- Controller, Service e Repository devem ser estruturados em camadas
+- Todos os pacotes podem acessar o pacote `*.domain`
+- Não deve haver lógica de negócio nos controllers; use os services para isso
+- Cenários de erro devem resultar em uma exceção customizada sendo lançada pelo service e tratada pelo controller
+- A visualização do histórico em diferentes formatos deve ser implementada com o padrão de projeto Template Method
+- A escolha do critério de escalonamento deve ser implementada com o padrão de projeto Strategy
+- Siga a lei de Demeter
+
+No dia da entrega, atualize o repositório Git **antes** da aula.
 
 <!-- - Aluno indica disciplinas que pretende cursar no próximo semestre (matrícula)
 - Sistema emite sinal sonoro (ou não, a depender da configuração do sistema) cada vez que uma nova matrícula é realizada

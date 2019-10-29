@@ -27,7 +27,7 @@ Veja também: [código-fonte usado durante a aula](https://github.com/rodrigorgs
     - [diagrama de sequência](uml-sequencia)
     - [outros diagramas](uml-outros)
 - [Princípios de projeto orientado a objetos](principios-projeto)
-- Arquitetura de software - ênfase em MVC e camadas
+- [Arquitetura de software](arquitetura)
 - Padrões de projeto
 - Teste de software - testes de unidade
 
