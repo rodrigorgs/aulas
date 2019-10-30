@@ -62,7 +62,7 @@ Neste momento não é necessário criar nenhuma interface com o usuário. No ent
 
 ## Entrega 2: entrega e apresentação no dia 19/11
 
-Na entrega 2 você vai criar uma interface gráfica com o usuário usando o Java Swing ou o JavaFX. Se optar por usar o Java Swing, você pode usar a extensão [WindowBuilder](https://www.eclipse.org/windowbuilder/) para Eclipse.
+Na entrega 2 você vai criar uma interface gráfica com o usuário usando o Java Swing, o JavaFX ou o Android SDK. Se optar por usar o Java Swing, você pode usar a extensão [WindowBuilder](https://www.eclipse.org/windowbuilder/) para Eclipse.
 
 Considere que a interface gráfica será usada exclusivamente pelo coordenador do curso, que possui todas as permissões. Conside os seguintes casos:
 
@@ -78,7 +78,7 @@ Considere que a interface gráfica será usada exclusivamente pelo coordenador d
 
 Considere uma arquitetura da seguinte forma:
 
-- As classes que representam entidades do sistema (ex.: aluno, universidade, curso...) devem estar em um pacote chamado `*.domain (onde * é o nome do pacote principal de sua aplicação, como `br.ufba.mata62.team1`)
+- As classes que representam entidades do sistema (ex.: aluno, universidade, curso...) devem estar em um pacote chamado `*.domain` (onde * é o nome do pacote principal de sua aplicação, como `br.ufba.mata62.team1`)
 - As telas do sistema devem estar em um pacote chamado `*.controller`, com sufixo `Controller` (ex.: `CurriculoController`)
 - As operações do sistema devem estar em classes do pacote `*.service`, com sufixo `Service` (ex.: `AlunoService`)
 - Código de acesso a arquivo deve estar em classes do pacote `*.repository`, com sufixo `Repository`
