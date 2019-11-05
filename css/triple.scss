@@ -9,7 +9,7 @@ $base-font-size:   14px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.750;
 $base-line-height: 1.5;
-$spacing-unit:     30px;
+$spacing-unit:     0px;
 
 $text-color:       #fff;
 $background-color: grey;
@@ -20,6 +20,8 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $content-width:    800px;
+
+$footer-height:    30px;
 
 h1 {
     color: #0017c1;
@@ -64,6 +66,10 @@ page-content {
     min-height: 100vh;
 }
 
+.texto, .cm-s-default, #consolelog {
+    height: calc(100vh - #{$footer-height}) !important;
+}
+
 #consolelog {
     vertical-align: top;
     width: 33.33%;
@@ -84,23 +90,16 @@ page-content {
 
 .go {
     margin-left: -57.5%;
-    margin-top: 535px;
     width: 200px;
 }
 
 footer{
     width: 100%;
+    text-align: center;
+    height: $footer-height;
 }
 
 .btn-back, .btn-fwd {
     width: 200px;
     height: 25px;
-}
-
-.btn-fwd{
-    margin-left: 1%;
-}
-
-.btn-back {
-    margin-left: 35%;
 }
