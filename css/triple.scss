@@ -66,7 +66,7 @@ page-content {
     min-height: 100vh;
 }
 
-.texto, .cm-s-default, #consolelog {
+.texto, #consolelog {
     height: calc(100vh - #{$footer-height}) !important;
 }
 
@@ -81,6 +81,11 @@ page-content {
     overflow: auto;
 }
 
+.cm-s-default {
+    position: absolute;
+    height: calc(100vh - #{$footer-height} - 21px) !important;
+}
+
 .page-content:after {
     content: "";
     display: flex;
@@ -88,9 +93,16 @@ page-content {
     visibility: hidden;
 }
 
+.editor {
+    position: relative;
+    width: 33%;
+}
+
 .go {
-    margin-left: -57.5%;
+    text-align: center;
+    margin-left: -58%;
     width: 200px;
+    margin-top: calc(100vh - #{$footer-height} - 21px);
 }
 
 footer{
