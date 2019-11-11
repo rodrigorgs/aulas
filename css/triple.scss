@@ -81,6 +81,11 @@ page-content {
     overflow: auto;
 }
 
+#fullScreenConsole{
+    display: inline;
+    margin-left: 83%;
+}
+
 .cm-s-default {
     position: absolute;
     height: calc(100vh - #{$footer-height} - 21px) !important;
@@ -104,7 +109,7 @@ page-content {
     width: 200px;
     margin-top: calc(100vh - #{$footer-height} - 21px);
     margin-left: calc(100vw * 0.575 * (-1));
-    margin-right: calc(100vw * 0.33);
+    //margin-right: calc(100vw * 0.33);
 }
 
 footer{
