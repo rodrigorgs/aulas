@@ -13,10 +13,13 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
 
 # Avaliações
 
-- (2,5) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
-- (2,5) Desenvolvimento de pequenos apps com Ionic
-- (2,0) [Seminário](seminarios)
-- (3,0) [Desenvolvimento de um app completo](trabalho-apps)
+- (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
+- (3,5) [Seminário](seminarios)
+- (3,5) Desenvolvimento de 3 pequenos apps com Ionic *ou* Desenvolvimento de um app completo
+  - Ambas as atividades podem ser feitas em equipes de até 4 pessoas ou individualmente
+  - Para o trabalho deve ser entregue o código-fonte (por e-mail) e um vídeo com até 3 minutos (preferencialmente 2 minutos) demonstrando o app em funcionamento. **Prazo**: 30/11.
+  - Os exercícios serão divulgados através do Google Classroom e entregues através do GitHub Classroom. **Prazo**: 29/11 (todos os exercícios).
+  - As equipes que optarem por fazer ambas as atividades concorrerão a até 0,8 ponto extra, da seguinte forma: a atividade com melhor nota terá peso 3,5 e a atividade com menor nota terá peso 0,8 (extra)
 
 <!--    
     * Exercício 1: Hello World
