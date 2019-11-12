@@ -29,6 +29,9 @@ Veja também: [código-fonte usado durante a aula](https://github.com/rodrigorgs
 - [Princípios de projeto orientado a objetos](principios-projeto)
 - [Arquitetura de software](arquitetura)
 - Padrões de projeto
+  - Comportamentais: Template Method, Strategy, Observer
+  - Criacionais: Factory Method, Abstract Factory
+  - Estruturais: Composite, Decorator
 - Teste de software - testes de unidade
 
 Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit)
