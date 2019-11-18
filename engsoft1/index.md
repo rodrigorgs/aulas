@@ -32,7 +32,7 @@ Veja também: [código-fonte usado durante a aula](https://github.com/rodrigorgs
   - Comportamentais: Template Method, Strategy, Observer
   - Criacionais: Factory Method, Abstract Factory
   - Estruturais: Composite, Decorator
-- Teste de software - testes de unidade
+- [Teste de software](testes) (testes de unidade)
 
 Extra: [controle de versão com Git](https://docs.google.com/presentation/d/1QTLn7roYJw_Cfm_IWRL-KusmQgnlQ6YVG6ZWePLDIFQ/edit)
 

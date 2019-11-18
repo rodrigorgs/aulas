@@ -17,7 +17,7 @@ Outros: banca de TCC, avaliação de professores
 
 O projeto consiste em um sistema desktop para gerenciamento de uma universidade, e deve ser desenvolvido por equipes contendo entre 3 e 6 pessoas. O sistema será desenvolvido incrementalmente, com entregas parciais ao longo do semestre. As entregas serão realizadas no GitHub, através do endereço <https://classroom.github.com/g/spmbcgWX>
 
-## Entrega 0: apresentação no dia 17/09
+## (0,8) Entrega 0: apresentação no dia 17/09
 
 Para a entrega 0, sua equipe precisará criar um projeto Java contendo as classes do domínio acadêmico (com seus respectivos atributos, construtores, getters e setters, considerando a visibilidade apropriada para cada membro), além de um diagrama de classes representando as classes do projeto. No diagrama de classes, omita os getters e setters para melhorar a legibilidade. Use boas práticas de codificação e de modelagem.
 
@@ -29,7 +29,7 @@ Para testar (parcialmente) se sua modelagem está correta, verifique se é poss�
 
 Na aula do dia 17/09, sua equipe deve apresentar e explicar o diagrama de classes para a turma, esclarecendo quaisquer dúvidas que possam surgir.
 
-## Entrega 1: entrega e apresentação no dia 22/10
+## (1,2) Entrega 1: entrega e apresentação no dia 22/10
 
 Nesta entrega, você adicionará as seguintes funcionalidades:
 
@@ -60,7 +60,7 @@ Neste momento não é necessário criar nenhuma interface com o usuário. No ent
 - Apresentação: demonstração do sistema
  -->
 
-## Entrega 2: entrega e apresentação no dia 19/11
+## (1,5) Entrega 2: entrega e apresentação no dia 19/11
 
 Na entrega 2 você vai criar uma interface gráfica com o usuário usando o Java Swing, o JavaFX ou o Android SDK. Se optar por usar o Java Swing, você pode usar a extensão [WindowBuilder](https://www.eclipse.org/windowbuilder/) para Eclipse.
 
@@ -100,9 +100,9 @@ No dia da entrega, atualize o repositório Git **antes** da aula.
 - Aluno visualiza histórico
 - Apresentação: demonstração do sistema -->
 
-## Entrega 3
+## (1,5) Entrega 3
 
-A definir.
+<!-- Crie testes de unidade automatizados para testar todas classes do pacote Service. Alcance pelo menos 90% de cobertura de código. -->
 
 <!-- - Projeto completo, com testes de unidade
 - Critério: cobertura de testes
