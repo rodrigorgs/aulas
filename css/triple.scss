@@ -82,8 +82,8 @@ page-content {
 }
 
 #fullScreenConsole{
-    display: inline;
-    margin-left: 83%;
+    float: right;
+    margin-right: 2px;
 }
 
 .cm-s-default {
@@ -101,15 +101,11 @@ page-content {
 .editor {
     position: relative;
     width: 33%;
+    float: left;
 }
 
 .go {
-    //text-align: center;
-    //margin-left: -58%;
-    width: 200px;
-    margin-top: calc(100vh - #{$footer-height} - 21px);
-    margin-left: calc(100vw * 0.575 * (-1));
-    //margin-right: calc(100vw * 0.33);
+    width: 100%;
 }
 
 footer{
