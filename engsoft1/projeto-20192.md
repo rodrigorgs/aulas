@@ -100,10 +100,19 @@ No dia da entrega, atualize o repositório Git **antes** da aula.
 - Aluno visualiza histórico
 - Apresentação: demonstração do sistema -->
 
-## (1,5) Entrega 3
+## (1,5) Entrega 3: entrega até 03/12 às 23:59
 
-<!-- Crie testes de unidade automatizados para testar todas classes do pacote Service. Alcance pelo menos 90% de cobertura de código. -->
+Na entrega 3 você precisará criar testes de unidade para testar todas classes do pacote Service. Talvez você precise refatorar seu código para mover funcionalidades para as classes do Service ou para fora delas. Pode ser indicado dividir métodos em dois ou mais métodos para tornar seu código mais testável.
 
-<!-- - Projeto completo, com testes de unidade
-- Critério: cobertura de testes
-- Apresentação: demonstração do sistema -->
+Os testes devem cobrir as seguintes funcionalidades:
+
+- Cadastro de aluno
+- Escalonamento
+- Histórico (incluindo cálculo de carga horária)
+
+Critérios de avaliação:
+
+- A cobertura de ramos (*branch coverage*) deve ser de ao menos 90% nas seguintes classes: classes do pacote `service` que implementam as funcionalidades testadas e classes que implementam os padrões Strategy e Factory Method.
+- Os seus testes devem rápidos, independentes e determinísticos.
+
+Apresentação: não haverá apresentação.

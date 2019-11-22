@@ -10,7 +10,7 @@ title: Introdução à Engenharia de Software
 ## Tópicos estudados
 
 - Introdução
-- Testes de Unidade
+- Testes de unidade
 - Princípios FIRST
 - Cobertura de testes
 - Visão geral sobre mocking
