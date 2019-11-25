@@ -81,10 +81,10 @@ page-content {
     overflow: auto;
 }
 
-#fullScreenConsole{
+#expandeConsole{
     float: right;
     margin-right: 2px;
-    
+    display: none;
 }
 
 .cm-s-default {
