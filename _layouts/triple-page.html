@@ -1,0 +1,39 @@
+---
+
+triple: true
+
+---
+
+<!DOCTYPE html>
+
+<html>
+
+    {% include head.html %}
+    
+    <body>
+
+        <div class = "page-content">
+
+            <div>
+
+                {{ content }}
+                
+
+                <div class="right column" id = "consolelog">
+                        <input type = "button" id = "fullScreenConsole" value = "Tela Cheia"/>
+                        <p class = "console" id = "log"></p>
+                </div>
+
+            </div>
+
+            <footer>
+                <input type = "button" class = "btn-back" id = "volta" value = "Retroceder"/>
+                <input type = "button" class = "btn-fwd" id = "avanca" value = "Avançar"/>
+
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

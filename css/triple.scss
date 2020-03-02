@@ -1,0 +1,120 @@
+---
+
+---
+
+@charset "utf-8";
+
+$base-font-family: Helvetica, Arial, Georgia;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.750;
+$base-line-height: 1.5;
+$spacing-unit:     0px;
+
+$text-color:       #fff;
+$background-color: grey;
+$brand-color:      #064bf5;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$content-width:    800px;
+
+$footer-height:    30px;
+
+h1 {
+    color: #0017c1;
+    font-weight: bold;
+}
+
+
+h2 {
+    font-weight: bold;
+    color: yellow;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #0da206;
+    text-decoration: underline;
+}
+
+@import "minima";
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$cell-padding:  6px;
+$border-color:  darkgray;
+
+table th { background-color: lightgray; padding: $cell-padding; border: 2px solid darkgray; }
+table td { background-color: white; padding: $cell-padding; border: 2px solid darkgray; }
+table { border: 3px solid darkgray; border-collapse: collapse; }
+
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0017c1 !important;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+page-content {
+    min-height: 100vh;
+}
+
+.texto, #consolelog {
+    height: calc(100vh - #{$footer-height}) !important;
+}
+
+#consolelog {
+    vertical-align: top;
+    width: 33.33%;
+    padding: 5px;
+    float: left;
+    position: relative;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+
+#fullScreenConsole{
+    float: right;
+    margin-right: 2px;
+}
+
+.cm-s-default {
+    position: absolute;
+    height: calc(100vh - #{$footer-height} - 21px) !important;
+}
+
+.page-content:after {
+    content: "";
+    display: flex;
+    clear: both; 
+    visibility: hidden;
+}
+
+.editor {
+    position: relative;
+    width: 33%;
+    float: left;
+}
+
+.go {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    height: $footer-height;
+}
+
+.btn-back, .btn-fwd {
+    width: 200px;
+    height: 25px;
+}
