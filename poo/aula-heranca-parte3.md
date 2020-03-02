@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: remark
 title: Herança - parte 3
 ---
+
+<div>
 
 # Polimorfismo
 
@@ -177,8 +179,6 @@ fulano instanceof Object
 
 # Late binding (vinculação tardia)
 
-Considere o seguinte código:
-
 ```java
 class Animal {
   public void anda() {
@@ -188,14 +188,12 @@ class Animal {
     System.out.println("Zzzzzz...");
   }
 }
-
 class Gato extends Animal {
   @Override
   public void fazBarulho() {
     System.out.println("Miau");
   }
 }
-
 class Treinador {
   public void treina(Animal animal) {
     animal.anda();
@@ -203,7 +201,6 @@ class Treinador {
     animal.fazBarulho();
   }
 }
-
 public class Main {
   public static void main(String[] args) {
     Gato gato = new Gato();
@@ -268,6 +265,7 @@ Como vamos modelar esse problema?
 
 - Nesse caso vamos composição e herança: Pessoa possui Arma, e Arma pode ser Flecha ou Espada. Atacar significa usar a arma.
 
+</div>
 
 <!--
 ```java

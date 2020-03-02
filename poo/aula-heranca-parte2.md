@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: remark
 title: Herança - parte 2
 ---
+
+<div>
 
 # A classe Object
 
@@ -242,3 +244,5 @@ class B extends A {
 ```
 
 O código compila, mas `B.teste()` não está sobrepondo `A.teste()`; na verdade ele é um método completamente novo. Podemos verificar isso ao adicionar a anotação `@Override` ou ao tentar chamar o método da superclasse usando `super.teste()`;
+
+</div>

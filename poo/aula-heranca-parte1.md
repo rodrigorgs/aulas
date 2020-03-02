@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: remark
 title: Herança - parte 1
 ---
+
+<div>
 
 # Reuso em POO
 
@@ -253,3 +255,5 @@ class C extends B {
 ```
 
 Ao invocar `C c = new C();`, qual a saída?
+
+</div>

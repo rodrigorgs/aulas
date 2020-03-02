@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: remark
 title: Exceções
 ---
+
+<div>
 
 # Tratamento de erros
 
@@ -99,6 +101,8 @@ if (x <= 0) {
 }
 System.out.println("O dobro de " + x + " é " + (x * 2));
 ```
+
+---
 
 # Stack trace
 
@@ -268,6 +272,7 @@ Ver também: <https://stackoverflow.com/questions/3354823/how-to-use-finally>
 
 # Hierarquia de exceções
 
+<!--
 <div class="uml">
 class Throwable {
 }
@@ -278,11 +283,12 @@ class Exception extends Throwable {
 class RuntimeException extends Exception {
 }
 </div>
+-->
 
 - `Throwable` é a mãe de todas as exceções
-- `Error` é para exceções que indicam problemas sérios que em geral não podem ser tratados. Exemplo (subclasse): `OutOfMemoryError`
-- `Exception` é para exceções que em geral podem ser tratadas
-- `RuntimeException` é para exceções corriqueiras, que poderiam ter sido evitadas com verificações durante a execução do problema. Exemplos (subclasses): `ArithmeticException`, `NullPointerException`, `IndexOutOfBoundsException`
+  - `Error` é para exceções que indicam problemas sérios que em geral não podem ser tratados. Exemplo (subclasse): `OutOfMemoryError`
+  - `Exception` é para exceções que em geral podem ser tratadas
+    - `RuntimeException` é um tipo de `Exception` para exceções corriqueiras, que poderiam ter sido evitadas com verificações durante a execução do problema. Exemplos (subclasses): `ArithmeticException`, `NullPointerException`, `IndexOutOfBoundsException`
 
 Observações:
 
@@ -503,4 +509,4 @@ try {
 
 O tratamento de exceções em Java introduz uma penalidade no desempenho do programa, uma vez que construir o *stack trace* da exceção é uma operação potencialmente custosa. Assim, evite usar `try/catch` dentro de um loop com muitas iterações se o desempenho for uma preocupação.
 
-
+</div>

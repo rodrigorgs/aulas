@@ -3,6 +3,10 @@
   <head>
     <title>{{ page.title }}</title>
     <meta charset="utf-8">
+    
+    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
+  
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -36,7 +40,7 @@
         var url = this;
         return '<img src="' + url + '" style="height: ' + percentage + '" />';
       };
-      var slideshow = remark.create();
+      var slideshow = remark.create({highlightLines: true});
     </script>
 
     {% include footer-items-mata56.html %}

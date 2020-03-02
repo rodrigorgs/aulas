@@ -3,10 +3,6 @@ layout: page
 title: Apresentação da disciplina (MATA56)
 ---
 
-# Objetivo
-
-Compreender e aplicar conceitos e paradigmas de linguagens de programação, de forma a facilitar o aprendizado de novas linguagens de programação e fornecer elementos para uma comparação crítica entre linguagens.
-
 # Metodologia
 
 - Aulas expositivas, exercícios e práticas em laboratório

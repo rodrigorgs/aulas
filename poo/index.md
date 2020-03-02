@@ -6,23 +6,45 @@ title: MATA55 - Programação orientada a objetos - 2019.1
 # Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>. 
-- Turmas:
-    - T02: SEG/QUA, 18:30 a 20:20. Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `jij4f4`.
-    - T03: TER/QUI, 18:30 a 20:20. Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `sq0eh`.
+- T03: TER/QUI, 18:30 a 20:20. Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `pfxx3eu`.
+
 
 # Avaliações
-
+<!-- 
 - (peso 3,0) Listas de exercícios
 - (peso 2,0) Prova escrita
-- (peso 3,0) Exercício incremental <!-- biblioteca -->
+- (peso 3,0) Exercício incremental
 - (peso 2,0) Projeto de implementação livre, em equipe
-
+ -->
 <!--
 Critérios de correção: Sonar (ponto extra)
 -->
 
 # Notas de aula (atualizadas constantemente)
 
+- Motivação
+  - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
+- Java básico (sem se aprofundar em orientação a objetos)
+  - [Alô mundo, pacotes](aula-java-alomundo)
+  - [Eclipse, uma IDE para Java](https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing)
+  - [Orientação a objetos básica (classes, atributos, métodos, static, final)](aula-java-oo)
+  - [Programação básica](https://docs.google.com/presentation/d/1lNB1NRPijRnCLB5d7Ps6s5Zwlw0GgcUQ2QwZWcuVVNo/edit)
+  - [Enums](aula-enums)
+    - exemplo: [cartas de baralho](cartas)
+  - [Exceções](aula-excecoes)
+  - [Coleções](https://docs.google.com/presentation/d/1X_p_8rYdTn34B_8ghgGjBtad8bHPZwcqNBz8IRrjoIQ/edit)
+  - Ecossistema (javadoc, maven)
+    - exemplo: [baralho](cartas)
+- Programação orientada a objetos
+  - UML: diagramas de classes e de objetos
+  - Encapsulamento. Getters/setters, visibilidade, construtores, imutabilidade, referências escapando.
+  - Tipos e interfaces. Interfaces Comparable/Comparator; princípio da segregação de interfaces.
+  - Identidade, igualidade, unicidade. Equals e hashCode.
+  - Composição e agregação.
+  - Herança. Downcasting e upcasting, super, override, overload, classes e métodos abstratos, Object.
+  - Generics.
+
+<!-- 
 Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
 
 Outros slides ou notas de aula:
@@ -35,7 +57,7 @@ Outros slides ou notas de aula:
 - [Enums](aula-enums)
 - [Exceções](aula-excecoes)
 - [Classes internas](aula-classes-internas)
-- [Generics](aula-generics)
+- [Generics](aula-generics) -->
 
 # Bibliografia recomendada
 

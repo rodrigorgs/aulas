@@ -1,36 +1,35 @@
 ---
 layout: page
-title: MATA56 - PLP - 2017.1
+title: MATA56 - Paradigmas de linguagens de programação - 2020.1
 ---
+
+# Objetivo
+
+Compreender e aplicar conceitos e paradigmas de linguagens de programação, de forma a facilitar o aprendizado de novas linguagens de programação e fornecer elementos para uma comparação crítica entre linguagens.
 
 # Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
-- Entre no [Google Classroom](https://classroom.google.com/) e inscreva-se nesta turma clicando no botão `+` e digitando o código `yxt8ii`.
+- Entre no [Google Classroom](https://classroom.google.com/) e inscreva-se nesta turma clicando no botão `+` e digitando o código `7aaxcjx`.
 
 # Avaliações
 
-- Prova escrita de Prolog <span style="color: gray;">\[peso: 3\]</span>
-- Exercícios práticos de Scheme <span style="color: gray;">\[peso: 1\]</span>
-- [Exercício de programação funcional](trabalho-js-20181) <span style="color: gray;">\[peso: 3\]</span>
-- Prova escrita de programação concorrente <span style="color: gray;">\[peso: 3\]</span>
+- Prova prática de Prolog <span style="color: gray;">\[peso: 3, individual\]</span>
+- Caracterização de uma linguagem de programação <span style="color: gray;">\[peso: 3, em grupo de até 5 pessoas\]</span>
+- Prova prática de programação funcional e concorrente com JavaScript <span style="color: gray;">\[peso: 4, individual\]</span>
 
-<!-- Tipos de questão:
-* qual o resultado desse código / como funciona?
-* escreva código segundo essa especificação
-  * corrija o código
- -->
-
-# Links importantes
+# Ferramentas
 
 - [SWISH](http://swish.swi-prolog.org/): interpretador de Prolog online
 - [BiwaScheme](biwascheme): interpretador de Scheme online
+- [repl.it](https://repl.it/languages): interpretador online de várias linguagens
 
 # Conteúdo
 
+(Atenção: o material pode ser atualizado ao longo do semestre)
+
 Introdução
 
-- [Apresentação da disciplina](disciplina)
 - [História das LPs](https://goo.gl/9qSZmy)
 
 Paradigma baseado em lógica
@@ -76,3 +75,11 @@ $(document).ready(function () {
   desabilitaLinksComecadosPor('#!');
 });
 </script>
+
+# Principais referências
+
+- **Prolog**: Introdução à Programação Prolog, Palazzo. ([pdf](http://disciplinas.dcc.ufba.br/pub/MATA56/20092/prolog-palazzo.pdf))
+- **Conceitos**: Programming Language Pragmatics ([site](https://www.cs.rochester.edu/u/scott/pragmatics/3e/)), Michael L. Scott, 3ª edição.
+- **Scheme**: [BiwaScheme reference](https://www.biwascheme.org/doc/reference.html)
+- **JavaScript**: [You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS)
+- [Outras referências](disciplina)
