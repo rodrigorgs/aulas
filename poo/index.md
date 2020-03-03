@@ -10,15 +10,10 @@ title: MATA55 - Programação orientada a objetos - 2019.1
 
 
 # Avaliações
-<!-- 
-- (peso 3,0) Listas de exercícios
-- (peso 2,0) Prova escrita
-- (peso 3,0) Exercício incremental
-- (peso 2,0) Projeto de implementação livre, em equipe
- -->
-<!--
-Critérios de correção: Sonar (ponto extra)
--->
+
+- (peso 4,0) Exercícios incrementais (jogo de cartas)
+- (peso 3,0) Prova prática
+- (peso 3,0) Caracterização de outras linguagens OO
 
 # Notas de aula (atualizadas constantemente)
 
