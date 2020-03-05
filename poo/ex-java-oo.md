@@ -6,7 +6,7 @@ Crie uma classe `Retangulo`, que representa um retângulo, com largura e altura 
 
 - `double calculaPerimetro()`: retorna a soma dos lados do retângulo
 - `double calculaArea()`: retorna o produto da largura pela altura
-- `double calculaVolume(double h)`: retorna o volume de um prisma retangular com altura `h`, tendo como base este retângulo; lembre-se que, nesse caso, o volume corresponde à área da base multiplicado pela altura
+- `double calculaVolume(double p)`: retorna o volume de um prisma retangular com profundidade `p`, tendo como base este retângulo; lembre-se que, nesse caso, o volume corresponde à área da base multiplicado pela profundidade
 
 Crie também um programa que cria dois retângulos, com medidas fixas quaisquer, e imprime seus perímetros, áreas e volumes (considerando alturas quaisquer).
 
