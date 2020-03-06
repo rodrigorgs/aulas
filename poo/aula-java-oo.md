@@ -11,6 +11,20 @@ A sintaxe de Java é muito similar à sintaxe da linguagem C; se você sabe C, v
 
 ---
 
+# Pensando em objetos
+
+- Imagine que estamos criando um programa que gerencia pessoas, e para cada pessoa armazenamos sua data de nascimento. A partir dessa informação queremos saber a idade de cada pessoa.
+- Em linguagens procedimentais (como C), criamos um conjunto de funções (subprogramas), que operam sobre dados (os parâmetros das funções).
+  - Funções são como ferramentas
+  - Se quisermos saber a idade de uma pessoa, trazemos a pessoa para perto, obtemos sua data de nascimento, e então lançamos essa informação em um programa que sabe calcular idades
+  - Um pseudoprograma procedimental: `d = fulano.dataNascimento; idade = calcularIdade(d);`
+- Em linguagens orientadas a objetos, pessoas não são apenas seus dados: elas também possuem comportamento. Em particular, cada pessoa sabe calcular sua própria idade.
+  - Assim, se queremos saber a idade de uma pessoa, perguntamos para ela: "Fulano, qual sua idade?" (em OO, dizemos que enviamos uma mensagem para o objeto)
+  - Um pseudoprograma OO: `idade = fulano.idadeAtual()`
+  - Note que `idadeAtual` não é um dado que está armazenado junto com pessoa; para responder a idade atual, a pessoa vai executar um código considerando seus dados (em particular, a data de nascimento)
+
+---
+
 # Criando objetos
 
 **Objetos** são um grupo de variáveis (**atributos**) associados a funções (**métodos**) que operam sobre essas variáveis.

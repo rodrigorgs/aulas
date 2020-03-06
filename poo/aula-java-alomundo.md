@@ -62,6 +62,14 @@ Explicação sucinta (detalharemos depois):
 
 ---
 
+# Sobre nomes de arquivos
+
+- Em Java, o nome do arquivo deve ser igual ao nome da classe nele contido, adicionado do sufixo `.java`.
+- Em geral, cada arquivo contém exatamente uma classe, e cada classe é descrita em um arquivo
+  - Pode haver mais de uma classe por arquivo, mas isso é assunto para outra aula
+
+---
+
 # Compilando e executando
 
 Programas Java (`.java`) são **compilados** em um arquivo binário, chamado **bytecode** (`.class`), que não é executado diretamente pelo sistema operacional, e sim interpretado pela máquina virtual Java (**JVM**, de *java virtual machine*).

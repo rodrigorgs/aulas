@@ -17,6 +17,10 @@ title: MATA55 - Programação orientada a objetos - 2019.1
 
 # Notas de aula (atualizadas constantemente)
 
+O código-fonte produzido durante as aulas se encontra aqui:
+
+<https://github.com/rodrigorgs/poo-exemplos>
+
 - Motivação
   - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
 - Java básico (sem se aprofundar em orientação a objetos)
