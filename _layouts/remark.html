@@ -4,9 +4,6 @@
     <title>{{ page.title }}</title>
     <meta charset="utf-8">
     
-    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
-    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
-  
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -22,9 +19,18 @@
       .remark-slides-area table td { background-color: white; padding: 7px; border: 2px solid darkgray; }
       .remark-slides-area table { border: 3px solid darkgray; border-collapse: collapse; }
     </style>
+
+    <script type="text/javascript" src="{{site.baseurl}}/lib/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ "/css/misc.css" | prepend: site.baseurl }}">
+    <script type="text/javascript" src="{{site.baseurl}}/js/misc.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
+  
+    <body>
+    
     {% include head-items-mata56.html %}
+    
   </head>
-  <body>
     <textarea id="source">
 
 {{content}}
