@@ -255,8 +255,8 @@ Exemplos:
 ```java
 // 3 é int; é convertido para 3.0 (ampliadora)
 double x = 3;
-// 2.8f é float; é convertido para 2 (redutora)
-int y = 2.8f;  //=> y: 2
+//  (redutora)
+int y = 2.8f;  //=> Erro de compilação, pois haveria perda de informação
 // 2 é convertido para 2.0 para fazermos uma soma de doubles
 System.out.println(3.5 + 2);
 ```
@@ -360,7 +360,7 @@ public class ExemploFuncao {
     }
   }
 
-  public static void soma(int a, int b) {
+  public static int soma(int a, int b) {
     return a + b;
   }
 
