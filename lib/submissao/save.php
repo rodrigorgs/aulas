@@ -41,8 +41,10 @@
 			apostila VARCHAR(20),
 			nome VARCHAR(256),
 			matricula VARCHAR(20),
-      button_index INT,
-			answers TEXT
+      		button_index INT,
+			answers TEXT,
+			testes_ok INT,
+			testes_total INT
 		);");
 
   $sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers) VALUES (NOW(), ?, ?, ?, ?, ?);");
