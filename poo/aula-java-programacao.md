@@ -447,7 +447,8 @@ class: middle, center
 - Portanto, strings são **objetos**, que possuem atributos e métodos
 - Além disso, strings são **imutáveis**: uma vez criadas não podem ser modificadas
 - Objetos string são representados por **aspas**.
-- Strings podem ser concatenados com o operador `+`
+- Strings podem ser concatenadas com o operador `+`
+  - Na expressão `a + b`, se apenas um dos operandos (`a` ou `b`) for String, o outro será convertido para String para ser feita a concatenação
 
 Exemplos:
 
@@ -529,6 +530,7 @@ class: middle, center
 
 ---
 
+0. Qual o resultado da expressão `"Resultado: " + 6 / 2` ?
 1. **Primeira letra**: escreva um método estático que recebe uma String e retorna um `char` representando o primeiro caractere da String. Se esse caractere for uma letra maiúscula, deve ser convertido para minúscula. Se a String for vazia, deve retornar o caractere de espaço branco.
 2. **Arquivos PDF**: escreva um método estático que recebe o nome de um arquivo e indica (através apenas da análise do nome do arquivo) se o arquivo está no formato PDF.
 3. **Mascarando senha**: escreva um método estático que recebe uma String e retorna uma String contendo um `*` para cada caractere da String original.

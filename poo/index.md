@@ -27,13 +27,12 @@ O código-fonte produzido durante as aulas se encontra aqui:
   - [Alô mundo, pacotes](aula-java-alomundo)
   - [Eclipse, uma IDE para Java](https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing)
   - [Programação procedural em Java](aula-java-programacao) (com exercícios)
-  - [Orientação a objetos básica (classes, atributos, métodos, static, final)](aula-java-oo) -- [exercícios sugeridos](ex-java-oo)
-  - [Enums](aula-enums)
-    - exemplo: [cartas de baralho](cartas)
+  - [Ecossistema](aula-java-ecossistema) (javadoc, maven)
+  - .
   - [Exceções](aula-excecoes)
   - [Coleções](https://docs.google.com/presentation/d/1X_p_8rYdTn34B_8ghgGjBtad8bHPZwcqNBz8IRrjoIQ/edit)
-  - [Ecossistema](aula-java-ecossistema) (javadoc, maven)
-    - exemplo: [baralho](cartas)
+  - [Orientação a objetos básica (classes, atributos, métodos, static, final)](aula-java-oo) -- [exercícios sugeridos](ex-java-oo)
+  - [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)
 - Programação orientada a objetos
   - UML: diagramas de classes e de objetos
   - Encapsulamento. Getters/setters, visibilidade, construtores, imutabilidade, referências escapando.

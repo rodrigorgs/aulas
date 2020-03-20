@@ -29,7 +29,28 @@ O predicado `=` pode ser usado para determinar se dois termos podem ser unificad
 - `X = Y.`
 - Negação: `\=`. `\=(X, Y)` é equivalente a `not(=(X, Y))`
 
+## Exercício
+
 [Exercício 2.1 do livro Learn Prolog Now!, página 31](http://www.dis.uniroma1.it/~gemignani/documents/lucia/LearnPrologNow.pdf#page=37).
+
+Quais das seguintes consultas resultam em uma unificação bem sucedida, e qual a instanciação de variáveis leva a essa unificação?
+
+```prolog
+bread = bread
+’Bread’ = bread
+’bread’ = bread
+Bread = bread
+bread = sausage
+food(bread) = bread
+food(bread) = X
+food(X) = food(bread)
+food(bread,X) = food(Y,sausage)
+food(bread,X,beer) = food(Y,sausage,X)
+food(bread,X,beer) = food(Y,kahuna_burger)
+food(X) = X
+meal(food(bread),drink(beer)) = meal(X,Y)
+meal(food(bread),X) = meal(X,drink(beer))
+```
 
 ## Busca
 
@@ -40,6 +61,10 @@ O predicado `=` pode ser usado para determinar se dois termos podem ser unificad
 - Ver [exemplos](http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf#page=6).
 - Use `trace.` / `notrace.` para ativar/desativar o rastreamento das consultas.
 - A busca pode ser construída como uma árvore
+
+### Exemplo
+
+Exemplos 2, 3 e 4: <http://cs.union.edu/~striegnk/courses/esslli04prolog/slides/0.day2.pdf#p9>
 
 ### Exemplo 
 

@@ -37,6 +37,32 @@ Nunca se esqueça de escrever o caso base, caso contrário o resultado será uma
 
 ![]({{site.baseurl}}/files/infinite-patrick.gif)
 
+## Resolução: ancestral
+
+**Caso base**: se `X` for progenitor de `Y`, podemos afirmar que `X` é ancestral de `Y`. Isso pode ser escrito como uma regra que não usa recursão:
+
+```prolog
+ancestral(X, Y) :- progenitor(X, Y).
+```
+
+**Regra recursiva**: No nosso exemplo, sabemos que `maria` é ancestral de `jorge` porque `maria` é progenitora de alguém (`jose`), e esse alguém (`jose`) é ancestral de `jorge`:
+
+```
+           /  maria \ progenitor
+          |          | 
+          |   jose </   \ ancestral
+ancestral |              |
+          |   iris       |
+          |              |
+           \> jorge    </
+```
+
+Assim, a regra fica:
+
+```prolog
+ancestral(X, Y) :- progenitor(X, Z), ancestral(Z, Y).
+```
+
 **Exercício 19**. Agora escreva uma regra para o predicado `descendente/2`, sem usar o predicado `ancestral/2`.
 
 **Exercício 20**. Considere o predicado `sucessor(X, Y)`, que indica que um número, `X`, é sucessor de outro número, `Y`. Escreva os fatos para relacionar os números de 1 a 6 de acordo com o predicado `sucessor`. Ex.:
