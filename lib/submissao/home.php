@@ -16,15 +16,9 @@
 	$sql->execute();
 	$result = $sql->get_result();
 
- 	$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-  	echo "<table border='1'>";
-  	foreach($data as $key => $row) {
-  	    echo "<tr>";
-  	    foreach($row as $key2 => $row2){
-  	        echo "<td>" . $row2 . "</td>";
-  	    }
-  	    echo "</tr>";
-  	}
-  	echo "</table>";
+  	echo "<table>";
+	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+		$apostila = $row['apostila'];
+		echo "<tr><td>".$apostila"<td><tr>";
+	}
 ?>
