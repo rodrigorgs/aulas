@@ -19,6 +19,6 @@
   	echo "<table>";
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		$apostila = $row['apostila'];
-		echo "<tr><td>".$apostila"<td><tr>";
+		echo "<tr><td>".$apostila."<td><tr>";
 	}
 ?>
