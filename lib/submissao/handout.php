@@ -2,6 +2,8 @@
 
 	session_start();
 
+	$apostila = $_GET["apostila"];
+
 	function defineColor($parameter){
 		if($parameter < 5.0){
 			return "red";
@@ -16,11 +18,6 @@
 		}
 	}
 
-	function passparameters($par_nome, $par_button_index){
-		$_SESSION['nome'] = $par_nome;
-		$_SESSION['button_index'] = $par_button_index;
-	}
-
 	$conn = mysqli_connect("localhost", "root", "123456", "mata56");
 	
 
@@ -32,7 +29,8 @@
   	mysqli_query($conn, "SET NAMES 'utf8'");
 
 	$sql = $conn->prepare("
-		select matricula, nome, button_index, testes_ok, testes_total from resposta order by nome, button_index");
+		select matricula, nome, button_index, testes_ok, testes_total from resposta where apostila = ? order by nome, button_index");
+	$sql->bind_param("s", $apostila);
 	$sql->execute();
 	$result = $sql->get_result();
 
@@ -46,13 +44,16 @@
 	echo "<h1>Atividades</h1>";
 
 	echo "<table>";
-	echo "<tr><td>Matrícula</td><td>Nome</td>";
+	echo "<thead>";
+	echo "<tr><th style = 'text-align: center;'>Matrícula</th><th style = 'text-align: center;'>Nome</th>";
 	$num_rows = 1;
 	while($num_rows <= $total_rows){
-		echo"<td>Atividade ".$num_rows."</td>";
+		echo"<th>Atividade ".$num_rows."</th>";
 		$num_rows++;
 	}
 	echo "</tr>";
+	echo "</thead>";
+	echo "<tbody>";
 
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$num_rows = 1;
@@ -61,18 +62,19 @@
 	$button_index = $row['button_index'];
 	$testes_ok = $row['testes_ok'];
 	$testes_total = $row['testes_total'];
-	$testes_corretos = $testes_ok / $testes_total * 10;
-	echo "<tr><td>".$matricula."</td><td>".$nome."</td>";
+	$testes_corretos = $testes_ok / $testes_total * 100;
+	echo "<tr><td style = 'text-align: center;'>".$matricula."</td><td style = 'text-align: center;'>".$nome."</td>";
 	if ($button_index == 1){
-		echo "<td href='answer.php' style = 'color:".
+		echo "<td style = 'text-align: center; color:".
 			defineColor($testes_corretos).
 			";'>".
-			number_format((float)$testes_corretos, 2, '.', '').
+			"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
+			number_format((float)$testes_corretos, 2, '.', '')."%".
 			"</td>";
 			//echo $button_index." first part one <br>";
 	}
 	else{
-		echo "<td style = 'color:red'>".number_format(0, 2, '.', '')."</td>";
+		echo "<td style = 'text-align: center; color:red'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
 		//echo "first part two <br>";
 	}				
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -81,28 +83,30 @@
 			$button_index = $row['button_index'];
 			if ($button_index > $num_rows){
 				while ($num_rows < $button_index){
-					echo "<td style = 'color:red;'>".number_format(0, 2, '.', '')."</td>";
+					echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
 					//echo $num_rows." second part one <br>";
 					$num_rows++;
 				}
 				$testes_ok = $row['testes_ok'];
 				$testes_total = $row['testes_total'];
-				$testes_corretos = $testes_ok / $testes_total * 10;
-				echo "<td style = 'color:".
+				$testes_corretos = $testes_ok / $testes_total * 100;
+				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				number_format((float)$testes_corretos, 2, '.', '').
+				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
+				number_format((float)$testes_corretos, 2, '.', '')."%".
 				"</td>";
 				//echo $button_index." second part two <br>";
 			}
 			else{
 				$testes_ok = $row['testes_ok'];
 				$testes_total = $row['testes_total'];
-				$testes_corretos = $testes_ok / $testes_total * 10;
-				echo "<td style = 'color:".
+				$testes_corretos = $testes_ok / $testes_total * 100;
+				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				number_format((float)$testes_corretos, 2, '.', '').
+				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
+				number_format((float)$testes_corretos, 2, '.', '')."%";
 				"</td>";
 				//echo $button_index." second part three <br>";
 			}
@@ -111,7 +115,7 @@
 			$num_rows++;
 			if ($num_rows <= $total_rows){
 				while ($num_rows <= $total_rows){
-					echo "<td style = 'color:red;'>".number_format(0, 2, '.', '')."</td>";
+					echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
 					$num_rows++;
 					//echo $num_rows." third part one <br>";
 				}
@@ -123,18 +127,19 @@
 			$button_index = $row['button_index'];
 			$testes_ok = $row['testes_ok'];
 			$testes_total = $row['testes_total'];
-			$testes_corretos = $testes_ok / $testes_total * 10;
+			$testes_corretos = $testes_ok / $testes_total * 100;
 			echo "<tr><td>".$matricula."</td><td>".$nome."</td>";
 			if ($button_index == 1){
-				echo "<td style = 'color:".
+				echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos).
 					";'>".
-					number_format((float)$testes_corretos, 2, '.', '').
+					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
+					number_format((float)$testes_corretos, 2, '.', '')."%";
 					"</td>";
 				//echo $button_index." third part two <br>";
 			}
 			else{
-				echo "<td style = 'color:red;'>".number_format(0, 2, '.', '')."</td>";
+				echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
 				//echo $button_index." third part three <br>";
 			}				
 		}
@@ -142,11 +147,12 @@
 	$num_rows++;
 	if ($num_rows <= $total_rows){
 		while ($num_rows <= $total_rows){
-			echo "<td style = 'color:red'>".number_format(0, 2, '.', '')."</td>";
+			echo "<td style = 'text-align: center; color:red'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
 			$num_rows++;
 			//echo $num_rows." third part one <br>";
 		}
 	}
 	echo "</tr>";
+	echo "</tbody>";
 	echo"</table>";
 ?>
