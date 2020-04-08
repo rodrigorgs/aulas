@@ -73,13 +73,13 @@
 		echo "<td style = 'text-align: center; color:".
 			defineColor($testes_corretos).
 			";'>".
-			"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
-			number_format((float)$testes_corretos, 2, '.', '')."%".
+			"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+			number_format((float)$testes_corretos, 2, '.', '')."%)".
 			"</td>";
 			//echo $button_index." first part one <br>";
 	}
 	else{
-		echo "<td style = 'text-align: center; color:red'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
+		echo "<td style = 'text-align: center; color:red'>"."0 (".number_format(0, 2, '.', '')."%)"."</td>";
 		//echo "first part two <br>";
 	}				
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -88,7 +88,7 @@
 			$button_index = $row['button_index'];
 			if ($button_index > $num_rows){
 				while ($num_rows < $button_index){
-					echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
+					echo "<td style = 'text-align: center; color:red;'>"."0 (".number_format(0, 2, '.', '')."%)"."</td>";
 					//echo $num_rows." ".$button_index." second part one <br>";
 					$num_rows++;
 				}
@@ -98,8 +98,8 @@
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
-				number_format((float)$testes_corretos, 2, '.', '')."%".
+				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+				number_format((float)$testes_corretos, 2, '.', '')."%)".
 				"</td>";
 				//echo $button_index." second part two <br>";
 			}
@@ -110,8 +110,8 @@
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
-				number_format((float)$testes_corretos, 2, '.', '')."%";
+				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+				number_format((float)$testes_corretos, 2, '.', '')."%)";
 				"</td>";
 				//echo $button_index." second part three <br>";
 			}
@@ -120,7 +120,7 @@
 			$num_rows++;
 			if ($num_rows <= $total_rows){
 				while ($num_rows <= $total_rows){
-					echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
+					echo "<td style = 'text-align: center; color:red;'>"."0 (".number_format(0, 2, '.', '')."%)"."</td>";
 					$num_rows++;
 					//echo $num_rows." third part one <br>";
 				}
@@ -138,14 +138,14 @@
 				echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos).
 					";'>".
-					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
-					number_format((float)$testes_corretos, 2, '.', '')."%";
+					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+					number_format((float)$testes_corretos, 2, '.', '')."%)";
 					"</td>";
 				//echo $button_index." third part two <br>";
 			}
 			else{
 					while ($num_rows < $button_index){
-						echo "<td style = 'text-align: center; color:red;'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
+						echo "<td style = 'text-align: center; color:red;'>"."0 (".number_format(0, 2, '.', '')."%)"."</td>";
 						//echo $num_rows." ".$button_index." third part three <br>";
 						$num_rows++;
 					}
@@ -155,8 +155,8 @@
 					echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos).
 					";'>".
-					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." ".
-					number_format((float)$testes_corretos, 2, '.', '')."%".
+					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+					number_format((float)$testes_corretos, 2, '.', '')."%)".
 					"</td>";
 					//echo $button_index." third part four <br>";
 			}				
@@ -165,7 +165,7 @@
 	$num_rows++;
 	if ($num_rows <= $total_rows){
 		while ($num_rows <= $total_rows){
-			echo "<td style = 'text-align: center; color:red'>"."0 ".number_format(0, 2, '.', '')."%"."</td>";
+			echo "<td style = 'text-align: center; color:red'>"."0 (".number_format(0, 2, '.', '')."%)"."</td>";
 			$num_rows++;
 			//echo $num_rows." fourth part one <br>";
 		}
