@@ -25,28 +25,40 @@
 							testes_total INT
 						);");
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Fulano', '1234567890', 1, '{}', 3, 10);");
+	/* $sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 1, '{}', 3, 10);");
+	$result = $sql->execute(); */
+
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 2, 'resposta 1', 3, 6);");
 	$result = $sql->execute();
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Fulano', '1234567890', 2, '{}', 3, 6);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Sicrana', '1233214567', 1, 'resposta 2', 5, 10);");
 	$result = $sql->execute();
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Sicrana', '1233214567', 1, '{}', 5, 10);");
-	$result = $sql->execute();
-
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Sicrana', '1233214567', 2, '{}', 6, 6);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Sicrana', '1233214567', 2, 'resposta 3', 6, 6);");
 	$result = $sql->execute();
 	
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Beltrano', '0987654321', 1, '{}', 8, 10);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Beltrano', '0987654321', 1, 'resposta 4', 8, 10);");
 	$result = $sql->execute();
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Beltrano', '0987654321', 2, '{}', 1, 6);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Beltrano', '0987654321', 2, 'resposta 5', 1, 6);");
 	$result = $sql->execute();
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Beltrano', '0987654321', 4, '{}', 4, 10);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Beltrano', '0987654321', 4, 'resposta 6', 4, 10);");
 	$result = $sql->execute();
 
-	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), '{}', 'Beltrano', '0987654321', 3, '{}', 15, 15);");
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Beltrano', '0987654321', 3, 'resposta 7', 15, 15);");
+	$result = $sql->execute();
+
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulana', '1238634712', 3, 'resposta 8', 10, 15);");
+	$result = $sql->execute();
+
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulana', '1238634712', 4, 'resposta 9', 7, 10);");
+	$result = $sql->execute();
+
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Sicrano', '0988907654', 3, 'resposta 10', 3, 15);");
+	$result = $sql->execute();
+
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Sicrano', '0988907654', 1, 'resposta 11', 9, 10);");
 	$result = $sql->execute();
 
 	echo "Tudo foi impresso";
