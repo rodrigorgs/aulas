@@ -2,7 +2,7 @@
 layout: remark
 ---
 
-class: middle, center
+<div>
 
 # Jogo de paciência em Java
 
@@ -160,3 +160,5 @@ Quais são as desvantagens dessa abordagem?
 ```java
 
 ```
+
+</div>

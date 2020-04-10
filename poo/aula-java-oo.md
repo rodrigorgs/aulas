@@ -18,6 +18,11 @@ A sintaxe de Java é muito similar à sintaxe da linguagem C; se você sabe C, v
   - Funções são como ferramentas
   - Se quisermos saber a idade de uma pessoa, trazemos a pessoa para perto, obtemos sua data de nascimento, e então lançamos essa informação em um programa que sabe calcular idades
   - Um pseudoprograma procedimental: `d = fulano.dataNascimento; idade = calcularIdade(d);`
+
+---
+
+# Pensando em objetos
+
 - Em linguagens orientadas a objetos, pessoas não são apenas seus dados: elas também possuem comportamento. Em particular, cada pessoa sabe calcular sua própria idade.
   - Assim, se queremos saber a idade de uma pessoa, perguntamos para ela: "Fulano, qual sua idade?" (em OO, dizemos que enviamos uma mensagem para o objeto)
   - Um pseudoprograma OO: `idade = fulano.idadeAtual()`
@@ -42,7 +47,8 @@ Dizemos também que `fulano` e `sicrano` são **instâncias** de `Pessoa`.
 
 # Acessando a atributos e métodos
 
-Para acessar **membros** (atributos e métodos) de um objeto, use um ponto (`.`). Exemplo:
+- Para acessar **membros** (atributos e métodos) de um objeto, use um ponto (`.`)
+- Exemplo: considere que objetos do tipo `Pessoa` possuem os atributos `altura` e `peso`, além do método `imc()`
 
 ```java
 Pessoa fulano = new Pessoa();
@@ -95,7 +101,7 @@ class Pessoa {
 }
 ```
 
-1. Pode-se definir valores iniciais para atributos. No exemplo, todo objeto da classe `Pessoa` será criado com o atributo `ehAdulto` com valor `true`; se necessário, pode-se alterar seu valor.
+1. Pode-se definir valores iniciais para atributos. No exemplo, todo objeto da classe `Pessoa` será criado com o atributo `ehAdulto` valendo `true`; se necessário, pode-se alterar seu valor.
 2. Todo método recebe implicitamente um parâmetro chamado `this`, que é uma referência para o objeto que está sendo executado. Através do `this`, o método pode acessar outros membros (atributos e métodos) do objeto.
 
 ---
@@ -122,8 +128,8 @@ class Pessoa {
 
 Classes podem definir atributos **estáticos**. A diferença é que esses atributos não são vinculados aos objetos da classe, e sim à própria classe. Como resultado, temos a seguinte situação:
 
-- Atributo não-estáticos: pode ter um valor diferente para cada objeto
-- Atributo estáticos: todos os objetos acessarão o mesmo valor (que é o valor definido para a classe)
+- Atributo não-estático: pode ter um valor diferente para cada objeto
+- Atributo estático: todos os objetos acessarão o mesmo valor (que é o valor definido para a classe)
 
 ```java
 class Pessoa {

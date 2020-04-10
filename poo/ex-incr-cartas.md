@@ -24,7 +24,7 @@ Crie a classe `Carta`, com os seguinte métodos públicos:
 
 <!-- construtores; exception -->
 
-Adicione à classe `Carta` um construtor que recebe valor e naipe (nessa ordem). Modifique a classe de forma que ela se torne imutável. Não deve ser permitido criar cartas com valor ou naipe nulos.
+Adicione à classe `Carta` um construtor que recebe valor e naipe (nessa ordem). Modifique a classe de forma que ela se torne imutável. Não deve ser permitido criar cartas com valor ou naipe nulos. Use uma exceção não-checada.
 
 ## 4
 

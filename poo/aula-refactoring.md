@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: remark
 title: Refatoração
 ---
 
+<div>
 # Definição
 
 Refatoração (em inglês, refactoring) é o processo de modificar um sistema de software para melhorar a estrutura interna do código sem alterar seu comportamento externo.
@@ -158,3 +159,4 @@ public class Professor {
 - Mover membros para uma nova classe (extract class)
 - Extrair interface (extract interface)
 
+</div>

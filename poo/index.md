@@ -13,7 +13,7 @@ title: MATA55 - Programação orientada a objetos - 2019.1
 
 - (peso 4,0) Exercícios incrementais (jogo de cartas)
 - (peso 3,0) Prova prática
-- (peso 3,0) Caracterização de outras linguagens OO
+- (peso 3,0) [Caracterização de outras linguagens OO](https://docs.google.com/spreadsheets/d/1bB9yHE6dl82zPNDTXR0ppBjLEtRlRXZXWNrmk18lM2U/edit?usp=sharing)
 
 # Notas de aula (atualizadas constantemente)
 
@@ -21,26 +21,51 @@ O código-fonte produzido durante as aulas se encontra aqui:
 
 <https://github.com/rodrigorgs/poo-exemplos>
 
+<!-- Exemplo sendo desenvolvido ao longo da aula: jogo estilo RTS, porém de tabuleiro, usando lib Lanterna -->
+<!-- TODO:
+- Criar animações para ilustrar troca de mensagens
+- Usar http://pythontutor.com/java.html#mode=edit ?
+ -->
+
 - Motivação
-  - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
+  - [Introdução à programação orientada a objetos][intro]
 - Java básico (sem se aprofundar em orientação a objetos)
   - [Alô mundo, pacotes](aula-java-alomundo)
-  - [Eclipse, uma IDE para Java](https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing)
+  - [Eclipse, uma IDE para Java][eclipse]
   - [Programação procedural em Java](aula-java-programacao) (com exercícios)
   - [Ecossistema](aula-java-ecossistema) (javadoc, maven)
   - .
-  - [Exceções](aula-excecoes)
-  - [Coleções](https://docs.google.com/presentation/d/1X_p_8rYdTn34B_8ghgGjBtad8bHPZwcqNBz8IRrjoIQ/edit)
   - [Orientação a objetos básica (classes, atributos, métodos, static, final)](aula-java-oo) -- [exercícios sugeridos](ex-java-oo)
   - [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)
+  - [Exceções](aula-excecoes)
+  - [Sobrecarga (overload)][overload]
+  - [Referências, identidade e igualdade][referencias]
+  - [Collections][aula-collections]
+- Habilidades básicas
+  - Debugging
+  - Controle de versão
+  - Testes de unidade
+  - [Refatoração](aula-refactoring)
 - Programação orientada a objetos
   - UML: diagramas de classes e de objetos
-  - Encapsulamento. Getters/setters, visibilidade, construtores, imutabilidade, referências escapando.
+  - Encapsulamento
+    - [Classes, construtores, garbage collector, this][construtores]
+    - [Pacotes, modificadores de acesso, getters e setters](aula-acesso)
+    - [Imutabilidade e referências escapando](aula-imutabilidade)
   - Tipos e interfaces. Interfaces Comparable/Comparator; princípio da segregação de interfaces.
   - Identidade, igualidade, unicidade. Equals e hashCode.
   - Composição e agregação.
   - Herança. Downcasting e upcasting, super, override, overload, classes e métodos abstratos, Object.
-  - Generics.
+  - [Generics](aula-generics).
+  - [Classes internas](aula-classes-internas).
+  - Reflection, annotations
+
+[intro]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
+[eclipse]: https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing
+[referencias]: https://docs.google.com/presentation/d/13w59yenVXOT4vXk14c5-JMgP62ty3LPkBHCMpwk61zM/edit
+[overload]: https://docs.google.com/presentation/d/1d4QWh9-rI44PL2AoH6KUy_8fSHSxxTykOQPIphGl3IE/edit
+[construtores]: https://docs.google.com/presentation/d/1U1eChwz2O0TnrF04DiUQ5fEANGflUVdCPtR_azmNgdo/edit
+[acesso]: https://docs.google.com/presentation/d/1MRqTOvbEnzAspcvW8_wWkKZSNJU1a6l3TVGTGSjkvMQ/edit
 
 <!-- 
 Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
