@@ -10,6 +10,8 @@ algumas condições o compilador consegue checar, outras não
 
 <div>
 
+# Interfaces e tipos
+
 ---
 
 class: middle, center, inverse
@@ -134,6 +136,20 @@ public class Orcamento {
     }
 }
 ```
+
+---
+
+# Exemplo fora da programação
+
+.left-column[
+<img src="{{site.baseurl}}/poo/images/plugue.webp" style="width: 200px"></img>
+]
+.right-column[
+- O padrão de tomadas do Brasil define uma interface para conexão de aparelhos elétricos a pontos de energia elétrica
+- Esse padrão define o formato e posição dos pinos, a função de cada pino (terra, fase, neutro), entre outras coisas
+- Você não consegue ligar um plugue norte-americano na tomada brasileira
+- Nada impede de você inverta a polaridade (o que seria uma quebra do contrato e pode causar problemas)
+]
 
 ---
 
