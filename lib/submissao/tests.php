@@ -3,6 +3,17 @@
 	$dbuser = 'root';
     $dbpass = '123456';
 
+	$value = "{\"answers\":[\"digite seu nome completo\",\"; se quiser, pode definir funções auxiliares\n(define (area medidas) \n 'implementeAFuncao)\n\n(teste 12 (area '(3 4)))\n; Crie no mínimo 2 testes adicionais\n;(teste ... ...)\n;(teste ... ...)\n;(teste ... ...)\n\"]}";
+
+	$valuedecoded = json_decode($value, true);
+
+	echo $valuedecoded."<br>"; 
+
+	echo "INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 1, '".json_decode($value)."', 3, 10); <br>";
+
+	echo json_decode($value);
+	echo "<br>";
+
 	$conn = mysqli_connect("localhost", $dbuser, $dbpass, "mata56");
 
 	mysqli_query($conn, "SET NAMES 'utf8'");
@@ -25,8 +36,8 @@
 							testes_total INT
 						);");
 
-	/* $sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 1, '{}', 3, 10);");
-	$result = $sql->execute(); */
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 1, '".json_decode($value)."', 3, 10);");
+	$result = $sql->execute();
 
 	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, testes_ok, testes_total) VALUES (NOW(), 'unica', 'Fulano', '1234567890', 2, 'resposta 1', 3, 6);");
 	$result = $sql->execute();
