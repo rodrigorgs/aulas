@@ -2,7 +2,7 @@
 
 	session_start();
 		
-	$nome = $_GET["name"];
+	$matricula = $_GET["mat"];
 
 	//echo $nome."<br>";
 
@@ -10,9 +10,9 @@
 
 	//echo $button_index."<br>";
 
-	//$apostila = $_GET["apostila"];
+	$apostila = $_GET["apostila"];
 	
-	$apostila = "unica";
+	//$apostila = "unica";
 
 	$conn = mysqli_connect("localhost", "root", "123456", "mata56");
 
@@ -24,20 +24,23 @@
 	
   	mysqli_query($conn, "SET NAMES 'utf8'");
 	
-	$query = "select answers from resposta where (nome = ? and button_index = ? and apostila = ?);";
+	$query = "select answers from resposta where (matricula = ? and button_index = ? and apostila = ?);";
 
 	//echo $query."<br>";
 
 	$sql = $conn->prepare($query);
 	
-	$sql->bind_param("sis", $nome, $button_index, $apostila);
+	$sql->bind_param("sis", $matricula, $button_index, $apostila);
 	
 	$sql->execute();
 
 	$result = $sql->get_result();
 
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
-	echo $row['answers'];
+		echo json_encode($row['answers']);
+		echo "<br>";
+
+	}
 
 ?>
