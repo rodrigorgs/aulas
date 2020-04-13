@@ -2,9 +2,9 @@
 
 	session_start();
 
-	//$apostila = $_GET["apostila"];
+	$apostila = $_GET["apostila"];
 
-	$apostila = "unica";
+	//$apostila = "unica";
 
 	function defineColor($parameter){
 		if($parameter < 5.0){
@@ -73,7 +73,7 @@
 		echo "<td style = 'text-align: center; color:".
 			defineColor($testes_corretos).
 			";'>".
-			"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+			"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 			number_format((float)$testes_corretos, 2, '.', '')."%)".
 			"</td>";
 			//echo $button_index." first part one <br>";
@@ -98,7 +98,7 @@
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+				"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 				number_format((float)$testes_corretos, 2, '.', '')."%)".
 				"</td>";
 				//echo $button_index." second part two <br>";
@@ -110,7 +110,7 @@
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos).
 				";'>".
-				"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+				"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 				number_format((float)$testes_corretos, 2, '.', '')."%)";
 				"</td>";
 				//echo $button_index." second part three <br>";
@@ -138,7 +138,7 @@
 				echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos).
 					";'>".
-					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+					"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 					number_format((float)$testes_corretos, 2, '.', '')."%)";
 					"</td>";
 				//echo $button_index." third part two <br>";
@@ -155,7 +155,7 @@
 					echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos).
 					";'>".
-					"<a href = 'answer.php?name=".$nome."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+					"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 					number_format((float)$testes_corretos, 2, '.', '')."%)".
 					"</td>";
 					//echo $button_index." third part four <br>";
