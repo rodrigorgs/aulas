@@ -16,7 +16,7 @@
 
 	$conn = mysqli_connect("localhost", "root", "123456", "mata56");
 
-	if (!$conn) {
+	if (!$conn){
   		die(converteMsg(array(
   				'success' => false,
   				'msg' => 'Erro de banco de dados: ' . mysqli_connect_error())));
@@ -37,10 +37,10 @@
 	$result = $sql->get_result();
 
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-
-		echo json_encode($row['answers']);
-		echo "<br>";
-
+		$val = $row["answers"];
 	}
 
+	$value = json_decode($val);
+
+	echo $value;
 ?>
