@@ -24,13 +24,13 @@
 	
   	mysqli_query($conn, "SET NAMES 'utf8'");
 	
-	$query = "select answers from resposta where (matricula = ? and button_index = ? and apostila = ?);";
+	$query = "select answers from resposta where (matricula = ? and apostila = ?) order by timestamp desc limit 1;";
 
 	//echo $query."<br>";
 
 	$sql = $conn->prepare($query);
 	
-	$sql->bind_param("sis", $matricula, $button_index, $apostila);
+	$sql->bind_param("ss", $matricula, $apostila);
 	
 	$sql->execute();
 
@@ -40,7 +40,8 @@
 		$val = $row["answers"];
 	}
 
-	$value = json_decode($val);
+	$value = json_decode($val, true);
 
-	echo $value;
+	echo "<pre>" . htmlspecialchars($value["answers"][(int)$button_index]) . "</pre>";
+
 ?>
