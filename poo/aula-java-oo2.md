@@ -3,17 +3,64 @@ layout: remark
 title: "Java: orientação a objetos"
 ---
 
+<!-- TODO:
+definir conceito de instância
+ -->
+
 <div>
+
+# Conceitos
+
+---
+
+# Programação procedural
+
+Um programa **procedural** consiste de **funções** (ou procedimentos) que **chamam** outras funções, podendo passar parâmetros e receber valores de retorno
+
+Exemplo (pseudocódigo):
+
+```java
+int main() {
+    Retangulo r;
+    // ...
+    // chama a função calculaArea passando 
+    // como parâmetro o retângulo r
+*   double area = calculaArea(r);
+}
+```
+
+---
 
 # Programação orientada a objetos
 
-- Um programa **procedural** consiste de funções (ou procedimentos) que **chamam** outras funções, podendo passar parâmetros e receber valores de retorno
-- Um programa **orientado a objetos** consiste de objetos que se comunicam com outros objetos através de **mensagens**
-  - Todo objeto possui um tipo (denominado **classe**)
-  - Todos os objetos do mesmo tipo respondem às mesmas mensagens
-  - Objetos podem guardar informações em variáveis denominadas **atributos**, e todos os objetos do mesmo tipo possuem os mesmos atributos
-  - Normalmente os objetos não acessam atributos de outros objetos diretamente, e sim através de mensagens
-  - As mensagens podem incluir outros objetos como parâmetros e podem retornar objetos
+Um programa **orientado a objetos** consiste de **objetos** que se comunicam com outros objetos através de **mensagens**
+
+- Uma mensagem pode incluir outros objetos como **parâmetros** e pode **retornar** um objeto
+- Ao receber uma mensagem, um objeto **executa** algum código
+  - Possivelmente, envia mensagens para outros objetos
+- Todo objeto possui um tipo (denominado **classe**)
+- Todos os objetos do **mesmo tipo** respondem às mesmas mensagens
+- Objetos podem guardar informações em variáveis denominadas **atributos**, e todos os objetos do mesmo tipo possuem os mesmos atributos
+- Normalmente os objetos não acessam atributos de outros objetos diretamente, e sim através de mensagens
+  - Ex.: um objeto `joao`, da classe `Usuario`, possui os atributos `nome` e `senha`, que são inacessíveis por objetos de outras classes, mas ele responde à mensagem `obterNome`, que retorna o nome; não há mensagem `obterSenha`
+
+---
+
+# Programação orientada a objetos
+
+Exemplo:
+
+```java
+int main() {
+    Retangulo r;
+    // Envia a mensagem "calculaArea" para o
+    // objeto r, do tipo Retangulo.
+*   double area = r.calculaArea();
+}
+```
+
+Cada retângulo é responsável por calcular sua própria área
+
 
 ---
 
@@ -80,7 +127,13 @@ Como seria um programa orientado a objetos para ligar e desligar automaticamente
 
 ---
 
-# Criando um objeto
+class: middle, inverse, center
+
+# Java: usando objetos
+
+---
+
+# Java: Criando um objeto
 
 - Para criar um objeto do tipo `T`, usa-se `new T()`
   - Ou, de forma mais completa, `new T(pâmetro1, parâmetro2, ...)`
@@ -89,7 +142,7 @@ Como seria um programa orientado a objetos para ligar e desligar automaticamente
 ```java
 // Cria um objeto do tipo StringBuffer e atribui à variável `x`:
 StringBuffer x = new StringBuffer();
-// Cria mais dois objetos, desta vez com 
+// Cria mais dois objetos, desta vez com um parâmetro
 StringBuffer nome = new StringBuffer("Fulano");
 StringBuffer sobrenome = new StringBuffer(" de Tal");
 ```
@@ -176,13 +229,112 @@ nome --> v
 
 ---
 
+class: middle, inverse, center
+
+# Java: definindo classes
+
+---
+
 # Especificando objetos
 
 - Como especificar quais são as mensagens às quais cada objeto responde, e o que eles fazem ao receber cada mensagem?
 - Através de uma **classe**. Lembre-se:
   - Todo objeto pertence a uma classe
-  - Todos os objetos de uma mesma classe respondem às mesmas mensagens
-  - Todos os objetos de uma mesma classe possuem os mesmos atributos
+  - Todos os objetos de uma mesma classe respondem às mesmas **mensagens**
+  - Todos os objetos de uma mesma classe possuem os mesmos **atributos**
+
+---
+
+# Exemplo: retângulo
+
+Objetos da classe `Retangulo` respondem às seguintes mensagens:
+
+- `definirDimensoes(a, l)` - define altura (`a`) e largura (`l`) do retângulo
+- `obterAltura()` - retorna a altura do retângulo
+- `obterLargura()` - retorna a largura do retângulo
+- `obterArea()` - retorna a área do retângulo (largura * altura)
+- `ehMaiorQue(r)` - indica se o retângulo é maior que outro retângulo, `r` 
+
+Para isso, eles guardam duas informações: largura e altura
+
+Criaremos uma classe `Retangulo` os **atributos** `largura` e `altura` e um **método** para cada mensagem a ser respondida.
+
+---
+
+# Exemplo: retângulo
+
+```java
+public class Retangulo {
+    private double altura;
+    private double largura;
+
+    public void definirDimensoes(double a, double l) {
+       altura = a;
+       largura = l;
+    }
+    public double obterAltura() {
+        return altura;
+    }
+    public double obterLargura() {
+        return largura;
+    }
+    public double obterArea() {
+        return largura * altura;
+    }
+    public boolean ehMaiorQue(Retangulo outro) {
+        return obterArea() > outro.obterArea();
+    }
+}
+```
+
+---
+
+# Exemplo: retângulo
+
+Exemplo de uso:
+
+```java
+public class Programa {
+    public static void main(String[] args) {
+        // Cria o objeto r, da classe Retangulo
+        Retangulo r = new Retangulo();
+        // Envia a mensagem "definirAltura" ao objeto r, passando 5 e 7 como parâmetros.
+        // Também se diz: chama o método "definirAltura" no objeto r
+        r.definirDimensoes(5, 7);
+
+        // Idem para o objeto s
+        Retangulo s = new Retangulo();
+        s.definirDimensoes(4, 6);
+
+        System.out.println(r.obterArea())
+        System.out.println(s.obterArea())
+        System.out.println(r.ehMaiorQue(s))
+    }
+}
+```
+
+---
+
+# Exemplo: retângulo
+
+Obervações:
+
+- A classe `Retangulo` **define os métodos** `definirDimensoes`, `obterAltura`, `obterLargura`, `obterArea`
+- Os objetos da classe `Retangulo` **respondem às mensagens** `definirDimensoes` etc., executando os métodos respectivos da classe
+- Os métodos podem **acessar os atributos** do objeto que recebeu a mensagem
+- Os atributos são declarados como **privados**
+  - Eles só podem ser acessados por objetos da classe `Retangulo`
+- Os métodos são declarados como **públicos**
+  - Eles podem ser chamados por objetos de qualquer classe
+- Ao criar um retângulo, não é possível definir apenas a altura ou apenas a largura; é necessário passar ambos
+
+---
+
+# Visualizando a execução do programa
+
+Use <http://www.pythontutor.com/java.html#mode=display>
+
+Conceitualmente, a chama de um método é similar à chamada de uma função, com a diferença de que o método recebe um parâmetro implícito, chamado `this`
 
 ---
 
@@ -242,7 +394,7 @@ skinparam class {
 }
 
 class Sensor {
-    double medida
+    medida : double
     atualizarMedida()
     obterMedida() : double
 }
@@ -276,6 +428,29 @@ Tomada .. tomadaInteligente
 AparelhoEletrico .. arCondicionado
 AparelhoEletrico .. televisao
 </div>
+
+---
+
+# Definindo classes em Java
+
+Programa principal:
+
+```java
+public class Programa {
+    public static void main(String[] args) {
+        Tomada tomada = new Tomada();
+        Sensor termometro = new Sensor();
+        AparelhoEletrico arCondicionado = new AparelhoEletrico();
+
+        tomada.conectarAparelho(arCondicionado);
+        tomada.conectarSensor(termometro);
+
+        while (true) {
+            tomada.atualizar();
+        }
+    }
+}
+```
 
 ---
 
@@ -335,27 +510,6 @@ public class Tomada {
             aparelho.desligar();
         } else {
             aparelho.ligar();
-        }
-    }
-}
-```
-
----
-
-# Definindo classes em Java
-
-```java
-public class Programa {
-    public static void main(String[] args) {
-        Tomada tomada = new Tomada();
-        Sensor termometro = new Sensor();
-        AparelhoEletrico arCondicionado = new AparelhoEletrico();
-
-        tomada.conectarAparelho(arCondicionado);
-        tomada.conectarSensor(termometro);
-
-        while (true) {
-            tomada.atualizar();
         }
     }
 }

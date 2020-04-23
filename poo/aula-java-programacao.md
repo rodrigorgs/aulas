@@ -74,7 +74,7 @@ System.out.println("ô"); //=> saída: Alô
 
 - Para concatenar strings, use `+`
 - Outros tipos (ex.: números) são convertidos automaticamente para strings se necessário
-  - Isso se chama conversão implícita ou coerção
+  - Isso se chama **conversão implícita** ou **coerção**
 
 Exemplos:
 

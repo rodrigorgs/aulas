@@ -27,7 +27,7 @@ title: "Java: Alô mundo"
 
 # Baixando o Java
 
-- Existem dois principais pacotes do Java: JRE e JDK
+- Existem dois principais pacotes do Java: **JRE** e **JDK**
   - **JRE** (Java Runtime Engine) contém o necessário para **executar** programas em Java. Contém a JVM e o programa `java`, dentre outros
   - **JDK** (Java Development Kit) inclui o JRE e ferramentas necessárias para **desenvolver** programas em Java, como o compilador (`javac`) e o depurador (`jdb`)
 
@@ -35,7 +35,7 @@ title: "Java: Alô mundo"
 
 # Experimente online
 
-O site <repl.it> permite programar em diversas linguagens sem instalar nada, usando apenas o navegador e uma conexão à Internet. Uma dessas linguagens é o Java:
+O site [repl.it](http://repl.it/) permite programar em diversas linguagens sem instalar nada, usando apenas o navegador e uma conexão à Internet. Uma dessas linguagens é o Java:
 
 <https://repl.it/languages/java>
 
@@ -86,18 +86,34 @@ java AloMundo          # Executa arquivo AloMundo.class
 
 # Pacotes
 
-- Pacotes
-  - As classes (e estruturas similares) ficam dentro de pacotes.
-  - Dentro de um pacote pode haver outros pacotes (estrutura hierárquica)
-- Diretórios e pacotes
-  - Cada pacote é representado por um diretório de mesmo nome
-  - Ex.: O pacote br.ufba.dcc é representado pelo diretório br/ufba/dcc
-  - Todos os arquivos .java dentro dessa pasta devem começar com a linha package br.ufba.dcc.
-  - Por convenção, os nomes dos pacotes são escritos em minúsculas
-- Domínio reverso
-  - É comum estruturar os pacotes de acordo com a notação de nome de domínio reverso. Exemplo: se o site do seu software é <meuhorario.dcc.ufba.br>, você deve criar suas classes dentro do pacote br.ufba.dcc.meuhorario.
+As classes (e estruturas similares) ficam dentro de **pacotes**.
+
+Dentro de um pacote pode haver outros pacotes (estrutura hierárquica)
+
+---
+
+# Pacotes
+
+Cada pacote é representado por um **diretório** de mesmo nome
+
+O arquivo `.java` deve declarar, no início, a qual pacote ele pertence
+
+Exemplo:
+
+- O pacote `br.ufba.dcc` é representado pelo diretório `br/ufba/dcc`
+- Todos os arquivos `.java` dentro dessa pasta devem começar com a linha package `br.ufba.dcc`.
+
+---
+
+# Pacotes
+
+Por convenção, os nomes dos pacotes são escritos em minúsculas
+
+**Domínio reverso**:
+
+  - É comum estruturar os pacotes de acordo com a notação de nome de domínio reverso. Exemplo: se o site do seu software é <meuhorario.dcc.ufba.br>, você deve criar suas classes dentro do pacote `br.ufba.dcc.meuhorario`.
   - O uso de um domínio praticamente elimina a chance de duas organizações escolherem o mesmo nome de pacote
-  - A ordem reversa ajuda a ordenar os pacotes (por exemplo, ao usar a ordem alfabética, br.ufba.dcc.disciplinas ficará perto de br.ufba.dcc.meuhorario)
+  - A ordem reversa ajuda a ordenar os pacotes (por exemplo, ao usar a ordem alfabética, `br.ufba.dcc.disciplinas` ficará perto de `br.ufba.dcc.meuhorario`)
 
 ---
 
