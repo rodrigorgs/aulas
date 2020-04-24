@@ -24,7 +24,7 @@
 	
   	mysqli_query($conn, "SET NAMES 'utf8'");
 	
-	$query = "select answers from resposta where (matricula = ? and apostila = ?) order by timestamp desc limit 1;";
+	$query = "select answers from resposta where (matricula = ? and apostila = ?) order by timestamp desc;";
 
 	//echo $query."<br>";
 
