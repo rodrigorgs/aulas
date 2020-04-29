@@ -36,12 +36,18 @@
 
 	$result = $sql->get_result();
 
+	$val = array();
+
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		$val = $row["answers"];
 	}
 
+	echo "<pre>" . $val . "</pre><br>";
+
 	$value = json_decode($val, true);
 
-	echo "<pre>" . htmlspecialchars($value["answers"][(int)$button_index]) . "</pre>";
+	echo "<pre>" . $value[1]["answers"] . "</pre>";
+
+	//echo "<pre>" . htmlspecialchars($value["answers"][1]) . "</pre>";
 
 ?>

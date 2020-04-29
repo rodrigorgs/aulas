@@ -30,7 +30,7 @@
   	}
   	mysqli_query($conn, "SET NAMES 'utf8'");
 
-	$query = "select matricula, nome, button_index, testes_ok, testes_total from resposta where apostila = ? order by nome, button_index";
+	$query = "select matricula, nome, button_index, testes_ok, testes_total from resposta where (apostila = ? && button_index > 0) order by nome, button_index";
 
 	//echo $query;
 
