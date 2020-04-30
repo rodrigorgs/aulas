@@ -24,7 +24,7 @@
 	
   	mysqli_query($conn, "SET NAMES 'utf8'");
 	
-	$query = "select answers from resposta where (matricula = ? and apostila = ?) order by timestamp desc;";
+	$query = "select answers from resposta where (matricula = ? and apostila = ?) order by button_index, timestamp desc;";
 
 	//echo $query."<br>";
 
@@ -38,16 +38,19 @@
 
 	$val = array();
 
+	$count = 0;
+
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-		$val = $row["answers"];
+		$val[$count] = $row["answers"];
+		$count = $count + 1;
 	}
 
-	echo "<pre>" . $val . "</pre><br>";
+	//echo "<pre>" . $val[(int)$button_index] . "</pre><br>";
 
-	$value = json_decode($val, true);
+	$value = json_encode($val[(int)$button_index]);
 
-	echo "<pre>" . $value[1]["answers"] . "</pre>";
+	$data = json_decode(json_decode($value, true), true);
 
-	//echo "<pre>" . htmlspecialchars($value["answers"][1]) . "</pre>";
+	echo "<pre>" . htmlspecialchars($data["answers"][0]) . "</pre>";
 
 ?>
