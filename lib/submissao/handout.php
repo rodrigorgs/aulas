@@ -77,12 +77,12 @@
 
 	echo "<h1>Atividades</h1>";
 
-	echo "<table>";
+	echo "<table style = 'border: solid 2px; border-collapse: collapse;'>";
 	echo "<thead>";
-	echo "<tr><th style = 'text-align: center;'>Matrícula</th><th style = 'text-align: center;'>Nome</th>";
+	echo "<tr><th style = 'text-align: center; border: solid 2px;'>Matrícula</th><th style = 'text-align: center; border: solid 2px;'>Nome</th>";
 	$num_rows = 1;
 	while($num_rows <= $total_rows){
-		echo"<th>Atividade ".$num_rows."</th>";
+		echo"<th style = 'border: solid 2px;'>Atividade ".$num_rows."</th>";
 		$num_rows++;
 	}
 	echo "</tr>";
@@ -101,11 +101,11 @@
 	$testes_ok = $testes["results"][0]["ok"];
 	$testes_total = $testes["results"][0]["total"];
 	$testes_corretos = $testes_ok / $testes_total * 100;
-	echo "<tr><td style = 'text-align: center;'>".$matricula."</td><td style = 'text-align: center;'>".$nome."</td>";
+	echo "<tr><td style = 'text-align: center; border: solid black 2px;'>".$matricula."</td><td style = 'text-align: center; border: solid black 2px;'>".$nome."</td>";
 	if ($button_index == 1){
 		echo "<td style = 'text-align: center; color:".
 			defineColor($testes_corretos/10).
-			";'>".
+			"; border: solid black 2px;'>".
 			"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 			number_format((float)$testes_corretos, 2, '.', '')."%)".
 			"</td>";
@@ -116,7 +116,7 @@
 		$sql_3 = $conn->prepare($zeroquery);
 		$sql_3->bind_param("ssiss", $nome, $matricula, 1, $jsonpadrao, $resultspadrao);
 		$sql_3->execute();
-		echo "<td style = 'text-align: center; color:red'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+		echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 		//echo "first part two <br>";
 	}				
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -129,7 +129,7 @@
 					$sql_3 = $conn->prepare($zeroquery);
 					$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 					$sql_3->execute();
-					echo "<td style = 'text-align: center; color:red'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+					echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 					//echo $num_rows." ".$button_index." second part one <br>";
 					$num_rows++;
 				}
@@ -142,7 +142,7 @@
 				$testes_corretos = $testes_ok / $testes_total * 100;
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos/10).
-				";'>".
+				"; border: solid black 2px;'>".
 				"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 				number_format((float)$testes_corretos, 2, '.', '')."%)".
 				"</td>";
@@ -159,7 +159,7 @@
 				$testes_corretos = $testes_ok / $testes_total * 100;
 				echo "<td style = 'text-align: center; color:".
 				defineColor($testes_corretos/10).
-				";'>".
+				"; border: solid black 2px;'>".
 				"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 				number_format((float)$testes_corretos, 2, '.', '')."%)";
 				"</td>";
@@ -174,7 +174,7 @@
 					$sql_3 = $conn->prepare($zeroquery);
 					$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 					$sql_3->execute();
-					echo "<td style = 'text-align: center; color:red'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+					echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 					$num_rows++;
 					//echo $num_rows." third part one <br>";
 				}
@@ -191,11 +191,11 @@
 			$testes_ok = $testes["results"][0]["ok"];
 			$testes_total = $testes["results"][0]["total"];
 			$testes_corretos = $testes_ok / $testes_total * 100;
-			echo "<tr><td>".$matricula."</td><td>".$nome."</td>";
+			echo "<tr><td style = 'border: solid black 2px;'>".$matricula."</td style = 'border: solid black 2px;'><td style = 'border: solid black 2px;'>".$nome."</td>";
 			if ($button_index == 1){
 				echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos/10).
-					";'>".
+					"; border: solid black 2px;'>".
 					"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 					number_format((float)$testes_corretos, 2, '.', '')."%)";
 					"</td>";
@@ -208,7 +208,7 @@
 						$sql_3 = $conn->prepare($zeroquery);
 						$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 						$sql_3->execute();
-						echo "<td style = 'text-align: center; color:red'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+						echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 						//echo $num_rows." ".$button_index." third part three <br>";
 						$num_rows++;
 					}
@@ -221,7 +221,7 @@
 					$testes_corretos = $testes_ok / $testes_total * 100;
 					echo "<td style = 'text-align: center; color:".
 					defineColor($testes_corretos/10).
-					";'>".
+					"; border: solid black 2px;'>".
 					"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
 					number_format((float)$testes_corretos, 2, '.', '')."%)".
 					"</td>";
@@ -236,7 +236,7 @@
 			$sql_3 = $conn->prepare($zeroquery);
 			$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 			$sql_3->execute();
-			echo "<td style = 'text-align: center; color:red'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+			echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 			$num_rows++;
 			//echo $num_rows." fourth part one <br>";
 		}
