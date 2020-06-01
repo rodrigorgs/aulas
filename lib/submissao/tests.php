@@ -133,5 +133,53 @@
 	$sql->bind_param("ss", $value, $val);
 	$result = $sql->execute();
 
+ $value = "{\"answers\":[\"Fulana\"]}";
+	$val = "{\"results\": [{\"ok\": 10, \"total\": 10}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'computacao', 'Fulana', '1238634712', 0, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"; se quiser, pode definir funções auxiliares\\n(define (area medidas) \\n 'implementeAFuncao)\\n\\n(teste 12 (area '(3 4)))\\n; Crie no mínimo 2 testes adicionais\\n;(teste 9 (area '(1 9)))\\n;(teste 11 (area '(11 1)))\\n;(teste 19 (area '(19 1)))\\n\"]}";
+	$val = "{\"results\": [{\"ok\": 7, \"total\": 10}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'computacao', 'Fulana', '1238634712', 2, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"Sicrana\"]}";
+	$val = "{\"results\": [{\"ok\": 10, \"total\": 10}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'lab', 'Sicrana', '1233214567', 0, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"; se quiser, pode definir funções auxiliares\\n(define (area medidas) \\n 'implementeAFuncao)\\n\\n(teste 12 (area '(3 4)))\\n; Crie no mínimo 2 testes adicionais\\n;(teste 13 (area '(13 1)))\\n;(teste 144 (area '(12 12)))\\n;(teste 169 (area '(13 13)))\\n\"]}";
+	$val = "{\"results\": [{\"ok\": 6, \"total\": 6}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'lab', 'Sicrana', '1233214567', 1, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"Fulano\"]}";
+	$val = "{\"results\": [{\"ok\": 10, \"total\": 10}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'atividade', 'Fulano', '1234567890', 0, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"; se quiser, pode definir funções auxiliares\\n(define (area medidas) \\n 'implementeAFuncao)\\n\\n(teste 12 (area '(3 4)))\\n; Crie no mínimo 2 testes adicionais\\n;(teste 4 (area '(2 2)))\\n;(teste 10 (area '(5 2)))\\n;(teste 6 (area '(3 2)))\\n\"]}";
+	$val = "{\"results\": [{\"ok\": 3, \"total\": 6}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'atividade', 'Fulano', '1234567890', 3, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"Beltrano\"]}";
+	$val = "{\"results\": [{\"ok\": 10, \"total\": 10}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'programacao', 'Beltrano', '0987654321', 0, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
+$value = "{\"answers\":[\"; se quiser, pode definir funções auxiliares\\n(define (area medidas) \\n 'implementeAFuncao)\\n\\n(teste 12 (area '(3 4)))\\n; Crie no mínimo 2 testes adicionais\\n;(teste 200 (area '(2 100)))\\n;(teste 200 (area '(25 8)))\\n;(teste 200 (area '(50 4)))\\n\"]}";
+	$val = "{\"results\": [{\"ok\": 15, \"total\": 15}]}";
+	$sql = $conn->prepare("INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'programacao', 'Beltrano', '0987654321', 2, ?, ?);");
+	$sql->bind_param("ss", $value, $val);
+	$result = $sql->execute();
+
 	echo "Tudo foi impresso";
 ?>

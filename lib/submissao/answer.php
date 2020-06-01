@@ -4,7 +4,7 @@
 		
 	$matricula = $_GET["mat"];
 
-	//echo $nome."<br>";
+	//echo $matricula."<br>";
 
 	$button_index = $_GET["questao"];
 
@@ -12,7 +12,7 @@
 
 	$apostila = $_GET["apostila"];
 	
-	//$apostila = "unica";
+	//echo $apostila."<br>";
 
 	$conn = mysqli_connect("localhost", "root", "123456", "mata56");
 
@@ -46,6 +46,8 @@
 	}
 
 	//echo "<pre>" . $val[(int)$button_index] . "</pre><br>";
+
+	//echo $val[1]."<br>";
 
 	$value = json_encode($val[(int)$button_index]);
 

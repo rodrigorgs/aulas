@@ -4,7 +4,7 @@
 	$conn = mysqli_connect("localhost", "root", "123456", "mata56");
   	mysqli_query($conn, "SET NAMES 'utf8'");
 
-	$sql = $conn->prepare("select min(apostila) as apostila from resposta");
+	$sql = $conn->prepare("select distinct apostila from resposta order by apostila");
 	$sql->execute();
 	$result = $sql->get_result();
 

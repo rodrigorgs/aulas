@@ -6,6 +6,9 @@
 
 	//$apostila = "unica";
 
+	//echo $apostila;
+	//echo "<br>";
+
 	function defineColor($parameter){
 		//echo $parameter. "<br>";
 		if($parameter < 5.0){
@@ -33,7 +36,7 @@
 
 	$query = "select matricula, nome, button_index, results from resposta where (apostila = ? && button_index > 0) order by nome, button_index";
 
-	$zeroquery = "INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), 'unica', ?, ?, ?, ?, ?)"; 
+	$zeroquery = "INSERT INTO resposta (timestamp, apostila, nome, matricula, button_index, answers, results) VALUES (NOW(), ?, ?, ?, ?, ?, ?)"; 
 
 	$jsonpadrao = "{\"answers\":[\"; se quiser, pode definir funções auxiliares\\n(define (area medidas) \\n 'implementeAFuncao)\\n\\n(teste 12 (area '(3 4)))\\n; Crie no mínimo 2 testes adicionais\\n;\\n\"]}";
 
@@ -45,13 +48,16 @@
 	$sql->bind_param("s", $apostila);
 	$sql->execute();
 	$result = $sql->get_result();
+	$um = 1;
 
-
-	$sql_2 = $conn->prepare("select max(button_index) from resposta");
+	$sql_2 = $conn->prepare("select max(button_index) from resposta where apostila = ?");
+	$sql_2->bind_param("s", $apostila);
 	$sql_2->execute();
 	$result_2 = $sql_2->get_result();
 	$num_linhas = mysqli_fetch_array($result_2, MYSQLI_ASSOC);
 	$total_rows = $num_linhas['max(button_index)'];
+
+	//echo $total_rows."<br>";
 
 	$questoestotais = array();
 	$questoestotais[0] = 10;
@@ -112,12 +118,22 @@
 			//echo $button_index." first part one <br>";
 	}
 	else{
-		$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[1] ."}]}";
-		$sql_3 = $conn->prepare($zeroquery);
-		$sql_3->bind_param("ssiss", $nome, $matricula, 1, $jsonpadrao, $resultspadrao);
-		$sql_3->execute();
-		echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
-		//echo "first part two <br>";
+		while($button_index > $num_rows){
+			$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[1] ."}]}";
+			$sql_3 = $conn->prepare($zeroquery);
+			$sql_3->bind_param("sssiss", $apostila, $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
+			$sql_3->execute();
+			echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
+			//echo "first part two <br>";
+			$num_rows++;
+		}
+		echo "<td style = 'text-align: center; color:".
+			defineColor($testes_corretos/10).
+			"; border: solid black 2px;'>".
+			"<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$button_index."'>".$testes_ok."</a>"." (".
+			number_format((float)$testes_corretos, 2, '.', '')."%)".
+			"</td>";
+			//echo $button_index." first part three <br>";		
 	}				
 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		if ($nome == $row['nome']){
@@ -127,7 +143,7 @@
 				while ($num_rows < $button_index){
 					$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[$num_rows] ."}]}";
 					$sql_3 = $conn->prepare($zeroquery);
-					$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
+					$sql_3->bind_param("sssiss", $apostila, $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 					$sql_3->execute();
 					echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 					//echo $num_rows." ".$button_index." second part one <br>";
@@ -172,7 +188,7 @@
 				while ($num_rows <= $total_rows){
 					$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[$num_rows] ."}]}";
 					$sql_3 = $conn->prepare($zeroquery);
-					$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
+					$sql_3->bind_param("sssiss", $apostila, $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 					$sql_3->execute();
 					echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 					$num_rows++;
@@ -206,7 +222,7 @@
 						$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[$num_rows] ."}]}";
 						//echo $resultspadrao . "<br>";
 						$sql_3 = $conn->prepare($zeroquery);
-						$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
+						$sql_3->bind_param("sssiss", $apostila, $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 						$sql_3->execute();
 						echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=1'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 						//echo $num_rows." ".$button_index." third part three <br>";
@@ -234,7 +250,7 @@
 		while ($num_rows <= $total_rows){
 			$resultspadrao = "{\"results\": [{\"ok\": 0, \"total\": ". $questoestotais[$num_rows] ."}]}";
 			$sql_3 = $conn->prepare($zeroquery);
-			$sql_3->bind_param("ssiss", $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
+			$sql_3->bind_param("sssiss", $apostila, $nome, $matricula, $num_rows, $jsonpadrao, $resultspadrao);
 			$sql_3->execute();
 			echo "<td style = 'text-align: center; color:red; border: solid black 2px;'>"."<a href = 'answer.php?apostila=".$apostila."&mat=".$matricula."&questao=".$num_rows."'>"."0</a> (".number_format(0, 2, '.', '')."%)"."</td>";
 			$num_rows++;
