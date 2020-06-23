@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Grupo 1: Atividades
+title: Grupo 1 - Atividades
 ---
 
 ## Por favor, acesse as páginas a seguir e resolva as questões
