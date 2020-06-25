@@ -17,10 +17,16 @@ Na atividade a seguir, declare duas variáveis, nome e idade, e imprima seu nome
 
 Em JavaScript, variáveis podem ser de diversos tipos, e os tipos de variável podem ser mudados em tempo de execução. Os símbolos de operação numérica podem ser __+__ (soma), __-__ (subtração), __*__ (multiplicação) e __/__ (divisão).
 
-Na atividade a seguir, imprima a soma de dois números, multiplicada por um terceiro.
+Na atividade a seguir, faça com que total seja a soma de num1 com num2, multiplicada por num3.
 
 <textarea class="code">
+var num1 = 3;
+var num2 = 5;
+var num3 = 8;
 
+var total;
+
+teste(64, total);
 </textarea>
 
 ## Objetos

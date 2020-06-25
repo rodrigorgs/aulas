@@ -12,6 +12,8 @@ A seguir, retorne o vetor sem alterar a sua quantidade, e verifique se a quantid
 vetor = [1, 2, 3, 4, 5, 6, 7, 8]
 vetor.shift();
 console.log(vetor);
+
+teste(8, vetor.length);
 </textarea>
 
 ## Funções
@@ -26,10 +28,14 @@ Por exemplo:
 }
 ```
 
-Crie uma função que recebe dois parâmetros e retorna a multiplicação dos dois.
+Faça com que funcao1 receba dois parâmetros e retorne a multiplicação dos dois.
 
 <textarea class="code">
+function funcao1(){
+}
 
+teste(6, funcao1(3, 2));
+teste(18, funcao1(6, 3));
 </textarea>
 
 ## Funções anônimas
@@ -45,5 +51,8 @@ Por exemplo:
 Crie a função da atividade anterior, mas como anônima.
 
 <textarea class="code">
+let funcao1 = ;
 
+teste(6, funcao1(3, 2));
+teste(18, funcao1(6, 3));
 </textarea>
