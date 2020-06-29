@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-Cada retângulo é responsável por calcular sua própria área
+> Cada retângulo é responsável por calcular sua própria área
 
 
 ---

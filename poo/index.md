@@ -35,13 +35,13 @@ O código-fonte produzido durante as aulas se encontra aqui:
 | Java      | [Programação procedural em Java](aula-java-programacao) (com exercícios)                          |
 | Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)                        |
 | OO        | [Orientação a objetos básica (classes, atributos, métodos)](aula-java-oo2)                        |
-| OO        | [Orientação a objetos básica (static e final)]((aula-java-oo))                                    |
+| OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                                      |
 | OO        | [Classes, construtores, garbage collector, this][construtores]                                    |
 | Java      | [Referências, identidade e igualdade][referencias]. TODO: equals, hashCode                        |
 | Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                                       |
 | Java      | [Exceções](aula-excecoes)                                                                         |
 | Java      | [Sobrecarga (overload)][overload]                                                                 |
-| Java      | [Collections][aula-collections]                                                                   |
+| Java      | [Collections](aula-collections)                                                                   |
 | OO        | UML: diagramas de classes e de objetos                                                            |
 | OO        | [Modelagem conceitual](aula-modelagem)                                                            |
 | OO        | Encapsulamento: [Pacotes, modificadores de acesso, getters e setters](aula-acesso)                |
