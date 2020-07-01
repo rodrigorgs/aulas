@@ -6,7 +6,7 @@ layout: page
 
 Em JavaScript, Arrays são estruturas mutáveis, ou seja, eles podem ser modificados. Sua declaração é semelhante à de objetos, mas estes são declarados entre colchetes (por exemplo, `vec = [1, 2, 3, 4])`. Há funções que podem modificar ou não um array; por exemplo, há duas formas de se obter um vetor sem o primeiro elemento: `vetor.shift()`, que altera o vetor para um vetor sem o primeiro elemento, e `v1 = v2.slice(1) ` – a função slice corta o vetor, pegando ele a partir do primeiro elemento. Para retornar o tamanho de um vetor em JavaScript, usa-se `vetor.length()`. A função retorna um valor numérico indicando a quantidade de elementos do vetor.
 
-A seguir, retorne o vetor sem alterar a sua quantidade, e verifique se a quantidade de elementos do vetor é a correta com length.
+A seguir, retorne o vetor sem alterar a sua quantidade, e verifique se a quantidade de elementos do vetor é a correta com length (para que a atividade esteja correta, tenha certeza de que há apenas um "OK!" no console).
 
 <textarea class="code">
 vetor = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -28,7 +28,7 @@ Por exemplo:
 }
 ```
 
-Faça com que funcao1 receba dois parâmetros e retorne a multiplicação dos dois.
+Faça com que funcao1 receba dois parâmetros e retorne a multiplicação dos dois (para que a atividade esteja correta, tenha certeza de que há dois "OK!" no console).
 
 <textarea class="code">
 function funcao1(){
@@ -48,7 +48,7 @@ Por exemplo:
 	let retornanum = (x) => {return x;};
 ```
 
-Crie a função da atividade anterior, mas como anônima.
+Crie a função da atividade anterior, mas como anônima (para que a atividade esteja correta, tenha certeza de que há dois "OK!" no console).
 
 <textarea class="code">
 let funcao1 = ;
