@@ -2,6 +2,10 @@
 layout: page
 ---
 
+## Início
+
+Por favor, comece a cronometrar o tempo de completude.
+
 ## Console
 
 Em JavaScript, a função `console.log()` imprime o conteúdo nela passado. Por exemplo, `console.log(“Insira um texto aqui”)` irá imprimir “Insira um texto aqui”, sem aspas (pode-se utilizar aspas simples ou crases também para representar texto). Para separar comandos, pode-se utilizar ponto e vírgula, mas não é obrigatório, já que quebras de linha também significam mudança de comando. 
@@ -44,3 +48,7 @@ A seguir, assim como na atividade 1, imprima seu nome e sua idade a partir de um
 <textarea class = "code">
 
 </textarea>
+
+## Fim
+
+Por favor, termine de cronometrar e grave o tempo de completude.

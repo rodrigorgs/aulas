@@ -2,6 +2,10 @@
 layout: page
 ---
 
+## Início
+
+Por favor, comece a cronometrar o tempo de completude.
+
 ## Arrays
 
 Em JavaScript, Arrays são estruturas mutáveis, ou seja, eles podem ser modificados. Sua declaração é semelhante à de objetos, mas estes são declarados entre colchetes (por exemplo, `vec = [1, 2, 3, 4])`. Há funções que podem modificar ou não um array; por exemplo, há duas formas de se obter um vetor sem o primeiro elemento: `vetor.shift()`, que altera o vetor para um vetor sem o primeiro elemento, e `v1 = v2.slice(1) ` – a função slice corta o vetor, pegando ele a partir do primeiro elemento. Para retornar o tamanho de um vetor em JavaScript, usa-se `vetor.length()`. A função retorna um valor numérico indicando a quantidade de elementos do vetor.
@@ -56,3 +60,7 @@ let funcao1 = ;
 teste(6, funcao1(3, 2));
 teste(18, funcao1(6, 3));
 </textarea>
+
+## Fim
+
+Por favor, termine de cronometrar e grave o tempo de completude.
