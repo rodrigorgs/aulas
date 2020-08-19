@@ -41,6 +41,7 @@ triple: true
             <script type="text/javascript">
                 $(document).ready(() => {
                     addRunCodeHook(() => {
+                        window.input = $("#entrada").val();
                         $("#consolelog").text("");
                     });
                 });
