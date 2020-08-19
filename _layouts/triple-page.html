@@ -18,12 +18,18 @@ triple: true
 
                 {{ content }}
                 
-
-                <div class="right column" id = "consolelog">
-                       <input type = "button" id = "expandeConsole" value = "Expandir"/>
-                        <p class = "console" id = "log"></p>
-                </div>
-
+		<div class="right column" id = "rightcolumn">
+			<div id = "input">
+				<h1 id="inputtitle">Entrada</h1>
+				<textarea id = "entrada">
+				</textarea>
+			</div>
+		        <div id = "consolelog">
+				<h1>Console</h1>
+		               <input type = "button" id = "expandeConsole" value = "Expandir"/>
+		                <p class = "console" id = "log"></p>
+		        </div>
+		</div>
             </div>
 
             <footer>
