@@ -46,10 +46,24 @@ triple: true
                         }
                     });
 
+                    function clearInput() {
+                        $("#entrada").val('');
+                    }
+                    function clearOutput() {
+                        $("#consolelog").html("<h1>Saída</h1>");
+                    }
+                    function clearIO() {
+                        clearInput();
+                        clearOutput();
+                    }
+
                     addRunCodeHook(() => {
                         window.input = $("#entrada").val();
-                        $("#consolelog").html("<h1>Saída</h1>");
+                        clearOutput();
                     });
+
+                    $("#volta").click(clearIO);
+                    $("#avanca").click(clearIO);
                 });
             </script>
         </div>
