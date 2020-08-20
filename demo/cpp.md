@@ -5,7 +5,7 @@ title: Demonstração
 
 ## Alô Mundo C++
 
-Escreva um programa em C++ que imprima a mensagem "Alô, Mundo!".
+Escreva um programa em C++ que imprima a mensagem "Alô, Mundo!" em uma linha e "Tchau!" na outra.
 
 <textarea class="code lang-cpp">
 #include &lt;iostream&gt;
@@ -14,6 +14,7 @@ using namespace std;
 
 int main() {
   cout &lt;&lt; "Alô, Mundo!" &lt;&lt; endl;
+  cout &lt;&lt; "Tchau!" &lt;&lt; endl;
   return 0;
 }</textarea>
 
@@ -29,7 +30,7 @@ using namespace std;
 int main() {
   int x;
   cin >> x; 
-  cout &lt;&lt; (x * 2) &lt;&lt; endl;
+  cout &lt;&lt; "O dobro é " &lt;&lt; (x * 2) &lt;&lt; endl;
   return 0;
 }</textarea>
 
