@@ -18,12 +18,17 @@ triple: true
 
                 {{ content }}
                 
-
-                <div class="right column" id = "consolelog">
-                       <input type = "button" id = "expandeConsole" value = "Expandir"/>
-                        <p class = "console" id = "log"></p>
-                </div>
-
+		<div class="right column" id = "rightcolumn">
+			<div id = "input">
+				<h1 id="inputtitle">Entrada</h1>
+				<textarea id = "entrada"></textarea>
+			</div>
+		        <div id = "consolelog">
+				<h1>Saída</h1>
+		               <input type = "button" id = "expandeConsole" value = "Expandir"/>
+		                <p class = "console" id = "log"></p>
+		        </div>
+		</div>
             </div>
 
             <footer>
@@ -34,9 +39,31 @@ triple: true
 
             <script type="text/javascript">
                 $(document).ready(() => {
-                    addRunCodeHook(() => {
-                        $("#consolelog").html("");
+                    $("#entrada").keydown(e => {
+                        if ((e.ctrlKey || e.metaKey) && e.keyCode === 13) {
+                            let codeMirror = $('#editor' + pagina_atual + ' .CodeMirror').get(0).CodeMirror;
+                            runCode(codeMirror.getValue(), codeMirror);
+                        }
                     });
+
+                    function clearInput() {
+                        $("#entrada").val('');
+                    }
+                    function clearOutput() {
+                        $("#consolelog").html("<h1>Saída</h1>");
+                    }
+                    function clearIO() {
+                        clearInput();
+                        clearOutput();
+                    }
+
+                    addRunCodeHook(() => {
+                        window.input = $("#entrada").val();
+                        clearOutput();
+                    });
+
+                    $("#volta").click(clearIO);
+                    $("#avanca").click(clearIO);
                 });
             </script>
         </div>
