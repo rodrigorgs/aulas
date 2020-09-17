@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: triple-page
 title: Demonstração
 ---
 
