@@ -18,7 +18,9 @@ int main() {
   return 0;
 }</textarea>
 
-## Exercício de programação com C++
+teste
+
+## Programa dobro
 
 Agora você deve digitar um número na caixa "Entrada" e o programa deve imprimir o seu dobro.
 
@@ -33,6 +35,26 @@ int main() {
   cout &lt;&lt; "O dobro é " &lt;&lt; (x * 2) &lt;&lt; endl;
   return 0;
 }</textarea>
+
+<textarea class="stdin">2</textarea>
+
+## Programa triplo
+
+Agora você deve digitar um número na caixa "Entrada" e o programa deve imprimir o seu triplo.
+
+<textarea class="code lang-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int x;
+  cin >> x; 
+  cout &lt;&lt; "O triplo é " &lt;&lt; (x * 3) &lt;&lt; endl;
+  return 0;
+}</textarea>
+
+<textarea class="stdin">3</textarea>
 
 ## Fim
 
