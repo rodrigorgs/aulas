@@ -4,148 +4,85 @@
 
 @charset "utf-8";
 
-$base-font-family: Helvetica, Arial, Georgia;
-$base-font-size:   14px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.750;
-$base-line-height: 1.5;
-$spacing-unit:     0px;
-
-$text-color:       #fff;
-$background-color: grey;
-$brand-color:      #064bf5;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$content-width:    800px;
+@import "minima";
 
 $footer-height:    30px;
 
-h1 {
-    color: yellow;
-    font-weight: bold;
+body {
+    margin: 0;
+}
+.pagina {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
+$column-padding: 10px;
 
-h2 {
-    font-weight: bold;
-    color: yellow;
-    text-decoration: underline;
+.pagina-corpo, .pagina-codigo, .pagina-console {
+    position: fixed;
+    background-color: ghostwhite;
+    border: 1px solid black;
 }
 
-h3 {
-    color: #0da206;
-    text-decoration: underline;
+.pagina-corpo {
+    left: 0;
+    padding: #{$column-padding};
+    width: calc(33.33% - #{$column-padding * 2});
+    height: calc(100vh - #{$footer-height} - #{$column-padding * 2});
 }
-
-.highlighter-rouge {
-	color: #ff1a1a;
-}
-
-@import "minima";
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-$cell-padding:  6px;
-$border-color:  darkgray;
-
-table th { background-color: lightgray; padding: $cell-padding; border: 2px solid darkgray; }
-table td { background-color: white; padding: $cell-padding; border: 2px solid darkgray; }
-table { border: 3px solid darkgray; border-collapse: collapse; }
-
-
-div.CodeMirror span.CodeMirror-matchingbracket {
-  color: #0017c1 !important;
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.highlight{
-   color: #990099;
-   background-color: black;
-}
-
-page-content {
-    min-height: 100vh;
-}
-
-.texto {
-    height: calc(100vh - #{$footer-height}) !important;
-}
-
-#consolelog, #input{
-	height: calc((100vh - #{$footer-height})/2) !important;
-}
-
-#consolelog, #input {
-    vertical-align: top;
+.pagina-codigo {
+    left: 33.3%;
+    padding: 0;
     width: 33.33%;
-    padding: 5px;
-    float: left;
-    position: relative;
-    background-color: black;
-    color: white;
-    overflow: auto;
+    height: calc(100vh - #{$footer-height});
 }
 
-#entrada {
-	width: 100%;
-	height: calc(45vh - 32px);
-	color: white;
-	background-color: black;
+.pagina-console {
+    left: 66.66%;
+    padding: 0;
+    width: 33.33%;
+    height: calc(100vh - #{$footer-height});
 }
 
-
-#expandeConsole{
-    float: right;
-    margin-right: 2px;
-    display: none;
+.stdin, .stdout {
+    width: 100% !important; 
+    height: calc(.5 * (100vh - #{$footer-height} - #{$column-padding * 3}));
 }
 
-.cm-s-default {
-    position: absolute;
-    height: calc(100vh - #{$footer-height} - 30px) !important;
-}
-
-.page-content:after {
-    content: "";
-    display: flex;
-    clear: both; 
-    visibility: hidden;
-}
-
-.CodeMirror-scroll{
-    height: calc(100vh - #{$footer-height}) !important;
-}
-
-.editor {
-    position: relative;
-    width: 33%;
-    float: left;
-}
-
-.go {
-    width: 200px;
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-footer{
+.painel {
+    position: fixed;
     width: 100%;
     text-align: center;
     height: $footer-height;
+    left: 0;
+    bottom: 0;
+    height: #{$footer-height};
+    background-color: darkslategrey;
 }
-
-.btn-back, .btn-fwd {
-    width: 200px;
+.painel input {
+    width: 150px;
     height: $footer-height;    
 }
+
+.fullscreen {
+    width: 100% !important;
+    z-index: 999 !important;
+    left: 0 !important;
+}
+
+.pagina:not(.pagina-atual) {
+    visibility: hidden;
+}
+
+
+.cm-s-default {
+    // position: absolute;
+    height: calc(100vh - #{$footer-height} - 30px) !important;
+}
+
+// .CodeMirror-scroll{
+//     height: calc(100vh - #{$footer-height}) !important;
+// }
+

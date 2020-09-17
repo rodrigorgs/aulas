@@ -1,7 +1,5 @@
 ---
-
 triple: true
-
 ---
 
 <!DOCTYPE html>
@@ -11,62 +9,12 @@ triple: true
     {% include head.html %}
     
     <body>
+        <script type="text/javascript">
+            document.triplePage = true;
+        </script>
 
-        <div class = "page-content">
-
-            <div>
-
-                {{ content }}
-                
-		<div class="right column" id = "rightcolumn">
-			<div id = "input">
-				<h1 id="inputtitle">Entrada</h1>
-				<textarea id = "entrada"></textarea>
-			</div>
-		        <div id = "consolelog">
-				<h1>Saída</h1>
-		               <input type = "button" id = "expandeConsole" value = "Expandir"/>
-		                <p class = "console" id = "log"></p>
-		        </div>
-		</div>
-            </div>
-
-            <footer>
-                <input type = "button" class = "btn-back" id = "volta" value = "Retroceder"/>
-                <input type = "button" class = "btn-fwd" id = "avanca" value = "Avançar"/>
-
-            </footer>
-
-            <script type="text/javascript">
-                document.triplePage = true;
-                $(document).ready(() => {
-                    $("#entrada").keydown(e => {
-                        if ((e.ctrlKey || e.metaKey) && e.keyCode === 13) {
-                            let codeMirror = $('#editor' + pagina_atual + ' .CodeMirror').get(0).CodeMirror;
-                            runCode(codeMirror.getValue(), codeMirror);
-                        }
-                    });
-
-                    function clearInput() {
-                        $("#entrada").val('');
-                    }
-                    function clearOutput() {
-                        $("#consolelog").html("<h1>Saída</h1>");
-                    }
-                    function clearIO() {
-                        clearInput();
-                        clearOutput();
-                    }
-
-                    addRunCodeHook(() => {
-                        window.input = $("#entrada").val();
-                        clearOutput();
-                    });
-
-                    $("#volta").click(clearIO);
-                    $("#avanca").click(clearIO);
-                });
-            </script>
+        <div class=postpost-content">
+            {{ content }}
         </div>
 
         <script type="text/javascript" src="{{site.baseurl}}/lib/submissao/submissao.js"></script>

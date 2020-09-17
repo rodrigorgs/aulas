@@ -60,3 +60,9 @@ div.CodeMirror span.CodeMirror-matchingbracket {
   color: blue !important;
   text-decoration: underline;
 }
+
+.stdin, .stdout {
+  vertical-align: top;
+  width: 49%;
+  height: 3.8em;
+}

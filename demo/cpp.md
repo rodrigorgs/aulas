@@ -18,6 +18,8 @@ int main() {
   return 0;
 }</textarea>
 
+teste
+
 ## Programa dobro
 
 Agora você deve digitar um número na caixa "Entrada" e o programa deve imprimir o seu dobro.
