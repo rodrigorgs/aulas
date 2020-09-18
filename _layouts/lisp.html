@@ -155,10 +155,10 @@ function multiEvalLisp(str, info) {
 function teste(expected, actual) {
 	if (JSON.stringify(expected) === JSON.stringify(actual)) {
 		testesCertos += 1;
-		console.log("%cOK!", "color: green;");
+		console.log("OK!");
 	} else {
 		testesErrados += 1;
-		console.log("%cERRO! Esperado: " + JSON.stringify(expected) + "; obtido: " + JSON.stringify(actual), "color: red;");
+		console.log("ERRO! Esperado: " + JSON.stringify(expected) + "; obtido: " + JSON.stringify(actual));
 	}
 }
 
