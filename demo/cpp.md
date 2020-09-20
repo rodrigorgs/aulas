@@ -18,7 +18,12 @@ int main() {
   return 0;
 }</textarea>
 
-teste
+<div class="testcases">
+]]]
+Alô, Mundo!
+Tchau!
+</div>
+
 
 ## Programa dobro
 
@@ -37,6 +42,16 @@ int main() {
 }</textarea>
 
 <textarea class="stdin">2</textarea>
+
+<div class="testcases">
+2
+]]]
+O dobro é 4
+=====
+3
+]]]
+O dobro é 6
+</div>
 
 ## Programa triplo
 
