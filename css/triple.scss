@@ -48,7 +48,14 @@ $column-padding: 10px;
 
 .stdin, .stdout {
     width: 100% !important; 
-    height: calc(.5 * (100vh - #{$footer-height} - #{$column-padding * 3}));
+    height: calc(.5 * (100vh - #{$footer-height} - #{$column-padding * 3} - 25px));
+}
+
+.testcases {
+    display: none;
+}
+.testresults {
+    padding-left: 5px;    
 }
 
 .painel {
