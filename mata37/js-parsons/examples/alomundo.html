@@ -25,8 +25,8 @@
         var initial = '#include &lt;iostream&gt;\n' +
                       'using namespace std;\n' +
                       'int main() {\n' +
-                      '  cout << "Alô, mundo!" << endl;\n' +
-                      '  return 0;\n' +
+                      'cout << "Alô, mundo!" << endl;\n' +
+                      'return 0;\n' +
                       '}';
 
         function displayErrors(fb) {
@@ -41,7 +41,8 @@
                 'trashId': 'sortableTrash',
                 'max_wrong_lines': 1,
                 'feedback_cb' : displayErrors,
-                'programmingLang': 'c++'
+                'programmingLang': 'c++',
+                'can_indent': false
             });
             parson.init(initial);
             parson.shuffleLines();

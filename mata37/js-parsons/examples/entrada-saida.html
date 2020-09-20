@@ -25,15 +25,15 @@
         var initial = '#include &lt;iostream&gt;\n' +
                       'using namespace std;\n' +
                       'int main() {\n' +
-                      '  // 1. Declara variáveis\n' +
-                      '  int x;\n' +
-                      '  // 2. Lê entrada\n' +
-                      '  cin >> x;\n' +
-                      '  // 3. Processa informações\n' +
-                      '  x = x * 2;\n' +
-                      '  // 4. Imprime saída\n' +
-                      '  cout << x << endl;\n' +
-                      '  return 0;\n' +
+                      '// 1. Declara variáveis\n' +
+                      'int x;\n' +
+                      '// 2. Lê entrada\n' +
+                      'cin >> x;\n' +
+                      '// 3. Processa informações\n' +
+                      'x = x * 2;\n' +
+                      '// 4. Imprime saída\n' +
+                      'cout << x << endl;\n' +
+                      'return 0;\n' +
                       '}';
 
         function displayErrors(fb) {
@@ -48,7 +48,8 @@
                 'trashId': 'sortableTrash',
                 'max_wrong_lines': 1,
                 'feedback_cb' : displayErrors,
-                'programmingLang': 'c++'
+                'programmingLang': 'java',
+                'can_indent': false
             });
             parson.init(initial);
             parson.shuffleLines();
