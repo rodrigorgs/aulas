@@ -29,20 +29,20 @@ $column-padding: 10px;
 .pagina-corpo {
     left: 0;
     padding: #{$column-padding};
-    width: calc(33.33% - #{$column-padding * 2});
+    width: calc(25.0% - #{$column-padding * 2});
     height: calc(100vh - #{$footer-height} - #{$column-padding * 2});
 }
 .pagina-codigo {
-    left: 33.3%;
+    left: 25.0%;
     padding: 0;
-    width: 33.33%;
+    width: 50.0%;
     height: calc(100vh - #{$footer-height});
 }
 
 .pagina-console {
-    left: 66.66%;
+    left: 75.0%;
     padding: 0;
-    width: 33.33%;
+    width: 25.0%;
     height: calc(100vh - #{$footer-height});
 }
 
