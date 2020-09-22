@@ -1,5 +1,5 @@
 ---
-layout: triple-page
+layout: page
 title: L2 Experimento
 ---
 
