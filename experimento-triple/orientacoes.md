@@ -7,9 +7,9 @@ title: Experimento - Orientações
 
 O experimento consiste de duas listas de exercícios de programação, cada uma com dois exercícios. As duas listas de exercícios possuem *layouts* diferentes.
 
-Antes de começar o experimento, preencha o [Termo de Consentimento](https://docs.google.com/forms/d/1VDMltrSWRdQEp40FrfXcurUvQ4N7m5Pk-OoqbYhQiP8/edit).
+Antes de começar o experimento, preencha o [Termo de Consentimento](https://forms.gle/DatcajyGNToLuv8Q7).
 
-Livre-se de qualquer distração antes de iniciar o experimento. Deve-se cronometrar o tempo gasto na resolução de cada lista de exercícios para preencher o [questionário](https://docs.google.com/forms/d/1G8Eyfrmq4UsYx-9UPsTf3hNae2IXzbXtwpGO2vl8JUA/edit).
+Livre-se de qualquer distração antes de iniciar o experimento. Deve-se cronometrar o tempo gasto na resolução de cada lista de exercícios para preencher o [questionário](https://forms.gle/owucj3K9urU9UqND8).
 
 Para iniciar o experimento, acesse a primeira lista de exercícios:
 
