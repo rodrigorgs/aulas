@@ -7,6 +7,9 @@
 	"settings": {
 		"search.exclude": {
 			"_site": true
-		  }
+		},
+		"files.associations": {
+			"algorithm": "cpp"
+		}
 	}
 }
