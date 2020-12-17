@@ -58,6 +58,10 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
     - [Angular](https://drive.google.com/open?id=1bGoa9sWTEhMVuPognjLgzP7BmjurpIfevEpg3NjAHUg)
     - [Ionic](https://drive.google.com/open?id=1DcuMmkFe8Yx80n37B71uw31h3lq_Rdh4iwROZEw7zCk)
 
+# Leituras recomendadas
+
+[https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/](10 Engineering Challenges Due to the Nature of Mobile Applications)
+
 # Referências
 
 Em português:
