@@ -1,25 +1,32 @@
 ---
 layout: page
-title: MATA55 - Programação orientada a objetos - 2019.1
+title: MATA55 - Programação orientada a objetos - 2021.1 - Turma 3
 ---
 
 # Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>. 
-- T03: TER/QUI, 18:30 a 20:20. Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `pfxx3eu`.
-
+- Aulas online: <https://meet.google.com/fjf-mxoq-bjr>
+  - TER/QUI, 18:30 a 20:20.
+- Servidor Discord (comunicação): <https://discord.gg/w63SAdhmmX>
+- [Email de boas-vindas](email)
 
 # Avaliações
 
-- (peso 4,0) Exercícios incrementais (jogo de cartas)
-- (peso 3,0) Prova prática
-- (peso 3,0) [Caracterização de outras linguagens OO](https://docs.google.com/spreadsheets/d/1bB9yHE6dl82zPNDTXR0ppBjLEtRlRXZXWNrmk18lM2U/edit?usp=sharing)
+- (peso 3,0, em grupo de até 6 pessoas) [Caracterização de outras linguagens OO](https://docs.google.com/spreadsheets/d/1QK-hHrSyV6qxwjwDCYapQABnT_kWhki01_vezf7Ts8k/edit#gid=0)
+- (peso 3,0, individual) Exercício incremental (biblioteca de interface gráfica)
+  - Cerca de 6 entregas ao longo do semestre
+- (peso 4,0, individual) Exercícios de fixação (implementação)
+
+## Política de honestidade
+
+Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
 
 # Notas de aula (atualizadas constantemente)
 
-O código-fonte produzido durante as aulas se encontra aqui:
+<!-- O código-fonte produzido durante as aulas se encontra aqui: -->
 
-<https://github.com/rodrigorgs/poo-exemplos>
+<!-- <https://github.com/rodrigorgs/poo-exemplos> -->
 
 <!-- Exemplo sendo desenvolvido ao longo da aula: jogo estilo RTS, porém de tabuleiro, usando lib Lanterna -->
 <!-- TODO:
@@ -30,14 +37,16 @@ O código-fonte produzido durante as aulas se encontra aqui:
 | Categoria | Conteúdo                                                                                          |
 |-----------|---------------------------------------------------------------------------------------------------|
 | Intro     | [Introdução à programação orientada a objetos][intro]                                             |
+| .         |                                                                                                   |
 | Java      | [Alô mundo, pacotes](aula-java-alomundo)                                                          |
 | Java      | [Eclipse, uma IDE para Java][eclipse]                                                             |
 | Java      | [Programação procedural em Java](aula-java-programacao) (com exercícios)                          |
 | Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)                        |
+| Java      | [Referências, identidade e igualdade][referencias].                                               |
+| .         |                                                                                                   |
 | OO        | [Orientação a objetos básica (classes, atributos, métodos)](aula-java-oo2)                        |
 | OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                                      |
 | OO        | [Classes, construtores, garbage collector, this][construtores]                                    |
-| Java      | [Referências, identidade e igualdade][referencias]. TODO: equals, hashCode                        |
 | Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                                       |
 | Java      | [Exceções](aula-excecoes)                                                                         |
 | Java      | [Sobrecarga (overload)][overload]                                                                 |
