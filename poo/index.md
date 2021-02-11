@@ -34,38 +34,41 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Usar http://pythontutor.com/java.html#mode=edit ?
  -->
 
-| Categoria | Conteúdo                                                                                          |
-|-----------|---------------------------------------------------------------------------------------------------|
-| Intro     | [Introdução à programação orientada a objetos][intro]                                             |
-| .         |                                                                                                   |
-| Java      | [Alô mundo, pacotes](aula-java-alomundo)                                                          |
-| Java      | [Eclipse, uma IDE para Java][eclipse]                                                             |
-| Java      | [Programação procedural em Java](aula-java-programacao) (com exercícios)                          |
-| Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)                        |
-| Java      | [Referências, identidade e igualdade][referencias].                                               |
-| .         |                                                                                                   |
-| OO        | [Orientação a objetos básica (classes, atributos, métodos)](aula-java-oo2)                        |
-| OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                                      |
-| OO        | [Classes, construtores, garbage collector, this][construtores]                                    |
-| Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                                       |
-| Java      | [Exceções](aula-excecoes)                                                                         |
-| Java      | [Sobrecarga (overload)][overload]                                                                 |
-| Java      | [Collections](aula-collections)                                                                   |
-| OO        | UML: diagramas de classes e de objetos                                                            |
-| OO        | [Modelagem conceitual](aula-modelagem)                                                            |
-| OO        | Encapsulamento: [Pacotes, modificadores de acesso, getters e setters](aula-acesso)                |
-| OO        | Encapsulamento: [Imutabilidade e referências escapando](aula-imutabilidade)                       |
-| OO        | [Tipos e interfaces](aula-interfaces)                                                             |
-| OO        | Herança. Downcasting e upcasting, super, override, overload, classes e métodos abstratos, Object. |
-| OO        | Composição e agregação.                                                                           |
-| OO        | [Generics](aula-generics).                                                                        |
-| OO        | [Classes internas](aula-classes-internas).                                                        |
-| OO        | Reflection, annotations                                                                           |
-| Skills    | Debugging                                                                                         |
-| Skills    | Controle de versão                                                                                |
-| Skills    | Testes de unidade                                                                                 |
-| Skills    | [Refatoração](aula-refactoring)                                                                   |
+| Categoria | Conteúdo                                                                           |
+|-----------|------------------------------------------------------------------------------------|
+| Intro     | [Introdução à programação orientada a objetos][intro]                              |
+| .         |                                                                                    |
+| Java      | [Alô mundo, pacotes](aula-java-alomundo)                                           |
+| Java      | [Eclipse, uma IDE para Java][eclipse]                                              |
+| Java      | [Programação procedural em Java](aula-java-programacao) (com exercícios)           |
+| Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)         |
+| Java      | [Referências, identidade e igualdade][referencias].                                |
+| .         |                                                                                    |
+| OO        | [Orientação a objetos básica (classes, atributos, métodos)](aula-java-oo2)         |
+| OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                       |
+| OO        | [Classes, construtores, garbage collector, this][construtores]                     |
+| Java      | [Sobrecarga (overload)][overload]                                                  |
+| Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                        |
+| OO        | Encapsulamento: [Pacotes, modificadores de acesso, getters e setters](aula-acesso) |
+| .         |                                                                                    |
+| Java      | [Collections](aula-collections)                                                    |
+| Java      | [Exceções](aula-excecoes)                                                          |
+| OO        | Encapsulamento: [Imutabilidade e referências escapando](aula-imutabilidade)        |
+| .         |                                                                                    |
+| OO        | Herança. super, override, classes e métodos abstratos, Object.                     |
+| OO        | Composição e agregação.                                                            |
+| OO        | [Tipos e interfaces](aula-interfaces)                                              |
+| .         |                                                                                    |
+| OO        | [Generics](aula-generics).                                                         |
+| OO        | [Classes internas](aula-classes-internas).                                         |
+| OO        | Reflection, annotations                                                            |
+| Skills    | Debugging                                                                          |
+| Skills    | Controle de versão                                                                 |
+| Skills    | Testes de unidade                                                                  |
+| Skills    | [Refatoração](aula-refactoring)                                                    |
 
+<!-- | OO        | [Modelagem conceitual](aula-modelagem)                                             | -->
+<!-- | OO        | UML: diagramas de classes e de objetos                                                            | -->
 
 [intro]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
 [eclipse]: https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing
