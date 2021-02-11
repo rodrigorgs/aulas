@@ -44,10 +44,12 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)         |
 | Java      | [Referências, identidade e igualdade][referencias].                                |
 | .         |                                                                                    |
-| OO        | [Orientação a objetos básica (classes, atributos, métodos)](aula-java-oo2)         |
+| OO        | [Classes, atributos, métodos](aula-java-oo2)                                       |
+| OO        | [Classes, atributos, métodos, construtores, this](aula-classes)                    |
+| OO        | [Static e final](aula-java-oo)                                                     |
 | OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                       |
 | OO        | [Classes, construtores, garbage collector, this][construtores]                     |
-| Java      | [Sobrecarga (overload)][overload]                                                  |
+| Java      | [Sobrecarga (overload)](aula-overload)                                             |
 | Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                        |
 | OO        | Encapsulamento: [Pacotes, modificadores de acesso, getters e setters](aula-acesso) |
 | .         |                                                                                    |
@@ -55,8 +57,10 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | Java      | [Exceções](aula-excecoes)                                                          |
 | OO        | Encapsulamento: [Imutabilidade e referências escapando](aula-imutabilidade)        |
 | .         |                                                                                    |
-| OO        | Herança. super, override, classes e métodos abstratos, Object.                     |
-| OO        | Composição e agregação.                                                            |
+| OO        | [Herança](aula-heranca-parte1.md).                                                 |
+| OO        | .. [Sobreposição](aula-heranca-parte2.md)                                          |
+| OO        | .. [Polimorfismo](aula-heranca-parte3.md)                                          |
+| OO        | .. [Classes e métodos abstratos](aula-heranca-parte4.md)                           |
 | OO        | [Tipos e interfaces](aula-interfaces)                                              |
 | .         |                                                                                    |
 | OO        | [Generics](aula-generics).                                                         |
@@ -73,7 +77,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 [intro]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
 [eclipse]: https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing
 [referencias]: https://docs.google.com/presentation/d/13w59yenVXOT4vXk14c5-JMgP62ty3LPkBHCMpwk61zM/edit
-[overload]: https://docs.google.com/presentation/d/1d4QWh9-rI44PL2AoH6KUy_8fSHSxxTykOQPIphGl3IE/edit
 [construtores]: https://docs.google.com/presentation/d/1U1eChwz2O0TnrF04DiUQ5fEANGflUVdCPtR_azmNgdo/edit
 [acesso]: https://docs.google.com/presentation/d/1MRqTOvbEnzAspcvW8_wWkKZSNJU1a6l3TVGTGSjkvMQ/edit
 
