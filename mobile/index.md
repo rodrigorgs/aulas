@@ -34,7 +34,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
 
 # Notas de aula
 
-- [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) (mercado de apps)
+- Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
 - [Introdução aos dispositivos móveis](https://drive.google.com/open?id=0BxqQol81uO5UN3BBTThmdWE2OFk)
 - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
 - Android
@@ -60,7 +60,9 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
 
 # Leituras recomendadas
 
-[https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/](10 Engineering Challenges Due to the Nature of Mobile Applications)
+- [10 Engineering Challenges Due to the Nature of Mobile Applications](https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/)
+- [Sistemas e dispositivos móveis nas universidades públicas: desafios e oportunidades](https://docs.google.com/document/d/1xkv2en13stqj3EnCGcdv29qvAT2dRk5YT1vJ85UrrVg/edit#)
+- gov.uk Service Manual: [Making sure your service works well on mobile](https://www.gov.uk/service-manual/technology/working-with-mobile-technology) e [We're not ‘appy. Not ‘appy at all.](https://gds.blog.gov.uk/2013/03/12/were-not-appy-not-appy-at-all/)
 
 # Referências
 

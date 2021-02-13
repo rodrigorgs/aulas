@@ -38,8 +38,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 |-----------|------------------------------------------------------------------------------------|
 | Intro     | [Introdução à programação orientada a objetos][intro]                              |
 | .         |                                                                                    |
-| Java      | [Alô mundo, pacotes](aula-java-alomundo)                                           |
 | Java      | [Eclipse, uma IDE para Java][eclipse]                                              |
+| Java      | [Alô mundo, pacotes](aula-java-alomundo)                                           |
 | Java      | [Programação procedural em Java](aula-java-programacao) (com exercícios)           |
 | Java      | [Ecossistema Java: Javadoc, Maven](aula-java-ecossistema) (javadoc, maven)         |
 | Java      | [Referências, identidade e igualdade][referencias].                                |
