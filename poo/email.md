@@ -4,6 +4,12 @@ Olá,
 
 Você está recebendo esta mensagem porque está matriculado na disciplina MATA55 - Programação Orientada a Objetos (POO). Nessa diciplina, você aprenderá conceitos de POO e a aplicar esses conceitos em exercícios de programação na linguagem Java.
 
+## Início das aulas
+
+Apesar de o início do semestre ser no dia 22/02, as aulas desta semana estão suspensas por causa do Congresso Virtual UFBA 2021. Aproveitem para se inscrever gratuitamente em http://www.congresso2021.ufba.br/ e aproveitar os cinco dias de programação.
+
+Aproveitem também para olhar o site da disciplina (ver abaixo), entrar no nosso canal de comunicação (ver abaixo) e começar a formar as equipes de até 6 pessoas para a atividade "Caracterização de outras linguagens OO" (ver site).
+
 ## Site da disciplina
 
 Todas as informações e materiais sobre a disciplina se encontram no site:
