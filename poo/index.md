@@ -18,7 +18,13 @@ title: MATA55 - Programação orientada a objetos - 2021.1 - Turma 3
   - Cerca de 6 entregas ao longo do semestre
 - (peso 4,0, individual) Exercícios de fixação (implementação)
 
-## Política de honestidade
+# Observações
+
+- Nesta disciplina você precisará programar bastante.
+- Os exercícios não envolvem algoritmos complexos, mas demandam que você implemente código a partir de uma especificação, e em alguns casos você precisará entender e interagir com código pré-existente.
+- Muitos exercícios serão entregues através do [GitHub Classroom](https://classroom.github.com/classrooms/78943541-ufba-poo-2021-1). Conhecimento de Git pode ajudar, mas é opcional.
+
+# Política de honestidade
 
 Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
 
@@ -95,10 +101,11 @@ Outros slides ou notas de aula:
 - [Classes internas](aula-classes-internas)
 - [Generics](aula-generics) -->
 
+<!-- 
 # Bibliografia recomendada
 
 Os livros a seguir estão disponíveis nas bibliotecas da UFBA:
 
 - SANTOS, Rafael. Introdução à programação orientada a objetos usando Java. Rio de Janeiro, RJ: Elsevier, c2003. 319, [6] p. ISBN 9788535212068 (broch.).
 - DEITEL, Harvey M.; DEITEL, Paul J. Java: como programar. 8.ed. São Paulo, SP. Pearson Prentice Hall, 2010. xxix 1144 p. ISBN 9788576055631(broch.).
-- ECKEL, Bruce. Thinking in Java. 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2000. 1127 p. ISBN 0130273635 (broch.).
+- ECKEL, Bruce. Thinking in Java. 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2000. 1127 p. ISBN 0130273635 (broch.). -->
