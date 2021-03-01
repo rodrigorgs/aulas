@@ -35,11 +35,9 @@ Cada variável possui um tipo. O tipo representa quais são os valores e as oper
 
 Por exemplo, o tipo `int` representa números inteiros, incluindo o zero, números positivos e números negativos. Com variáveis do tipo `int` é possível realizar soma, subtração, divisão, multiplicação, resto da divisão, dentre outras operações.
 
-O tipo `float` representa números fracionários.
+O tipo `double` representa números fracionários.
 
 ---
-
-## Tipos
 
 |             tipo             |            valores             |       espaço / precisão        |
 |------------------------------|--------------------------------|--------------------------------|
@@ -47,10 +45,16 @@ O tipo `float` representa números fracionários.
 | int                          | números inteiros               | Pelo menos 16 bits (2 bytes)   |
 | long (ou long int)           | números inteiros               | Pelo menos 32 bits (4 bytes)   |
 | long long (ou long long int) | números inteiros               | Pelo menos 64 bits (8 bytes)   |
-| float                        | números fracionários           |                                |
-| double                       | números fracionários           | Tão ou mais preciso que float  |
-| long double                  | números fracionários           | Tão ou mais preciso que double |
+| float                        | números fracionários (`2.5f`)  |                                |
+| double                       | números fracionários (`2.0`)   | Mais preciso que float         |
+| long double                  | números fracionários (`2.0`)   | Mais preciso que double        |
 | bool                         | valor-verdade (true/false)     | .                              |
+
+---
+
+## Tipos
+
+Note que o valor `2.0` representa um valor do tiplo `double`, enquanto `2.0f` representa um valor do tipo `float`.
 
 ---
 
@@ -73,7 +77,7 @@ Para cada tipo inteiro, existe um tipo correspondente que comporta apenas valore
 Exemplo:
 
 - `int`: zero, positivos e negativos
-- `unsigned int`: zer e positivos
+- `unsigned int`: zero e positivos
 
 ---
 
@@ -300,11 +304,64 @@ O que acontece nesse caso é que o compilador troca todas as referências a PI (
 - <http://www.cplusplus.com/doc/tutorial/variables/>
 - <http://www.cplusplus.com/doc/tutorial/operators/>
 
-<!--
+--
 
-# Conversão de tipos
+## Conversão de tipos
+
+Em alguns casos pode-se converter um valor de um tipo para outro. A conversão pode ser:
 
 - Implícita (coerção)
-- Explícita (*cast*) -->
+- Explícita (*cast*)
+
+--
+
+## Conversão implícita (coerção)
+
+Pode ocorrer quando se tenta armazenar um valor de um tipo em uma variável de outro tipo. Ex.:
+
+```c++
+int x = 3.9;    //=> 3
+double y = 2;   //=> 2.0
+float z = 4.4;  //=> 4.4f
+```
+
+Nas conversões de número decimal para inteiro, o número é truncado (i.e., a parte decimal é descartada)
+
+--
+
+## Conversão implícita (coerção)
+
+Também pode ocorrer dentro de expressões aritméticas:
+
+```c++
+double x = 3.5 + 2;
+```
+
+O número 2 é convertido para double (2.0) antes de ser feita a soma.
+
+--
+
+## Conversão explícita (cast)
+
+Você também pode explicitar que deseja fazer uma conversão. Para isso, use o formato `(tipo)valor`. Ex.:
+
+```c++
+double x = 3.7;
+cout << (int)x << endl;  //=> 3
+```
+
+--
+
+## Conversão explícita (cast)
+
+Atenção: o cast tem precedência sobre outras operações. Assim, as duas linhas a seguir produzem resultados diferentes:
+
+```c++
+cout << (double)9 / 2 << endl;
+cout << (double)(9 / 2) << endl;
+```
+
+- No primeiro caso, o número `9` é convertido para `double` antes de ser realizada a divisão
+- No segundo caso, o resultado da operação `9 / 2` é convertido para `double`
 
 </div>

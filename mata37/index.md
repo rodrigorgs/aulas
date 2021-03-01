@@ -38,18 +38,16 @@ title: MATA37 - ILP - 2018.1
 <!-- |           | [Arquitetura de computadores](arquitetura)    |    |-->
 <!-- |           | [Linguagens de programação](#!linguagens)     |                                | -->
 
+- [Aula 1](https://drive.google.com/file/d/1MCRM7GF9RX8vYtPRL-_QAGQ_tJWBagrq/view?usp=sharing)
 - [Pra que aprender a programar?](intro-ilp)
 - [O que são algoritmos? E linguagens de programação?](algoritmo)
 - .
 - ["Alô mundo" em C++](intro-cpp)
-- Exercício: [Alô mundo - jogo dos 7 erros](https://repl.it/@rodrigorocha/alomundo7erros)
-- [Expressões aritméticas](aritmetica)
-- .
 - [Variáveis](variaveis)
-- [Uma estratégia para ler código](https://medium.com/bits-and-behavior/teaching-a-strategy-for-reading-code-fbc9f4044cab)
 - [Entrada e saída](entrada-saida)
-- .
+- [Expressões aritméticas](aritmetica)
 - [Estilo de codificação](estilo)
+- .
 - [Quiz sobre variáveis, aritmética e entrada/saída](https://play.kahoot.it/#/k/71e43c0a-cd6c-4286-a3bf-d159b793dcf7)
 - [Erros comuns nos exercícios](erros-comuns)
 - .

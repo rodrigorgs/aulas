@@ -18,6 +18,20 @@ title: Desenvolvimento para dispositivos móveis - 2021
 - Desenvolvimento de apps Android
 - Desenvolvimento de apps web e híbridos
 
+## Cronograma
+
+1. Visão geral.Mercado de apps móveis.
+2. Híbrido, web, mobile. Android
+3. Android
+4. Android
+5. Ionic
+6. Ionic
+7. Equipe 1
+8. Equipe 2
+9. Equipe 3
+10. Equipe 4
+
+
 # Avaliações
 
 As avaliações serão realizadas em grupos de 3 pessoas.
