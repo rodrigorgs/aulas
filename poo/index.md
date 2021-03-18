@@ -52,8 +52,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | .         |                                                                                    |
 | OO        | [Classes, atributos, métodos](aula-java-oo2)                                       |
 | OO        | [Classes, atributos, métodos, construtores, this](aula-classes)                    |
-| OO        | [Static e final](aula-java-oo)                                                     |
 | OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                       |
+| .         |                                                                                    |
 | OO        | [Classes, construtores, garbage collector, this][construtores]                     |
 | Java      | [Sobrecarga (overload)](aula-overload)                                             |
 | Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                        |
