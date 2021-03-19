@@ -55,9 +55,11 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | OO        | [Orientação a objetos básica (static e final)](aula-java-oo)                       |
 | .         |                                                                                    |
 | OO        | [Classes, construtores, garbage collector, this][construtores]                     |
+|           | - [Quiz][quiz1]                                                                    |
 | Java      | [Sobrecarga (overload)](aula-overload)                                             |
 | Java      | [Enums](aula-enums) -- exemplo: [cartas de baralho](cartas)                        |
 | OO        | Encapsulamento: [Pacotes, modificadores de acesso, getters e setters](aula-acesso) |
+|           | - [Quiz][quiz2]                                                                    |
 | .         |                                                                                    |
 | Java      | [Collections](aula-collections)                                                    |
 | Java      | [Exceções](aula-excecoes)                                                          |
@@ -85,6 +87,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 [referencias]: https://docs.google.com/presentation/d/13w59yenVXOT4vXk14c5-JMgP62ty3LPkBHCMpwk61zM/edit
 [construtores]: https://docs.google.com/presentation/d/1U1eChwz2O0TnrF04DiUQ5fEANGflUVdCPtR_azmNgdo/edit
 [acesso]: https://docs.google.com/presentation/d/1MRqTOvbEnzAspcvW8_wWkKZSNJU1a6l3TVGTGSjkvMQ/edit
+[quiz1]: https://create.kahoot.it/details/programacao-orientada-a-objetos-com-java-parte-1/93655e8b-0866-41fa-ba09-439c8709cc8b
+[quiz2]: https://create.kahoot.it/details/programacao-orientada-a-objetos-parte-2/3ef15af5-873c-40e9-bb1e-1a6a7316fcc7
 
 <!-- 
 Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
