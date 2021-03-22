@@ -9,7 +9,10 @@ title: "Java: orientação a objetos"
 
 - É uma biblioteca Java para requisições HTTP
 - Disponível em <https://square.github.io/retrofit/>
+
+<!--
 - Seu uso é [recomendado pela Google no projeto Jetpack](https://developer.android.com/jetpack/androidx/explorer)
+-->
 
 ---
 
