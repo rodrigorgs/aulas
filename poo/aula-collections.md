@@ -111,7 +111,7 @@ Experimente trocar `ArrayList` por outras coleções e veja o resultado!
 
 ---
 
-# Métodos existentes em ALGUMAS as coleções
+# Métodos existentes em ALGUMAS coleções
 
 + `get(i)` - retorna o elemento na posição `i` (indexado a partir de zero)
 + `firstElement()`/`lastElement()` - retorna o primeiro/último elemento
@@ -122,6 +122,12 @@ Experimente trocar `ArrayList` por outras coleções e veja o resultado!
 # Classe Collections
 
 A classe `Collections` possui diversos métodos estáticos que implementa operações úteis sobre coleções, como `sort`, `binarySearch`, `frequency`, `max`, `min`, `replaceAll`, `reverse`, `rotate`, `shuffle`, `swap`. Veja a documentação da classe para entender o que cada método faz.
+
+---
+
+# HashMap
+
+Mostrar em aula
 
 ---
 
