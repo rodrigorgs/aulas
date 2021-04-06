@@ -1,3 +1,10 @@
+---
+layout: remark
+title: Collections
+---
+
+<div>
+
 # Collections
 
 - No Java, Collections são um conjunto de classes e outras entidades que representam grupos de objetos (também chamados de coleções).
@@ -125,3 +132,4 @@ Crie um programa que lê um arquivo com dados de cursos e disciplinas da UFBA ([
 - Universidade: nome, addCurso(), imprime(), qtdDisciplinas()
 - Curso: codigo, nome, addDisciplina(), getDisciplinas(), imprime(), qtdDisciplinas()
 - Disciplina: codigo, nome, semestre, natureza, ch, curriculo, imprime()
+</div>
