@@ -9,7 +9,9 @@
 			"_site": true
 		},
 		"files.associations": {
-			"algorithm": "cpp"
+			"algorithm": "cpp",
+			"iosfwd": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }

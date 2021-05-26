@@ -35,7 +35,7 @@ A equipe organizadora deve apresentar brevemente o guia de configuração, possi
 
 A equipe organizadora do workshop deve especificar um **exercício prático**, consistindo no desenvolvimento de uma aplicação simples usando a tecnologia, que as demais equipes devem desenvolver e entregar dentro do prazo de 1 semana.
 
-Sugere-se um exercício **simples**, que ilustre interação, atualização da interface e navegação entre duas telas.
+O exercício deve ilustrar interação, atualização da interface e navegação entre duas telas.
 
 O exercício deve vir acompanhado de um conjunto de **roteiros de teste** (manuais ou automatizados), que descrevem cenários comuns de uso e o resultado esperado.
 
