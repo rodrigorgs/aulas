@@ -67,7 +67,7 @@ title: MATA37 - ILP - 2018.1
 - [Structs](structs)
 - [Funções](funcoes)
 - [Ordenação](ordenacao)
-- [Busca binária][busca]
+- [Busca binária][busca] - ver também [material do livro OpenDSA](https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/BinarySearch.html)
 
 <!--
 Recursão:
