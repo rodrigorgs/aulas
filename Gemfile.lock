@@ -41,6 +41,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rexml (3.2.5)
     rouge (2.2.1)
     safe_yaml (1.0.5)
     sass (3.7.4)
@@ -56,6 +57,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.6.3)
   minima
+  rexml (~> 3.2)
 
 BUNDLED WITH
    2.2.6

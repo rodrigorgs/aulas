@@ -20,8 +20,8 @@ $(document).ready(() => {
     // Oculta resultado expresso em comentários
     $('.hljs-comment').each(function () {
         let elem = $(this);
-        if (elem.text().trim().startsWith('//=>')) {
-            let newText = elem.text().replace('//=>', '').trim();
+        if (elem.text().trim().match(/^(\/\/|#)=>/)) {
+            let newText = elem.text().replace(/(\/\/|#)=>/, '').trim();
             let newElem = $('<span class="resultado">' + newText + '</span>');
             elem.replaceWith(newElem);
             ocultaResultado(newElem);
