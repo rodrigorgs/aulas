@@ -2,8 +2,14 @@
 layout: remark
 title: Introdução à Programação
 ---
+{::nomarkdown}
+template: inverse
 
-<div>
+# Algoritmos e Programas
+
+{% include_relative footer.txt %}
+
+---
 
 # Algoritmo
 
@@ -87,4 +93,4 @@ if not ja_fez_aniversario:
 print(idade)
 ```
 
-</div>
+{:/}

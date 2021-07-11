@@ -3,7 +3,15 @@ layout: remark
 title: Introdução ao Python
 ---
 
-<div>
+{::nomarkdown}
+
+template: inverse
+
+# Introdução à Linguagem Python
+
+{% include_relative footer.txt %}
+
+---
 
 <!-- 
 - Entrada e saída e expressões - https://drive.google.com/drive/u/1/folders/1-Upp6tNa4wUDOB93kEMD6GpPUw8OA2v1
@@ -96,10 +104,15 @@ print(2 + 3)
 print(2 + 3)   # exibe a soma de 2 e 3
 ```
 
+---
+
+template: inverse
+
+## Informações adicionais
 
 ---
 
-# Para saber mais: editores de código
+# Editores de código
 
 Você pode usar o IDLE para desenvolver qualquer programa em Python, mas programadores profissionais tendem a preferir outros editores. Algumas opções:
 
@@ -109,7 +122,7 @@ Você pode usar o IDLE para desenvolver qualquer programa em Python, mas program
 
 ---
 
-# Para saber mais: bytecode
+# bytecode
 
 - Interpretar o código-fonte é um processo relativamente lento
 - Para melhorar o desempenho dos programas, Python usa uma abordagem híbrida:
@@ -123,4 +136,4 @@ Você pode usar o IDLE para desenvolver qualquer programa em Python, mas program
 - Nilo Menezes. **Introdução à Programação com Python** (2ª ed.). Novatec Editora.
 - Allen B. Downey. **Pense em Python** (2ª ed.). Disponível em <https://penseallen.github.io/PensePython2e/>
 
-</div>
+{:/}

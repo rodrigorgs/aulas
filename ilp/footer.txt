@@ -1,0 +1,2 @@
+
+.footnote[Introdução à Lógica de Programação / Processamento de Dados<br><br>Instituto de Computação<br>Universidade Federal da Bahia]

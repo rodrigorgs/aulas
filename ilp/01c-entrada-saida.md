@@ -3,9 +3,28 @@ layout: remark
 title: Entrada e saída em Python
 ---
 
-<div>
+{::nomarkdown}
+template: inverse
 
-## Saída de dados: print
+# Entrada e saída de dados
+
+{% include_relative footer.txt %}
+
+---
+
+# Entrada e saída
+
+- As instruções de entrada e saída permitem ao seu programa interagir com informações externas a ele
+- Estudaremos como **ler** do teclado (entrada) e **escrever** da tela (saída)
+- Saída de dados: `print()`
+- Entrada de dados: `input()`
+
+---
+
+template: inverse
+# Saída de dados
+---
+# Saída de dados: print
 
 - Para exibir (imprimir) um valor na tela, use a instrução `print(x)`, substituindo `x` pela expressão cujo resultado deve ser exibido. Exemplos:
 
@@ -17,7 +36,7 @@ print(3.14 / 2)
 
 ---
 
-## Definindo o número de casas decimais
+# Definindo o número de casas decimais
 
 - Se você precisar controlar o número de casas decimais que vão ser exibidas, use a função `format(x, .Nf)`, que converte um número, `x`, em uma string que representa o número com `N` casas decimais. Exemplo:
 
@@ -29,7 +48,7 @@ print(format(numero, ".5f"))
 
 ---
 
-## Imprimindo múltiplos valores na mesma linha
+# Imprimindo múltiplos valores na mesma linha
 
 Você pode passar para o `print` diversas expressões separadas por vírgulas. Exemplo:
 
@@ -48,7 +67,7 @@ print("(", ddd, ") ", telefone, sep="")
 
 ---
 
-## Imprimindo múltiplos valores na mesma linha
+# Imprimindo múltiplos valores na mesma linha
 
 Outra opção é converter todas as expressões para string e então concatená-las (juntá-las) com `+`:
 
@@ -64,7 +83,7 @@ O que acontece se você não usar `str`?
 
 --
 
-TypeError!
+`TypeError`! Não é possível "somar" uma string a um número!
 
 ---
 
@@ -86,7 +105,11 @@ print("pessoal!")
 
 ---
 
-## Entrada: input()
+template: inverse
+# Entrada de dados
+---
+
+# Entrada: input()
 
 - `input()` lê tudo o que o usuário digita até apertar Enter e retorna o texto digitado como uma string. Exemplo:
 
@@ -97,8 +120,8 @@ print("Oi", nome)
 ```
 
 ---
-
-## Entrada: input()
+template: exercise
+# Exemplo com input()
 
 Qual a saída do programa a seguir, considerando como entradas os números 2 e 3?
 
@@ -116,7 +139,9 @@ O `input` sempre retorna uma string! Se necessário, você deve converter para o
 
 ---
 
-## Entrada: input()
+template: exercise
+# Exemplo com input()
+
 
 Programa corrigido:
 
@@ -130,7 +155,10 @@ print("Soma:", a + b)
 
 ---
 
-## Ex.: programa que lê um número e imprime seu dobro
+template: exercise
+# Outro exemplo com input()
+
+Programa que lê um número e imprime seu dobro:
 
 ```python
 numero = int(input())
@@ -139,7 +167,7 @@ print(numero * 2)
 
 ---
 
-## Lendo diversos valores na mesma linha
+# Lendo diversos valores na mesma linha
 
 Programa que lê uma linha com três números inteiros, separados por espaço, e mostra a soma dos números:
 
@@ -155,4 +183,4 @@ print(a + b + c)
 
 Note que `split()` retorna strings; é necessário converter cada parte para inteiro antes de fazer a soma.
 
-</div>
+{:/}

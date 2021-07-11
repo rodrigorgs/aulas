@@ -3,9 +3,15 @@ layout: remark
 title: Tipos de dados, constantes, variáveis e operadores aritméticos
 ---
 
-<div>
+{::nomarkdown}
+template: inverse
 
-## Variáveis
+# Variáveis
+
+{% include_relative footer.txt %}
+
+---
+# Variáveis
 
 Variáveis são usadas para guardar informações dentro de um programa.
 
@@ -18,7 +24,7 @@ O valor da variável pode mudar durante a execução do programa.
 
 ---
 
-## Atribuição
+# Atribuição
 
 Para **atribuir** um **valor** a uma variável, usa-se `=`. Exemplos:
 
@@ -35,7 +41,21 @@ OBS.: `>>>` indica que estamos usando o modo shell. Não digite `>>>`!
 
 ---
 
-## Identificador
+# Atribuições compostas
+
+Atribuições compostas modificam o valor de uma variável através de uma operação matemática. Elas são apenas formas mais sucintas de escrever certas atribuições. Usa-se `+=` (incremento), `-=` (decremento), `*=` e `/=`. Exemplos:
+
+| atribuição composta |      é equivalente a       |
+|---------------------|----------------------------|
+| `x += 3`            | `x = x + 3`                |
+| `x += y * 2`        | `x = x + y * 2`            |
+| `preco -= desconto` | `preco = preco - desconto` |
+| `num /= 2`          | `num = num / 2`            |
+| `a *= b + 1`        | `a = a * (b + 1)`          |
+
+---
+
+# Identificador
 
 O nome de uma variável (**identificador**) em Python 
 
@@ -56,7 +76,11 @@ Existem palavras reservadas que não podem ser usadas para dar nome as variávei
 
 ---
 
-## Tipos
+template: inverse
+# Tipos de dados
+
+---
+# Tipos
 
 Os tipos de dados básicos em Python são os seguintes:
 
@@ -69,7 +93,7 @@ Os tipos de dados básicos em Python são os seguintes:
 - `bool` - valor **lógico** (`True` ou `False`)
 --
 
-- `str` - tipo **string** (cadeia de caracteres, texto). Ex.: `"Olá, pessoal!"`
+- `str` - tipo **string** (cadeia de caracteres, texto). Ex.: `"Olá, pessoal!"` ou `'Olá, pessoal!`
 
 --
 
@@ -90,28 +114,14 @@ Para saber o tipo de uma variável (por exemplo, `x`), use `type(x)`.
 
 ```python
 >>> x = 1
->>> type(x)  #=> [class 'int']
+>>> type(x)  #=> class 'int'
 >>> y = 3.0
->>> type(y)  #=> [class 'float']
+>>> type(y)  #=> class 'float'
 ```
 
 ---
 
-## Atribuições compostas
-
-Atribuições compostas modificam o valor de uma variável através de uma operação matemática. Elas são apenas formas mais sucintas de escrever certas atribuições. Usa-se `+=`, `-=`, `*=` e `/=`. Exemplos:
-
-| atribuição composta |      é equivalente a       |
-|---------------------|----------------------------|
-| `x += 3`            | `x = x + 3`                |
-| `x += y * 2`        | `x = x + y * 2`            |
-| `preco -= desconto` | `preco = preco - desconto` |
-| `num /= 2`          | `num = num / 2`            |
-| `a *= b + 1`        | `a = a * (b + 1)`          |
-
----
-
-## Conversão de tipos
+# Conversão de tipos
 
 Em alguns casos pode-se querer converter um valor de um tipo para outro. Para isso, use uma das funções de conversão:
 
@@ -128,7 +138,7 @@ z = int(x) - y
 
 ---
 
-## Conversão de tipos
+# Conversão de tipos
 
 ```python
 >>> x = 3
@@ -147,4 +157,4 @@ Na conversão de `float` para `int`, as casas decimais são descartadas.
 >>> int(x)   #=> 1
 ```
 
-</div>
+{:/}

@@ -68,6 +68,9 @@
         color: #f3f3f3;
         line-height: 0.8em;
       }
+      .exercise {
+        background: #ceeaff;
+      }
 
       .line-numbers{
         /* Set "line-numbers-counter" to 0 */
@@ -110,9 +113,20 @@
     
   </head>
     <textarea id="source">
-
-{{content}}
-
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+name: exercise
+layout: true
+class: exercise
+---
+name: normal
+layout: true
+class: none
+---
+template: normal
+{{ content }}
     </textarea>
     <script src="{{site.baseurl}}/lib/remark/remark.min.js"></script>
     <script>
