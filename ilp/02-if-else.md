@@ -56,6 +56,8 @@ print("Programa finalizado.")
 - Os dois primeiros `print`s, no entanto, só vão ser executados se você digitar um número menor que 18
 - O bloco de código do `if` é delimitado pela indentação (espaços à esquerda)
 
+Visualize a execução do código no [Python Tutor](http://pythontutor.com/visualize.html)
+
 ---
 
 # Indentação
