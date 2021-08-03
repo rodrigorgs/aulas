@@ -98,6 +98,50 @@ Use os operadores relacionais:
 
 ---
 
+# if: outro exemplo
+
+Na compra de um produto, dado o preço unitário e o número de unidades, imprima o valor total da compra. Se o número de unidades for superior a 10, o cliente ganha 5% de desconto.
+
+--
+
+```python
+preco = float(input())
+quantidade = int(input())
+
+total = preco * quantidade
+if quantidade > 10:
+    total *= 0.95
+
+print(total)
+```
+
+---
+
+# if: mais um exemplo
+
+Escreva um programa que, dado o ano atual, o ano de nascimento da pessoa, e sabendo se ela já fez aniversário no ano atual, imprime a idade da pessoa.
+
+Entrada: ano atual, ano de nascimento, e a string S (se já fez aniversário no ano atual)
+
+--
+
+```python
+# Entrada
+ano_atual = int(input())
+ano_nascimento = int(input())
+nao_fez_aniversario = (input() == "N")
+
+# Processamento
+idade = ano_atual - ano_nascimento
+if nao_fez_aniversario:
+    idade = idade - 1
+
+# Saída
+print(idade)
+```
+
+---
+
 # if
 
 Considere agora o seguinte programa:
@@ -110,7 +154,7 @@ if idade < 18:
     print("Você não é adulto.")
 ```
 
-Note que as condições são opostas.
+Note que as condições são opostas. Nesse caso podemos usar a estrutura `if`/`else`, que veremos a seguir.
 
 ---
 
