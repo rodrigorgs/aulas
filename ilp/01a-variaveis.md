@@ -100,7 +100,7 @@ Os tipos de dados básicos em Python são os seguintes:
 O **tipo** determina as operações que podem ser realizadas. Exemplos:
 
 - É possível subtrair números (`int` e `float`), mas não é possível subtrair strings
-- Não se pode somar um inteiro a um valor lógico
+- Não se pode somar um inteiro a uma string
 
 --
 
