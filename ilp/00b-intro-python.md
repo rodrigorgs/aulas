@@ -44,6 +44,7 @@ Se quiser experimentar sem instalar nada, use algum desses sites:
 - <https://codecollab.io/>
 - <https://repl.it/>
 - <https://brython.info/>
+- <http://pythontutor.com/>
 
 ---
 

@@ -53,7 +53,7 @@ Certas operações possuem maior **precedência**, isto é, são realizadas prim
 Níveis de precedência de operadores:
 
 - `**` (maior precedência)
-- `\*`, `/`, `//`, `%`
+- `*`, `/`, `//`, `%`
 - `+`, `-` (menor precedência)
 - Duas operações no mesmo nível: executar da esquerda para a direita
 
