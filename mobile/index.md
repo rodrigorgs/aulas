@@ -13,7 +13,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 # Avaliações
 
 - (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android) (em duplas)
-- (5,0) [Workshop de tecnologia de desenvolvimento mobile](seminarios) (em equipes de 4 pessoas)
+- (5,0) [Workshop de tecnologia de desenvolvimento mobile](workshop) (em equipes de 4 pessoas)
   - (1,0) Guia de configuração
   - (1,5) Workshop: parte teórica
   - (2,0) Workshop: desenvolvimento
@@ -34,7 +34,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 # Notas de aula
 
 - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
-- [Introdução aos dispositivos móveis](https://drive.google.com/open?id=0BxqQol81uO5UN3BBTThmdWE2OFk)
+- [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
 - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
 - Android
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
