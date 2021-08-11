@@ -3,6 +3,7 @@ layout: page
 ---
 
 - Introdução
+  - [Motivação](https://docs.google.com/presentation/d/1L70pAPrIstAOukWUIAEPKGXnzVXo46hV4m6BVAWkdnY/edit)
   - [Introdução à programação](00a-intro-programacao)
   - [Introdução à linguagem Python](00b-intro-python)
   - Avaliação na disciplina

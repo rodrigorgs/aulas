@@ -7,11 +7,11 @@ title: Workshop sobre desenvolvimento para dispositivos móveis
 
 - Flutter
 - React Native
-- Nativescript
 - Vue Native
+- NativeScript
 - Xamarin
-- Haxe + OpenFL
-
+- Haxe + HaxeUI
+- Python + Kivy
 ## Guia de configuração
 
 A equipe que vai organizar o workshop deve preparar um guia de configuração do ambiente. O guia deve apresentar:
@@ -27,18 +27,10 @@ O guia pode indicar a configuração em um ambiente na nuvem (ex.: IDE online) o
 
 ## Realização do workshop
 
-O workshop deve apresentar os principais conceitos da tecnologia escolhida, incluindo um breve histórico, arquitetura, ferramentas, principais conceitos, além de apresentar exemplos de código ilustrando os conceitos e o desenvolvimento de aplicações.
-
-A equipe organizadora deve apresentar brevemente o guia de configuração, possivelmente tirando dúvidas dos participantes, tomando o cuidado de não prejudicar o tempo necessário para desenvolver as outras atividades do workshop.
+O workshop deve apresentar brevemente os principais conceitos da tecnologia escolhida, incluindo histórico, arquitetura, ferramentas, principais conceitos. A seguir, deve ser demonstrada a construção de uma aplicação simples contendo ao menos **interação do usuário** e **navegação entre telas**. Ao final, deve ser apresentado um **exercício prático** (desafio) que consiste em uma tarefa de modificação do código produzido de acordo com uma especificação bem definida.
 
 ## Exercícios
 
-A equipe organizadora do workshop deve especificar um **exercício prático**, consistindo no desenvolvimento de uma aplicação simples usando a tecnologia, que as demais equipes devem desenvolver e entregar dentro do prazo de 1 semana.
-
-O exercício deve ilustrar interação, atualização da interface e navegação entre duas telas.
-
-O exercício deve vir acompanhado de um conjunto de **roteiros de teste** (manuais ou automatizados), que descrevem cenários comuns de uso e o resultado esperado.
+As demais equipes devem desenvolver e entregar o exercício dentro do prazo de 1 semana.
 
 Após a entrega, a equipe tem uma semana para avaliar cada entrega e atribuir uma **nota**, de 0% a 100%, proporcional ao número de casos de teste nos quais a aplicação entregue é bem sucedida.
-
-A **nota final** de cada equipe referente à entrega de exercícios resolvidos será proporcional à média das duas maiores notas dos exercícios individuais. Assim, para obter a nota máxima, é suficiente entregar **dois exercícios** que atendem plenamente às especificações.

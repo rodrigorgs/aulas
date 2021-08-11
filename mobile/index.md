@@ -1,25 +1,24 @@
 ---
 layout: page
-title: MATC89 - Aplicações para Dispositivos Móveis - 2019.2
+title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 ---
 
 # Informações básicas
 
 - Site: [v.ht/matc89](http://v.ht/matc89)
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
-- Inscreva-se no [Google Classroom](https://classroom.google.com/) da turma: clique no botão `+` e digite o código `m7vt57`.
 
-**Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis. Desenvolvimento de aplicativos híbridos com Ionic e Cordova.
+**Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis.
 
 # Avaliações
 
-- (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android)
-- (3,5) [Seminário](seminarios)
-- (3,5) Desenvolvimento de 3 pequenos apps com Ionic *ou* Desenvolvimento de um app completo
-  - Ambas as atividades podem ser feitas em equipes de até 4 pessoas ou individualmente
-  - Para o trabalho deve ser entregue o código-fonte (por e-mail) e um vídeo com até 3 minutos (preferencialmente 2 minutos) demonstrando o app em funcionamento. **Prazo**: 30/11.
-  - Os exercícios serão divulgados através do Google Classroom e entregues através do GitHub Classroom. **Prazo**: 29/11 (todos os exercícios).
-  - As equipes que optarem por fazer ambas as atividades concorrerão a até 0,8 ponto extra, da seguinte forma: a atividade com melhor nota terá peso 3,5 e a atividade com menor nota terá peso 0,8 (extra)
+- (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android) (em duplas)
+- (5,0) [Workshop de tecnologia de desenvolvimento mobile](seminarios) (em equipes de 4 pessoas)
+  - (1,0) Guia de configuração
+  - (1,5) Workshop: parte teórica
+  - (2,0) Workshop: desenvolvimento
+  - (0,5) Exercício proposto (bem especificado, nível de dificuldade adequado)
+- (2,0) Resolução de exercícios de dois workshops
 
 <!--    
     * Exercício 1: Hello World
