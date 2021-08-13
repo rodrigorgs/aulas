@@ -33,16 +33,19 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 
 # Notas de aula
 
-- Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
-- [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
-- [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
+- Introdução
+  - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
+  - [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
+  - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
+  - Ver também as leituras recomendadas (abaixo)
 - Android
+    + [Instalação](https://docs.google.com/presentation/d/13iFDtHQ-HxVs8ofT0UEiqeOjuFcn_FhtfFGxm7zrPUg/edit)
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
         + Guardando o estado de uma Activity antes de ela ser destruída para poder restaurar o estado quando ela for construída novamente (enquanto o aplicativo está sendo executado): [onSave/RestoreInstanceState](instance-state)
     + [ListView](https://speakerdeck.com/rodrigorgs/listview-android-sdk) ([arquivo original do Keynote](https://drive.google.com/file/d/0BxqQol81uO5UUG0tTnExR2xXblE/view?usp=sharing))
     + [SQLite](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
     + [Serviços Web](https://speakerdeck.com/rodrigorgs/servico-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UNnhLeFJMMzZ4Yk0))
-    + [Acessando serviços Web com a biblioteca Retrofit](retrofit)
+      - [Acessando serviços Web com a biblioteca Retrofit](retrofit)
       - [Acessando serviços Web com a API nativa do Android](https://speakerdeck.com/rodrigorgs/cliente-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5USXBOWV9WU0RIWFU), [exemplo de código](rest.zip))
     + [Multithreading](https://speakerdeck.com/rodrigorgs/multithreading-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UOG0tcFdYVVg4Z1U))
       - [Exemplo de código](async-task.zip)
