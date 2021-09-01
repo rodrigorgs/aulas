@@ -250,11 +250,11 @@ Exemplo:
 nota = float(input())
 if nota > 9.0:
     print("Excelente!")
-else if nota > 7.0:
+elif nota > 7.0:
     print("Muito bom!")
-else if nota > 5.0:
+elif nota > 5.0:
     print("Razoável!")
-else
+else:
     print("Estude mais!")
 ```
 
