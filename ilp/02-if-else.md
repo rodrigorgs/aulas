@@ -344,4 +344,27 @@ Ao computar o resultado de uma expressão lógica com operadores `and` e `or`, o
 - `A and B`: se A for falso, a expressão B não é avaliada, pois qualquer que seja seu valor, a expressão `A and B` é falsa
 - `A or B`: se A for verdadeiro, a expressão B não é avaliada, pois qualquer que seja seu valor, a expressão `A or B` é verdadeira
 
+---
+
+# Exemplo: obrigatoriedade de votação
+
+```python
+# Programa que lê a idade de uma pessoa e mostra uma mensagem
+# indicando a possibilidade e obrigatoriedade do voto
+#
+# Menor de 18 anos: Não vota
+# 16 ou 17 anos: Voto facultativo
+# 18 a 69 anos: Voto obrigatório
+# 70 anos ou maior: Voto facultativo
+
+idade = int(input())
+if idade >= 16:
+  if idade >= 18 and idade <= 70:
+    print("Voto obrigatório")
+  else:
+    print("Voto facultativo")
+else:
+    print("Não pode votar")
+```
+
 {:/}
