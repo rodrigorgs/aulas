@@ -68,6 +68,27 @@ public class Todo {
 
 # Exemplo de uso
 
+Agora crie a interface TodoService, que [especifica como são as chamadas ao serviço](https://square.github.io/retrofit/) de lista de afazeres.
+
+```java
+public interface TodoService {
+    @GET("/todos/{id}")
+    public Call<Todo> getTodoById(@Path("id") Long id);
+
+    @GET("/todos")
+    public Call<List<Todo>> getTodos();
+
+    @POST("/todos")
+    public Call<Todo> createTodo(@Body Todo todo);
+}
+```
+
+A implementação dessa interface será criada automaticamente pelo Retrofit com base nas anotações de código.
+
+---
+
+# Exemplo de uso
+
 Agora, edite sua Activity principal para inicializar a API:
 
 ```java
