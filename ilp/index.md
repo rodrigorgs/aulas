@@ -14,3 +14,4 @@ layout: page
   - [Entrada e saída para problemas de correção automática](https://docs.google.com/presentation/d/1wTuChjtp-tPVXElQVtBanVULWNsoeN-vDv9C2ZK_5Vo/edit?usp=sharing)
 - [Condicionais (if/else)](02-if-else)
 - [Estruturas de repetição (while/for)](https://docs.google.com/presentation/d/1fIC4ntPE-z-rJNGRwaMYT6U64yitrdRe7SORdhAXNDo/edit?usp=sharing)
+- [Funções](https://docs.google.com/presentation/d/1WwM1eyjoHY1AjlFB-QMLRkpf282d8reQ_gSj32hWo-k/edit)
