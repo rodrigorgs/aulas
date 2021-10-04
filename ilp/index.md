@@ -15,3 +15,4 @@ layout: page
 - [Condicionais (if/else)](02-if-else)
 - [Estruturas de repetição (while/for)](https://docs.google.com/presentation/d/1fIC4ntPE-z-rJNGRwaMYT6U64yitrdRe7SORdhAXNDo/edit?usp=sharing)
 - [Funções](https://docs.google.com/presentation/d/1WwM1eyjoHY1AjlFB-QMLRkpf282d8reQ_gSj32hWo-k/edit)
+- [Listas](https://docs.google.com/presentation/d/1CwoiceFgppt3yvQ5udZ4GjHmx9WY7ORTbUjNfC-asrs/edit)
