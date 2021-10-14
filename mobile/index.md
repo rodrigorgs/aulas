@@ -18,7 +18,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
   - (1,5) Workshop: parte teórica
   - (2,0) Workshop: desenvolvimento
   - (0,5) Exercício proposto (bem especificado, nível de dificuldade adequado)
-- (2,0) Resolução de exercícios de dois workshops
+- (2,0) Resolução de exercícios de **três** workshops
 
 <!--    
     * Exercício 1: Hello World
