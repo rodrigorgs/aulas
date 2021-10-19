@@ -17,3 +17,4 @@ layout: page
 - [Funções](https://docs.google.com/presentation/d/1WwM1eyjoHY1AjlFB-QMLRkpf282d8reQ_gSj32hWo-k/edit)
 - [Listas](https://docs.google.com/presentation/d/1CwoiceFgppt3yvQ5udZ4GjHmx9WY7ORTbUjNfC-asrs/edit)
 - [Strings](https://docs.google.com/presentation/d/189Y5hcDkxrv_O_MBbK816_ERWpE4hQMJIeLS3OFrNAQ/edit)
+- [Dicionários](https://docs.google.com/presentation/d/1nUkODdvlRfckESn8dOYoD-LUw8qMPGvX7H30NsnToos/edit)
