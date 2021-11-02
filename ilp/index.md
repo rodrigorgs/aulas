@@ -18,3 +18,6 @@ layout: page
 - [Listas](https://docs.google.com/presentation/d/1CwoiceFgppt3yvQ5udZ4GjHmx9WY7ORTbUjNfC-asrs/edit)
 - [Strings](https://docs.google.com/presentation/d/189Y5hcDkxrv_O_MBbK816_ERWpE4hQMJIeLS3OFrNAQ/edit)
 - [Dicionários](https://docs.google.com/presentation/d/1nUkODdvlRfckESn8dOYoD-LUw8qMPGvX7H30NsnToos/edit)
+- [Matrizes](https://docs.google.com/presentation/d/1uqPeYzrX8k_jQJSxAdn5zwnX4agrADUbwHzgZXJtbIo/edit)
+- [Ordenação](https://docs.google.com/presentation/d/1iLvHy1G085masAq-_qO2Ml4hMOSCcYEmruCf_gW2U_Y/edit)
+- [Busca binária](https://docs.google.com/presentation/d/1BEviB3aF6jBwchBOq7UxBt13fbA1NxWcFFUvUpPTZAo/edit)
