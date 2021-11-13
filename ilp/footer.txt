@@ -1,2 +1,2 @@
 
-.footnote[Introdução à Lógica de Programação / Processamento de Dados<br><br>Instituto de Computação<br>Universidade Federal da Bahia]
+.footnote[Introdução à Lógica de Programação / Processamento de Dados<br><br>Rodrigo Rocha &lt; rodrigorgs@ufba.br &gt;<br>Instituto de Computação<br>Universidade Federal da Bahia]
