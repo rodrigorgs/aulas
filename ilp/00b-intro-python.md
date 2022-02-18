@@ -136,5 +136,6 @@ Você pode usar o IDLE para desenvolver qualquer programa em Python, mas program
 
 - Nilo Menezes. **Introdução à Programação com Python** (2ª ed.). Novatec Editora.
 - Allen B. Downey. **Pense em Python** (2ª ed.). Disponível em <https://penseallen.github.io/PensePython2e/>
+- Allen B. Downey. **Pense em Python** (3ª ed.). Disponível em <https://panda.ime.usp.br/pensepy/static/pensepy/>
 
 {:/}
