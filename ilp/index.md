@@ -2,8 +2,6 @@
 layout: page
 ---
 
-![](ilp-pd-logo.png)
-
 - Introdução
   - [Motivação](https://docs.google.com/presentation/d/1L70pAPrIstAOukWUIAEPKGXnzVXo46hV4m6BVAWkdnY/edit)
   - [Introdução à programação](00a-intro-programacao)
@@ -23,3 +21,6 @@ layout: page
 - [Matrizes](https://docs.google.com/presentation/d/1uqPeYzrX8k_jQJSxAdn5zwnX4agrADUbwHzgZXJtbIo/edit)
 - [Ordenação](https://docs.google.com/presentation/d/1iLvHy1G085masAq-_qO2Ml4hMOSCcYEmruCf_gW2U_Y/edit)
 - [Busca binária](https://docs.google.com/presentation/d/1BEviB3aF6jBwchBOq7UxBt13fbA1NxWcFFUvUpPTZAo/edit)
+
+![](ilp-pd-logo.png)
+
