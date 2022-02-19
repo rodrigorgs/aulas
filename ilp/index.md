@@ -2,6 +2,8 @@
 layout: page
 ---
 
+![](ilp-pd-logo.png)
+
 - Introdução
   - [Motivação](https://docs.google.com/presentation/d/1L70pAPrIstAOukWUIAEPKGXnzVXo46hV4m6BVAWkdnY/edit)
   - [Introdução à programação](00a-intro-programacao)
