@@ -1,34 +1,19 @@
 ---
 layout: page
-title: MATA55 - Programação orientada a objetos - 2021.1 - Turma 3
+title: MATA55 - Programação orientada a objetos - 2022.1
 ---
 
 # Informações básicas
 
-- Professor: Rodrigo Rocha <rodrigorgs@ufba.br>. 
-- Aulas online: <https://meet.google.com/fjf-mxoq-bjr>
-  - TER/QUI, 18:30 a 20:20.
-- Servidor Discord (comunicação): <https://discord.gg/w63SAdhmmX>
-- [Email de boas-vindas](email)
-
-# Avaliações
-
-- (peso 3,0, em grupo de até 6 pessoas) [Caracterização de outras linguagens OO](https://docs.google.com/spreadsheets/d/1QK-hHrSyV6qxwjwDCYapQABnT_kWhki01_vezf7Ts8k/edit#gid=0)
-- (peso 3,0, individual) Exercício incremental (biblioteca de interface gráfica)
-  - Cerca de 6 entregas ao longo do semestre
-- (peso 4,0, individual) Exercícios de fixação (implementação)
-
-# Observações
-
-- Nesta disciplina você precisará programar bastante.
-- Os exercícios não envolvem algoritmos complexos, mas demandam que você implemente código a partir de uma especificação, e em alguns casos você precisará entender e interagir com código pré-existente.
-- Muitos exercícios serão entregues através do [GitHub Classroom](https://classroom.github.com/classrooms/78943541-ufba-poo-2021-1). Conhecimento de Git pode ajudar, mas é opcional.
+- Professor: Rodrigo Rocha
+- Estagiário Docente: Diego Zabot
+- Demais informações: [apresentação da disciplina](https://docs.google.com/presentation/d/1EBSfuD0UsCaXW05dTPfUODOdev25t4khDll_4V1pAmo/edit?usp=sharing)
 
 # Política de honestidade
 
 Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
 
-# Notas de aula (atualizadas constantemente)
+# Notas de aula
 
 <!-- O código-fonte produzido durante as aulas se encontra aqui: -->
 
@@ -39,6 +24,12 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Criar animações para ilustrar troca de mensagens
 - Usar http://pythontutor.com/java.html#mode=edit ?
  -->
+
+## Slides principais
+
+<https://docs.google.com/presentation/d/1_Bk-M5lcncQYLzAQjL4i-Nys7dGZPBMEzU98HWRO6Ck/edit>
+
+## Material adicional
 
 | Categoria | Conteúdo                                                                           |
 |-----------|------------------------------------------------------------------------------------|
