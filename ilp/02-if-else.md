@@ -121,7 +121,7 @@ print(total)
 
 Escreva um programa que, dado o ano atual, o ano de nascimento da pessoa, e sabendo se ela já fez aniversário no ano atual, imprime a idade da pessoa.
 
-Entrada: ano atual, ano de nascimento, e a string S (se já fez aniversário no ano atual)
+Entrada: ano atual, ano de nascimento, e a string `S` (se já fez aniversário no ano atual) ou `N` (caso contrário).
 
 --
 
@@ -268,7 +268,7 @@ template: inverse
 
 # Expressões lógicas
 
-Dentro dos parênteses do if e do else-if devem-se escrever *expressões lógicas*, isto é, expressões que retornam *verdadeiro* (`True`) ou *falso* (`False`) -- tipo `bool` (booleano). Para isso, podemos usar *operadores relacionais* e *operadores lógicos*.
+As condições do `if` e do `else-if` são *expressões lógicas*, isto é, expressões que retornam *verdadeiro* (`True`) ou *falso* (`False`) -- tipo `bool` (booleano). Para isso, podemos usar *operadores relacionais* e *operadores lógicos*.
 
 ---
 
