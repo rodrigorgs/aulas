@@ -125,9 +125,27 @@ A classe `Collections` possui diversos métodos estáticos que implementa opera�
 
 ---
 
+# HashSet
+
+- Conjunto (não permite elementos duplicados)
+- A ordem dos elementos não é definida
+- Os objetos precisam implementar o método `int hashCode()`
+  - Otimização para determinar se um valor está em uma estrutura hash
+  - Se dois objetos são iguais, devem retornar o mesmo `hashCode`
+  - Se são diferentes, podem retornar o mesmo `hashCode` ou não
+
+---
+
 # HashMap
 
-Mostrar em aula
+- Estrutura chave-valor
+- Os objetos usados como chavem devem implementar `hashCode`
+
+```java
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Um", 1);
+Integer x = map.get("Um");
+```
 
 ---
 
