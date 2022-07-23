@@ -20,7 +20,9 @@ codigo inicial do editor
 
 ## Outras linguagens
 
-Adicione ao `textarea` a classe `lang-NOMEDALINGUAGEM`, ex.: `lang-scheme`, `lang-ruby`, `lang-cpp`.
+Adicione ao `textarea` a classe `lang-NOMEDALINGUAGEM`, ex.: `lang-scheme`, `lang-python`, `lang-cpp`.
+
+C++:
 
 <textarea class="code lang-cpp">
 #include &lt;iostream&gt;
@@ -31,6 +33,13 @@ int main() {
   cout &lt;&lt; "Alô mundo!" &lt;&lt; endl;
   return 0;
 }</textarea>
+
+Python:
+
+<textarea class="code lang-python">
+x = int(input())
+print("O dobro de", x, "é", x * 2)
+</textarea>
 
 ## Editor de código com resposta
 
