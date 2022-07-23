@@ -11,3 +11,4 @@ Espaço para demonstração das funcionalidades da plataforma de aulas.
 - [Provas](prova)
 - [Diagramas UML](uml)
 - [Slides](slides)
+- [Quiz](quiz)
