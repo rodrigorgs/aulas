@@ -287,7 +287,7 @@ b = a
 
 As variáveis `a` e `b` referenciam o mesmo objeto. Como objetos do tipo `int` são imutáveis, qualquer operação sobre a variável `b` não vai ter nenhum impacto sobre a variável `a`. Por exemplo, se fizermos `b = b + 1`, o objeto `1`, referenciado por `a`, vai se manter; um novo objeto, `2`, será criado, e `b` referenciará esse novo objeto.
 
-## Outros tipos
+### Outros tipos
 
 Como vimos, `list` é mutável. Outros tipos mutáveis incluem `dict` (dicionários) e `set` (conjuntos).
 
