@@ -1,36 +1,41 @@
-<script type="text/javascript" src="{{site.baseurl}}/lib/ramda/ramda.min.js"></script>
-
+{% if page.features == nil or page.features contains "code" %}
 <script src="{{site.baseurl}}/lib/codemirror/codemirror.js"></script>
-<link rel="stylesheet" href="{{site.baseurl}}/lib/codemirror/codemirror.css">
-<script src="{{site.baseurl}}/lib/codemirror/mode/javascript/javascript.js"></script>
-<script src="{{site.baseurl}}/lib/codemirror/mode/scheme/scheme.js"></script>
-<!-- <script src="https://repl.it/lib/api.js" type="text/javascript" charset="utf-8"></script> -->
-<script src="{{site.baseurl}}/lib/codemirror/mode/ruby/ruby.js"></script>
-<script src="{{site.baseurl}}/lib/codemirror/mode/clike/clike.js"></script>
-<script src="{{site.baseurl}}/lib/codemirror/mode/python/python.js"></script>
 <script src="{{site.baseurl}}/lib/codemirror/addon/edit/matchbrackets.js"></script>
-
+<link rel="stylesheet" href="{{site.baseurl}}/lib/codemirror/codemirror.css">
 <link rel="stylesheet" href="{{site.baseurl}}/lib/codemirror/addon/hint/show-hint.css">
 <link rel="stylesheet" href="{{site.baseurl}}/lib/codemirror/addon/lint/lint.css">
-
-<script src="{{site.baseurl}}/lib/biwascheme/biwascheme-0.6.6-min.js"></script>
-<script src="{{site.baseurl}}/lib/jscpp/JSCPP.es5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
-
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/editors-codemirror.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/triple-page.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-biwascheme.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "javascript" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/javascript/javascript.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/ramda/ramda.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-javascript.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "ruby" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/ruby/ruby.js"></script>
+<!-- <script src="https://repl.it/lib/api.js" type="text/javascript" charset="utf-8"></script> -->
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-ruby.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "scheme" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/scheme/scheme.js"></script>
+<script src="{{site.baseurl}}/lib/biwascheme/biwascheme-0.6.6-min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-biwascheme.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "cpp" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/clike/clike.js"></script>
+<script src="{{site.baseurl}}/lib/jscpp/JSCPP.es5.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-cpp.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "python" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/python/python.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-python.js"></script>
-
+{% endif %}
+{% if page.features == nil or page.features contains "uml" %}
+<script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "quiz" %}
 <script  src="{{site.baseurl}}/lib/quizdown/quizdown.js"></script>
 <script>quizdown.init();</script>
-
-<!-- 
-<script type="text/javascript" src="{{site.baseurl}}/lib/submissao/submissao.js"></script>
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/lib/submissao/submissao.css">
- -->
-
-<!-- <link rel="stylesheet" href="{{site.baseurl}}/lib/codemirror/addons/fullscreen.css"> -->
+{% endif %}

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   {% if layout.triple == true %}
     <link rel="stylesheet" href="{{ "/css/triple.css" | prepend: site.baseurl }}">
+    <script type="text/javascript" src="{{site.baseurl}}/lib/triple-page.js"></script>
   {% else %}
     <link rel="stylesheet" href="{{ "/css/page.css" | prepend: site.baseurl }}">
   {% endif %}
@@ -19,9 +20,6 @@
 
   <script type="text/javascript" src="{{site.baseurl}}/lib/jquery-ui/jquery-ui.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/lib/jquery-ui/jquery-ui.min.css">
-
-  <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
-  <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
 
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/lib/simple-hint/simple-hint.min.css">
 

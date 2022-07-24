@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Diagramas UML
+features: [uml]
 ---
 
 Diagramas UML podem ser adicionados com o [PlantUML](https://plantuml.com/). O código do PlantUML deve estar dentro de uma `div` com a classe `uml`. Exemplo:

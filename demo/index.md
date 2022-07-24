@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Demonstração
+features: []
 ---
 
 Espaço para demonstração das funcionalidades da plataforma de aulas.

@@ -2,6 +2,7 @@
 layout: page
 title:  "Início"
 date:   2016-07-06 16:40:00 -0300
+features: []
 ---
 
 Disciplinas ministradas pelo professor [Rodrigo Rocha](https://rodrigorgs.github.io/) na UFBA.

@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Quiz"
+features: [quiz]
 ---
 
 Ver <https://github.com/bonartm/quizdown-js/blob/main/docs/syntax.md>
