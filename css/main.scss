@@ -49,7 +49,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 800;
 }
-h1 { font-size: 42px; }
+.page-content h1 { font-size: 42px; }
+.page-content h2 { font-size: 40px; }
+.page-content h3 { font-size: 32px; }
+
 .page-content h2 {
   margin-top: 20px; 
   padding-top: 20px;
