@@ -47,13 +47,13 @@ $on-laptop:        800px;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 800;
 }
 h1 { font-size: 42px; }
-h2 {
+.page-content h2 {
   margin-top: 20px; 
   padding-top: 20px;
   border-top: 1px solid black;
-  font-weight: 900;
 }
 
 $cell-padding:  6px;
