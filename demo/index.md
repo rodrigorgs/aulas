@@ -13,3 +13,4 @@ Espaço para demonstração das funcionalidades da plataforma de aulas.
 - [Diagramas UML](uml)
 - [Slides](slides)
 - [Quiz](quiz)
+- [Tooltip](tooltip)

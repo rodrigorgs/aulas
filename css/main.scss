@@ -59,6 +59,16 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid black;
 }
 
+blockquote {
+  font-size: $base-font-size;
+  background: #F0F0F0;
+  font-style: normal !important;
+  padding: 30px;
+  margin: 30px;
+  border: 1px solid;
+  color: $text-color;
+}
+
 $cell-padding:  6px;
 $border-color:  darkgray;
 
@@ -73,4 +83,33 @@ div.CodeMirror span.CodeMirror-matchingbracket {
 
 .testcases {
   display: none;
+}
+
+/////////////
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
