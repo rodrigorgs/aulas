@@ -255,3 +255,7 @@ print("A situação é", situacao)
   - `preco_com_desconto(preco_produto, desconto)`
   - `preco_com_frete(preco, valor_frete)`
   - `preco_final(preco_produto, desconto, valor_frete)`
+
+## Revisão
+
+Consulte [este glossário](https://mange.ifrn.edu.br/python/aprenda-com-py3/capitulo_03.html#glossario).
