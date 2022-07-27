@@ -46,3 +46,20 @@ cria_janela(
   flutuante=True,
   transparente=False)
 ```
+
+## Docstring
+
+Docstring é uma string que aparece como primeira instrução em uma função, e serve para documentá-la. Essa string pode ser acessada através do atributo especial `__doc__`. Exemplo:
+
+<textarea class="code lang-python">
+function soma(a, b):
+  """
+  Soma dois números, a e b.
+  Retorna um número, que é a soma dos dois números.
+  """
+  return a + b
+
+print(soma.__doc__)
+</textarea>
+
+Docstrings também são usadas por ferramentas como [pydoc](https://docs.python.org/pt-br/3/library/pydoc.html) para gerar um documento com a lista de funções de um programa e suas respectivas documentações.

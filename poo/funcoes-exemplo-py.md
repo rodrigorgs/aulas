@@ -6,7 +6,7 @@ features: [code, python, uml]
 
 ## Um sistema acadêmico
 
-Imagine que queremos criar um sistema acadêmico segundo a seguinte especificação:
+Imagine que queremos criar um sistema acadêmico segundo a seguinte **especificação**:
 
 > O sistema permite **cadastrar no histórico do aluno as disciplinas cursadas e suas notas**, **imprimir o histórico** de um aluno (com listas de disciplinas e notas, bem como média geral), bem como **indicar se o aluno pode se formar**. O diploma só deve ser concedido a alunos com média geral igual ou superior a 5.0, e que tenham obtido na disciplina TCC nota igual ou superior a 7.0. Uma disciplina pode ser cursada várias vezes.
 
@@ -113,6 +113,8 @@ def imprimir_media_geral(historico):
   media = calcular_media_geral(historico)
   print("Média geral:", media)
 ```
+
+> Re-escrever parte de um programa para torná-lo mais fácil de entender ou modificar sem, no entanto, mudar o que o programa faz é chamado de **refatoração**
 
 Agora só falta definir `calcular_maior_nota`:
 
