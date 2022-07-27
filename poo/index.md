@@ -22,14 +22,17 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - [Revendo Python sob o ponto de vista da programação orientada a objetos](intro-objetos-py): objetos, referências, identidade, mutabilidade
   - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
 - Programação procedural (programa construído a partir de funções)
-  - [Funções](intro-funcoes-py.md): parâmetros, retorno, funções tagarelas
+  - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default* e argumentos nomeados
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
 
 **Parte 2: programação orientada a objetos**
 
+- [Projeto orientado a objetos](projeto-oo)
 - [Usando objetos](usando-objetos): objetos, atributos, métodos
+- [Definindo classes](definindo-classes)
+- [Construindo um programa OO a partir de uma especificação](exemplo-classes)
 
 **Material complementar**
 

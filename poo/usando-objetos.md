@@ -4,7 +4,7 @@ title: Usando objetos
 features: [code, python, uml]
 ---
 
-## Usando objetos
+## Atributos e métodos
 
 Vimos anteriormente que, em Python, variáveis referenciam objetos. Isso significa que números, strings e listas são objetos, dentre outros. Vimos também que todo objeto é de um tipo (ex.: `int`, `string`, `list`).
 
@@ -98,9 +98,3 @@ Por exemplo, o código do método `__add__` do tipo `int` realiza uma soma; já 
 
 > Objetos contém outros objetos, através de **atributos**, e podem ser manipulados através de **métodos**. Em Python, tudo são objetos, e toda interação com objetos se dá através de chamada de **métodos** e <span class="tooltip">acesso a atributos<span class="tooltiptext">Tecnicamente, acesso a atributos é feito através da chamada de métodos especiais como __getattribute__ e __setattr__</span></span>. Até mesmo operadores, como `+` e `==`, são traduzidos em chamadas de métodos.
 
-## Pensando com objetos
-
-Tradicionalmente, pensamos em verbos (o que a aplicação faz)
-Com objetos, pensamos primeiro nos substantivos (com o que estamos lidando), para depois pensarmos o que os substativos fazem
-
-Aluno possui Historico, que possui Itens, que possui Disciplina e nota.
