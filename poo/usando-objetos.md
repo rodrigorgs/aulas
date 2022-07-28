@@ -75,7 +75,7 @@ print(x.__add__(y))
 
 Seguem alguns operadores e métodos especiais correspondentes:
 
-| Expressão | Equivalente com métodos  |
+| Expressão | Chamada de método equivalente |
 |-----------|--------------------------|
 | `x + y`   | `x.__add__(y)`           |
 | `x - y`   | `x.__sub__(y)`           |
@@ -94,7 +94,7 @@ Por exemplo, o código do método `__add__` do tipo `int` realiza uma soma; já 
   - atributos (variáveis que pertencem a um objeto)
   - métodos (funções que pertencem a um objeto)
 - Para acessar atributos e métodos, usa-se a dot notation
-- Até operadores como + são métodos. Ex.: (1).__add__(2)
+- Até operadores como + são métodos. Ex.: `(1).__add__(2)`
 
-> Objetos contém outros objetos, através de **atributos**, e podem ser manipulados através de **métodos**. Em Python, tudo são objetos, e toda interação com objetos se dá através de chamada de **métodos** e <span class="tooltip">acesso a atributos<span class="tooltiptext">Tecnicamente, acesso a atributos é feito através da chamada de métodos especiais como __getattribute__ e __setattr__</span></span>. Até mesmo operadores, como `+` e `==`, são traduzidos em chamadas de métodos.
+> Objetos contém outros objetos, através de **atributos**, e podem ser manipulados através de **métodos**. Em Python, tudo são objetos, e toda interação com objetos se dá através de chamada de **métodos** e <span class="tooltip">acesso a atributos<span class="tooltiptext">Tecnicamente, o acesso a atributos é feito através da chamada de métodos especiais como __getattribute__ e __setattr__</span></span>. Até mesmo operadores, como `+` e `==`, são traduzidos em chamadas de métodos.
 

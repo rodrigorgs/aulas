@@ -29,6 +29,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 **Parte 2: programação orientada a objetos**
 
+- Importância: as principais linguagens de programação são orientadas a objetos. Ver ranking do [TIOBE](https://www.tiobe.com/tiobe-index/) e [PYPL](https://pypl.github.io/PYPL.html)
 - [Projeto orientado a objetos](projeto-oo)
 - [Usando objetos](usando-objetos): objetos, atributos, métodos
 - [Definindo classes](definindo-classes)
