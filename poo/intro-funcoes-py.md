@@ -4,13 +4,13 @@ title: Funções em Python
 features: [code, python, uml]
 ---
 
-## Um programa simples!
+## Um programa simples
 
 Com o objetivo de resolver um problema, um **algoritmo** recebe um conjunto de **entradas** e produz uma **saída**.
 
 O programa abaixo implementa um algoritmo para calcular a média de um conjunto de notas:
 
-```python
+<textarea class="code lang-python">
 notas = input("Digite as notas (separadas por espaços): ").split()
 notas = [float(x) for x in notas]
 
@@ -20,7 +20,7 @@ for nota in notas:
 media /= len(notas)
 
 print("A média geral é", media)
-```
+</textarea>
 
 Neste programa, temos:
 
