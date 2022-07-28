@@ -15,11 +15,12 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 **Introdução: paradigmas de linguagens de programação e programação orientada a objetos**
 
-<https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit>
+- [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
 
 **Parte 1: revisão e aprofundamento sobre a linguagem Python e funções**
 
-- [Revendo Python sob o ponto de vista da programação orientada a objetos](intro-objetos-py): objetos, referências, identidade, mutabilidade
+- Revendo Python sob o ponto de vista da programação orientada a objetos: 
+  - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
   - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
 - Programação procedural (programa construído a partir de funções)
   - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas

@@ -27,8 +27,7 @@ Eis alguns exemplos de objetos em Python:
 
 - A string `"Alô"`
 - O número `3.14`
-- A lista `[1, 2, 3]`
-  - Os elementos de uma lista também são objetos
+- A lista `[1, 2, 3]` (os elementos de uma lista também são objetos)
 
 
 <div class="quizdown">
@@ -140,7 +139,7 @@ Operações iniciadas por `__` são especiais; por exemplo:
 - `__add__` significa adição usando o operador `+`
 - `__gt__` significa comparação com o operador `>` (em inglês, *greater than*).
 
-> Você pode verificar que objetos do tipo `int` possuem a operação `__sub__` (subtração com `-`), enquanto objetos do tipo `list` não possuem essa operação.
+Você pode verificar que objetos do tipo `int` possuem a operação `__sub__` (subtração com `-`), enquanto objetos do tipo `list` não possuem essa operação.
 
 ## Todo objeto tem uma identidade
 
@@ -148,7 +147,7 @@ Digamos que você e seu amigo são donos de uma **mesma** barra de chocolate. Se
 
 Se, por outro lado, você e seu amigo possuem barras de chocolate **iguais** (mas não a mesma), você pode comer seu chocolate sem prejudicar seu amigo.
 
-Cada pessoa possui um número de CPF, que a identifica unicamente na população. Gêmeos idênticos, mesmo que sejam iguais em tudo, possuem CPFs diferentes. São **iguais**, mas não são a **mesma** pessoa.
+Outro exemplo: cada pessoa possui um número de CPF, que a identifica unicamente na população. Gêmeos idênticos, mesmo que sejam iguais em tudo, possuem CPFs diferentes. São **iguais**, mas não são a **mesma** pessoa.
 
 Da mesma forma, **cada objeto possui uma identidade**.
 
@@ -221,6 +220,8 @@ print(x is y)
 
 Por que é importante saber se duas variáveis referenciam o mesmo objeto? Essa informação pode ser importante quando estamos **modificando** um objeto.
 
+Por exemplo, se as variáveis `v1` e `v2` referenciam o mesmo objeto, isso significa que podemos modificar o objeto referenciado `v1` sem manipular a variável `v1`, o que pode causar surpresas.
+
 Considere o quiz a seguir:
 
 <div class="quizdown">
@@ -292,5 +293,4 @@ As variáveis `a` e `b` referenciam o mesmo objeto. Como objetos do tipo `int` s
 Como vimos, `list` é mutável. Outros tipos mutáveis incluem `dict` (dicionários) e `set` (conjuntos).
 
 Como vimos, `int` é imutável. Outros tipos imutáveis incluem `float` (número decimal), `str` (strings), `bool` (booleano), e `tuple` (tuplas).
-
 

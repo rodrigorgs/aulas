@@ -52,7 +52,7 @@ cria_janela(
 Docstring é uma string que aparece como primeira instrução em uma função, e serve para documentá-la. Essa string pode ser acessada através do atributo especial `__doc__`. Exemplo:
 
 <textarea class="code lang-python">
-function soma(a, b):
+def soma(a, b):
   """
   Soma dois números, a e b.
   Retorna um número, que é a soma dos dois números.

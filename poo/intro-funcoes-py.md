@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Funções em Python
-features: [code, python]
+features: [code, python, uml]
 ---
 
 ## Um programa simples!
