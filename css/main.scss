@@ -89,6 +89,12 @@ div.CodeMirror span.CodeMirror-matchingbracket {
 
 .CodeMirror {
   border: 1px solid darkgray;
+  // resize: vertical;
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  max-height: 25em;
 }
 
 .stdout, .stdin {
