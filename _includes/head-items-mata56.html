@@ -39,3 +39,7 @@
 <script  src="{{site.baseurl}}/lib/quizdown/quizdown.js"></script>
 <script>quizdown.init();</script>
 {% endif %}
+
+{% if page.features == nil or page.features contains "code" %}
+<script type="text/javascript" src="{{site.baseurl}}/lib/submissao/submissao2.js"></script>
+{% endif %}
