@@ -1,0 +1,50 @@
+---
+layout: page
+title:  "Survey"
+features: [survey]
+---
+
+<div id="regular">
+  <button onclick="submitClickerAnswer('A');">A</button><br>
+  <button onclick="submitClickerAnswer('B');">B</button><br>
+  <button onclick="submitClickerAnswer('C');">C</button><br>
+  <button onclick="submitClickerAnswer('D');">D</button><br>
+  <button onclick="submitClickerAnswer('E');">E</button><br>
+  <button onclick="submitClickerAnswer('F');">F</button><br>
+</div>
+
+<script>
+  function submitClickerAnswer(value) {
+    console.log(value);
+    postSubmit({question_type: "clicker", submition_type: "single", answer: value})
+      .done(() => alert("Resposta enviada."))
+      .fail(() => alert("Erro ao enviar resposta."));
+  }
+</script>
+
+<div id="admin">
+  <br>
+  <button onclick="closeCurrent();">Close current</button><br>
+  <button onclick="openNext();">Open next</button><br>
+</div>
+
+<script>
+  function closeCurrent() {
+    postSubmit({question_type: "control", answer: "close"})
+      .done(() => alert("OK.")).fail(() => alert("Erro."));
+  }
+  function openNext() {
+    postSubmit({question_type: "control", answer: "open"})
+      .done(() => alert("OK.")).fail(() => alert("Erro."));
+  }
+</script>
+
+<script>
+  if (submissionSession.isAdmin()) {
+    document.getElementById("admin").style.display = "block";
+    document.getElementById("regular").style.display = "none";
+  } else {
+    document.getElementById("admin").style.display = "none";
+    document.getElementById("regular").style.display = "block";
+  }
+</script>
