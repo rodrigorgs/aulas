@@ -23,6 +23,7 @@ features: [survey]
 </script>
 
 <div id="admin">
+  <div id="answers"></div>
   <br>
   <button onclick="closeCurrent();">Close current</button><br>
   <button onclick="openNext();">Open next</button><br>
@@ -37,12 +38,28 @@ features: [survey]
     postSubmit({question_type: "control", answer: "open"})
       .done(() => alert("OK.")).fail(() => alert("Erro."));
   }
+  function updateAnswers() {
+    const elem = document.getElementById("answers");
+    postSubmit({}, "get-answer-count.php")
+      .done((data) => {
+        // console.log(data);
+        data = JSON.parse(data);
+        let s = "";
+        for (let item of data) {
+          s += `${item.answer}: ${"#".repeat(item.count)}<br>`;
+        }
+        elem.innerHTML = s;
+      })
+      .fail(() => alert("Erro."));
+  }
 </script>
 
 <script>
   if (submissionSession.isAdmin()) {
     document.getElementById("admin").style.display = "block";
     document.getElementById("regular").style.display = "none";
+
+    updateAnswers();
   } else {
     document.getElementById("admin").style.display = "none";
     document.getElementById("regular").style.display = "block";
