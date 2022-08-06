@@ -1,48 +1,48 @@
 ---
 layout: page
-title:  "Survey"
-features: [survey]
+title:  "ABC"
+features: [clicker]
 ---
 
 <div id="regular">
-  <button onclick="submitClickerAnswer('A');">A</button><br>
-  <button onclick="submitClickerAnswer('B');">B</button><br>
-  <button onclick="submitClickerAnswer('C');">C</button><br>
-  <button onclick="submitClickerAnswer('D');">D</button><br>
-  <button onclick="submitClickerAnswer('E');">E</button><br>
-  <button onclick="submitClickerAnswer('F');">F</button><br>
+  <button class="clicker" onclick="submitClickerAnswer('A');">A</button>
+  <button class="clicker" onclick="submitClickerAnswer('B');">B</button>
+  <button class="clicker" onclick="submitClickerAnswer('C');">C</button>
+  <button class="clicker" onclick="submitClickerAnswer('D');">D</button>
+  <button class="clicker" onclick="submitClickerAnswer('E');">E</button>
+  <button class="clicker" onclick="submitClickerAnswer('F');">F</button>
 </div>
 
 <script>
   function submitClickerAnswer(value) {
-    console.log(value);
     postSubmit({question_type: "clicker", submition_type: "single", answer: value})
       .done(() => alert("Resposta enviada."))
-      .fail(() => alert("Erro ao enviar resposta."));
+      .fail((xhr) => {
+        alert("Erro ao enviar resposta. " + xhr.responseText);
+      });
   }
 </script>
 
 <div id="admin">
   <div id="answers"></div>
   <br>
-  <button onclick="closeCurrent();">Close current</button><br>
-  <button onclick="openNext();">Open next</button><br>
+  <button class="go" onclick="closeCurrent();">Close current</button> 
+  <button class="go" onclick="openNext();">Open next</button><br>
 </div>
 
 <script>
   function closeCurrent() {
     postSubmit({question_type: "control", answer: "close"})
-      .done(() => alert("OK.")).fail(() => alert("Erro."));
+      .done(() => alert("OK.")).fail((xhr) => alert("Erro. " + xhr.responseText));
   }
   function openNext() {
     postSubmit({question_type: "control", answer: "open"})
-      .done(() => alert("OK.")).fail(() => alert("Erro."));
+    .done(() => alert("OK.")).fail((xhr) => alert("Erro. " + xhr.responseText));
   }
   function updateAnswers() {
     const elem = document.getElementById("answers");
     postSubmit({}, "get-answer-count.php")
       .done((data) => {
-        // console.log(data);
         data = JSON.parse(data);
         let s = "";
         for (let item of data) {
@@ -50,7 +50,7 @@ features: [survey]
         }
         elem.innerHTML = s;
       })
-      .fail(() => alert("Erro."));
+      .fail((xhr) => alert("Erro. " + xhr.responseText));
   }
 </script>
 
@@ -65,3 +65,8 @@ features: [survey]
     document.getElementById("regular").style.display = "block";
   }
 </script>
+
+<div>
+  <br>
+  Esta página está disponível em <a href="https://a.ufba.br/abc">a.ufba.br/abc</a>.
+</div>
