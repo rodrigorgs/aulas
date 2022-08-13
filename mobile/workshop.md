@@ -7,6 +7,8 @@ title: Workshop sobre desenvolvimento para dispositivos móveis
 
 - Flutter
 - React Native
+- Jetpack Compose
+- SwiftUI
 - Vue Native
 - NativeScript
 - Xamarin

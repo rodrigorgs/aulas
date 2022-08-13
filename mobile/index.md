@@ -7,18 +7,21 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 
 - Site: [v.ht/matc89](http://v.ht/matc89)
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
+- Aulas:
+  - QUA, 18:30, sala 210 do PAF I
+  - SEX, 18:30, lab 143 do IME I
 
 **Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis.
 
 # Avaliações
 
-- (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android) (em duplas)
-- (5,0) [Workshop de tecnologia de desenvolvimento mobile](workshop) (em equipes de 4 pessoas)
+- (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android) (individual)
+- (5,0) [Workshop de tecnologia de desenvolvimento mobile](workshop) (em equipes de até 6 pessoas, a partir de 16/11)
   - (1,0) Guia de configuração
   - (1,5) Workshop: parte teórica
   - (2,0) Workshop: desenvolvimento
   - (0,5) Exercício proposto (bem especificado, nível de dificuldade adequado)
-- (2,0) Resolução de exercícios de **três** workshops
+- (2,0) Resolução de exercícios de **dois** workshops (mesmas equipes do workshop)
 
 <!--    
     * Exercício 1: Hello World

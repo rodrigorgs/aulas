@@ -5,7 +5,17 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 ## Informações básicas
 
-- Professor: Rodrigo Rocha
+- Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
+- Monitor: Caio Miranda <caiomp@ufba.br>
+- Aulas:
+  - SEG, 13:00, lab 143 do IME
+  - QUA, 13:00, sala 108 do PAF I
+
+## Avaliações
+
+- [4,0] Pequenos exercícios de código em Python (individual)
+- [3,0] Projeto em Python (em equipe)
+- [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
 
 ## Política de honestidade
 
