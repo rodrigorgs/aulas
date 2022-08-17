@@ -13,8 +13,8 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 ## Avaliações
 
-- [4,0] Pequenos exercícios de código em Python (individual)
-- [3,0] Projeto em Python (em equipe)
+- [3,0] Pequenos exercícios de código em Python (individual)
+- [4,0] Projeto em Python (em equipe)
 - [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
 
 ## Política de honestidade
@@ -29,9 +29,11 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 **Parte 1: revisão e aprofundamento sobre a linguagem Python e funções**
 
+- Introdução a Python
+  - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
+  - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
-  - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
 - Programação procedural (programa construído a partir de funções)
   - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
