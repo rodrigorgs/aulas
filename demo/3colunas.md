@@ -1,6 +1,7 @@
 ---
 layout: triple-page
 title: Demonstração
+features: [code,javascript]
 ---
 
 ## Página com o triple-page

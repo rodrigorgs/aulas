@@ -7,13 +7,15 @@
 @import "minima";
 
 $footer-height:    30px;
+$header-height:    54px;
+$button-height:    36px;
 
 body {
     margin: 0;
 }
 .pagina {
   position: fixed;
-  top: 0;
+  top: $header-height;
   left: 0;
   margin: 0;
 }
@@ -30,25 +32,26 @@ $column-padding: 10px;
     left: 0;
     padding: #{$column-padding};
     width: calc(25.0% - #{$column-padding * 2});
-    height: calc(100vh - #{$footer-height} - #{$column-padding * 2});
+    height: calc(100vh - #{$footer-height} - #{$header-height} - #{$column-padding * 2});
+    overflow-y: scroll;
 }
 .pagina-codigo {
     left: 25.0%;
     padding: 0;
     width: 50.0%;
-    height: calc(100vh - #{$footer-height});
+    height: calc(100vh - #{$footer-height} - #{$header-height});
 }
 
 .pagina-console {
     left: 75.0%;
     padding: 0;
     width: 25.0%;
-    height: calc(100vh - #{$footer-height});
+    height: calc(100vh - #{$footer-height} - #{$header-height});
 }
 
 .stdin, .stdout {
     width: 100% !important; 
-    height: calc(.5 * (100vh - #{$footer-height} - #{$column-padding * 3} - 25px));
+    height: calc(.5 * (100vh - #{$footer-height} - #{$header-height} - #{$column-padding * 3} - 25px)) !important;
 }
 
 .testcases {
@@ -86,10 +89,11 @@ $column-padding: 10px;
 
 .cm-s-default {
     // position: absolute;
-    height: calc(100vh - #{$footer-height} - 30px) !important;
+    height: calc(100vh - #{$footer-height} - #{$header-height} - #{$button-height}) !important;
 }
 
-// .CodeMirror-scroll{
-//     height: calc(100vh - #{$footer-height}) !important;
-// }
+.CodeMirror-scroll{
+    max-height: calc(100vh - #{$footer-height} - #{$header-height} - #{$button-height}) !important;
+    height: calc(100vh - #{$footer-height} - #{$header-height} - #{$button-height}) !important;
+}
 

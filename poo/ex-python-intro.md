@@ -1,16 +1,26 @@
 ---
-layout: page
+layout: triple-page
 title: Exercícios em Python
 features: [code, python]
 ---
 
 ## Introdução
 
-Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo não serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos por um programa Python que usa `assert`s para testar se a saída está correta. Fique à vontade para criar mais `assert`s.
+Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo **não** serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos dentro do próprio programa, com instruções `assert` para testar se a saída está correta.
+
+Clique no botão **Avançar** para visualizar o primeiro exercício.
 
 ## Retângulo
 
 Crie uma função que recebe como medidas a base e altura de um retângulo e retorna a sua área.
+
+Clique em **Rodar** para executar seu código.
+
+Se houver algum erro, ele aparecerá no painel à direita. Caso contrário, a saída do seu programa será vazia.
+
+Se quiser visualizar o retorno da função, adicione instruções `print` no final do programa.
+
+Fique à vontade para criar mais testes usando a instrução `assert`.
 
 <textarea class="code lang-python">
 def calcula_area(base, altura):
@@ -45,10 +55,14 @@ Crie uma função que classifique uma pessoa em uma das seguintes categorias, de
 def faixa_etaria(idade):
   return "bebê"
 
+assert faixa_etaria(0) == "bebê"
 assert faixa_etaria(1) == "bebê"
-assert faixa_etaria(5) == "criança"
-assert faixa_etaria(15) == "adolescente"
-assert faixa_etaria(25) == "adulta"
+assert faixa_etaria(2) == "criança"
+assert faixa_etaria(11) == "criança"
+assert faixa_etaria(12) == "adolescente"
+assert faixa_etaria(17) == "adolescente"
+assert faixa_etaria(18) == "adulta"
+assert faixa_etaria(81) == "adulta"
 </textarea>
 
 ## Linha de caracteres

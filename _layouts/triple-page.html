@@ -13,11 +13,19 @@ triple: true
             document.triplePage = true;
         </script>
 
+        <div class="painel">
+            <input type="button" class="btn-back" id="volta" value="Retroceder"/>
+            <input type="button" class="btn-fwd" id="avanca" value="Avançar"/>
+            <input type="button" id="expandeEditor" value="Expandir editor"/>
+        </div>
+        
+        {% include header.html %}
+
+
+
         <div class=postpost-content">
             {{ content }}
         </div>
-
-        <script type="text/javascript" src="{{site.baseurl}}/lib/submissao/submissao.js"></script>
     </body>
 
 </html>
