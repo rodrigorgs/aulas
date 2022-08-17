@@ -32,6 +32,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
+  - [Exercícios de Python básico](ex-python-intro)
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
 - Programação procedural (programa construído a partir de funções)
