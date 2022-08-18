@@ -94,7 +94,8 @@ digraph G {
 @enddot
 </div>
 
-Dica: você pode visualizar as variáveis e objetos de qualquer programa Python no site [Python Tutor](https://pythontutor.com/). Para uma visualização mais próxima desta que apresentamos aqui, escolha as opções "render all objects on the heap" ao editar o código.
+> Dica: você pode visualizar as variáveis e objetos de qualquer programa Python no site [Python Tutor](https://pythontutor.com/). Para uma visualização mais próxima desta que apresentamos aqui, escolha a opção "render all objects on the heap" ao editar o código.
+
 ## Todo objeto é de um tipo
 
 O **tipo** de um objeto determina...

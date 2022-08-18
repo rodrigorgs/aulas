@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
+title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
 ---
 
 # Informações básicas
@@ -9,7 +9,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
 - Aulas:
   - QUA, 18:30, sala 210 do PAF I
-  - SEX, 18:30, lab 143 do IME I
+  - SEX, 18:30, lab 143 do IME
 
 **Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis.
 
@@ -71,6 +71,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2021.2
 - [10 Engineering Challenges Due to the Nature of Mobile Applications](https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/)
 - [Sistemas e dispositivos móveis nas universidades públicas: desafios e oportunidades](https://docs.google.com/document/d/1xkv2en13stqj3EnCGcdv29qvAT2dRk5YT1vJ85UrrVg/edit#)
 - gov.uk Service Manual: [Making sure your service works well on mobile](https://www.gov.uk/service-manual/technology/working-with-mobile-technology) e [We're not ‘appy. Not ‘appy at all.](https://gds.blog.gov.uk/2013/03/12/were-not-appy-not-appy-at-all/)
+- [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
 
 # Referências
 

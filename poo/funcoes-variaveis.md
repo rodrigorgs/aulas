@@ -153,8 +153,6 @@ def valor_final(preco, desconto):
   return preco * multiplicador
 ```
 
-</textarea>
-
 ## Reatribuição de parâmetros
 
 Considere o seguinte código:
