@@ -239,6 +239,7 @@ situacao = determina_situacao(notas_finais, 5.0)
 print("A situação é", situacao)
 </textarea>
 
+<!-- 
 ## Exercícios
 
 - Crie uma função `imc(peso, altura)`, que calcula o índice de massa corporal de uma pessoa
@@ -255,6 +256,7 @@ print("A situação é", situacao)
   - `preco_com_desconto(preco_produto, desconto)`
   - `preco_com_frete(preco, valor_frete)`
   - `preco_final(preco_produto, desconto, valor_frete)`
+-->
 
 ## Revisão
 

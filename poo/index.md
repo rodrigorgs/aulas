@@ -13,8 +13,8 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 ## Avaliações
 
-- [3,0] Pequenos exercícios de código em Python (individual)
-- [4,0] Projeto em Python (em equipe)
+- [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados **em negrito** nesta página
+- [4,0] Projeto em Python (em equipe) - [sopa de letrinhas](sopa-de-letrinhas) usando a biblioteca [Pyglet](pyglet)
 - [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
 
 ## Política de honestidade
@@ -32,14 +32,18 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
-  - [Exercícios de Python básico](ex-python-intro)
+  - **[Exercícios de Python básico](ex-python-intro)**
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
 - Programação procedural (programa construído a partir de funções)
   - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default* e argumentos nomeados
+  - **[Exercícios de funções em Python](ex-python-funcoes)**
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
+- Outros tópicos em Python
+  - Manipulando arquivos
+  - Módulos e pacotes. `import`, `__init.py__`, `__name__ == __main__`
 
 **Parte 2: programação orientada a objetos**
 

@@ -1,6 +1,6 @@
 ---
-layout: page
-# title: Classes em Python
+layout: triple-page
+title: "Exercícios: classes em Python"
 features: [code, python]
 ---
 
