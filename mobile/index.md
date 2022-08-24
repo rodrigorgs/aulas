@@ -73,15 +73,12 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
 - gov.uk Service Manual: [Making sure your service works well on mobile](https://www.gov.uk/service-manual/technology/working-with-mobile-technology) e [We're not ‘appy. Not ‘appy at all.](https://gds.blog.gov.uk/2013/03/12/were-not-appy-not-appy-at-all/)
 - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
 
-# Referências
+# Bibliografia e referências
 
-Em português:
+- GRIFFITHS, Dawn; GRIFFITHS, David. Use a cabeça!: desenvolvendo para Android. Alta Books; 2ª edição, 2019.
+- GARDNER, Lyza Danger; GRIGSBY, Jason. Use a cabeça! Mobile Web. Alta Books; 1ª edição, 2013.
 
-- [K19 - Desenvolvimento Mobile com Android](http://www.stratura.com.br/uploads/fgfgdfgsdfg_1354214000.pdf)
-- [Marlon Carvalho - Curso de Android](https://github.com/marloncarvalho/curso-android)
-- Notas de aula (ver abaixo)
-
-Em inglês:
+Referências em inglês:
 
 - [Android Developers](https://developer.android.com/?hl=pt-br) (oficial)
 - [Vogella - Android Development](http://www.vogella.com/android.html)
