@@ -54,6 +54,12 @@ assert media_justa([6]) == 0
 assert media_justa([12, 18]) == 12
 assert media_justa([1, 3, 5]) == 2
 
+# a lista não deve ser modificada
+l = [1, 3, 5]
+lcopy = l.copy()
+media_justa(l)
+assert l == lcopy
+
 from unittest.mock import MagicMock
 maior = MagicMock(return_value=5)
 assert media_justa([5, 10]) == 10
