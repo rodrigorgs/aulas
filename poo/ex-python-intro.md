@@ -89,6 +89,7 @@ def retangulo(c, base, altura):
   s += "****"
   return s
 
+### Testes
 assert retangulo("*", 4, 2) == "****\n****\n"
 assert retangulo("#", 5, 1) == "#####\n"
 </textarea>
@@ -101,6 +102,7 @@ Crie uma função que recebe um número inteiro, `N` e retorna uma lista com tod
 def sequencia(n):
   return []
 
+### Testes
 assert sequencia(3) == [1, 2, 3]
 assert sequencia(1) == [1]
 assert sequencia(-1) == []
@@ -115,6 +117,7 @@ def produtorio(lista):
   resultado = 1
   return resultado
 
+### Testes
 assert produtorio([]) == 1
 assert produtorio([1, 2, 3]) == 6
 assert produtorio([1, 0, 3]) == 0
