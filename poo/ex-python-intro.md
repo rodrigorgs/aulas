@@ -90,8 +90,8 @@ def retangulo(c, base, altura):
   return s
 
 ### Testes
-assert retangulo("*", 4, 2) == "****\n****\n"
-assert retangulo("#", 5, 1) == "#####\n"
+assert retangulo("*", 4, 2).strip() == "****\n****"
+assert retangulo("#", 5, 1).strip() == "#####"
 </textarea>
 
 ## Lista sequencial
