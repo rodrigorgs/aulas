@@ -42,8 +42,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - **[Exercícios de funções em Python](ex-python-funcoes)**
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
 - Outros tópicos em Python
+  - [Módulos e pacotes](python-modules)
   - Manipulando arquivos
-  - Módulos e pacotes. `import`, `__init.py__`, `__name__ == __main__`
 
 **Parte 2: programação orientada a objetos**
 
