@@ -1,5 +1,5 @@
 ---
-layout: triple-page
+layout: page
 title: "Módulos em Python"
 features: [quiz]
 ---
@@ -70,7 +70,3 @@ Um módulo pode importar outros módulos usando caminhos relativos usando uma da
 
 - `from .modulo import nomes`: importa módulo no mesmo diretório
 - `from ..modulo import nomes`: importa módulo no diretório pai
-
-
-
-
