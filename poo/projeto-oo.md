@@ -199,6 +199,8 @@ Crie um diagrama de classes para a seguinte especificação:
 - Árvore genealógica
 - Programa de ilustração com formas geométricas
 - Agenda telefônica (contatos)
+- Conta bancária
+- Televisão
 - Aplicativo de transporte individual (ex.: Uber, 99)
 - Aplicativo de delivery de comida (ex.: iFood, Uber Eats)
 - Rede social (ex.: Instagram, TikTok)

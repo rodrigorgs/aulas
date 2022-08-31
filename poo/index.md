@@ -45,13 +45,30 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - [Módulos e pacotes](python-modules)
   - Manipulando arquivos
 
-**Parte 2: programação orientada a objetos**
+**Parte 2: programação orientada a objetos com Python**
 
 - Importância: as principais linguagens de programação são orientadas a objetos. Ver ranking do [TIOBE](https://www.tiobe.com/tiobe-index/) e [PYPL](https://pypl.github.io/PYPL.html)
-- [Projeto orientado a objetos](projeto-oo)
-- [Usando objetos](usando-objetos): objetos, atributos, métodos
-- [Definindo classes](definindo-classes)
-- [Construindo um programa OO a partir de uma especificação](exemplo-classes)
+- Conceitos básicos de orientação a objetos: [1](https://docs.google.com/presentation/d/1bNv_WTRK7ncIDEkAWZ3q2WdZu5vi5Ran-8gT_As1c8A/edit) e [2](projeto-oo)
+- Classes, objetos, métodos, atributos e construtores: [1](https://docs.google.com/presentation/d/19bN5IqfxQADgGKLlZ67mLPuQLYC_SKAtltJCNSKzkdE/edit) e [2](definindo-classes)
+- Membros estáticos
+- Enums
+- Encapsulamento, visibilidade, propriedades<!--(https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit)-->
+- Exceções
+- Herança, polimorfismo, sobrecarga de operadores
+- Tipagem estática; optional, generics
+
+**Parte 3: Java**
+
+- Linguagem Java
+- Construtores
+- Visibilidade
+- Static e final
+- Herança, classes abstratas e interfaces
+- Collections e Generics
+- Exceções checadas e não-checadas
+
+<!-- - [Construindo um programa OO a partir de uma especificação](exemplo-classes) -->
+<!-- - [Usando objetos](usando-objetos): objetos, atributos, métodos -->
 
 **Material complementar**
 
