@@ -58,6 +58,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Exceções
 - Herança, polimorfismo, sobrecarga de operadores
 - Tipagem estática; optional, generics
+- Extra: reflexão, testes de unidade
 
 **Parte 3: Java**
 
