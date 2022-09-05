@@ -159,9 +159,11 @@ if __name__ == '__main__':
   unittest.main(exit=False)
 </textarea>
 
+<!--
+
 ## Rede social
 
-<textarea class="code lang-python">
+<!!!textarea class="code lang-python">
 class Usuario:
   def __init__(self, nome):
     pass
@@ -221,3 +223,4 @@ if __name__ == '__main__':
   import sys
   unittest.main(exit=False)
 </textarea>
+-->
