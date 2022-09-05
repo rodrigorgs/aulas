@@ -14,9 +14,9 @@ Ao criar uma conta, deve-se sempre informar o código e, opcionalmente, o saldo;
 
 Ao movimentar dinheiro na conta, o saldo nunca deve ficar negativo.
 
-+ Considere que a classe deve possuir as seguintes propriedades, que não podem ser alteradas diretamente após a criação da conta:
++ Considere que a classe deve possuir as seguintes propriedades:
   - `codigo`
-  - `saldo` (pode ser alterado através dos métodos `retira`, `deposita` e `transfere`)
+  - `saldo`
 
 Complete a implementação da classe.
 
@@ -54,13 +54,13 @@ class TestConta(unittest.TestCase):
     self.assertEqual(c.codigo, '123')
     self.assertEqual(c.saldo, 0)
 
-  def test_nao_pode_alterar_codigo(self):
-    c = Conta('123', 50.0)
-    self.assertRaises(AttributeError, lambda: (c.codigo := '456'))
+#  def test_nao_pode_alterar_codigo(self):
+#    c = Conta('123', 50.0)
+#    self.assertRaises(AttributeError, lambda: (c.codigo := '456'))
 
-  def test_nao_pode_alterar_saldo(self):
-    c = Conta('123', 50.0)
-    self.assertRaises(AttributeError, lambda: (c.saldo := 999.99))
+#  def test_nao_pode_alterar_saldo(self):
+#    c = Conta('123', 50.0)
+#    self.assertRaises(AttributeError, lambda: (c.saldo := 999.99))
 
   def test_cria_conta_com_saldo(self):
     c = Conta('123', 50)
