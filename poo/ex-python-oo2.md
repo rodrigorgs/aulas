@@ -154,7 +154,7 @@ class TestAluno(unittest.TestCase):
   
   def test_nao_pode_mudar_matricula(self):
     a = Aluno('123', 'abc')
-    self.assertRaises(AttributeError):
+    with self.assertRaises(AttributeError):
       a.matricula = '456'
 
 if __name__ == '__main__':
