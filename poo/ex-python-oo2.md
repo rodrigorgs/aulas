@@ -150,9 +150,10 @@ class TestAluno(unittest.TestCase):
     a.nome = 'def'
     self.assertEqual(a.nome, 'def')
   
-  def test_nao_pode_mudar_nome(self):
+  def test_nao_pode_mudar_matricula(self):
     a = Aluno('123', 'abc')
-    self.assertRaises(AttributeError, lambda: (a.matricula := '456'))
+    self.assertRaises(AttributeError):
+      a.matricula = '456'
 
 if __name__ == '__main__':
   import sys
