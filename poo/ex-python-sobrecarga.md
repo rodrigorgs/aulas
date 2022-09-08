@@ -45,7 +45,7 @@ assert p1 != None
 
 ## Conjunto de pessoas
 
-Com base na questão anterior, complete a implementação da classe `Pessoa` para permitir que suas instâncias sejam inseridas em conjuntos (sets).
+Com base na questão anterior, complete a implementação da classe `Pessoa` para permitir que suas instâncias sejam inseridas em conjuntos (sets). Lembre-se que pessoas são identificadas unicamente por seu CPF, ou seja, não pode haver duas instâncias com o mesmo CPF dentro de um conjunto.
 
 <textarea class="code lang-python">
 class Pessoa:
