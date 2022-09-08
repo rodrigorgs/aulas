@@ -32,5 +32,5 @@ assert Video.TIPO_SERIE == 'serie'
 assert Video.tipos == ['filme', 'serie']
 Video.TIPO_FILME = 'f'
 Video.TIPO_SERIE = 's'
-assert Video.tipos == ['f', 's']
+assert Video.tipos() == ['f', 's']
 </textarea>
