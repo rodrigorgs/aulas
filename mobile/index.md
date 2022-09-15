@@ -38,9 +38,13 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
 
 - Introdução
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
-  - [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
-  - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
+  - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
   - Ver também as leituras recomendadas (abaixo)
+- Notas sobre os exercícios
+  - [Guia de laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
+  - [Como fazer os exercícios](https://docs.google.com/presentation/d/1MUvztR37W7q0djQ8r4uMp9q1qQTc3vCCWueuR6WKVFA/edit#slide=id.g118ad8bf6ff_0_65)
+  - Os exercícios serão corrigidos na AVD `3.2 QVGA (ADP2)`
+  <!-- - [Orientações gerais sobre os exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit) -->
 - Android
     + [Instalação](https://docs.google.com/presentation/d/13iFDtHQ-HxVs8ofT0UEiqeOjuFcn_FhtfFGxm7zrPUg/edit)
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
@@ -71,7 +75,11 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
 - [10 Engineering Challenges Due to the Nature of Mobile Applications](https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/)
 - [Sistemas e dispositivos móveis nas universidades públicas: desafios e oportunidades](https://docs.google.com/document/d/1xkv2en13stqj3EnCGcdv29qvAT2dRk5YT1vJ85UrrVg/edit#)
 - gov.uk Service Manual: [Making sure your service works well on mobile](https://www.gov.uk/service-manual/technology/working-with-mobile-technology) e [We're not ‘appy. Not ‘appy at all.](https://gds.blog.gov.uk/2013/03/12/were-not-appy-not-appy-at-all/)
-- [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
+
+Complementares:
+
+- [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
+- [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
 
 # Bibliografia e referências
 
