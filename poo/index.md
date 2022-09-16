@@ -14,8 +14,10 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 ## Avaliações
 
 - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados **em negrito** nesta página
-- [4,0] Projeto em Python (em equipe) - [sopa de letrinhas](sopa-de-letrinhas) usando a biblioteca [Pyglet](pyglet)
+- [4,0] [Projeto em Python (em equipe)](projeto-jogo-oo) - jogo usando a biblioteca [Pyglet](pyglet)
 - [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
+
+<!-- - [4,0] Projeto em Python (em equipe) - [sopa de letrinhas](sopa-de-letrinhas) usando a biblioteca [Pyglet](pyglet) -->
 
 ## Política de honestidade
 
@@ -53,8 +55,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - **[Exercícios sobre classes](ex-python-oo)**
 - [Encapsulamento, visibilidade, propriedades](https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit)
 - **[Exercícios envolvendo propriedades](ex-python-oo2)**
-- Membros estáticos
-- Sobrecarga de operadores
+- [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
+- [Membros estáticos](https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit)
 - Enums
 - Exceções
 - Herança, polimorfismo, sobrecarga de operadores

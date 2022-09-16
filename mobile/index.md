@@ -42,7 +42,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
   - Ver também as leituras recomendadas (abaixo)
 - Notas sobre os exercícios
   - [Guia de laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
-  - [Como fazer os exercícios](https://docs.google.com/presentation/d/1MUvztR37W7q0djQ8r4uMp9q1qQTc3vCCWueuR6WKVFA/edit#slide=id.g118ad8bf6ff_0_65)
+  - [Como fazer os exercícios](https://docs.google.com/presentation/d/1MUvztR37W7q0djQ8r4uMp9q1qQTc3vCCWueuR6WKVFA/edit)
   - Os exercícios serão corrigidos na AVD `3.2 QVGA (ADP2)`
   <!-- - [Orientações gerais sobre os exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit) -->
 - Android
