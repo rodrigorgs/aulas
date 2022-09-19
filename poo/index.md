@@ -54,10 +54,13 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Classes, objetos, métodos, atributos e construtores: [1](https://docs.google.com/presentation/d/19bN5IqfxQADgGKLlZ67mLPuQLYC_SKAtltJCNSKzkdE/edit) e [2](definindo-classes)
 - **[Exercícios sobre classes](ex-python-oo)**
 - [Encapsulamento, visibilidade, propriedades](https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit)
+- **[Exercício: rede social](ex-python-rede-social)**
 - **[Exercícios envolvendo propriedades](ex-python-oo2)**
-- [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
 - [Membros estáticos](https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit)
-- Enums
+- **[Exercícios sobre membros estáticos](ex-python-static)**
+- [Enums](https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit)
+- **[Exercícios sobre enums](ex-python-enum)**
+- [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
 - Exceções
 - Herança, polimorfismo, sobrecarga de operadores
 - Tipagem estática; optional, generics
