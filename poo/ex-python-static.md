@@ -13,9 +13,6 @@ Uma cor é formada por três componentes (`r`, `g` e `b`, ou vermelho, verde e a
 - `AMARELA`: (255, 255, 0)
 
 <textarea class="code lang-python">
-class Paleta:
-  pass
-
 class Cor:
   def __init__(self, r, g, b):
     self.r = r
@@ -25,11 +22,14 @@ class Cor:
   def __eq__(self, o):
     return self.r == o.r and self.g == o.g and self.b == o.b
 
+class Paleta:
+  pass
+
 ### Testes
 
 assert Paleta.AZUL.b == 255 and Paleta.AZUL.r == 0 and Paleta.AZUL.g == 0
-assert Paleta.VERMELHA == Paleta(255, 0, 0)
-assert Paleta.AMARELA == Paleta(255, 255, 0)
+assert Paleta.VERMELHA == Cor(255, 0, 0)
+assert Paleta.AMARELA == Cor(255, 255, 0)
 </textarea>
 
 ## Vetor
