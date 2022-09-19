@@ -54,7 +54,7 @@ class Vetor:
     self.y = y
   
   def __eq__(self, o):
-    return math.abs(self.x - o.x) < 0.001 and math.abs(self.y - o.y) < 0.001
+    return abs(self.x - o.x) < 0.001 and abs(self.y - o.y) < 0.001
 
 assert Vetor.comAnguloETamanho(math.pi / 3, 10) == Vetor(5, 8.66025)
 assert Vetor.comAnguloETamanho(math.pi, 10) == Vetor.horizontal(-10)
@@ -77,7 +77,7 @@ Crie atributos estáticos representando os status e então implemente os método
 
 <textarea class="code lang-python">
 class Pedido:
-  def __init__(self, valor):
+  def __init__(self, valor=0.0):
     self.valor = valor
     self.status = 0
 

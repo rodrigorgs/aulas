@@ -61,7 +61,7 @@ class Status:
   pass
 
 class Pedido:
-  def __init__(self, valor):
+  def __init__(self, valor=0.0):
     self.valor = valor
 
   def pagar(self, forma_de_pagamento):
