@@ -6,13 +6,16 @@ features: [code, python]
 
 ## Cores
 
-Uma cor é formada por três componentes (`r`, `g` e `b`, ou vermelho, verde e azul), variando de 0 a 255, e é representada pela classe `Cor`. Como conveniência para os clientes da classe, crie atributos estáticos representando as seguintes cores:
+Uma cor é formada por três componentes (`r`, `g` e `b`, ou vermelho, verde e azul), variando de 0 a 255, e é representada pela classe `Cor`. Como conveniência para os clientes da classe, crie uma classe `Paleta` com atributos estáticos representando as seguintes cores:
 
 - `AZUL`: (0, 0, 255)
 - `VERMELHA`: (255, 0, 0)
 - `AMARELA`: (255, 255, 0)
 
 <textarea class="code lang-python">
+class Paleta:
+  pass
+
 class Cor:
   def __init__(self, r, g, b):
     self.r = r
@@ -24,9 +27,9 @@ class Cor:
 
 ### Testes
 
-assert Cor.AZUL.b == 255 and cor.AZUL.r == 0 and cor.AZUL.g == 0
-assert Cor.VERMELHA == Cor(255, 0, 0)
-assert Cor.AMARELA == Cor(255, 255, 0)
+assert Paleta.AZUL.b == 255 and Paleta.AZUL.r == 0 and Paleta.AZUL.g == 0
+assert Paleta.VERMELHA == Paleta(255, 0, 0)
+assert Paleta.AMARELA == Paleta(255, 255, 0)
 </textarea>
 
 ## Vetor

@@ -31,15 +31,15 @@ class Cor:
 ### Testes
 c = Cor(1, 2, 3)
 c.altera(Componente.RED, 128)
-assert c.r == 128 and c.g = 2 and c.b = 3
+assert c.r == 128 and c.g == 2 and c.b == 3
 
 c = Cor(1, 2, 3)
 c.altera(Componente.GREEN, 100)
-assert c.r == 1 and c.g = 100 and c.b = 3
+assert c.r == 1 and c.g == 100 and c.b == 3
 
 c = Cor(1, 2, 3)
 c.altera(Componente.BLUE, 255)
-assert c.r == 1 and c.g = 2 and c.b = 255
+assert c.r == 1 and c.g == 2 and c.b == 255
 
 assert isinstance(Componente.RED, Enum)
 </textarea>
