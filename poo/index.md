@@ -24,6 +24,16 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
 
+## Exercícios valendo nota
+
+1. **[Python básico](ex-python-intro)**
+2. **[Funções em Python](ex-python-funcoes)**
+3. **[Classes](ex-python-oo)**
+4. **[Rede social](ex-python-rede-social)**
+5. **[Propriedades](ex-python-oo2)**
+6. **[Membros estáticos](ex-python-static)**
+7. **[Enums](ex-python-enum)**
+
 ## Conteúdo
 
 **Introdução: paradigmas de linguagens de programação e programação orientada a objetos**
@@ -35,14 +45,12 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
-  - **[Exercícios de Python básico](ex-python-intro)**
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
 - Programação procedural (programa construído a partir de funções)
   - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default* e argumentos nomeados
-  - **[Exercícios de funções em Python](ex-python-funcoes)**
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
 - Outros tópicos em Python
   - [Módulos e pacotes](python-modules)
@@ -53,14 +61,9 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Importância: as principais linguagens de programação são orientadas a objetos. Ver ranking do [TIOBE](https://www.tiobe.com/tiobe-index/) e [PYPL](https://pypl.github.io/PYPL.html)
 - Conceitos básicos de orientação a objetos: [1](https://docs.google.com/presentation/d/1bNv_WTRK7ncIDEkAWZ3q2WdZu5vi5Ran-8gT_As1c8A/edit) e [2](projeto-oo)
 - Classes, objetos, métodos, atributos e construtores: [1](https://docs.google.com/presentation/d/19bN5IqfxQADgGKLlZ67mLPuQLYC_SKAtltJCNSKzkdE/edit) e [2](definindo-classes)
-- **[Exercícios sobre classes](ex-python-oo)**
 - [Encapsulamento, visibilidade, propriedades](https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit)
-- **[Exercício: rede social](ex-python-rede-social)**
-- **[Exercícios envolvendo propriedades](ex-python-oo2)**
 - [Membros estáticos](https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit)
-- **[Exercícios sobre membros estáticos](ex-python-static)**
 - [Enums](https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit)
-- **[Exercícios sobre enums](ex-python-enum)**
 - [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
 - [Herança, polimorfismo](https://docs.google.com/presentation/d/1DG7HM7MFKisSS8QXRI-J0FhLXay4Hx2CJl2-Wca7SQE/edit?usp=sharing)
 - Exceções
