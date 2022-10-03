@@ -14,6 +14,7 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 ## Avaliações
 
 - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados **em negrito** nesta página
+  - Prazo: 7/11
 - [4,0] [Projeto em Python (em equipe)](projeto-jogo-oo) - jogo usando a biblioteca [Pyglet](pyglet)
   - [Código-fonte do exemplo de jogo de cartas](https://github.com/rodrigorgs/cartas-pyglet)
 - [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
