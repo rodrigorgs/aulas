@@ -33,6 +33,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 5. **[Propriedades](ex-python-oo2)**
 6. **[Membros estáticos](ex-python-static)**
 7. **[Enums](ex-python-enum)**
+8. **[Herança](ex-python-heranca)**
 
 ## Conteúdo
 
