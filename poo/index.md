@@ -68,8 +68,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - [Enums](https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit)
 - [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
 - [Herança, polimorfismo](https://docs.google.com/presentation/d/1DG7HM7MFKisSS8QXRI-J0FhLXay4Hx2CJl2-Wca7SQE/edit?usp=sharing)
-- Exceções
-- Tipagem estática; optional, generics
+- [Exceções](https://docs.google.com/presentation/d/1U_JjTZZTQ9XruyLxnIlgKxmB5HkmK9gUOaOsCQZ42e8/edit)
+- [Tipagem estática](https://docs.google.com/presentation/d/1g7fK2N1sYmhBoHAMI2oJEE7qewbF_ve-DAtZ9e9z1rM/edit)
 - Extra: reflexão, testes de unidade
 
 **Parte 3: Java**
