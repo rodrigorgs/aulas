@@ -50,8 +50,9 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
         + Guardando o estado de uma Activity antes de ela ser destruída para poder restaurar o estado quando ela for construída novamente (enquanto o aplicativo está sendo executado): [onSave/RestoreInstanceState](instance-state)
     + [ListView](https://speakerdeck.com/rodrigorgs/listview-android-sdk) ([arquivo original do Keynote](https://drive.google.com/file/d/0BxqQol81uO5UUG0tTnExR2xXblE/view?usp=sharing))
-    + [SQLite](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
-      + [Usando a biblioteca Room](https://developer.android.com/training/data-storage/room)
+    + Persistência de dados
+      + [SQLiteOpenHelper](https://speakerdeck.com/rodrigorgs/sqlite-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UeXZ4VWxVN2JDLXc))
+      + [Biblioteca Room](https://developer.android.com/training/data-storage/room) - ver [exemplo de código usando Room](https://github.com/rodrigorgs/exemplo-android-room)
     + [Serviços Web](https://speakerdeck.com/rodrigorgs/servico-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5UNnhLeFJMMzZ4Yk0))
       - [Acessando serviços Web com a biblioteca Retrofit](retrofit)
       - [Acessando serviços Web com a API nativa do Android](https://speakerdeck.com/rodrigorgs/cliente-rest-android-sdk) ([arquivo original do Keynote](https://drive.google.com/open?id=0BxqQol81uO5USXBOWV9WU0RIWFU), [exemplo de código](rest.zip))
