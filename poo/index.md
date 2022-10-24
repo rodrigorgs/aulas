@@ -36,6 +36,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 7. **[Enums](ex-python-enum)**
 8. **[Herança](ex-python-heranca)**
 9. **[Herança: parte 2](ex-python-heranca2)**
+10. **[Exceções](ex-python-excecoes)**
 
 ## Conteúdo
 
