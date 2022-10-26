@@ -39,7 +39,7 @@ Na aula seguinte a cada entrega, para cada equipe, o professor jogará o jogo e 
 
 - (25/09) Entrega da descrição
 - (16/10) Entrega parcial
-- (13/11) Entrega final
+- (27/11) Entrega final
 
 ## Ideias e recursos para jogos
 
