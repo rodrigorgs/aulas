@@ -72,11 +72,10 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - [Herança, polimorfismo](https://docs.google.com/presentation/d/1DG7HM7MFKisSS8QXRI-J0FhLXay4Hx2CJl2-Wca7SQE/edit?usp=sharing)
 - [Exceções](https://docs.google.com/presentation/d/1U_JjTZZTQ9XruyLxnIlgKxmB5HkmK9gUOaOsCQZ42e8/edit)
 - [Tipagem estática](https://docs.google.com/presentation/d/1g7fK2N1sYmhBoHAMI2oJEE7qewbF_ve-DAtZ9e9z1rM/edit)
-- Extra: reflexão, testes de unidade
 
 **Parte 3: Java**
 
-- Linguagem Java
+- [Programação procedural em Java](aula-java-programacao)
 - Construtores
 - Visibilidade
 - Static e final
