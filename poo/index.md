@@ -90,7 +90,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 [Diferenças entre Java e Python](https://docs.google.com/presentation/d/1zKDn5ifd4CCN3o8ZqlgOlS-sWF78BRTyMURRX5Crnmw/edit)
 
-<!-- 
 | Categoria | Conteúdo                                                                           |
 |-----------|------------------------------------------------------------------------------------|
 | Intro     | [Introdução à programação orientada a objetos][intro]                              |
@@ -129,7 +128,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | Skills    | Controle de versão                                                                 |
 | Skills    | Testes de unidade                                                                  |
 | Skills    | [Refatoração](aula-refactoring)                                                    |
- -->
 <!-- | OO        | [Modelagem conceitual](aula-modelagem)                                             | -->
 <!-- | OO        | UML: diagramas de classes e de objetos                                                            | -->
 
