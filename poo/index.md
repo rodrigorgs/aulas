@@ -80,8 +80,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Visibilidade
 - Static e final
 - Herança, classes abstratas e interfaces
-- Collections e Generics
-- Exceções checadas e não-checadas
 
 <!-- - [Construindo um programa OO a partir de uma especificação](exemplo-classes) -->
 <!-- - [Usando objetos](usando-objetos): objetos, atributos, métodos -->
