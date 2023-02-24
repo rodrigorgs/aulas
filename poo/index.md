@@ -6,18 +6,22 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 ## Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
-- Monitor: Caio Miranda <caiomp@ufba.br>
+<!-- - Monitor: Caio Miranda <caiomp@ufba.br> -->
 - Aulas:
-  - SEG, 13:00, lab 143 do IME
-  - QUA, 13:00, sala 108 do PAF I
+  - SEG, 18:30 <!--, lab 143 do IME -->
+  - QUA, 18:30 <!--, sala 108 do PAF I -->
 
 ## Avaliações
 
-- [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados **em negrito** nesta página
-  - Prazo: 7/11
+- [3,0] Lista de exercícios
+- [3,0] Prova prática 1
+- [4,0] Prova prática 2
+
+<!-- - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados nesta página -->
+<!-- 
 - [4,0] [Projeto em Python (em equipe)](projeto-jogo-oo) - jogo usando a biblioteca [Pyglet](pyglet)
   - [Código-fonte do exemplo de jogo de cartas](https://github.com/rodrigorgs/cartas-pyglet)
-- [3,0] Prova escrita sobre programação orientada a objetos com Java (individual)
+- [3,0] Prova escrita sobre programação orientada a objetos com Java (individual) -->
 
 <!-- - [4,0] Projeto em Python (em equipe) - [sopa de letrinhas](sopa-de-letrinhas) usando a biblioteca [Pyglet](pyglet) -->
 
@@ -25,8 +29,9 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
 
-## Exercícios valendo nota
+## Lista de exercícios (vale nota)
 
+<!-- 
 1. **[Python básico](ex-python-intro)**
 2. **[Funções em Python](ex-python-funcoes)**
 3. **[Classes](ex-python-oo)**
@@ -37,18 +42,45 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 8. **[Herança](ex-python-heranca)**
 9. **[Herança: parte 2](ex-python-heranca2)**
 10. **[Exceções](ex-python-excecoes)**
+ -->
 
 ## Conteúdo
 
+<!-- 
 **Introdução: paradigmas de linguagens de programação e programação orientada a objetos**
 
 - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
+ -->
 
 **Parte 1: revisão e aprofundamento sobre a linguagem Python e funções**
 
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
-  - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
+    - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
+  - Objetos, variáveis e tipos
+  - Funções, parâmetros e retorno; funções tagarelas
+    - Parâmetros default, argumentos nomeados, docstring
+  - Escopo de variáveis e parâmetros
+  - [Módulos e pacotes](python-modules)
+- Programação orientada a objetos
+  - Conceitos: Classes, atributos, métodos e objetos. Construtores.
+    - Modelagem OO
+    - Experimentação com o Tupy
+  - Programação OO com Python
+    - Static
+    - Enum
+    - Exceções
+    - Tipagem estática
+  - [Encapsulamento, visibilidade, propriedades][encapsulamento]
+    - Mutabilidade e referências escapando
+  - Herança e polimorfismo
+    - Sobreposição
+    - Classes abstratas
+    - Protocolos
+  
+<!-- 
+[encapsulamento]: https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit
+
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
 - Programação procedural (programa construído a partir de funções)
@@ -57,7 +89,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default* e argumentos nomeados
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
 - Outros tópicos em Python
-  - [Módulos e pacotes](python-modules)
   - Manipulando arquivos
 
 **Parte 2: programação orientada a objetos com Python**
@@ -65,7 +96,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Importância: as principais linguagens de programação são orientadas a objetos. Ver ranking do [TIOBE](https://www.tiobe.com/tiobe-index/) e [PYPL](https://pypl.github.io/PYPL.html)
 - Conceitos básicos de orientação a objetos: [1](https://docs.google.com/presentation/d/1bNv_WTRK7ncIDEkAWZ3q2WdZu5vi5Ran-8gT_As1c8A/edit) e [2](projeto-oo)
 - Classes, objetos, métodos, atributos e construtores: [1](https://docs.google.com/presentation/d/19bN5IqfxQADgGKLlZ67mLPuQLYC_SKAtltJCNSKzkdE/edit) e [2](definindo-classes)
-- [Encapsulamento, visibilidade, propriedades](https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit)
 - [Membros estáticos](https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit)
 - [Enums](https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit)
 - [Sobrecarga de operadores](https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit)
@@ -136,7 +166,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 [acesso]: https://docs.google.com/presentation/d/1MRqTOvbEnzAspcvW8_wWkKZSNJU1a6l3TVGTGSjkvMQ/edit
 [quiz1]: https://create.kahoot.it/details/programacao-orientada-a-objetos-com-java-parte-1/93655e8b-0866-41fa-ba09-439c8709cc8b
 [quiz2]: https://create.kahoot.it/details/programacao-orientada-a-objetos-parte-2/3ef15af5-873c-40e9-bb1e-1a6a7316fcc7
-
+ -->
 <!-- 
 Alguns slides disponíveis no [Drive da disciplina](https://drive.google.com/open?id=1JxHnqlfg74vCFhJf1LfS3d4w70Ev8qBN)
 
