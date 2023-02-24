@@ -36,14 +36,35 @@ print(3.14 / 2)
 
 ---
 
-# Definindo o número de casas decimais
+# Imprimindo com número definido de casas decimais
 
+- Para imprimir um valor com um determinado número de casas decimais, converta-o para string usando f-strings. Exemplo:
+
+```python
+total = 1 / 7 #=> 0.14285714285714285
+print(f'{total:.2f}') #=> 0.14
+```
+<!-- 
 - Se você precisar controlar o número de casas decimais que vão ser exibidas, use a função `format(x, .Nf)`, que converte um número, `x`, em uma string que representa o número com `N` casas decimais. Exemplo:
 
 ```python
 numero = 1.5 ** 2
 print(format(numero, ".2f"))
 print(format(numero, ".5f"))
+```
+-->
+
+---
+
+# Imprimindo múltiplos valores na mesma linha
+
+- Você também pode usar f-strings. Exemplo:
+
+```python
+a = 1
+b = 2
+c = 3
+print(f'{a} {b} {c}') #=> 1 2 3
 ```
 
 ---
@@ -64,26 +85,6 @@ ddd = 71
 telefone = "5555-5555"
 print("(", ddd, ") ", telefone, sep="")
 ```
-
----
-
-# Imprimindo múltiplos valores na mesma linha
-
-Outra opção é converter todas as expressões para string e então concatená-las (juntá-las) com `+`:
-
-```python
-ddd = 71
-telefone = "5555-5555"
-print("(" + str(ddd) + ") " + telefone)
-```
-
---
-
-O que acontece se você não usar `str`?
-
---
-
-`TypeError`! Não é possível "somar" uma string a um número!
 
 ---
 

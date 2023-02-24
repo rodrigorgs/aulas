@@ -93,7 +93,7 @@ Os tipos de dados básicos em Python são os seguintes:
 - `bool` - valor **lógico** (`True` ou `False`)
 --
 
-- `str` - tipo **string** (cadeia de caracteres, texto). Ex.: `"Olá, pessoal!"` ou `'Olá, pessoal!`
+- `str` - tipo **string** (cadeia de caracteres, texto). Ex.: `"Olá, pessoal!"` (aspas duplas) ou `'Olá, pessoal!'` (aspas simples)
 
 --
 

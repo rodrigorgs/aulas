@@ -65,12 +65,12 @@ As linguagens de programação possuem os seguintes tipos de instruções:
 
 Algoritmo para calcular a idade de uma pessoa, escrito em português:
 
-1. Lê o ano atual
-2. Lê o ano de nascimento de uma pessoa
-3. Lê se a pessoa já fez aniversário no ano atual
+1. Pergunta o ano atual
+2. Pergunta o ano de nascimento de uma pessoa
+3. Pergunta se a pessoa já fez aniversário no ano atual
 4. Calcula a idade (ano atual menos ano de nascimento)
 5. Se a pessoa ainda não fez aniversário, subtrai 1 da idade
-6. Exibe a idade
+6. Diz a idade, ou seja, o resultado do cálculo
 
 ---
 

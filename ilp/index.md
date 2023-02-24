@@ -9,7 +9,7 @@ layout: page
   - Avaliação na disciplina
   - Como pedir ajuda
   - [Variáveis](01a-variaveis)
-  - [Expressões aritméticas](01b-expressoes)
+  - [Expressões aritméticas e formatação de strings](01b-expressoes)
   - [Entrada e saída](01c-entrada-saida)
   - [Entrada e saída para problemas de correção automática](https://docs.google.com/presentation/d/1wTuChjtp-tPVXElQVtBanVULWNsoeN-vDv9C2ZK_5Vo/edit?usp=sharing)
 - [Condicionais (if/else)](02-if-else)

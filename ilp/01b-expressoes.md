@@ -108,4 +108,51 @@ sobrenome = "de Tal"
 nome_completo = nome + " " + sobrenome  #=> "Fulano de Tal"
 ```
 
+---
+
+# Expressões com strings
+
+- Não é possível concatenar string com um número:
+
+```python
+ano = 2001
+x = 'maio de ' + ano
+# TypeError: can only concatenate str (not "int") to str
+```
+
+- Para concatenar é preciso converter para string:
+
+```python
+ano = 2001
+x = 'maio de ' + str(ano) #=> 'maio de 2001'
+```
+
+---
+
+# Interpolação de strings
+
+- A **interpolação de strings** é um recurso que permite construir facilmente uma string que contenha valores de variáveis ou expressões. Exemplo:
+
+```python
+nome = 'Fulana'
+idade = 18
+frase = f'{nome} tem {idade} anos' #=> 'Fulana tem 18 anos'
+```
+
+- Dentro das string, expressões entre chaves (`{}`) são substituídas pelos seus valores (convertidos para string)
+- O `f` antes das aspas indica que queremos que o Python faça essa substituição
+  - Sem o `f` não funciona (faça o teste!)
+  - Essas strings são chamadas de *f-strings* (*formatted strings*)
+
+---
+
+# Interpolação de strings
+
+No caso de expressões do tipo `float`, podemos controlar a quantidade de casas decimais. Exemplo com duas casas decimais:
+
+```python
+total = 1 / 7 #=> 0.14285714285714285
+frase = f'Resultado: {total:.2f}' #=> 0.14
+```
+
 {:/}
