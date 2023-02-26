@@ -6,7 +6,6 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 ## Informações básicas
 
 - Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
-<!-- - Monitor: Caio Miranda <caiomp@ufba.br> -->
 - Aulas:
   - SEG, 18:30 <!--, lab 143 do IME -->
   - QUA, 18:30 <!--, sala 108 do PAF I -->
@@ -49,7 +48,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 <!-- 
 **Introdução: paradigmas de linguagens de programação e programação orientada a objetos**
 
-- [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
  -->
 
 **Parte 1: revisão e aprofundamento sobre a linguagem Python e funções**
@@ -57,29 +55,33 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
     - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
-  - Objetos, variáveis e tipos
-  - Funções, parâmetros e retorno; funções tagarelas
-    - Parâmetros default, argumentos nomeados, docstring
-  - Escopo de variáveis e parâmetros
   - [Módulos e pacotes](python-modules)
 - Programação orientada a objetos
-  - Conceitos: Classes, atributos, métodos e objetos. Construtores.
-    - Modelagem OO
-    - Experimentação com o Tupy
-  - Programação OO com Python
-    - Static
-    - Enum
-    - Exceções
-    - Tipagem estática
-  - [Encapsulamento, visibilidade, propriedades][encapsulamento]
-    - Mutabilidade e referências escapando
-  - Herança e polimorfismo
-    - Sobreposição
-    - Classes abstratas
-    - Protocolos
+  - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
+  - Conceitos básicos
+    - Paradigmas
+    - [Variáveis, objetos (valores) e tipos (classes)][intro-objetos-py]
+    - [Classes, atributos, métodos e construtores](https://docs.google.com/presentation/d/1tIi4g7ljCe2Ri1Ijm0tATZF8NrLgo1jedL_Q6wRifKc/edit)
+      - Parâmetros default, argumentos nomeados, docstring
+      - Escopo de variáveis e parâmetros
+  - Modelagem OO
+  - Tópicos em OO
+    - [Static][static]
+    - [Enum][enum]
+  - [Encapsulamento, visibilidade e propriedades][encapsulamento]
+    - [Mutabilidade e referências escapando][identidade-mutabilidade]
+  - [Tipagem estática][tipagem-estatica]
+  - [Herança e polimorfismo][heranca]
+  - [Exceções][excecoes]
   
-<!-- 
 [encapsulamento]: https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit
+[enum]: https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit
+[static]: https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit
+[excecoes]: https://docs.google.com/presentation/d/1U_JjTZZTQ9XruyLxnIlgKxmB5HkmK9gUOaOsCQZ42e8/edit
+[tipagem-estatica]: https://docs.google.com/presentation/d/1g7fK2N1sYmhBoHAMI2oJEE7qewbF_ve-DAtZ9e9z1rM/edit
+[heranca]: https://docs.google.com/presentation/d/1DG7HM7MFKisSS8QXRI-J0FhLXay4Hx2CJl2-Wca7SQE/edit
+
+<!-- 
 
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
