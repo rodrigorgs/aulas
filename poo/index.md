@@ -30,17 +30,17 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 ## Lista de exercícios (vale nota)
 
-<!-- 
 1. **[Python básico](ex-python-intro)**
 2. **[Funções em Python](ex-python-funcoes)**
-3. **[Classes](ex-python-oo)**
-4. **[Rede social](ex-python-rede-social)**
-5. **[Propriedades](ex-python-oo2)**
-6. **[Membros estáticos](ex-python-static)**
-7. **[Enums](ex-python-enum)**
-8. **[Herança](ex-python-heranca)**
-9. **[Herança: parte 2](ex-python-heranca2)**
-10. **[Exceções](ex-python-excecoes)**
+<!-- 
+1. **[Classes](ex-python-oo)**
+2. **[Rede social](ex-python-rede-social)**
+3. **[Propriedades](ex-python-oo2)**
+4. **[Exceções](ex-python-excecoes)**
+5. **[Membros estáticos](ex-python-static)**
+6. **[Enums](ex-python-enum)**
+7. **[Herança](ex-python-heranca)**
+8.  **[Herança: parte 2](ex-python-heranca2)**
  -->
 
 ## Conteúdo
@@ -54,26 +54,32 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 - Introdução a Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
-    - [Revisão da linguagem Python](/aulas/ilp) (material da disciplina de Introdução à Lógica de Programação)
-  - [Módulos e pacotes](python-modules)
+  - [Revisão da linguagem Python](/aulas/ilp) (if, while, for, funções, listas etc.)
+  <!-- - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas -->
+  - [Variáveis, objetos (valores) e tipos (classes)](intro-objetos-py)
+  - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
+  - [Recursos extras de funções em Python](funcoes-python): parâmetros *default*, argumentos nomeados e docstrings
+  - **Listas de exercícios 1 e 2**
+  <!-- - [Módulos e pacotes](python-modules) -->
 - Programação orientada a objetos
-  - [Introdução à programação orientada a objetos](https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit)
-  - Conceitos básicos
-    - Paradigmas
-    - [Variáveis, objetos (valores) e tipos (classes)][intro-objetos-py]
-    - [Classes, atributos, métodos e construtores](https://docs.google.com/presentation/d/1tIi4g7ljCe2Ri1Ijm0tATZF8NrLgo1jedL_Q6wRifKc/edit)
-      - Parâmetros default, argumentos nomeados, docstring
-      - Escopo de variáveis e parâmetros
-  - Modelagem OO
-  - Tópicos em OO
-    - [Static][static]
-    - [Enum][enum]
-  - [Encapsulamento, visibilidade e propriedades][encapsulamento]
-    - [Mutabilidade e referências escapando][identidade-mutabilidade]
+  - [O paradigma da programação orientada a objetos][paradigma-oo]
+  - POO básico: objetos, classes, atributos, métodos, construtores
+    - [O ambiente Tupy para aprendizagem de POO][tupy-poo]
+    - [POO básico em Python][poo-basico-py]
+    - [Criando classes no ambiente Tupy][tupy-classes]
+    - **Listas de exercícios 3 e 4**
+  - [Modelagem OO](http://ww2.inf.ufg.br/~fabio/manual-modelagem.pdf)
   - [Tipagem estática][tipagem-estatica]
+  - [Encapsulamento, visibilidade e propriedades][encapsulamento]
+    - [Identidade e mutabilidade](identidade-mutabilidade)
+    - [Exceções][excecoes]
+  - [Static][static] e [Enum][enum]
   - [Herança e polimorfismo][heranca]
-  - [Exceções][excecoes]
-  
+
+[paradigma-oo]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
+[tupy-classes]: https://docs.google.com/presentation/d/1h-w_iZPu2PcXdmUWFdPPOgvRduvZn-VBgFDo5l2tfUw/edit
+[tupy-poo]: https://docs.google.com/presentation/d/1tIi4g7ljCe2Ri1Ijm0tATZF8NrLgo1jedL_Q6wRifKc/edit
+[poo-basico-py]: https://docs.google.com/presentation/d/19bN5IqfxQADgGKLlZ67mLPuQLYC_SKAtltJCNSKzkdE/edit
 [encapsulamento]: https://docs.google.com/presentation/d/14DtBOvTD-30YsbB5CpDTKU-E0GYdhxV0Mpwd_8WGc6U/edit
 [enum]: https://docs.google.com/presentation/d/1g59YNwbirJTdeCS27CGqPsMJ6wr8wvoIKzaJsb2x5kQ/edit
 [static]: https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit
@@ -86,9 +92,6 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 - Revendo Python sob o ponto de vista da programação orientada a objetos: 
   - [Objetos, referências, identidade, mutabilidade](intro-objetos-py)
 - Programação procedural (programa construído a partir de funções)
-  - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas
-  - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
-  - [Recursos extras de funções em Python](funcoes-python): parâmetros *default* e argumentos nomeados
   - [Construindo programa procedural a partir de uma especificação](funcoes-exemplo-py): especificação, refatoração, diagramas
 - Outros tópicos em Python
   - Manipulando arquivos
