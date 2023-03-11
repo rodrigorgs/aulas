@@ -32,6 +32,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
 1. **[Python básico](ex-python-intro)**
 2. **[Funções em Python](ex-python-funcoes)**
+
 <!-- 
 1. **[Classes](ex-python-oo)**
 2. **[Rede social](ex-python-rede-social)**
@@ -40,7 +41,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 5. **[Membros estáticos](ex-python-static)**
 6. **[Enums](ex-python-enum)**
 7. **[Herança](ex-python-heranca)**
-8.  **[Herança: parte 2](ex-python-heranca2)**
+8. **[Herança: parte 2](ex-python-heranca2)**
  -->
 
 ## Conteúdo
@@ -50,9 +51,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
  -->
 
-**Parte 1: revisão e aprofundamento sobre a linguagem Python e funções**
-
-- Introdução a Python
+- Introdução ao Python
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (if, while, for, funções, listas etc.)
   <!-- - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas -->
@@ -119,10 +118,9 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 <!-- - [Construindo um programa OO a partir de uma especificação](exemplo-classes) -->
 <!-- - [Usando objetos](usando-objetos): objetos, atributos, métodos -->
 
-**Material complementar**
+**Material complementar**: [Diferenças entre Java e Python](https://docs.google.com/presentation/d/1zKDn5ifd4CCN3o8ZqlgOlS-sWF78BRTyMURRX5Crnmw/edit)
 
-[Diferenças entre Java e Python](https://docs.google.com/presentation/d/1zKDn5ifd4CCN3o8ZqlgOlS-sWF78BRTyMURRX5Crnmw/edit)
-
+<!--
 | Categoria | Conteúdo                                                                           |
 |-----------|------------------------------------------------------------------------------------|
 | Intro     | [Introdução à programação orientada a objetos][intro]                              |
@@ -161,8 +159,8 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 | Skills    | Controle de versão                                                                 |
 | Skills    | Testes de unidade                                                                  |
 | Skills    | [Refatoração](aula-refactoring)                                                    |
-<!-- | OO        | [Modelagem conceitual](aula-modelagem)                                             | -->
-<!-- | OO        | UML: diagramas de classes e de objetos                                                            | -->
+| OO        | [Modelagem conceitual](aula-modelagem)                                             | 
+| OO        | UML: diagramas de classes e de objetos                                                            | 
 
 [intro]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
 [eclipse]: https://docs.google.com/presentation/d/1BohOI0Ky0cqwsze7U-PnJc_qU9u9dbKtvUOwiH63HIY/edit?usp=sharing
@@ -185,9 +183,9 @@ Outros slides ou notas de aula:
 - [Enums](aula-enums)
 - [Exceções](aula-excecoes)
 - [Classes internas](aula-classes-internas)
-- [Generics](aula-generics) -->
+- [Generics](aula-generics)
 
-<!-- 
+
 # Bibliografia recomendada
 
 Os livros a seguir estão disponíveis nas bibliotecas da UFBA:
