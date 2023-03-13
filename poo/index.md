@@ -12,9 +12,9 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 ## Avaliações
 
-- [3,0] Lista de exercícios
-- [3,0] Prova prática 1
-- [4,0] Prova prática 2
+- [4,0] Listas de exercícios <!-- pequenos projetos, recomenda-se não usar LLM -->
+- [3,0] Prova escrita 1 <!-- conceitos, fixação -->
+- [3,0] Trabalho prático <!-- projeto maior, pode usar LLMs -->
 
 <!-- - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados nesta página -->
 <!-- 
@@ -51,7 +51,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
  -->
 
-- Introdução ao Python
+- **Introdução ao Python**
   - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (if, while, for, funções, listas etc.)
   <!-- - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas -->
@@ -60,7 +60,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default*, argumentos nomeados e docstrings
   - **Listas de exercícios 1 e 2**
   <!-- - [Módulos e pacotes](python-modules) -->
-- Programação orientada a objetos
+- **Programação orientada a objetos - parte 1**
   - [O paradigma da programação orientada a objetos][paradigma-oo]
   - POO básico: objetos, classes, atributos, métodos, construtores
     - [O ambiente Tupy para aprendizagem de POO][tupy-poo]
@@ -69,6 +69,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
     - **Listas de exercícios 3 e 4**
   - [Modelagem OO](http://ww2.inf.ufg.br/~fabio/manual-modelagem.pdf)
   - [Tipagem estática][tipagem-estatica]
+- **Programação orientada a objetos - parte 2**
   - [Encapsulamento, visibilidade e propriedades][encapsulamento]
     - [Identidade e mutabilidade](identidade-mutabilidade)
     - [Exceções][excecoes]
