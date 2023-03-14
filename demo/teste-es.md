@@ -1,8 +1,28 @@
 ---
 layout: triple-page
 title: Demonstração
-features: [code,cpp]
+features: [code,cpp,python]
 ---
+
+## Programa dobro (Python)
+
+Você deve digitar um número inteiro na caixa "Entrada" e o programa deve imprimir o seu dobro.
+
+<textarea class="code lang-python">
+x = int(input())
+print("O dobro é", x * 2)
+</textarea>
+
+<textarea class="stdin">2</textarea>
+<div class="testcases">
+2
+]]]
+O dobro é 4
+=====
+3
+]]]
+O dobro é 6
+</div>
 
 ## Alô Mundo C++
 
@@ -24,7 +44,6 @@ int main() {
 Alô, Mundo!
 Tchau!
 </div>
-
 
 ## Programa dobro
 
