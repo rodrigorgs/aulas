@@ -59,7 +59,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default*, argumentos nomeados e docstrings
   - **Listas de exercícios 1 e 2**
-  <!-- - [Módulos e pacotes](python-modules) -->
+  - [Módulos e pacotes][modulos-pacotes]
 - **Programação orientada a objetos - parte 1**
   - [O paradigma da programação orientada a objetos][paradigma-oo]
   - POO básico: objetos, classes, atributos, métodos, construtores
@@ -76,6 +76,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
   - [Static][static] e [Enum][enum]
   - [Herança e polimorfismo][heranca]
 
+[modulos-pacotes]: https://docs.google.com/presentation/d/1GoTn5Lpbov0xz30Di9rlbcOHpmL5upBVEqRwM-lYQg8/edit
 [paradigma-oo]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
 [tupy-classes]: https://docs.google.com/presentation/d/1h-w_iZPu2PcXdmUWFdPPOgvRduvZn-VBgFDo5l2tfUw/edit
 [tupy-poo]: https://docs.google.com/presentation/d/1tIi4g7ljCe2Ri1Ijm0tATZF8NrLgo1jedL_Q6wRifKc/edit
