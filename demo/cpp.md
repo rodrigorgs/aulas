@@ -1,6 +1,7 @@
 ---
 layout: triple-page
 title: Demonstração
+features: [code,cpp]
 ---
 
 ## Alô Mundo C++
