@@ -52,14 +52,13 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
  -->
 
 - **Introdução ao Python**
-  - [Introdução à linguagem Python](/aulas/ilp/00b-intro-python)
   - [Revisão da linguagem Python](/aulas/ilp) (if, while, for, funções, listas etc.)
   <!-- - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas -->
   - [Variáveis, objetos (valores) e tipos (classes)](intro-objetos-py)
   - [Variáveis e funções](funcoes-variaveis): escopo, variáveis locais e globais, sombreamento, reatribuição e passagem de objetos mutáveis como parâmetro
   - [Recursos extras de funções em Python](funcoes-python): parâmetros *default*, argumentos nomeados e docstrings
-  - **Listas de exercícios 1 e 2**
   - [Módulos e pacotes][modulos-pacotes]
+  - **Listas de exercícios 1 e 2**
 - **Programação orientada a objetos - parte 1**
   - [O paradigma da programação orientada a objetos][paradigma-oo]
   - POO básico: objetos, classes, atributos, métodos, construtores
