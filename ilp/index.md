@@ -22,6 +22,10 @@ layout: page
 - [Ordenação](https://docs.google.com/presentation/d/1iLvHy1G085masAq-_qO2Ml4hMOSCcYEmruCf_gW2U_Y/edit)
 - [Busca binária](https://docs.google.com/presentation/d/1BEviB3aF6jBwchBOq7UxBt13fbA1NxWcFFUvUpPTZAo/edit)
 
+Exercícios de fixação:
+
+- [Exercícios de introdução](ex-introducao)
+
 Extra:
 
 - [Python para programadores C++](https://docs.google.com/document/d/1SkQrwLixZjPvFuiEJQcR5iObTigd88wwwpqoj_rzroQ/edit)
