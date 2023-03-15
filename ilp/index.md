@@ -1,6 +1,9 @@
 ---
 layout: page
+title: Programação em Python
 ---
+
+### Slides
 
 - Introdução
   - [Motivação](https://docs.google.com/presentation/d/1L70pAPrIstAOukWUIAEPKGXnzVXo46hV4m6BVAWkdnY/edit)
@@ -22,13 +25,13 @@ layout: page
 - [Ordenação](https://docs.google.com/presentation/d/1iLvHy1G085masAq-_qO2Ml4hMOSCcYEmruCf_gW2U_Y/edit)
 - [Busca binária](https://docs.google.com/presentation/d/1BEviB3aF6jBwchBOq7UxBt13fbA1NxWcFFUvUpPTZAo/edit)
 
-Exercícios de fixação:
+### Exercícios de fixação
 
 - [Exercícios de introdução](ex-introducao)
 
-Extra:
+### Material extra
 
-- [Python para programadores C++](https://docs.google.com/document/d/1SkQrwLixZjPvFuiEJQcR5iObTigd88wwwpqoj_rzroQ/edit)
+- [Python para quem programa em C++](https://docs.google.com/document/d/1SkQrwLixZjPvFuiEJQcR5iObTigd88wwwpqoj_rzroQ/edit)
 
 ![](ilp-pd-logo.png)
 
