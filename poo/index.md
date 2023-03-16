@@ -3,19 +3,6 @@ layout: page
 title: MATA55 - Programação orientada a objetos - 2022.2
 ---
 
-## Informações básicas
-
-- Professor: Rodrigo Rocha <rodrigorgs@ufba.br>
-- Aulas:
-  - SEG, 18:30 <!--, lab 143 do IME -->
-  - QUA, 18:30 <!--, sala 108 do PAF I -->
-
-## Avaliações
-
-- [4,0] Listas de exercícios <!-- pequenos projetos, recomenda-se não usar LLM -->
-- [3,0] Prova escrita 1 <!-- conceitos, fixação -->
-- [3,0] Trabalho prático <!-- projeto maior, pode usar LLMs -->
-
 <!-- - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados nesta página -->
 <!-- 
 - [4,0] [Projeto em Python (em equipe)](projeto-jogo-oo) - jogo usando a biblioteca [Pyglet](pyglet)
@@ -24,24 +11,19 @@ title: MATA55 - Programação orientada a objetos - 2022.2
 
 <!-- - [4,0] Projeto em Python (em equipe) - [sopa de letrinhas](sopa-de-letrinhas) usando a biblioteca [Pyglet](pyglet) -->
 
-## Política de honestidade
-
-Para aprender a programar você precisa praticar muito. Por isso, para aproveitar melhor a disciplina, este você deverá resolver os exercícios práticos individualmente. Fique à vontade para discutir as questões com colegas, mas jamais compartilhe o código-fonte da solução. Nós levamos a política de honestidade muito a sério e utilizaremos soluções computacionais para identificar cópias das soluções submetidas.
-
+<!-- 
 ## Lista de exercícios (vale nota)
 
 1. **[Python básico](ex-python-intro)**
 2. **[Funções em Python](ex-python-funcoes)**
-
-<!-- 
-1. **[Classes](ex-python-oo)**
-2. **[Rede social](ex-python-rede-social)**
-3. **[Propriedades](ex-python-oo2)**
-4. **[Exceções](ex-python-excecoes)**
-5. **[Membros estáticos](ex-python-static)**
-6. **[Enums](ex-python-enum)**
-7. **[Herança](ex-python-heranca)**
-8. **[Herança: parte 2](ex-python-heranca2)**
+3. **[Classes](ex-python-oo)**
+4. **[Rede social](ex-python-rede-social)**
+5. **[Propriedades](ex-python-oo2)**
+6. **[Exceções](ex-python-excecoes)**
+7. **[Membros estáticos](ex-python-static)**
+8. **[Enums](ex-python-enum)**
+9. **[Herança](ex-python-heranca)**
+10. **[Herança: parte 2](ex-python-heranca2)**
  -->
 
 ## Conteúdo
@@ -51,7 +33,7 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 
  -->
 
-- **Introdução ao Python**
+- **Introdução à linguagem Python**
   - [Revisão da linguagem Python](/aulas/ilp) (if, while, for, funções, listas etc.)
   <!-- - [Funções](intro-funcoes-py): parâmetros, retorno, funções tagarelas -->
   - [Variáveis, objetos (valores) e tipos (classes)](intro-objetos-py)
@@ -120,6 +102,9 @@ Para aprender a programar você precisa praticar muito. Por isso, para aproveita
 <!-- - [Usando objetos](usando-objetos): objetos, atributos, métodos -->
 
 **Material complementar**: [Diferenças entre Java e Python](https://docs.google.com/presentation/d/1zKDn5ifd4CCN3o8ZqlgOlS-sWF78BRTyMURRX5Crnmw/edit)
+
+![](poo-logo.png)
+
 
 <!--
 | Categoria | Conteúdo                                                                           |
