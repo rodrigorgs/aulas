@@ -6,7 +6,7 @@ features: [code, python]
 
 ## Introdução
 
-Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo **não** serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos dentro do próprio programa, com instruções `assert` para testar se a saída está correta.
+Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo **não** serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos dentro do próprio programa.
 
 Clique no botão **Avançar** para visualizar o primeiro exercício.
 
@@ -18,17 +18,18 @@ Clique em **Rodar** para executar seu código.
 
 Se houver algum erro, ele aparecerá no painel à direita. Caso contrário, a saída do seu programa será vazia.
 
-Se quiser visualizar o retorno da função, adicione instruções `print` no final do programa.
+Se quiser visualizar o retorno da função, adicione instruções `print` no final do programa, mas lembre-se de **removê-las** antes de enviar sua resposta para que elas não interfiram na correção automática.
 
-Fique à vontade para criar mais testes usando a instrução `assert`.
+Fique à vontade para criar testes usando a instrução `assert`.
 
 <textarea class="code lang-python">
 def calcula_area(base, altura):
   return 0
-
+</textarea>
+<div class="testcode">
 assert calcula_area(0, 0) == 0
 assert calcula_area(3, 4) == 12
-</textarea>
+</div>
 
 ## IMC
 
@@ -37,10 +38,11 @@ Crie uma função que determina se uma pessoa está obesa. Uma pessoa obesa é a
 <textarea class="code lang-python">
 def esta_obesa(peso, altura):
   return false
-
+</textarea>
+<div class="testcode">
 assert esta_obesa(70, 1.70) == False
 assert esta_obesa(170, 1.70) == True
-</textarea>
+</div>
 
 ## Imposto
 
@@ -54,7 +56,8 @@ Crie uma função que classifique uma pessoa em uma das seguintes categorias, de
 <textarea class="code lang-python">
 def faixa_etaria(idade):
   return "bebê"
-
+</textarea>
+<div class="testcode">
 assert faixa_etaria(0) == "bebê"
 assert faixa_etaria(1) == "bebê"
 assert faixa_etaria(2) == "criança"
@@ -63,7 +66,7 @@ assert faixa_etaria(12) == "adolescente"
 assert faixa_etaria(17) == "adolescente"
 assert faixa_etaria(18) == "adulta"
 assert faixa_etaria(81) == "adulta"
-</textarea>
+</div>
 
 ## Linha de caracteres
 
@@ -73,11 +76,12 @@ Crie uma função que recebe um caractere e um número inteiro, `N`, e retorna u
 def linha(c, n):
   s = "****"
   return s
-
+</textarea>
+<div class="testcode">
 assert linha("*", 5) == "*****"
 assert linha("#", 2) == "##"
 assert linha("@", 0) == ""
-</textarea>
+</div>
 
 ## Retângulo desenhado
 
@@ -88,11 +92,11 @@ def retangulo(c, base, altura):
   s = "****"
   s += "****"
   return s
-
-### Testes
+</textarea>
+<div class="testcode">
 assert retangulo("*", 4, 2).strip() == "****\n****"
 assert retangulo("#", 5, 1).strip() == "#####"
-</textarea>
+</div>
 
 ## Lista sequencial
 
@@ -101,12 +105,12 @@ Crie uma função que recebe um número inteiro, `N` e retorna uma lista com tod
 <textarea class="code lang-python">
 def sequencia(n):
   return []
-
-### Testes
+</textarea>
+<div class="testcode">
 assert sequencia(3) == [1, 2, 3]
 assert sequencia(1) == [1]
 assert sequencia(-1) == []
-</textarea>
+</div>
 
 ## Produtório
 
@@ -116,9 +120,9 @@ Crie uma função que recebe uma lista de números e retorna o seu produto ou 1 
 def produtorio(lista):
   resultado = 1
   return resultado
-
-### Testes
+</textarea>
+<div class="testcode">
 assert produtorio([]) == 1
 assert produtorio([1, 2, 3]) == 6
 assert produtorio([1, 0, 3]) == 0
-</textarea>
+</div>
