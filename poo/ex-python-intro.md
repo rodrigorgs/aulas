@@ -4,11 +4,22 @@ title: Exercícios em Python
 features: [code, python]
 ---
 
-## Introdução
+## Olá!
 
-Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo **não** serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos dentro do próprio programa.
+Nesta página você pode resolver exercícios de programação sem sair do navegador. Se você está aqui porque os exercícios são parte da avaliação de uma disciplina, clique no botão `Login`, no canto superior direito da página, e preencha os seus dados de acesso. Somente assim suas respostas serão enviadas para o professor.
 
-Clique no botão **Avançar** para visualizar o primeiro exercício.
+Nestes exercícios você vai criar **funções** segundo alguma especificação. Os valores de entrada do seu algoritmo **não** serão digitados pelo usuário; em vez disso, os valores de entrada serão fornecidos como parâmetros na chamada da função.
+
+Clique no botão `Rodar` e, a seguir, no botão `Avançar`. Não altere nada no código ao lado!
+
+<textarea class="code lang-python">
+def voce_entendeu():
+  return "sim"
+</textarea>
+
+<div class="testcode">
+voce_entendeu().upper().strip() == 'SIM' or print('Você precisa responder sim para continuar')
+</div>
 
 ## Retângulo
 
@@ -18,7 +29,7 @@ Clique em **Rodar** para executar seu código.
 
 Se houver algum erro, ele aparecerá no painel à direita. Caso contrário, a saída do seu programa será vazia.
 
-Se quiser visualizar o retorno da função, adicione instruções `print` no final do programa, mas lembre-se de **removê-las** antes de enviar sua resposta para que elas não interfiram na correção automática.
+Se quiser visualizar o retorno da função, adicione instruções `print` no final do programa.
 
 Fique à vontade para criar testes usando a instrução `assert`.
 
