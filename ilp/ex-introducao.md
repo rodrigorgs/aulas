@@ -4,6 +4,20 @@ title: Exercícios de introdução
 features: [code,python]
 ---
 
+## Olá!
+
+Nesta página você pode resolver exercícios de programação sem sair do navegador. Se você está aqui porque os exercícios são parte da avaliação de uma disciplina, clique no botão `Login`, no canto superior direito da página, e preencha os seus dados de acesso. Somente assim suas respostas serão enviadas para o professor.
+
+<textarea class="code lang-python">
+print("Entendido!")
+</textarea>
+
+<div class="testcases">
+]]]Entendido!
+</div>
+
+Clique no botão `Rodar` e, a seguir, no botão `Avançar`. Não altere nada no código ao lado!
+
 ## Alô mundo
 
 Modifique o programa para que ele escreva `Alô, mundo!`
