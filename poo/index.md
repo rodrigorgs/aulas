@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MATA55 - Programação orientada a objetos - 2022.2
+title: MATA55 - Programação orientada a objetos - 2023.1
 ---
 
 <!-- - [3,0] Pequenos exercícios de código em Python (individual) - exercícios indicados nesta página -->
