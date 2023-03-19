@@ -40,16 +40,13 @@
     </div>
 
     <script>
-      const hasSubmission = {{ has_submission }};
-      document.addEventListener('alpine:init', () => {
-          Alpine.store('submission', { hasSubmission, username: null, isAdmin: false })
+      window.hasSubmission = {{ has_submission }};
 
-          loginDialog = jQuery("#dialog");
-          loginDialog.find("form").on("submit", function (evt) {
-              evt.preventDefault();
-              submitLoginDialog();
-          });
-      })
+      loginDialog = jQuery("#dialog");
+      loginDialog.find("form").on("submit", function (evt) {
+        evt.preventDefault();
+        submitLoginDialog();
+      });
     </script>
 
     <nav class="site-nav">

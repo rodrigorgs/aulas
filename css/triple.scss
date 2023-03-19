@@ -64,12 +64,13 @@ $column-padding: 10px;
 .painel {
     position: fixed;
     width: 100%;
-    text-align: center;
+    // text-align: center;
     height: $footer-height;
     left: 0;
     bottom: 0;
     height: #{$footer-height};
     background-color: darkslategrey;
+    color: lightgray;
 }
 .painel input {
     width: 150px;

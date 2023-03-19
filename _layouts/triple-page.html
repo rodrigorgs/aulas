@@ -14,11 +14,26 @@ triple: true
         </script>
 
         <div class="painel" x-data>
-            <input type="button" class="btn-back" id="volta" value="Retroceder" x-bind:disabled="$store.triple.isFirstPage()" @click="$store.triple.move(-1);"/>
-            <input type="button" class="btn-fwd" id="avanca" value="Avançar" x-bind:disabled="$store.triple.isLastPage()" @click="$store.triple.move(1);"/>
-            <span style="color: lightgray;">
-                <span x-text="$store.triple.currentPage + 1"></span> /
-                <span x-text="$store.triple.pages.length"></span>
+            <input type="button" class="btn-back" value="Anterior"
+                    x-bind:disabled="$store.triple.isFirstPage()"
+                    @click="$store.triple.move(-1);"/>
+            <input type="button" class="btn-fwd" value="Próximo"
+                    x-bind:disabled="$store.triple.isLastPage()"
+                    @click="$store.triple.move(1);"/>
+            <span>
+                <span x-text="$store.triple.currentPage + 1">0</span> /
+                <span x-text="$store.triple.pages.length">0</span>
+            </span>
+             &mdash;
+            <span>
+                <span x-show="$store.submission.wasSaved($store.triple.currentPage)">
+                    Salvo em
+                    <span x-text="$store.submission.getSubmissionTimestamp($store.triple.currentPage)"></span>
+                    </span>
+                </span>
+                <span x-show="!$store.submission.wasSaved($store.triple.currentPage)">
+                    Ainda não foi salvo
+                </span>
             </span>
             <!-- <input type="button" id="expandeEditor" value="Expandir editor"/> -->
         </div>
