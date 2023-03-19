@@ -16,19 +16,21 @@ triple: true
         <div class="painel" x-data>
             <input type="button" class="btn-back" id="volta" value="Retroceder" x-bind:disabled="$store.triple.isFirstPage()" @click="$store.triple.move(-1);"/>
             <input type="button" class="btn-fwd" id="avanca" value="Avançar" x-bind:disabled="$store.triple.isLastPage()" @click="$store.triple.move(1);"/>
+            <span style="color: lightgray;">
+                <span x-text="$store.triple.currentPage + 1"></span> /
+                <span x-text="$store.triple.pages.length"></span>
+            </span>
             <!-- <input type="button" id="expandeEditor" value="Expandir editor"/> -->
         </div>
         
         {% include header.html %}
-
-
 
         <div class=postpost-content">
             {{ content }}
         </div>
 
         <div id="triple-container"></div>
-        
+
     </body>
 
 </html>
