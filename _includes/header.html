@@ -8,7 +8,49 @@
     <span class="page-title">{{ page.title }}</span>
     </div>
 
-    <div id="submission-bar" style="float: right;"></div>
+    {% if page.features == nil or page.features contains "code" or page.features contains "survey" or page.features contains "clicker" %}
+      {%- assign has_submission = 'true' -%}
+    {% else %}
+      {%- assign has_submission = 'false' -%}
+    {% endif %}
+    
+    <div x-data x-show="$store.submission.username" style="float: right;">
+      <div id="loginbar">
+        <span class="loginbar-logout" x-show="$store.submission.username">
+          <span>User:</span>
+          <span class="loginbar-username" x-text="$store.submission.username || '?'">?</span>
+          <button onclick="logout();">Logout</button>
+          <!-- <button onclick="enviaRespostasTotal();">Enviar respostas</button> -->
+          <!-- <button onclick="carregaRespostasTotal();">Carregar respostas</button> -->
+          <button onclick="proximaResposta(-1);" x-show="$store.submission.isAdmin">&lt;</button>
+          <button onclick="proximaResposta(1);" x-show="$store.submission.isAdmin">&gt;</button>
+          <a onclick="clickStats(this);">Stats</a>
+        </span>
+        <span class="loginbar-login" x-show="!$store.submission.username">
+          <button onclick="showLogin();">Login</button>
+        </span>
+      </div>
+      <div id="dialog" title="Login" style="display: none">
+      <form autocomplete="off">
+        <input id="username" type="text" size="25" placeholder="Username" /><br/>
+        <input id="password" type="password" size="25" placeholder="Password" /><br/>
+        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
+      </form>
+      </div>
+    </div>
+
+    <script>
+      const hasSubmission = {{ has_submission }};
+      document.addEventListener('alpine:init', () => {
+          Alpine.store('submission', { hasSubmission, username: null, isAdmin: false })
+
+          loginDialog = jQuery("#dialog");
+          loginDialog.find("form").on("submit", function (evt) {
+              evt.preventDefault();
+              submitLoginDialog();
+          });
+      })
+    </script>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">

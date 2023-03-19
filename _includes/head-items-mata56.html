@@ -51,5 +51,9 @@
 {% endif %}
 
 {% if page.features == nil or page.features contains "code" or page.features contains "survey" or page.features contains "clicker" %}
+<script type="text/javascript" src="{{site.baseurl}}/lib/ezsubmission/ezsubmission.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/submissao/submissao2.js"></script>
+<script>
+  document.hasLogin = true
+</script>
 {% endif %}
