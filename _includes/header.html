@@ -14,7 +14,7 @@
       {%- assign has_submission = 'false' -%}
     {% endif %}
     
-    <div x-data x-show="$store.submission.username" style="float: right;">
+    <div x-data x-show="$store.submission.hasSubmission" style="float: right;">
       <div id="loginbar">
         <span class="loginbar-logout" x-show="$store.submission.username">
           <span>User:</span>

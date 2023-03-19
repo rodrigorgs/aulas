@@ -48,7 +48,7 @@ Crie uma função que determina se uma pessoa está obesa. Uma pessoa obesa é a
 
 <textarea class="code lang-python">
 def esta_obesa(peso, altura):
-  return false
+  return False
 </textarea>
 <div class="testcode">
 assert esta_obesa(70, 1.70) == False
