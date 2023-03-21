@@ -32,6 +32,7 @@ title: Programação em Python
 ### Material extra
 
 - [Python para quem programa em C++](https://docs.google.com/document/d/1SkQrwLixZjPvFuiEJQcR5iObTigd88wwwpqoj_rzroQ/edit)
+- [Seleção de problemas para esta disciplina (GRUPRO)](http://wiki.dcc.ufba.br/GRUPRO/BasicO)
 
 ![](ilp-pd-logo.png)
 
