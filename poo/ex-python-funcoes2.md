@@ -4,7 +4,35 @@ title: "Exercícios: funções em Python"
 features: [code, python]
 ---
 
-## 
+## Valor total
+
+O programa ao lado calcula o valor total de uma compra. Transforme esse programa em uma função, chamada `calcula_total`, que recebe os dados de entrada como parâmetros e retorna o valor total. Sua função não deve conter instruções como `print` e `input`, mas você pode manter essas instruções *fora* da função se quiser testá-la.
+
+<textarea class="code lang-python">
+qtd = int(input())
+valor_unitario = float(input())
+desconto = float(input()) # Entre 0.0 e 1.0
+print((qtd * valor_unitario) * (1 - desconto))
+</textarea>
+
+<textarea class="stdin">10
+100
+0.4
+</textarea>
+
+<div class="testcode">
+try:
+  assert abs(calcula_total(10, 100, 0.4) - 600) < 0.01, 'calcula_total(10, 100, 0.4) deve retornar 600.0'
+  assert abs(calcula_total(3, 4, 0.0) - 12) < 0.01, 'calcula_total(3, 4, 0.0) deve retornar 12.0'
+  assert abs(calcula_total(9, 10.50, 1.0) - 0) < 0.01, 'calcula_total(9, 10.50, 1.0) deve retornar 0.0'
+except AssertionError as e:
+  print(e)
+</div>
+
+<!-- 
+def calcula_total(qtd, valor_unitario, desconto):
+  return (qtd * valor_unitario) * (1 - desconto)
+ -->
 
 ## Docstring
 
@@ -61,6 +89,53 @@ def segundo_grau(x, a, b=0, c=0):
   return a * x ** 2 + b * x + c
 -->
 
+## Saudação
+
+No programa ao lado há um função `saudacao`. Em vez de dizer o que ela deve fazer, adicionamos alguns testes no final do programa, que mostram como a função deve funcionar.
+
+Corrija a função `saudacao` de forma que ela passe nos testes (`asserts`).
+
+<textarea class="code lang-python">
+def saudacao():
+  return f"Oi, pessoal!"
+
+assert saudacao('pessoal', 'Oi') == 'Oi, pessoal!'
+assert saudacao('Mundo') == 'Alô, Mundo!'
+assert saudacao(saudacao='Olá', nome='galera') == 'Olá, galera!'
+assert saudacao(nome='galera') == 'Alô, galera!'
+</textarea>
+
+<div class="testcode">
+try:
+  assert saudacao('turma', 'Eita') == 'Eita, turma!', 'Erro ao chamar a função com dois parâmetros posicionais'
+  assert saudacao('planeta') == 'Alô, planeta!', 'Erro ao chamar a função com um parâmetro posicional'
+  assert saudacao(saudacao='Oba', nome='pessoal') == 'Oba, pessoal!', 'Erro ao chamar a função com dois parâmetros nomeados'
+  assert saudacao(nome='você') == 'Alô, você!', 'Erro ao chamar a função com um parâmetro nomeado'
+except AssertionError as e:
+  print(e)
+</div>
+
+## Maiúsculas
+
+Crie uma função, maiusculizada, que recebe uma lista de strings e retorna uma lista com as strings convertidas para maiúsculas (use `s.upper()` para converter uma string `s` para maiúsculas).
+
+<textarea class="code lang-python">
+def maiusculizada(lista):
+  pass
+</textarea>
+
+<div class="testcode">
+try:
+  assert maiusculizada([]) == [], 'Erro com lista vazia'
+  assert maiusculizada(['d']) == ['D'], 'Erro com lista de um elemento'
+  assert maiusculizada(['d', 'Aba', 'CaRRO']) == ['D', 'ABA', 'CARRO'], 'Erro com lista de 3 elementos'
+  l = ['qwe', 'asd', 'zxc']
+  maiusculizada(l)
+  assert l == ['qwe', 'asd', 'zxc'], 'Não modifique a lista passada como parâmetro!'
+except AssertionError as e:
+  print(e)
+</div>
+
 ## Média justa
 
 Crie uma função uma função `maior(lista)`, que retorna o maior elemento de uma lista de números e uma função `media_justa(lista)`, que retorna a média dos números da lista desconsiderando o seu maior elemento. A segunda função deve usar a primeira.
@@ -99,7 +174,7 @@ try:
   # Um método deve chamar o outro
   from unittest.mock import MagicMock
   maior = MagicMock(return_value=5)
-  assert media_justa([5, 10]) == 5, 'Erro em media_justa()'
+  assert media_justa([5, 10]) == 10, 'Erro em media_justa()'
   assert maior.called, 'O método media_justa deve chamar o método maior'
 except AssertionError as e:
   print('Erro:', e)
