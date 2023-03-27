@@ -156,6 +156,14 @@ assert linha("@", 0) == ""
 
 Crie uma função que recebe um caractere e dois inteiros, base e altura, e retorna uma string representando um retângulo com as dimensões fornecidas. Use a função `linha` desenvolvida anteriormente (você precisará copiar a função aqui).
 
+Exemplo: para a chamada `retangulo('#', 4, 3)`, a função deve retornar a seguinte string:
+
+```
+####
+####
+####
+```
+
 <textarea class="code lang-python">
 def retangulo(c, base, altura):
   s = "****"
