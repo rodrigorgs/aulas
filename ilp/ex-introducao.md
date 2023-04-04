@@ -8,12 +8,12 @@ features: [code,python]
 
 Nesta página você pode resolver exercícios de programação sem sair do navegador. Se você está aqui porque os exercícios são parte da avaliação de uma disciplina, clique no botão `Login`, no canto superior direito da página, e preencha os seus dados de acesso. Somente assim suas respostas serão enviadas para o professor.
 
-Você entendeu? Modifique o programa ao lado para que ele escreva "Sim", e em seguida clique no botão "Rodar". A saída do programa deve aparecer na caixa "Saída" (canto inferior direito).
+Você entendeu? Modifique o programa ao lado para que ele escreva **"Entendido!"**, e em seguida clique no botão "Rodar". A saída do programa deve aparecer na caixa "Saída" (canto inferior direito).
 
 Ao rodar seu programa, também serão executados alguns testes para verificar se seu programa está correto. Se os seus testes passarem, clique no botão "Próximo" para avançar para a próxima questão.
 
 <textarea class="code lang-python">
-print("Entendido!")
+print("Não entendi!")
 </textarea>
 
 <div class="testcases">
