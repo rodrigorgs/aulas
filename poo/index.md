@@ -27,6 +27,10 @@ features: []
 10. **[Herança: parte 2](ex-python-heranca2)**
  -->
 
+## Guia de Laboratório
+
+Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJOrTGYhejdkp2pIxRodRHWdH8XkPJjn4/edit#)
+
 ## Conteúdo
 
 <!-- 
