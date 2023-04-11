@@ -50,6 +50,7 @@ $column-padding: 10px;
 }
 
 .stdin, .stdout {
+    font-size: 18px;
     width: 100% !important; 
     height: calc(.5 * (100vh - #{$footer-height} - #{$header-height} - #{$column-padding * 3} - 25px)) !important;
 }
