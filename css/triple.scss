@@ -50,7 +50,8 @@ $column-padding: 10px;
 }
 
 .stdin, .stdout {
-    font-size: 18px;
+    font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
+    font-size: 20px;
     width: 100% !important; 
     height: calc(.5 * (100vh - #{$footer-height} - #{$header-height} - #{$column-padding * 3} - 25px)) !important;
 }
