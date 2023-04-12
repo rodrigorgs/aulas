@@ -16,7 +16,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == "Pokemon"
+assert resposta() == "Pokemon", "Resposta errada"
 </div>
 
 ## Quais são os atributos presentes no objeto pikachu?
@@ -31,7 +31,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"angle", "file", "forca", "vida", "x", "y"}
+assert resposta() == {"angle", "file", "forca", "vida", "x", "y"}, "Resposta errada"
 </div>
 
 ## Quais são os valores iniciais dos atributos de pikachu?
@@ -52,7 +52,7 @@ assert resposta() == {
   "forca": 30,
   "vida": 100,
   "x": 200.0,
-  "y": 300.0}
+  "y": 300.0}, "Resposta errada"
 </div>
 
 ## Quais são os métodos da pokeball?
@@ -63,7 +63,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"destroy", "joga"}
+assert resposta() == {"destroy", "joga"}, "Resposta errada"
 </div>
 
 ## Quais são as classes dos objetos referenciados pelas variáveis globais?
@@ -74,7 +74,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"Campo", "Pokemon", "Pokeball"}
+assert resposta() == {"Campo", "Pokemon", "Pokeball"}, "Resposta errada"
 </div>
 
 ## Quais atributos são modificados pelo método evolui da classe Pokemon?
@@ -85,7 +85,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"file", "forca", "vida"}
+assert resposta() == {"file", "forca", "vida"}, "Resposta errada"
 </div>
 
 ## Identifique o nome de um método da classe Pokemon que retorna True ou False
@@ -96,7 +96,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == "pode_ser_capturado"
+assert resposta() == "pode_ser_capturado", "Resposta errada"
 </div>
 
 ## Quais métodos da classe Pokemon recebem parâmetros?
@@ -107,7 +107,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"ataca", "recebe_dano"}
+assert resposta() == {"ataca", "recebe_dano"}, "Resposta errada"
 </div>
 
 ## Objetos de qual ou quais classes podem receber dano?
@@ -118,7 +118,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == {"Pokemon"}
+assert resposta() == {"Pokemon"}, "Resposta errada"
 </div>
 
 ## Crie uma nova pokeball. Use-a para capturar um pokemon.
@@ -131,7 +131,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == "sim"
+assert resposta() == "sim", "Resposta errada"
 </div>
 
 ## Crie um novo pókemon a partir da imagem 'bulbasaur.png'. Ele possui os mesmos métodos dos objetos referenciados pelas variáveis pikachu e charmander?
@@ -144,7 +144,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == "sim"
+assert resposta() == "sim", "Resposta errada"
 </div>
 
 ## Qual o mínimo de ataques que um pokemon precisa desferir para fazer outro pokemon desmaiar?
@@ -157,7 +157,7 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == 2
+assert resposta() == 2, "Resposta errada"
 </div>
 
 ## É possível capturar um pokemon desmaiado?
@@ -170,5 +170,5 @@ def resposta():
 </textarea>
 
 <div class="testcode">
-assert resposta() == "não"
+assert resposta() == "não", "Resposta errada"
 </div>
