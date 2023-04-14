@@ -40,6 +40,12 @@ $column-padding: 10px;
     padding: 0;
     width: 50.0%;
     height: calc(100vh - #{$footer-height} - #{$header-height});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagina-codigo button {
+    width: 200px;
 }
 
 .pagina-console {
@@ -100,3 +106,7 @@ $column-padding: 10px;
     height: calc(100vh - #{$footer-height} - #{$header-height} - #{$button-height}) !important;
 }
 
+.button-panel {
+    display: flex;
+    flex-direction: row;
+}
