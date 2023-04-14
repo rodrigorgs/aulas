@@ -25,7 +25,7 @@ class Casa:
 try:
   assert type(c1) == Casa, 'c1 deve referenciar um objeto da classe Casa'
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Construindo prédios
@@ -51,7 +51,7 @@ try:
   assert type(p) == Predio, 'p deve referenciar um objeto da classe Predio'
   assert p.n == 5, 'O prédio deve ter 5 andares'
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Acelerando
@@ -95,7 +95,7 @@ try:
   assert final == fusca_inicial + fusca.aceleracao * 5, 'Variável final incorreta'
   assert fusca.acelerou, 'O fusca precisa ser acelerado'  
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Retângulo simples
@@ -116,13 +116,13 @@ class Retangulo:
 <div class="testcode">
 try:  
   r = Retangulo(23, 76)
-  assert r.base == 23, 'Resposta errada'
-  assert r.altura == 76, 'Resposta errada'
+  assert r.base == 23
+  assert r.altura == 76
   r = Retangulo(99, 33)
-  assert r.base == 99, 'Resposta errada'
-  assert r.altura == 33, 'Resposta errada'
+  assert r.base == 99
+  assert r.altura == 33
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 </textarea>
@@ -141,13 +141,13 @@ Continuando o exercício anterior, implemente dois métodos adicionais:
 <div class="testcode">
 try:
   r = Retangulo(4, 3)
-  assert r.area() == 12, 'Resposta errada'
-  assert r.perimetro() == 14, 'Resposta errada'
+  assert r.area() == 12
+  assert r.perimetro() == 14
   r.base = 5
-  assert r.area() == 15, 'Resposta errada'
-  assert r.perimetro() == 16, 'Resposta errada'
+  assert r.area() == 15
+  assert r.perimetro() == 16
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Aumentar retângulo
@@ -173,10 +173,10 @@ try:
   r1 = Retangulo(4, 5)
   r2 = Retangulo(1, 2)
   r1.aumenta(r2)
-  assert r1.base == 5 and r1.altura == 7, 'Resposta errada'
-  assert r2.base == 1 and r2.altura == 2, 'Resposta errada'
+  assert r1.base == 5 and r1.altura == 7
+  assert r2.base == 1 and r2.altura == 2
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Soma de retângulos
@@ -202,11 +202,11 @@ try:
   r1 = Retangulo(4, 5)
   r2 = Retangulo(1, 2)
   r3 = r1.mais(r2)
-  assert r1.base == 4 and r1.altura == 5, 'Resposta errada'
-  assert r2.base == 1 and r2.altura == 2, 'Resposta errada'
-  assert r3.base == 5 and r3.altura == 7, 'Resposta errada'
+  assert r1.base == 4 and r1.altura == 5
+  assert r2.base == 1 and r2.altura == 2
+  assert r3.base == 5 and r3.altura == 7
 except AssertionError as e:
-  print(e)
+  print('[ERRO]', e)
 </div>
 
 ## Conta bancária
@@ -228,7 +228,7 @@ Complete a implementação da classe.
 <textarea class="code lang-python">
 class Conta:
   '''ATENÇÃO: Crie o construtor da classe'''
-  
+
   def deposita(self, quantia):
     '''
     Adiciona a quantia ao saldo da conta.

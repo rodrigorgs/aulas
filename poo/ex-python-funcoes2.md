@@ -26,7 +26,7 @@ try:
   assert abs(calcula_total(3, 4, 0.0) - 12) < 0.01, 'calcula_total(3, 4, 0.0) deve retornar 12.0'
   assert abs(calcula_total(9, 10.50, 1.0) - 0) < 0.01, 'calcula_total(9, 10.50, 1.0) deve retornar 0.0'
 except AssertionError as e:
-  print(e)
+  print('[ERRO] ', e)
 </div>
 
 <!-- 
@@ -54,7 +54,7 @@ try:
   assert distancia.__doc__ is not None, 'A função não possui docstring'
   assert re.sub(r'[ \n]+', ' ', distancia.__doc__.strip()) == "Calcula a distância euclideana entre os pontos (x1, y1) e (x2, y2)", 'O texto da docstring está incorreto'
 except AssertionError as e:
-  print(e)
+  print('[ERRO] ', e)
 </div>
 
 <!-- 
@@ -76,12 +76,12 @@ def segundo_grau(x, a, b, c):
 
 <div class="testcode">
 try:
-  assert segundo_grau(2, 1, 1, 1) == 7
-  assert segundo_grau(3, 4, -2) == segundo_grau(3, 4, -2, 0)
-  assert segundo_grau(-2, 7) == segundo_grau(-2, 7, 0, 0)
-  assert segundo_grau(-2, 7, c=8) == segundo_grau(-2, 7, 0, 8)
+  assert segundo_grau(2, 1, 1, 1) == 7, 'Erro'
+  assert segundo_grau(3, 4, -2) == segundo_grau(3, 4, -2, 0), 'Erro'
+  assert segundo_grau(-2, 7) == segundo_grau(-2, 7, 0, 0), 'Erro'
+  assert segundo_grau(-2, 7, c=8) == segundo_grau(-2, 7, 0, 8), 'Erro'
 except AssertionError as e:
-    print(e)
+    print('[ERRO] ', e)
 </div>
 
 <!-- 
@@ -112,7 +112,7 @@ try:
   assert saudacao(saudacao='Oba', nome='pessoal') == 'Oba, pessoal!', 'Erro ao chamar a função com dois parâmetros nomeados'
   assert saudacao(nome='você') == 'Alô, você!', 'Erro ao chamar a função com um parâmetro nomeado'
 except AssertionError as e:
-  print(e)
+  print('[ERRO] ', e)
 </div>
 
 ## Maiúsculas
@@ -133,7 +133,7 @@ try:
   maiusculizada(l)
   assert l == ['qwe', 'asd', 'zxc'], 'Não modifique a lista passada como parâmetro!'
 except AssertionError as e:
-  print(e)
+  print('[ERRO] ', e)
 </div>
 
 ## Média justa
