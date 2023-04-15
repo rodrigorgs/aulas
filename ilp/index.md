@@ -27,7 +27,8 @@ title: Programação em Python
 
 ### Exercícios de fixação
 
-- [Exercícios de introdução](ex-introducao)
+- [Introdução](ex-introducao)
+- [Condicionais (if/else)](ex-if)
 
 ### Material extra
 
