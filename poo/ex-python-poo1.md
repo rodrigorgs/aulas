@@ -166,6 +166,8 @@ class Retangulo:
     com as dimensões de outro retângulo, passado
     como parâmetro
     '''
+
+    
 </textarea>
 
 <div class="testcode">
@@ -195,6 +197,7 @@ class Retangulo:
     dimensões de outro retângulo, passado como
     parâmetro
     '''
+
 </textarea>
 
 <div class="testcode">
@@ -252,6 +255,8 @@ class Conta:
     :param beneficiario: conta do beneficiário
     :return: `True` se a transferência foi realizada, `False` caso contrário
     '''
+
+
 </textarea>
 
 <div class="testcode">
