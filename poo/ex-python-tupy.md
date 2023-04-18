@@ -20,7 +20,34 @@ class Semaforo(Image):
 run(globals())
 </textarea>
 
+<div class="runtemplate">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
+</div>
+
 <div class="testcode">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
 import unittest
 class TestSemaforo(unittest.TestCase):
   def test_cor_inicial(self):
@@ -74,7 +101,34 @@ class Sombra(Image):
 run(globals())
 </textarea>
 
+<div class="runtemplate">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
+</div>
+
 <div class="testcode">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
 import unittest
 class TestSombra(unittest.TestCase):
   def test_posicao_inicial(self):
@@ -163,7 +217,34 @@ torre3 = Torre(400, 300)
 run(globals())
 </textarea>
 
+<div class="runtemplate">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
+</div>
+
 <div class="testcode">
+class Image:
+  def __new__(cls, *args, **kwargs):
+    self = super().__new__(cls)
+    self.x = 0
+    self.y = 0
+    self.file = self.__class__.__name__.lower() + '.png'
+    self.angle = 0
+    return self
+
+def run(x):
+  pass
+[[[code]]]
 import unittest
 
 class TestTorre(unittest.TestCase):
