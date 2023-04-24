@@ -17,6 +17,8 @@ class Semaforo(Image):
   def __init__(self):
     pass
 
+s = Semaforo()
+
 run(globals())
 </textarea>
 
