@@ -177,7 +177,7 @@ Implemente o jogo Torre de Hanói usando o Tupy. O jogo consiste em três torres
 Você deve criar as seguintes classes:
 
 - `Disco`: representa um disco de tamanho `tamanho`. O atributo `file` deve ser igual a `discoX.png`, onde `X` é o tamanho do disco.
-- `Torre`: representa uma torre. A torre deve ser inicializada com uma posição `x` e `y`, e uma lista de discos, de baixo para cima. Se não for informada uma lista de discos, supõe-se que a torre está vazia.
+- `Torre`: representa uma torre. A torre deve ser inicializada com uma posição `x` e `y`, e uma lista de discos (atributo `discos`), de baixo para cima. Se não for informada uma lista de discos, supõe-se que a torre está vazia.
   - A torre deve possuir um método `disco_do_topo`, que retorna o disco do topo da torre, ou `None` se a torre estiver vazia. 
   - Além disso, deve possuir um método `move_disco_para_torre`, que recebe como parâmetro uma outra torre, e move o disco do topo da torre atual para o topo da torre recebida como parâmetro, contanto que o movimento não viole as regras do jogo. O método deve retornar `True` se o disco foi movido, ou `False` caso contrário.
 
