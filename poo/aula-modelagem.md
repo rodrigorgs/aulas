@@ -24,3 +24,4 @@ A responsibility is not the same thing as a method, but methods are imple- mente
 - serviço de transporte (Uber)
 - e-commerce (Amazon)
 - site de jogo de cartas online
+- vetores (velocidade)
