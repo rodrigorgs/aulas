@@ -6,6 +6,9 @@ class Semaforo(Image):
     self.y = 240
     self.file = 'verde.png'
 
+  def avanca(self):
+    self.file = 'amarelo.png'
+
 s = Semaforo()
 
 run(globals())

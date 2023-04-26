@@ -189,7 +189,7 @@ Você deve criar as seguintes classes:
   - A torre deve possuir um método `disco_do_topo`, que retorna o disco do topo da torre, ou `None` se a torre estiver vazia. 
   - Além disso, deve possuir um método `move_disco_para_torre`, que recebe como parâmetro uma outra torre, e move o disco do topo da torre atual para o topo da torre recebida como parâmetro, contanto que o movimento não viole as regras do jogo. O método deve retornar `True` se o disco foi movido, ou `False` caso contrário.
 
-Ao mover um disco, sua posição deve ser alterada, de forma que a sua coordenada `x` coincida com a coordenada `x` da torre, e a sua coordenada `y` seja dada por `Ty + 40 - 30 * N`, onde `Ty` é a coordenada `y` da torre de destino, e `N` é o número de discos na torre de destino após o movimento.
+Ao mover um disco, sua posição deve ser alterada, de forma que a sua coordenada `x` coincida com a coordenada `x` da torre, e a sua coordenada `y` seja dada por `Ty + 40 - 30 * N`, onde `Ty` é a coordenada `y` da torre de destino, e `N` é o número de discos na torre de destino antes do movimento.
 
 Você pode usar os seguintes arquivos de imagem (três discos e uma torre):
 

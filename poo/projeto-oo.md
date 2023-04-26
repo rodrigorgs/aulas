@@ -191,10 +191,12 @@ Crie um diagrama de classes para a seguinte especificação:
 
 ## Exercício: outras ideias
 
+- Site de busca de passagens aéreas (Google Flights)
+  - Caso de uso. Usuário especifica cidade de origem, cidade de destino, data inicial e final, número de adultos e número de crianças; resultados são voos (aeroporto para aeroporto) de companhias aéreas (dois tipos: voo de ida e voo de volta). Pode haver conexões. Preço.
 - Sistema de e-commerce (ex.: Magalu, Amazon)
 - Sistema de streaming (ex.: Netflix, Globo+)
 - Jogo de xadrez
-- Jogo de cartas
+- Jogo de [cartas](cartas.md)
 - Jogo de dominó
 - Árvore genealógica
 - Programa de ilustração com formas geométricas
@@ -207,3 +209,4 @@ Crie um diagrama de classes para a seguinte especificação:
 - Sistema de hospedagem (ex.: AirBnB, Booking)
 - Sistema de agendamento de compromissos
 - Biblioteca de componentes gráficos (botões, caixa de texto...)
+- Biblioteca para manipular vetores
