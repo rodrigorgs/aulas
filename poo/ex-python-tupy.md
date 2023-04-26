@@ -6,6 +6,12 @@ features: [code, python]
 
 ## Semáforo
 
+Nas questões a seguir você usará o Tupy para visualizar o programa sendo executado. Para instalar o Tupy, use o comando `pip install git+https://github.com/rodrigorgs/tupy.git`. Para executar o seu programa, crie um arquivo com extensão `.py`, cole seu código-fonte e execute-o com o Python.
+
+Para facilitar, você pode baixar o código inicial dos exercícios como um [arquivo `.zip`](ex-tupy.zip), já incluindo as imagens.
+
+----
+
 No ambiente **Tupy**, crie uma classe `Semaforo`, com o atributo `cor` e o método `avanca` (avança). O atributo `cor` deve ser inicialmente `"verde"`; ao chamar `avanca` sucessivamente, a cor deve mudar para `"amarelo"`, `"vermelho"`, então voltar para `"verde"` e assim por diante. O atributo `file` (herdando do tupy) deve ser sempre igual à cor, seguida de `.png`.
 
 **Atenção**: ao colar o código aqui (neste e nos próximos exercícios), omita a linha `from tupy import *`.
