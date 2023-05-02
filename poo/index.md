@@ -53,7 +53,7 @@ Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJ
     - [POO básico em Python][poo-basico-py]
     - [Criando classes no ambiente Tupy][tupy-classes]
     - **Listas de exercícios 3 e 4**
-  - [Modelagem OO](http://ww2.inf.ufg.br/~fabio/manual-modelagem.pdf)
+  - [Modelagem OO](https://engsoftmoderna.info/cap4.html)
   - [Tipagem estática][tipagem-estatica]
 - **Programação orientada a objetos - parte 2**
   - [Encapsulamento, visibilidade e propriedades][encapsulamento]
