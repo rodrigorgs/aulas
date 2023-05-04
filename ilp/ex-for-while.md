@@ -24,7 +24,7 @@ for i in range(3):
 
 ## Valor total de cada item
 
-O programa ao lado 1) lê um número `qtd` e depois 2) lê um par de números inteiros representando a quantidade e o preço unitário de um item e 3) imprime o valor dos itens. Modifique o programa para que ele repita os passos (2) e (3) `qtd` vezes.
+O programa ao lado 1) lê um número `qtd` e depois 2) lê um par de números inteiros representando a quantidade e o preço unitário de um item e 3) imprime o valor dos itens. Modifique o programa para que ele repita os passos (2) e (3) `qtd` vezes; ou seja, o programa deve calcular o valor final de `qtd` itens, descritos na entrada pela sua quantidade e preço unitário .
 
 <textarea class="code lang-python">
 qtd = int(input())
