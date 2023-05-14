@@ -57,10 +57,11 @@ Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJ
   - [Tipagem estática][tipagem-estatica]
 - **Programação orientada a objetos - parte 2**
   - [Encapsulamento, visibilidade e propriedades][encapsulamento]
-    - [Identidade e mutabilidade](identidade-mutabilidade)
-    - [Exceções][excecoes]
+  - [Sobrecarga de operadores][sobrecarga]
+  - [Exceções][excecoes]
   - [Static][static] e [Enum][enum]
   - [Herança e polimorfismo][heranca]
+    <!-- - [Identidade e mutabilidade](identidade-mutabilidade) -->
 
 [modulos-pacotes]: https://docs.google.com/presentation/d/1GoTn5Lpbov0xz30Di9rlbcOHpmL5upBVEqRwM-lYQg8/edit
 [paradigma-oo]: https://docs.google.com/presentation/d/1bdzbS51fA-BewCaC0gMNuTSQWtDXfrHKVRiR3I-URnY/edit
@@ -72,6 +73,7 @@ Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJ
 [static]: https://docs.google.com/presentation/d/1UrWfmWoLe9xsb5WmU2mMCHw0AEWOqiRgO_AbyNpvQ_0/edit
 [excecoes]: https://docs.google.com/presentation/d/1U_JjTZZTQ9XruyLxnIlgKxmB5HkmK9gUOaOsCQZ42e8/edit
 [tipagem-estatica]: https://docs.google.com/presentation/d/1g7fK2N1sYmhBoHAMI2oJEE7qewbF_ve-DAtZ9e9z1rM/edit
+[sobrecarga]: https://docs.google.com/presentation/d/1UfZ7swOojM6QOnZa5mA9VCZmvby1Dd9bniIOuaiPYI0/edit
 [heranca]: https://docs.google.com/presentation/d/1DG7HM7MFKisSS8QXRI-J0FhLXay4Hx2CJl2-Wca7SQE/edit
 
 <!-- 
