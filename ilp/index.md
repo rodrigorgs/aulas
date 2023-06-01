@@ -30,6 +30,7 @@ title: Programação em Python
 - [Introdução](ex-introducao)
 - [Condicionais (if/else)](ex-if)
 - [Repetição (for/while)](ex-for-while)
+- [Listas](ex-listas)
 
 ### Material extra
 
