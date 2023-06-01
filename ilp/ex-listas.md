@@ -1,6 +1,6 @@
 ---
 layout: triple-page
-title: "Exercícios: if/else/elif"
+title: "Exercícios: listas"
 features: [code, python]
 ---
 
@@ -73,6 +73,8 @@ Considere o seguinte programa:
 
 ```python
 palavras = ["Obrigado", "por", "tudo"]
+# Escreva uma linha de código abaixo
+# para completar o programa...
 ```
 
 Que linha de código você deve escrever ao final do programa para inserir a palavra "fim" no final da lista?
