@@ -1,8 +1,8 @@
 ---
 layout: page
-title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
+title: Desenvolvimento de Aplicativos Móveis - 2023.1
 ---
-
+<!-- 
 # Informações básicas
 
 - Site: [v.ht/matc89](http://v.ht/matc89)
@@ -12,7 +12,8 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
   - SEX, 18:30, lab 143 do IME
 
 **Conteúdo**: Conceitos de desenvolvimento de apps para dispositivos móveis. Desenvolvimento de aplicativos nativos com Android SDK e linguagem Java. Noções da aplicação de tecnologias da web para dispositivos móveis.
-
+ -->
+<!-- 
 # Avaliações
 
 - (3,0) [Desenvolvimento de pequenos apps com Android SDK](exercicios-android) (individual)
@@ -22,6 +23,7 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
   - (2,0) Workshop: desenvolvimento
   - (0,5) Exercício proposto (bem especificado, nível de dificuldade adequado)
 - (2,0) Resolução de exercícios de **dois** workshops (mesmas equipes do workshop)
+-->
 
 <!--    
     * Exercício 1: Hello World
@@ -37,14 +39,23 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
 # Notas de aula
 
 - Introdução
-  - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing))
   - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
-  - Ver também as leituras recomendadas (abaixo)
+  - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
+- Android
+  - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
+  - [Introdução ao desenvolvimento com Android SDK](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
+- Flutter
+  - (em breve)
+
+<!-- 
 - Notas sobre os exercícios
   - [Guia de laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
   - [Como fazer os exercícios](https://docs.google.com/presentation/d/1MUvztR37W7q0djQ8r4uMp9q1qQTc3vCCWueuR6WKVFA/edit)
   - Os exercícios serão corrigidos na AVD `3.2 QVGA (ADP2)`
+   -->
   <!-- - [Orientações gerais sobre os exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit) -->
+
+<!--   
 - Android
     + [Instalação](https://docs.google.com/presentation/d/13iFDtHQ-HxVs8ofT0UEiqeOjuFcn_FhtfFGxm7zrPUg/edit)
     + [Introdução ao Android](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
@@ -70,18 +81,17 @@ title: MATC89 - Aplicações para Dispositivos Móveis - 2022.2
     - [ES6 e TypeScript](https://drive.google.com/open?id=1tK-mleL0MPsohCff0E8tuxeyijwprZwsIqmIwoy46gA)
     - [Angular](https://drive.google.com/open?id=1bGoa9sWTEhMVuPognjLgzP7BmjurpIfevEpg3NjAHUg)
     - [Ionic](https://drive.google.com/open?id=1DcuMmkFe8Yx80n37B71uw31h3lq_Rdh4iwROZEw7zCk)
+-->
 
-# Leituras recomendadas
+# Leituras complementares
 
 - [10 Engineering Challenges Due to the Nature of Mobile Applications](https://blog.pragmaticengineer.com/10-engineering-challenges-due-to-the-nature-of-mobile-applications/)
 - [Sistemas e dispositivos móveis nas universidades públicas: desafios e oportunidades](https://docs.google.com/document/d/1xkv2en13stqj3EnCGcdv29qvAT2dRk5YT1vJ85UrrVg/edit#)
 - gov.uk Service Manual: [Making sure your service works well on mobile](https://www.gov.uk/service-manual/technology/working-with-mobile-technology) e [We're not ‘appy. Not ‘appy at all.](https://gds.blog.gov.uk/2013/03/12/were-not-appy-not-appy-at-all/)
-
-Complementares:
-
 - [Introdução aos dispositivos móveis](https://docs.google.com/presentation/d/11YIeaJ22oQgixFvy4QqGU0_SwSRbVOywI0yR2XoASwk/edit)
 - [Nativo vs. web vs. híbrido vs. nativo multiplataforma](https://docs.google.com/presentation/d/1BOJgJeV-48F_wKH9Kar2hqva500EA1mUxL1vQtra8V8/edit?usp=sharing)
 
+<!-- 
 # Bibliografia e referências
 
 - GRIFFITHS, Dawn; GRIFFITHS, David. Use a cabeça!: desenvolvendo para Android. Alta Books; 2ª edição, 2019.
@@ -91,4 +101,4 @@ Referências em inglês:
 
 - [Android Developers](https://developer.android.com/?hl=pt-br) (oficial)
 - [Vogella - Android Development](http://www.vogella.com/android.html)
-
+ -->
