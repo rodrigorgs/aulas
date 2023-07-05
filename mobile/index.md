@@ -42,6 +42,8 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 
 # Notas de aula
 
+[Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
+
 - Introdução
   - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
