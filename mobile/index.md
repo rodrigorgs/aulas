@@ -38,7 +38,7 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 
 # Exercícios
 
-- [Exercícios de Dart]((https://classroom.github.com/a/X12g1jra)
+- [Exercícios de Dart](https://classroom.github.com/a/X12g1jra)
 
 # Notas de aula
 
