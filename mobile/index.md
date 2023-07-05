@@ -51,7 +51,7 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
   - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
   - [Introdução ao desenvolvimento com Android SDK](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
 - Flutter
-  - (em breve)
+  - [Linguagem Dart](https://docs.google.com/presentation/d/1GjP68nGHteIkoR8quvcm_HrZ7Zyn6Hp8jkFgy6ElHC8/edit)
 
 <!-- 
 - Notas sobre os exercícios
