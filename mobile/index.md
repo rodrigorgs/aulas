@@ -41,6 +41,7 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 - [Como fazer os exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit?usp=sharing)
 - [Exercícios de Dart](https://classroom.github.com/a/X12g1jra)
 - [Exercícios de Flutter](https://classroom.github.com/a/_eUZUjRc)
+  - **Atenção**: no exercício do Snackbar, use uma duração de 500 milissegundos.
 
 # Notas de aula
 
