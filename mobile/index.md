@@ -38,14 +38,15 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 
 # Exercícios
 
-- [Como fazer os exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit?usp=sharing)
+Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit?usp=sharing).
+
 - [Exercícios de Dart](https://classroom.github.com/a/X12g1jra)
-- [Exercícios de Flutter](https://classroom.github.com/a/_eUZUjRc)
-  - **Atenção**: no exercício do Snackbar, use uma duração de 500 milissegundos.
+- [Exercícios de Flutter - parte 1](https://classroom.github.com/a/_eUZUjRc) - **Atenção**: no exercício do Snackbar, use uma duração de 500 milissegundos.
+- [Exercícios de Flutter - parte 2](https://classroom.github.com/a/LOuoCp4b)
 
-# Notas de aula
+# Slides
 
-[Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
+<!-- [Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing) -->
 
 - Introdução
   - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
