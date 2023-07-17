@@ -50,7 +50,7 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 
 # Projeto
 
-Veja [informações sobre o projeto](projeto-flutter)
+Veja [informações sobre o projeto](2023/projeto-flutter)
 
 # Slides
 
