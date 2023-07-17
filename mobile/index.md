@@ -36,6 +36,10 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 - [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
 -->
 
+# Informações sobre a disciplina
+
+Veja slides de [Informações sobre a disciplina](https://docs.google.com/presentation/d/1xZb6dvTPsmup76Rd71ASMXReCOGe1ii2KSBMtV_Zzxw/edit?usp=sharing)
+
 # Exercícios
 
 Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit?usp=sharing).
@@ -43,6 +47,10 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 - [Exercícios de Dart](https://classroom.github.com/a/X12g1jra)
 - [Exercícios de Flutter - parte 1](https://classroom.github.com/a/_eUZUjRc) - **Atenção**: no exercício do Snackbar, use uma duração de 500 milissegundos.
 - [Exercícios de Flutter - parte 2](https://classroom.github.com/a/LOuoCp4b)
+
+# Projeto
+
+Veja [informações sobre o projeto](projeto-flutter)
 
 # Slides
 
