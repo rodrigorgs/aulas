@@ -33,6 +33,8 @@ A entrega consiste no envio de um e-mail para <rodrigorgs@ufba.br> com a pasta d
 
 ## Datas
 
+O projeto deve ser entregue até o dia 26/07/2023 (quarta-feira) às 23:59.
+
 ## Avaliação
 
 A avaliação será feita com base nos seguintes critérios:
