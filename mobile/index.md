@@ -122,3 +122,5 @@ Referências em inglês:
 - [Android Developers](https://developer.android.com/?hl=pt-br) (oficial)
 - [Vogella - Android Development](http://www.vogella.com/android.html)
  -->
+
+<img src="mobile.png" width="100" height="100">
