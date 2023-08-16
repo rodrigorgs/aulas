@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Desenvolvimento de Aplicativos Móveis - 2023.1
+title: Desenvolvimento de Aplicativos Móveis - 2023.2
 ---
 <!-- 
 # Informações básicas
@@ -36,10 +36,13 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.1
 - [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
 -->
 
-# Informações sobre a disciplina
+# Programa
 
-Veja slides de [Informações sobre a disciplina](https://docs.google.com/presentation/d/1xZb6dvTPsmup76Rd71ASMXReCOGe1ii2KSBMtV_Zzxw/edit?usp=sharing)
+- Introdução: Evolução de dispositivos computacionais e aplicativos. Design de interfaces para diferentes tamanhos de tela. Distribuição de aplicativos. Abordagens para desenvolvimento de aplicativos.
+- Android: plataforma, ambiente de desenvolvimento e SDK.
+- Flutter: conceitos iniciais, linguagem Dart, criação de interfaces gráficas, interação, navegação, gerenciamento de estado.
 
+<!-- 
 # Exercícios
 
 Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit?usp=sharing).
@@ -51,14 +54,17 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 # Projeto
 
 Veja [informações sobre o projeto](20231/projeto-flutter)
+-->
 
 # Slides
 
 <!-- [Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing) -->
 
 - Introdução
-  - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
+  - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
+
+<!-- 
 - Android
   - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
   - [Introdução ao desenvolvimento com Android SDK](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
@@ -66,7 +72,7 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
   - [Linguagem Dart](https://docs.google.com/presentation/d/1GjP68nGHteIkoR8quvcm_HrZ7Zyn6Hp8jkFgy6ElHC8/edit)
   - [Introdução ao Flutter](https://docs.google.com/presentation/d/1dcSDogvICDwkXkJwtJeXhHTk5i4o1rukE3285w6oS90/edit)
   - [Desenvolvimento de apps com Flutter](https://docs.google.com/presentation/d/1A8FBRqqPQF72GGiHpfNuAMC7p09VgNdl9x1A84YiXkU/edit#slide=id.p)
-
+ -->
 <!-- 
 - Notas sobre os exercícios
   - [Guia de laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
