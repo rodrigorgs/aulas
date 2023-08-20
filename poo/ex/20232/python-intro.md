@@ -50,6 +50,14 @@ def calcula_area(base, altura):
 #assert calcula_area(5, 0) == 0
 #assert calcula_area(20, 5) == 100
 </textarea>
+
+<textarea class="stdin">
+# code NÃO EDITE ESTA LINHA!
+# Você pode adicionar código de
+# teste abaixo desta linha.
+print(calcula_area(3, 4))
+</textarea>
+
 <div class="testcode">
 assert calcula_area(0, 0) == 0
 assert calcula_area(3, 4) == 12
@@ -65,6 +73,12 @@ Lembre-se: a função não deve imprimir o resultado, e sim retorná-lo (com a p
 def esta_obesa(peso, altura):
   return False
 </textarea>
+
+<textarea class="stdin">
+# code
+print(esta_obesa(80, 1.80))
+</textarea>
+
 <div class="testcode">
 assert esta_obesa(70, 1.70) == False
 assert esta_obesa(170, 1.70) == True
@@ -83,6 +97,12 @@ Crie uma função que classifique uma pessoa em uma das seguintes categorias, de
 def faixa_etaria(idade):
   return "bebê"
 </textarea>
+
+<textarea class="stdin">
+# code
+print(faixa_etaria(5))
+</textarea>
+
 <div class="testcode">
 assert faixa_etaria(0) == "bebê"
 assert faixa_etaria(1) == "bebê"
@@ -103,6 +123,12 @@ def linha(c, n):
   s = "****"
   return s
 </textarea>
+
+<textarea class="stdin">
+# code
+print(linha('#', 4))
+</textarea>
+
 <div class="testcode">
 assert linha("*", 5) == "*****"
 assert linha("#", 2) == "##"
@@ -113,12 +139,27 @@ assert linha("@", 0) == ""
 
 Crie uma função que recebe um caractere e dois inteiros, base e altura, e retorna uma string representando um retângulo com as dimensões fornecidas. Use a função `linha` desenvolvida anteriormente (você precisará copiar a função aqui).
 
+Exemplo: a chamada `retangulo('*', 4, 2)` deve retornar a seguinte string: 
+
+```
+****
+****
+```
+
+Dica: use a sequência `\n` dentro de uma string para representar uma quebra de linha.
+
 <textarea class="code lang-python">
 def retangulo(c, base, altura):
   s = "****"
-  s += "****"
+  s += "\n****"
   return s
 </textarea>
+
+<textarea class="stdin">
+# code
+print(retangulo('*', 4, 2))
+</textarea>
+
 <div class="testcode">
 assert retangulo("*", 4, 2).strip() == "****\n****"
 assert retangulo("#", 5, 1).strip() == "#####"
@@ -132,6 +173,13 @@ Crie uma função que recebe um número inteiro, `N` e retorna uma lista com tod
 def sequencia(n):
   return []
 </textarea>
+
+<textarea class="stdin">
+# code
+print(sequencia(5))
+print(sequencia(0))
+</textarea>
+
 <div class="testcode">
 assert sequencia(3) == [1, 2, 3]
 assert sequencia(1) == [1]
@@ -147,6 +195,12 @@ def produtorio(lista):
   resultado = 1
   return resultado
 </textarea>
+
+<textarea class="stdin">
+# code
+print(produtorio([2, 4, -1]))
+</textarea>
+
 <div class="testcode">
 assert produtorio([]) == 1
 assert produtorio([1, 2, 3]) == 6
