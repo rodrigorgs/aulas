@@ -6,7 +6,9 @@ features: [code, python]
 
 ## Batalha Pokémon
 
-Para essas questões, você deverá baixar o projeto [tupy-samples](https://github.com/rodrigorgs/tupy-samples/archive/refs/heads/master.zip) e então executar o script localizado em `pokemon/batalha-pokemon.py`.
+Para essas questões, você deverá instalar o [Tupy](https://rodrigorgs.github.io/tupy/).
+
+Depois disso, você deve baixar o projeto [tupy-samples](https://github.com/rodrigorgs/tupy-samples/archive/refs/heads/master.zip) e então executar o script localizado em `pokemon/batalha-pokemon.py`.
 
 Responda às questões apenas com o uso do ambiente Tupy; NÃO responda com base no código-fonte do script.
 
