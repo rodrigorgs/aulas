@@ -63,11 +63,11 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 - Introdução
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
   - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
-
-<!-- 
 - Android
   - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
   - [Introdução ao desenvolvimento com Android SDK](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
+
+<!-- 
 - Flutter
   - [Linguagem Dart](https://docs.google.com/presentation/d/1GjP68nGHteIkoR8quvcm_HrZ7Zyn6Hp8jkFgy6ElHC8/edit)
   - [Introdução ao Flutter](https://docs.google.com/presentation/d/1dcSDogvICDwkXkJwtJeXhHTk5i4o1rukE3285w6oS90/edit)
