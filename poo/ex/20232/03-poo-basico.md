@@ -139,7 +139,7 @@ class Retangulo:
 
 <textarea class="stdin">
 # code
-r = Retagulo(3, 4)
+r = Retangulo(3, 4)
 print('Base: ', r.base)
 print('Altura: ', r.altura)
 </textarea>
