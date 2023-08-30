@@ -32,6 +32,13 @@ class Ponto:
   pass
 </textarea>
 
+<textarea class="stdin">
+# code
+p1 = Ponto(0, 0)
+p2 = Ponto(3, 4)
+print(p1.distancia(p2)) # 5
+</textarea>
+
 <div class="testcode">
 try:
   p = Ponto(1, 2)
@@ -75,7 +82,7 @@ Implemente as classes usando a linguagem Python. Considere que:
 - O método `encerrar` fecha o carrinho.
 - Novos itens não podem ser adicionados a um carrinho fechado.
 - O método `total` retorna a soma dos preços dos itens.
-- A lista de itens deve ser implementada como uma lista (`[]`)
+- O carrinho deve armazenar seus itens em um objeto do tipo `list` (`[]`)
 
 OBS.: Neste momento não se preocupe com ocultação de informação (atributos privados) ou com exceções. Esses assuntos serão abordados mais adiante.
 
