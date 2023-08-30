@@ -191,7 +191,7 @@ Inscricao --> "disciplina 1" Disciplina
 Implemente as classes usando a linguagem Python. Considere que:
 
 - A nota de um aluno em uma disciplina é 0,0 até que seja alterada.
-- A taxa de aprovação de uma disciplina é a proporção de alunos (entre 0,0 e 1,0) cuja nota final na disciplina é maior ou igual a 5,0.
+- A taxa de aprovação de uma disciplina é a proporção de alunos (entre 0,0 e 1,0) cuja nota final na disciplina é maior ou igual a 5,0. Se não houver alunos inscritos, a taxas de aprovação deve ser zero.
 - O método `inscrever` cria uma inscrição para o aluno na disciplina.
 - A disciplina guarda uma lista de inscrições, representada como uma lista da linguagem Python (`[]`). Ao inscrever um aluno, a inscrição é inserida no final da lista.
 - Para este exemplo, ao tentar inscrever um aluno em uma disciplina, não é necessário verificar se ele já está inscrito (esse caso não será testado).
