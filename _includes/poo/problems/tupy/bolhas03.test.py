@@ -1,8 +1,11 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
-try: from bolha03 import Bolha, Crianca, Pedra, keyboard, BaseTupyObject, bolhas
-except: pass
+try:
+    import sys; sys.path.append('_private/poo/problems/tupy')
+    from bolha03 import Bolha, Crianca, Pedra, keyboard, BaseTupyObject, bolhas
+except:
+    pass
 
 class TestBolha(unittest.TestCase):
     def test_bolha_init(self):

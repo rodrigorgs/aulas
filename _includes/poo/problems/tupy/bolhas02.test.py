@@ -1,8 +1,11 @@
 import unittest
 from unittest.mock import patch
 
-try: from bolha02 import Bolha, Crianca, keyboard
-except: pass
+try:
+    import sys; sys.path.append('_private/poo/problems/tupy') 
+    from bolha02 import Bolha, Crianca, keyboard
+except:
+    pass
 
 class TestBolha(unittest.TestCase):
     def test_bolha_init(self):
