@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 try:
     import sys; sys.path.append('_private/poo/problems/tupy') 
-    from bolha02 import Bolha, Crianca, keyboard
+    from bolhas02 import Bolha, Crianca, keyboard
 except:
     pass
 

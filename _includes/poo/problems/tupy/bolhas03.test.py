@@ -3,7 +3,7 @@ from unittest.mock import patch, MagicMock
 
 try:
     import sys; sys.path.append('_private/poo/problems/tupy')
-    from bolha03 import Bolha, Crianca, Pedra, keyboard, BaseTupyObject, bolhas
+    from bolhas03 import Bolha, Crianca, Pedra, keyboard, BaseTupyObject, bolhas
 except:
     pass
 

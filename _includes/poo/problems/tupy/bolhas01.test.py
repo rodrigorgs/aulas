@@ -2,7 +2,7 @@ import unittest
 
 try:
     import sys; sys.path.append('_private/poo/problems/tupy')
-    from bolha01 import Bolha
+    from bolhas01 import Bolha
 except:
     pass
 
