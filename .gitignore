@@ -8,7 +8,7 @@ prova-pratica-2a.md
 _drafts/
 bower_components/
 
-_private
+#_private
 a.out
 analise-quantitativa
 .Rproj.user
