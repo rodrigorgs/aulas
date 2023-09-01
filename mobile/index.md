@@ -24,16 +24,12 @@ title: Desenvolvimento de Aplicativos Móveis - 2023.2
   - (0,5) Exercício proposto (bem especificado, nível de dificuldade adequado)
 - (2,0) Resolução de exercícios de **dois** workshops (mesmas equipes do workshop)
 -->
-
 <!--    
+
     * Exercício 1: Hello World
     * Exercício 2: Navegação
     * Exercício 3: Lista
 
-# Orientações
-
-- [Guia de Laboratório](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
-- [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
 -->
 
 # Programa
@@ -55,6 +51,11 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 
 Veja [informações sobre o projeto](20231/projeto-flutter)
 -->
+
+# Orientações
+
+- [Guia de Laboratório - Android](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
+- [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
 
 # Slides
 
