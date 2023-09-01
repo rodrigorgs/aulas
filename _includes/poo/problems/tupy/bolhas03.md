@@ -46,12 +46,12 @@ run(globals())
 </textarea>
 
 <div class="runtemplate">
-{% include_relative problems/tupy/fake-tupy.py %}
+{% include poo/problems/tupy/fake-tupy.py %}
 [[[code]]]
 </div>
 
 <div class="testcode">
-{% include_relative problems/tupy/fake-tupy.py %}
+{% include poo/problems/tupy/fake-tupy.py %}
 [[[code]]]
-{% include_relative problems/tupy/bolhas03.test.py %}
+{% include poo/problems/tupy/bolhas03.test.py %}
 </div>
