@@ -31,6 +31,12 @@ Crie atributos e métodos adicionais se necessário.
 
 Consulte a [documentação do Tupy](https://rodrigorgs.github.io/tupy/) para mais detalhes.
 
+Aqui está a imagem da pedra:
+
+<a href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAJxJREFUGJVtkC0Og0AQhb8hKBoMIUHtAZCVFVynh+IQOE5QgUTW4KqabDCktVS9ZTdl1ezM+8l7RvTut+se//tpNs3ZGah1xd/OtNAR4Pn6AuCrjXot6afZTCxfbXSXJgELCJAfSgWPzxsgEOq1DOBcNgCda4Ja6w5iEkbKIsYCvtrIVIEOcSjZD+NioSeFElC2w7hYqOesS0gL/wHFs0cd8E/CsQAAAABJRU5ErkJggg==" download="pedra.png">
+<img width="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAJxJREFUGJVtkC0Og0AQhb8hKBoMIUHtAZCVFVynh+IQOE5QgUTW4KqabDCktVS9ZTdl1ezM+8l7RvTut+se//tpNs3ZGah1xd/OtNAR4Pn6AuCrjXot6afZTCxfbXSXJgELCJAfSgWPzxsgEOq1DOBcNgCda4Ja6w5iEkbKIsYCvtrIVIEOcSjZD+NioSeFElC2w7hYqOesS0gL/wHFs0cd8E/CsQAAAABJRU5ErkJggg==">
+</a>
+
 <textarea class="code lang-python">
 from tupy import *
 

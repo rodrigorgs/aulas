@@ -20,6 +20,12 @@ A criança é controlada pelas teclas direcionais do teclado. Cada vez que uma t
 
 Consulte a [documentação do Tupy](https://rodrigorgs.github.io/tupy/) para mais detalhes.
 
+Precisa de uma imagem de criança? Pode usar essa:
+
+<a href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAoCAYAAADpE0oSAAAAAXNSR0IArs4c6QAAAOlJREFUWIXtltENgCAMRMU4iHEG95/AGYyb6JcJwZbelX6ooV9G2nsFTY80kLHM6ym9348tMTpwsgb0NgAlldBS3Fp3gXNRS5DJHS0wKoTmQGD0u3pqoR0zO0Fz4aOOjg4Wg/nJ0NwqmB2DTC181MhOmJN578jUxLUINQmkgf/YogTcjy3d7/NnpgF10RLLwWhNFYwWS2BGw9WtBUY0J6mgZWJJOi2+/ohlXs8WwXe7Uwd38KfArkHhMf4msDUwmAZcV58c4rFEE8yIsg2EiHhqq7dFBsg2oPpxlDVqug8/jgKWeqGe/Mm4ACi7tDx4TB2dAAAAAElFTkSuQmCC" download="crianca.png">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAoCAYAAADpE0oSAAAAAXNSR0IArs4c6QAAAOlJREFUWIXtltENgCAMRMU4iHEG95/AGYyb6JcJwZbelX6ooV9G2nsFTY80kLHM6ym9348tMTpwsgb0NgAlldBS3Fp3gXNRS5DJHS0wKoTmQGD0u3pqoR0zO0Fz4aOOjg4Wg/nJ0NwqmB2DTC181MhOmJN578jUxLUINQmkgf/YogTcjy3d7/NnpgF10RLLwWhNFYwWS2BGw9WtBUY0J6mgZWJJOi2+/ohlXs8WwXe7Uwd38KfArkHhMf4msDUwmAZcV58c4rFEE8yIsg2EiHhqq7dFBsg2oPpxlDVqug8/jgKWeqGe/Mm4ACi7tDx4TB2dAAAAAElFTkSuQmCC">
+</a>
+
 <textarea class="code lang-python">
 from tupy import *
 
