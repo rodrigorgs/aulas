@@ -57,6 +57,10 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 - [Guia de Laboratório - Android](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
 - [Orientações Gerais sobre os Exercícios](https://docs.google.com/document/d/1J1uNZaPkjvmxpWM4N-mXa6OiCQKkmleF0npnvBSyG9k/edit)
 
+# Exercícios
+
+- [Exercício de Android](https://classroom.github.com/a/tNb6bv0Q)
+
 # Slides
 
 <!-- [Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing) -->
