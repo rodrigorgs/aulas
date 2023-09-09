@@ -21,8 +21,10 @@
 <script src="{{site.baseurl}}/lib/biwascheme/biwascheme-0.6.6-min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-biwascheme.js"></script>
 {% endif %}
-{% if page.features == nil or page.features contains "cpp" %}
+{% if page.features == nil or page.features contains "cpp" or page.features contains "dart" or page.features contains "flutter" %}
 <script src="{{site.baseurl}}/lib/codemirror/mode/clike/clike.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "cpp" %}
 <script src="{{site.baseurl}}/lib/jscpp/JSCPP.es5.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/editors/eval-cpp.js"></script>
 {% endif %}
@@ -34,6 +36,9 @@
 {% if page.features == nil or page.features contains "uml" %}
 <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-encoder.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/lib/plantuml/plantuml-replacer.js"></script>
+{% endif %}
+{% if page.features == nil or page.features contains "dart" or page.features contains "flutter" %}
+<script src="{{site.baseurl}}/lib/codemirror/mode/dart/dart.js"></script>
 {% endif %}
 {% if page.features == nil or page.features contains "quiz" %}
 <script  src="{{site.baseurl}}/lib/quizdown/quizdown.js"></script>
