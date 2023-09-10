@@ -1,0 +1,16 @@
+lib
+
+# Flutter/Dart specific
+**/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build_runner/
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr

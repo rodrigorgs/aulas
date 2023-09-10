@@ -1,21 +1,3 @@
-## Alo mundo
-
-<textarea class="code lang-flutter" data-filename="flutter_aulas/lib/alomundo.dart">
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(criaApp());
-}
-
-Text criaApp() {
-  return const Text(
-    'Aprendendo Flutter!',
-    textDirection: TextDirection.ltr,
-  );
-}
-</textarea>
-
-<div class="testcode">
 import 'package:flutter_aulas/alomundo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -29,4 +11,3 @@ void main() {
     });
   });
 }
-</div>
