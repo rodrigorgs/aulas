@@ -14,8 +14,8 @@ Sicrana Silva - CEP não informado
 
 Sugestão: use operadores como `?.` e `??` para lidar com nulos.
 
-<textarea class="code lang-dart" data-filename="flutter_aulas/lib/pessoa.dart">
-// Arquivo flutter_aulas/lib/pessoa.dart
+<textarea class="code lang-dart" data-filename="flutter_aulas/lib/endereco.dart">
+// Arquivo flutter_aulas/lib/endereco.dart
 
 class Pessoa {
 
@@ -23,5 +23,5 @@ class Pessoa {
 </textarea>
 
 <div class="testcode">
-{% include mobile/problems/flutter_aulas/test/pessoa_test.dart %}
+{% include mobile/problems/flutter_aulas/test/endereco_test.dart %}
 </div>
