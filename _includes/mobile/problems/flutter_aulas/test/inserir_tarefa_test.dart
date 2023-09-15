@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 void main() {
   group('inserirTarefa', () {
     test('deve inserir tarefa com prioridade padrão', () {
-      final tarefas = [];
+      List<Map<String, Object>> tarefas = [];
       final titulo = 'Comprar leite';
       final resultado = inserirTarefa(tarefas, titulo);
       expect(resultado, isTrue);
@@ -14,7 +14,7 @@ void main() {
     });
 
     test('deve inserir tarefa com prioridade especificada', () {
-      final tarefas = [];
+      List<Map<String, Object>> tarefas = [];
       final titulo = 'Comprar pão';
       final prioridade = 3;
       final resultado = inserirTarefa(tarefas, titulo, prioridade);
@@ -25,7 +25,7 @@ void main() {
     });
 
     test('não deve inserir tarefa com prioridade inválida', () {
-      final tarefas = [];
+      List<Map<String, Object>> tarefas = [];
       final titulo = 'Comprar açúcar';
       final prioridade = 0;
       final resultado = inserirTarefa(tarefas, titulo, prioridade);
