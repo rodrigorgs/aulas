@@ -17,7 +17,7 @@ Sugestão: use operadores como `?.` e `??` para lidar com nulos.
 <textarea class="code lang-dart" data-filename="flutter_aulas/lib/endereco.dart">
 // Arquivo flutter_aulas/lib/endereco.dart
 
-class Pessoa {
+class Cliente {
 
 }
 </textarea>
