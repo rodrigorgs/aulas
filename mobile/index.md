@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Desenvolvimento de Aplicativos Móveis - 2023.2
+features: []
 ---
 <!-- 
 # Informações básicas
