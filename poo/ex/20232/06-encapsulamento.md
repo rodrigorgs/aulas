@@ -68,16 +68,17 @@ Veja exemplo de como a classe deve ser usada no código ao lado.
 class NomeCompleto:
   def __init__(self, nome: str, sobrenome: str) -> None:
     pass
+</textarea>
 
-if __name__ == '__main__':
-  n = NomeCompleto('João', 'Silva')
-  print(n.nome) # João
-  print(n.sobrenome) # Silva
-  print(n.nome_completo) # João Silva
-  n.nome = 'Maria'
-  n.sobrenome = 'Santos'
-  print(n.nome_completo) # Maria Santos
-
+<textarea class="stdin">
+# code
+n = NomeCompleto('João', 'Silva')
+print(n.nome) # João
+print(n.sobrenome) # Silva
+print(n.nome_completo) # João Silva
+n.nome = 'Maria'
+n.sobrenome = 'Santos'
+print(n.nome_completo) # Maria Santos
 </textarea>
 
 <div class="testcode">
