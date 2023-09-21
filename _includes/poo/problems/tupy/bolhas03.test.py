@@ -74,6 +74,7 @@ class TestCrianca(unittest.TestCase):
     def test_crianca_tem_pedra(self):
         c = Crianca(100, 200)
         self.assertTrue(hasattr(c, 'pedra'))
+        self.assertTrue(isinstance(c.pedra, Pedra) or c.pedra is None)
         self.assertIsInstance(c.pedra, Pedra)
 
     def test_espaco_lanca_pedra(self):
@@ -85,8 +86,8 @@ class TestCrianca(unittest.TestCase):
 
     def test_pedra_move_ao_lancar(self):
         c = Crianca(100, 200)
-        c.lancar()
-        c.update(); c.pedra.update()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         self.assertEqual(c.pedra.x, 160)
@@ -94,24 +95,24 @@ class TestCrianca(unittest.TestCase):
 
     def test_pedra_nao_lanca_duas_vezes_seguidas(self):
         c = Crianca(100, 200)
-        c.lancar()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         c.update(); c.pedra.update()
-        c.update(); c.pedra.update()
-        c.lancar()
-        c.update(); c.pedra.update()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         self.assertEqual(c.pedra.x, 200)
         self.assertEqual(c.pedra.y, 200)
 
     def test_pedra_pode_ser_relancada_ao_sair_da_tela(self):
         c = Crianca(770, 200)
-        c.lancar()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         c.update(); c.pedra.update()
-        c.update(); c.pedra.update()
-        c.lancar()
-        c.update(); c.pedra.update()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         self.assertEqual(c.pedra.x, 790)
         self.assertEqual(c.pedra.y, 200)
 
@@ -119,8 +120,8 @@ class TestCrianca(unittest.TestCase):
         c = Crianca(100, 200)
         c.x = 120
         c.y = 180
-        c.lancar()
-        c.update(); c.pedra.update()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         self.assertEqual(c.pedra.x, 140)
         self.assertEqual(c.pedra.y, 180)
 
@@ -131,8 +132,8 @@ class TestCrianca(unittest.TestCase):
         bolhas.append(b1)
         bolhas.append(b2)
         c = Crianca(100, 200)
-        c.lancar()
-        c.update(); c.pedra.update()
+        with patch('__main__.keyboard.is_key_just_down', side_effect=lambda x: x == 'space'):
+            c.update(); c.pedra.update()
         with patch('__main__.BaseTupyObject._collides_with', \
                    side_effect=lambda obj: obj == b1):
             c.update(); c.pedra.update()
