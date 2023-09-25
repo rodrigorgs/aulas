@@ -150,8 +150,9 @@ class TestCrianca(unittest.TestCase):
             c.update(); c.pedra.update()
         with patch('__main__.BaseTupyObject._collides_with', \
                    side_effect=lambda obj: obj == b1):
-            c.update(); c.pedra.update()
-            c.update(); c.pedra.update()
+            with patch.object(b1, '_collides_with', \
+                   side_effect=lambda obj: obj == c.pedra):
+                c.update(); c.pedra.update()
         c.update(); c.pedra.update()
         self.assertEqual(len(bolhas), 1)
         self.assertEqual(bolhas[0], b2)
