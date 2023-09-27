@@ -132,7 +132,7 @@ print(inscreve(Pessoa('Sozinho')))
 <div class="testcode">
 try:
   from typing import Optional
-  assert inscreve.__annotations__ == {'dono': Pessoa, 'pet': Optional[Pet], 'return': str}, 'Anotações de tipo incorretas'
+  assert inscreve.__annotations__ == {'dono': Pessoa, 'pet': Optional[Pet], 'return': str} or inscreve.__annotations__ == {'dono': Pessoa, 'pet': Union[Pet, None], 'return': str}, 'Anotações de tipo incorretas'
 
   assert inscreve(Pessoa('Fulano'), Pet('Rex', 'cachorro')) == 'Inscrição realizada: Fulano e Rex'
   assert inscreve(Pessoa('Sozinho')) == 'Inscrição realizada: Sozinho'
