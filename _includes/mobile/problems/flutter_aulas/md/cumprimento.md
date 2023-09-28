@@ -1,6 +1,6 @@
 ## Cumprimento
 
-Crie um widget `Cumprimento` que recebe um nome e exibe um texto no formato "Olá, <nome>!" (atenção a maiúsculas, minúsculas e pontuação). Fique à vontade para alterar o construtor e o método `build`, mas garanta que o widget pode ser instanciado como no exemplo: `Cumprimento(nome: 'Mundo')`.
+Crie um widget `Cumprimento` que recebe um nome e exibe um texto no formato `Olá, <nome>!` (atenção a maiúsculas, minúsculas e pontuação). Fique à vontade para alterar o construtor e o método `build`, mas garanta que o widget pode ser instanciado como no exemplo: `Cumprimento(nome: 'Mundo')`.
 
 <textarea class="code lang-flutter" data-filename="flutter_aulas/lib/cumprimento.dart">
 // Arquivo flutter_aulas/lib/cumprimento.dart
