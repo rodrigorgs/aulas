@@ -35,7 +35,7 @@ O trabalho será avaliado de acordo com os seguintes critérios:
 
 ## Entregas
 
-- (8/10) Formação de equipes (usando o SenhaBot no Discord)
+- (8/10) Formação de equipes, definição do título e da descriçnao do projeto (usando o SenhaBot no Discord)
 - (22/10) Entrega do diagrama de classes da UML, contendo todas as classes que planeja-se implementar no projeto, com seus relacionamentos e atributos e métodos mais importantes, via Discord
 - (5/11) Vídeo curto (até 90 segundos) mostrando o andamento do projeto, via Discord
 - (26/11) Entrega final
