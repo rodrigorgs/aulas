@@ -1,12 +1,28 @@
 ---
 layout: triple-page
 title: "Exercícios: rede social"
-features: [code, python]
+features: [code, python, uml]
 ---
 
 ## Rede social
 
-Uma rede social é formada por usuários, identificados unicamente pelo seu número de telefone e grupos de usuários, que possuem um único dono. Complemente a implementação de acordo com o que está especificado nas docstrings.
+Uma rede social é formada por usuários, identificados unicamente pelo seu número de telefone e grupos de usuários, que possuem um único dono. Complemente a implementação de acordo com o que está especificado nas docstrings e com o diagrama de classes abaixo (que mostra apenas os atributos das classes):
+
+<div class="uml">
+class Usuario {
+  - telefone: str
+  - nome: str
+}
+
+class Grupo {
+  - nome: str
+  - dono: Usuario
+  - usuarios: list
+}
+
+Grupo --> "usuarios *" Usuario
+</div>
+
 
 <textarea class="code lang-python">
 class Usuario:
