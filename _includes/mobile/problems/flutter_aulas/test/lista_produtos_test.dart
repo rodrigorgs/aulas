@@ -43,6 +43,7 @@ void main() {
         ),
       );
 
+      print('${produtos[0].preco} reais');
       expect(find.text('10.0 reais'), findsOneWidget);
       expect(find.text('5.0 reais'), findsOneWidget);
       expect(find.text('3.0 reais'), findsOneWidget);

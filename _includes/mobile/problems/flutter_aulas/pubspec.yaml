@@ -5,5 +5,9 @@ environment:
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0
+  convenient_test_dev: ^1.0.0
   flutter_test:
     sdk: flutter
+dependencies:
+  flutter_riverpod: ^2.4.4
+  convenient_test: ^1.0.0
