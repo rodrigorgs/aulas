@@ -96,5 +96,8 @@ class MeuTexto extends ConsumerWidget {
 </textarea>
 
 <div class="testcode">
+{%- capture code -%}
 {% include mobile/problems/flutter_aulas/test/claro_escuro_riverpod_test.dart %}
+{%- endcapture -%}
+{{ code | escape }}
 </div>
