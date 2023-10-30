@@ -16,8 +16,16 @@ class Conta:
   
   def deposita(self, quantia):
     self.saldo += quantia
+</textarea>
 
-### Testes
+<textarea class="stdin">
+# code
+c = ContaPoupanca('555', 50.0)
+c.rende()
+print(c.saldo)
+</textarea>
+
+<div class="testcode">
 import unittest
 from unittest import mock
 
@@ -51,73 +59,9 @@ class TestConta(unittest.TestCase):
 if __name__ == '__main__':
   import sys
   unittest.main(exit=False)
-</textarea>
+</div>
 
-## Robô aspirador
-
-Uma empresa fabrica robôs aspiradores para consumidores domésticos. São três os robôs:
-
-- robô básico: move-se em quatro direções (frente, trás, esquerda e direita)
-- robô plus: além de mover-se em quatro direções, possui a função `explora`, que é uma programação que faz o robô mover-se em quadrados (frente, direita, trás, esquerda)
-- robô smart: além de mover-se em quatro direções, possui a função `retorna_a_base`, que posiciona o robô na posição da base (definida na inicialização do robô)
-
-O código do robô básico já está implementado. Implemente os outros dois robôs, usando o recurso de herança. Consulte os testes em caso de dúvida.
-
-<textarea class="code lang-python">
-class RoboBasico:
-  DIRECOES = {'frente': (0, -1), 'tras': (0, 1),
-      'esquerda': (-1, 0), 'direita': (1, 0)}
-  def __init__(self, x, y):
-    self.x = x
-    self.y = y
-
-  def move(self, direcao):
-    dx, dy = RoboBasico.DIRECOES[direcao]
-    self.x += dx
-    self.y += dy
-
-### Testes
-import unittest
-from unittest import mock
-
-def declared_methods(klass):
-  return list(filter(lambda x: x[0:2] != '__', klass.__dict__.keys()))
-
-class TestRobo(unittest.TestCase):
-  def test_heranca(self):
-    self.assertTrue(issubclass(RoboSmart, RoboBasico))
-    self.assertTrue(issubclass(RoboPlus, RoboBasico))
-  
-  def test_metodos_declarados(self):
-    self.assertEqual(declared_methods(RoboSmart), ['retorna_a_base'])
-    self.assertEqual(declared_methods(RoboPlus), ['explora'])
-
-  @mock.patch('__main__.RoboBasico.move')
-  def test_robo_plus(self, mock_move):
-    r = RoboPlus(5, 5)
-    r.explora()
-    mock_move.assert_any_call('frente')
-    mock_move.assert_any_call('tras')
-    mock_move.assert_any_call('esquerda')
-    mock_move.assert_any_call('direita')
-  
-  def test_robo_smart(self):
-    r = RoboSmart(5, 5, 1, 2)
-    r.retorna_a_base()
-    self.assertEqual(r.x, 1)
-    self.assertEqual(r.y, 2)
-    r = RoboSmart(5, 5, 2, 3)
-    r.retorna_a_base()
-    self.assertEqual(r.x, 2)
-    self.assertEqual(r.y, 3)
-
-
-if __name__ == '__main__':
-  import sys
-  unittest.main(exit=False)
-</textarea>
-
-## Conta Auditada
+## Conta auditada
 
 Considere a classe `Conta` ao lado. Crie uma subclasse, `ContaAuditada`, que registra a quantidade de operações de depósito e retirada que recebeu (atributos `qtd_depositos` e `qtd_retiradas`). Implemente também o método `quantidade_operacoes()`, que retorna o total de operações. Não copie e cole código da classe `Conta` para a classe `ContaAuditada`.
 
@@ -132,8 +76,20 @@ class Conta:
   def retira(self, quantia):
     if self.saldo >= quantia:
       self.saldo -= quantia
+</textarea>
 
-### Testes
+<textarea class="stdin">
+# code
+c = ContaAuditada()
+c.deposita(20)
+c.deposita(5)
+c.retira(3)
+print(c.qtd_depositos)
+print(c.qtd_retiradas)
+print(c.quantidade_operacoes())
+</textarea>
+
+<div class="testcode">
 import unittest
 from unittest import mock
 
@@ -165,4 +121,4 @@ class TestContaAuditada(unittest.TestCase):
 if __name__ == '__main__':
   import sys
   unittest.main(exit=False)
-</textarea>
+</div>
