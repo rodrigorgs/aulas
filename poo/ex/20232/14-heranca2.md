@@ -11,10 +11,8 @@ O programa ao lado representa usuários de uma universidade pública federal, qu
 Modifique o código para que a classe `Usuario` não possa ser instanciada, mas possa ser estendida, usando o conceito de classes abstratas.
 
 <textarea class="code lang-python">
-import re
-
 class Usuario:
-  def __init__(self, matricula, nome):
+  def __init__(self, matricula: str, nome):
     self._matricula = matricula
     self._nome = nome
   
@@ -26,11 +24,11 @@ class Usuario:
 
 class Aluno(Usuario):
   def valida(self):
-    return re.match('^\\d{9}$', self._matricula)
+    return len(self._matricula) == 9 and all(c.isdigit() for c in self._matricula)
 
 class Servidor(Usuario):
   def valida(self):
-    return re.match('^\\d{7}$', self._matricula)
+    return len(self._matricula) == 7 and all(c.isdigit() for c in self._matricula)
 </textarea>
 
 <textarea class="stdin">

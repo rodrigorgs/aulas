@@ -13,8 +13,12 @@ title: Princípios de projeto orientado a objetos
 ## Leitura complementar
 
 - Robert C. Martin. [The principles of OOD](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod) (SOLID principles)
-- Robert C. Martin. [Design Principles and Design Patterns](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf)
+- Robert C. Martin. [Design Principles and Design Patterns](https://drive.google.com/file/d/1ovL50Ef43eah3Cy14d9FW3w02nnju2ed/view?usp=sharing)
     - rigidity, fragility, immobility, and viscosity
+    - rigidez: software difícil de alterar; cada mudança provoca uma cascata de mudanças em módulos dependentes.
+    - fragilidade: mudanças em um módulo causam erros em outros módulos, mesmo que não haja relação entre eles.
+    - imobilidade: dificuldade de reusar código de outros projetos ou parte do mesmo projeto
+    - viscosidade: é mais fácil fazer uma mudança de forma incorreta do que da forma correta
 - Maurício Aniche. Orientação a Objetos e SOLID para Ninjas.
 - [SOLID, GRASP, and Other Basic Principles of Object-Oriented Design](https://dzone.com/articles/solid-grasp-and-other-basic-principles-of-object-o)
 - Martin Fowler. [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
