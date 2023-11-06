@@ -207,7 +207,13 @@ class Guerreiro(Contador):
 
 <textarea class="stdin">
 # code
-
+g = Guerreiro()
+g.recebe_dano()
+print(g.vida)  # 6
+g.recebe_dano()
+print(g.vida)  # 2
+g.recebe_dano()
+print(g.vida)  # 0
 </textarea>
 
 <div class="testcode">
