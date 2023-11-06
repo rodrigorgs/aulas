@@ -65,6 +65,8 @@ if __name__ == '__main__':
 
 Considere a classe `Conta` ao lado. Crie uma subclasse, `ContaAuditada`, que registra a quantidade de operações de depósito e retirada que recebeu (atributos `qtd_depositos` e `qtd_retiradas`). Implemente também o método `quantidade_operacoes()`, que retorna o total de operações. Não copie e cole código da classe `Conta` para a classe `ContaAuditada`.
 
+OBS.: Deve-se contabilizar também as tentativas de retirada que não foram efetivadas por falta de saldo.
+
 <textarea class="code lang-python">
 class Conta:
   def __init__(self):
