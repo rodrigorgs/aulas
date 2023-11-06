@@ -8,7 +8,7 @@ Altere o código inicial de forma que o texto "Modo Claro" seja exibido em preto
 
 <textarea class="code lang-flutter" data-filename="flutter_aulas/lib/claro_escuro_riverpod.dart">
 import 'package:flutter/material.dart';
-import 'package:flutter_aulas/claro_escuro_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   runApp(ProviderScope(
