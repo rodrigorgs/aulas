@@ -63,6 +63,7 @@ Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJ
   - [Exceções][excecoes]
   - [Static][static] e [Enum][enum]
   - [Herança e polimorfismo][heranca]
+  - [Princípios de projeto](https://docs.google.com/presentation/d/1nyRZR6H451HA9N3enWCmVV1PP4fTnBjQ6RrLAh-LXGQ/edit)
     <!-- - [Identidade e mutabilidade](identidade-mutabilidade) -->
 
 [modulos-pacotes]: https://docs.google.com/presentation/d/1GoTn5Lpbov0xz30Di9rlbcOHpmL5upBVEqRwM-lYQg8/edit
