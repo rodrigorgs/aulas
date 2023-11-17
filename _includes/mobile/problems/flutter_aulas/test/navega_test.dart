@@ -36,6 +36,7 @@ void main() {
   testWidgets('Verifica botão de voltar', (WidgetTester tester) async {
     await tester.pumpWidget(const MaterialApp(home: Inicio()));
     await tester.tap(find.text('Vermelho'));
+    await tester.pumpAndSettle();
 
     final NavigatorState navigator = tester.state(find.byType(Navigator));
     navigator.pop();
