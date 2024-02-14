@@ -11,3 +11,13 @@ dev_dependencies:
 dependencies:
   flutter_riverpod: ^2.4.4
   convenient_test: ^1.0.0
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf

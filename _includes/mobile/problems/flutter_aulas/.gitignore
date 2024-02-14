@@ -14,3 +14,4 @@ lib
 *.iml
 *.iws
 *.ipr
+failures/
