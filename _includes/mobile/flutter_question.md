@@ -1,4 +1,4 @@
-{% capture source_file_path %}mobile/problems/flutter_aulas/lib/{{ include.filename }}__draft.dart{% endcapture %}
+{% capture source_file_path %}mobile/problems/flutter_aulas/draft/{{ include.filename }}__draft.dart{% endcapture %}
 {% capture source_file %}{% include {{ source_file_path }} %}{% endcapture %}
 
 ## {{ include.filename }}

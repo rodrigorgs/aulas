@@ -17,7 +17,7 @@ def generate_draft_file(filename):
                 inside_draft_app = False
             elif inside_draft_app:
                 draft_app_lines.append(line)
-    with open(f"lib/{filename}__draft.dart", "w") as f:
+    with open(f"draft/{filename}__draft.dart", "w") as f:
         f.write('''\
 import 'package:flutter/material.dart';
 
