@@ -4,7 +4,9 @@ title: "Exercícios de Flutter"
 features: []
 ---
 
-- [Layout](layout)
+- Lista 1: layout - [arquivos](flutter_aulas_layout.zip) e [página de submissão](layout)
+
+<!-- 
 - [Stateless](stateless)
 - [Stateful](stateful)
-
+ -->
