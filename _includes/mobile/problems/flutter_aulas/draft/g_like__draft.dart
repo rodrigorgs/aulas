@@ -9,6 +9,7 @@ Widget buildApp() {
   // Para isso, substitua o Placeholder pelos
   // widgets adequados.
   //
+  // - O texto e o ícone devem ambos ter tamanho 20.
   // - A distância entre o ícone e o texto é de 8 pixels.
   // - O enchimento ao redor do conjunto (ícone e texto)
   // é de 16 pixels.
