@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Desenvolvimento de Aplicativos Móveis - 2023.2
+title: Desenvolvimento de Aplicativos Móveis - 2024.1
 features: []
 ---
 <!-- 
@@ -53,14 +53,15 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 Veja [informações sobre o projeto](20231/projeto-flutter)
 -->
 
-# Orientações
+<!-- # Orientações
 
 - [Guia de Laboratório - Android](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
-- [Orientações Gerais sobre os Exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit)
+- [Orientações Gerais sobre os Exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit) 
 
 # Exercícios
 
 - [Exercício de Android](https://classroom.github.com/a/tNb6bv0Q)
+-->
 
 # Slides
 
@@ -68,6 +69,8 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 
 - Introdução
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
+    - Ranking da [App Store](https://apps.apple.com/br/charts/iphone)
+    - Ranking da [Google Play](https://play.google.com/store/apps)
   - [Desenvolvimento para dispositivos móveis: uma visão geral](https://docs.google.com/presentation/d/1HIecqkfBAoaQ19FjchJX3KT6OwOgNy7TicvKwOw8C8M/edit)
 - Android
   - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
