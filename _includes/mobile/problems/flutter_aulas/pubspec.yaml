@@ -11,6 +11,8 @@ dev_dependencies:
 dependencies:
   flutter_riverpod: ^2.4.4
   convenient_test: ^1.0.0
+  device_preview: ^1.1.0
+  http: ^1.2.1
 flutter:
   uses-material-design: true
 
