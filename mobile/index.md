@@ -54,13 +54,16 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 -->
 
  # Orientações
+
 <!--
+
 - [Guia de Laboratório - Android](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
 - [Orientações Gerais sobre os Exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit) 
 
 # Exercícios
 
 - [Exercício de Android](https://classroom.github.com/a/tNb6bv0Q)
+
 -->
 
 - [Uso do Android Studio no laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
