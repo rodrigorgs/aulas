@@ -53,8 +53,8 @@ Primeiramente, veja [como fazer os exercícios](https://docs.google.com/presenta
 Veja [informações sobre o projeto](20231/projeto-flutter)
 -->
 
-<!-- # Orientações
-
+ # Orientações
+<!--
 - [Guia de Laboratório - Android](https://docs.google.com/document/d/13sOy6BJv51Xiud7gHsxtIdgrnDOrTgB7VNpOvEomo7I/edit)
 - [Orientações Gerais sobre os Exercícios](https://docs.google.com/presentation/d/11AntLlFpDEDVDFjMKZLlIz2XMshifSEnElz5dqlTSbs/edit) 
 
@@ -63,9 +63,10 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 - [Exercício de Android](https://classroom.github.com/a/tNb6bv0Q)
 -->
 
+- [Uso do Android Studio no laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
+
 # Slides
 
-<!-- [Guia de laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing) -->
 
 - Introdução
   - Mercado de apps: [A corrida do ouro da App Store](https://speakerdeck.com/rodrigorgs/a-corrida-do-ouro-da-app-store-at-mobile-day) ([versão .key](https://drive.google.com/file/d/0BxqQol81uO5UVUtxRjV6QWk5eWc/view?usp=sharing&resourcekey=0-_i5EkDKMr2iFmsd7538Y-g))
