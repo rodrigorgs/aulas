@@ -1,9 +1,15 @@
 ---
 layout: page
-title: "Exercícios de Flutter - 2024.1"
-features: [code]
+title: "Exercícios de Flutter"
+features: []
 ---
 
-Autentique-se clicando no botão **Login** no canto superior direito da página. Os dados de acesso podem ser obtidos no Discord.
+- Lista 1: layout - [arquivos](flutter_aulas_layout.zip) e [página de submissão](layout)
 
-Listas de exercício: em breve.
+<!-- 
+
+- Lista 2: staless e stateful widgets - [arquivos](flutter_aulas_widgets.zip) e [página de submissão](widgets)
+- [Stateless](stateless)
+- [Stateful](stateful)
+
+ -->
