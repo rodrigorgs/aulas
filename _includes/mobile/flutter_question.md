@@ -7,6 +7,8 @@
 <img src="goldens/{{ include.filename }}02.png" width="300" style="border: 1px solid; margin-bottom: 10px;" onerror="this.style='display: none;'">
 <img src="goldens/{{ include.filename }}03.png" width="300" style="border: 1px solid; margin-bottom: 10px;" onerror="this.style='display: none;'">
 
+{{ include.content }}
+
 <textarea class="code lang-flutter" data-filename="flutter_aulas/lib/{{ include.filename }}.dart">{{ source_file | escape }}
 </textarea>
 
