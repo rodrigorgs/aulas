@@ -66,7 +66,7 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 
 -->
 
-- [Uso do Android Studio no laboratório](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
+- [Guia de Laboratório - Flutter e Android](https://docs.google.com/document/d/1Ebvb6pw5KAQ2SlgIb3kTvbIrhhlrLXkLYf6GAQVbiUg/edit?usp=sharing)
 - [Orientações sobre os exercícios](https://docs.google.com/document/d/1uvJav_YruWZzYERr16hyBpeR3WctfFqIWBESKRk1cfQ/edit)
 
 # Slides
