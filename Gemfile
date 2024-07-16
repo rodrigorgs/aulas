@@ -25,4 +25,4 @@ gem "minima"
 #   gem "jekyll-github-metadata", "~> 1.0"
 # end
 
-gem "rexml", "~> 3.2"
+gem "rexml", "~> 3.3"
