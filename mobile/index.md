@@ -84,6 +84,7 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
   - [Linguagem Dart](https://docs.google.com/presentation/d/1GjP68nGHteIkoR8quvcm_HrZ7Zyn6Hp8jkFgy6ElHC8/edit)
   - [Introdução ao Flutter](https://docs.google.com/presentation/d/1dcSDogvICDwkXkJwtJeXhHTk5i4o1rukE3285w6oS90/edit)
   - [Desenvolvimento de apps com Flutter](https://docs.google.com/presentation/d/1A8FBRqqPQF72GGiHpfNuAMC7p09VgNdl9x1A84YiXkU/edit#slide=id.p)
+  - [Desenvolvimento de apps com Flutter: Nível intermediário](https://docs.google.com/presentation/d/1OzRM3fgDVTo14LVnEtcaHvxuuKCxP5C6oyD_dICW2pQ/edit)
 
 <!-- 
  -->
