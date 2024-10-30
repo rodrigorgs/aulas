@@ -13,8 +13,6 @@ Widget buildApp() {
   // - O enchimento ao redor do conjunto (ícone e texto)
   // é de 16 pixels.
   // - A cor do enchimento é Colors.blueGrey.shade100
-  // - O tamanho do texto é 20 pixels
-  // - O tamanho do ícone é 20 pixels
   return MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
