@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(buildApp());
+  runApp(criaApp());
 }
 
-Widget buildApp() {
+Widget criaApp() {
   // Construa o app segundo a tela de referência.
   // Para isso, substitua o Placeholder pelos
   // widgets adequados.
