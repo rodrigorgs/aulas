@@ -4,8 +4,8 @@ title: "Exercícios de Flutter"
 features: []
 ---
 
-- Lista 1: layout - [arquivos](flutter_aulas_layout.zip) e [página de submissão](layout)
-- Lista 2: widgets - [arquivos](flutter_aulas_widgets.zip) e [página de submissão](widgets)
+- Lista 1: layout - [página de submissão](layout)
+- Lista 2: widgets - [página de submissão](widgets)
 
 Ver também: 
 
