@@ -5,7 +5,9 @@ features: []
 ---
 
 - Lista 1: layout - [página de submissão](layout)
-- Lista 2: widgets - [página de submissão](widgets)
+
+<!-- - Lista 2: widgets - [página de submissão](widgets) -->
+
 
 Ver também: 
 
