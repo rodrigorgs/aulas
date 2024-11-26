@@ -15,3 +15,5 @@ lib
 *.iws
 *.ipr
 failures/
+
+*.g.dart
