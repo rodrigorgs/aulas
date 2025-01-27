@@ -22,7 +22,7 @@ function calculaScore(base64) {
     console.log(history.join("; ").replace("\n", ""));
 
     var solvedObj = JSON.parse(storage.solvedMap)
-    var solved = Object.keys(solvedObj).filter(key => solvedObj[key] === true)
+    var solved = Object.keys(solvedObj).filter(key => solvedObj[key]["solved"] == true)
 
     var selecionados = ["intro1", "intro2", "intro3", "intro4", "rampup1", "rampup2", "rampup3", "rampup4", "remote1", "remote2", "remote3", "remote4", "remote5", "remote6", "remote7", "remoteAdvanced1", "remoteAdvanced2"];
     var scoreSelecionados = selecionados.reduce((sum, level) => solvedObj[level] ? sum + 1 : sum, 0);
