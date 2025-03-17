@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Desenvolvimento de Aplicativos Móveis - 2024.1
+title: Desenvolvimento de Aplicativos Móveis
 features: []
 ---
 <!-- 
