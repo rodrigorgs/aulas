@@ -41,10 +41,10 @@ Baixe a versão mais recente no site oficial: <https://www.python.org/>
 
 Se quiser experimentar sem instalar nada, use algum desses sites:
 
-- <https://codecollab.io/>
+- <https://rodrigorgs.github.io/aulas/demo/python>
+- <http://pythontutor.com/>
 - <https://repl.it/>
 - <https://brython.info/>
-- <http://pythontutor.com/>
 
 ---
 

@@ -588,7 +588,7 @@ public class Main {
             System.out.println("Não foi possível criar o arquivo");
         }
     }
-    public void criaArquivo() throws IOException {
+    public static void criaArquivo() throws IOException {
         File file = new File("/tmp/abcd");
         file.createNewFile();
     }
