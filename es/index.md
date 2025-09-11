@@ -22,6 +22,20 @@ features: []
   - [Estratégias para criação de testes](https://docs.google.com/presentation/d/1iURDzF605wDMI8uIxFEH2aIEE0gy8EefcWak5k8xl14/edit?slide=id.gb33812c128_0_4)
   - [BDD](https://docs.google.com/presentation/d/14e4lDI3wGnl1RxnUT9zk2fmP3noXEoT-OiL75yJfMwM/edit?slide=id.g436303bbb9_0_5#slide=id.g436303bbb9_0_5)
 
+# Material complementar
+
+Simuladores de processo de desenvolvimento de software:
+
+- [SimSE](https://ics.uci.edu/~emilyo/SimSE/downloads.html)
+  - [waterfall.jar](https://ics.uci.edu/~emilyo/SimSE/downloads/newJars/waterfall.jar)
+  - [xp.jar](https://ics.uci.edu/~emilyo/SimSE/downloads/newJars/xp.jar)
+- [Kanban Board Game](http://www.kanbanboardgame.com/)
+
+<!-- 
+- [Scrum Simulation with LEGO Bricks](https://www.lego4scrum.com/)
+- [Kanban Pizza Game](https://www.agile42.com/en/agile-teams/kanban-pizza-game)
+-  -->
+
 # Bibliografia e referências
 
 - https://engsoftmoderna.info/
