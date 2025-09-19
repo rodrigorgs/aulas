@@ -81,6 +81,7 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
 - Android
   - [Ecossistema Android](https://docs.google.com/presentation/d/1q_24FLFzH0N4b8I8kdCwNdsVPdmNrzWlsupQ19ruvdQ/edit)
   - [Introdução ao desenvolvimento com Android SDK](https://speakerdeck.com/rodrigorgs/introducao-ao-android)
+    - No Android Studio, criar projeto com "Empty Views Activity" para escolher entre Kotlin e Java
 - Flutter
   - [Linguagem Dart](https://docs.google.com/presentation/d/1GjP68nGHteIkoR8quvcm_HrZ7Zyn6Hp8jkFgy6ElHC8/edit)
   - [Introdução ao Flutter](https://docs.google.com/presentation/d/1dcSDogvICDwkXkJwtJeXhHTk5i4o1rukE3285w6oS90/edit)
