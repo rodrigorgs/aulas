@@ -12,6 +12,7 @@ features: []
   - [Métodos ágeis](https://docs.google.com/presentation/d/187mv23RO8kI43Dj2PkWkw2H82aDTy_qhOCodtCvGV6s/edit?usp=sharing)
   - [Kanban](https://docs.google.com/presentation/d/1lUlZ97iXmMJobH7ULTfAY-qsjS8Mca8devYfpQad1ps/edit?slide=id.g712103d9b2_0_696#slide=id.g712103d9b2_0_696)
   - [Processo de Software Moderno](https://docs.google.com/presentation/d/1r3j4u82cDeJ7xrUM6N_xUls18kj5TOm0F3CNukRw04I/edit)
+- [Design sprints](https://docs.google.com/presentation/d/1RX6EGf1Myc7DbmOo3L4JpeQUBFR_V7rEYa3uHAvats8/edit)
 - Requisitos de software
   - [Introdução a Requisitos](https://docs.google.com/presentation/d/1xgmOeUPgybjo8hVkdvXpkUb8SHrYeMDdSSGGhWXuaE0/edit?usp=sharing)
   - [Processos de engenharia de requisitos](https://docs.google.com/presentation/d/1pcRZWinPN70thCBNh58KkQu7uCgc6zOdB09D7d0uXVE/edit?usp=sharing)
