@@ -92,8 +92,11 @@ Veja [informações sobre o projeto](20231/projeto-flutter)
   - [Introdução ao Flutter](https://docs.google.com/presentation/d/1dcSDogvICDwkXkJwtJeXhHTk5i4o1rukE3285w6oS90/edit)
   - [Desenvolvimento de apps com Flutter](https://docs.google.com/presentation/d/1A8FBRqqPQF72GGiHpfNuAMC7p09VgNdl9x1A84YiXkU/edit#slide=id.p)
   - [Desenvolvimento de apps com Flutter: testes automatizados](https://docs.google.com/presentation/d/1_eO18bKn9QCghHR72eAc6IH7K2xlKpUIUCC_snLepKw/edit?usp=sharing)
-  - [Desenvolvimento de apps com Flutter: Nível intermediário](https://docs.google.com/presentation/d/1OzRM3fgDVTo14LVnEtcaHvxuuKCxP5C6oyD_dICW2pQ/edit)
-  - [Desenvolvimento de apps com Flutter: Firebase](https://docs.google.com/presentation/d/1-9Vs9bx7xZxoR1Xea5sUnWErAi0f3_W8ya_3odXKyGk/edit)
+  - [Desenvolvimento de apps com Flutter: Riverpod e Arquitetura](https://docs.google.com/presentation/d/1OzRM3fgDVTo14LVnEtcaHvxuuKCxP5C6oyD_dICW2pQ/edit)
+  - Plataformas de Backend-as-a-Service (BaaS):
+    - [Desenvolvimento de apps com Flutter: Firebase](https://docs.google.com/presentation/d/1-9Vs9bx7xZxoR1Xea5sUnWErAi0f3_W8ya_3odXKyGk/edit)
+    - [Desenvolvimento de apps com Flutter: Supabase](https://docs.google.com/presentation/d/1YndI_D6OFZMrl1Xwf8nifNiLkYn39G8k5mEfhM15d6w/edit)
+
 
 <!-- 
  -->
