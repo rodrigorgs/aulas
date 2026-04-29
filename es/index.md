@@ -18,7 +18,9 @@ features: []
   - [Processos de engenharia de requisitos](https://docs.google.com/presentation/d/1pcRZWinPN70thCBNh58KkQu7uCgc6zOdB09D7d0uXVE/edit?usp=sharing)
   - [Histórias do usuário](https://slides.com/rodrigorgs/user-stories)
     - [Exemplo: SIPÓS](https://docs.google.com/document/d/1tWwKIElnpbtwghCq1yjALsSIZ9lxOwuZyZKetZNwqrQ/edit)
-  - Casos de uso: [parte 1](https://drive.google.com/file/d/1RK8GSxWsH-6iCzukaUSDmJg-Nn_iw4gX/view) e [parte 2](https://drive.google.com/file/d/1ZX4xSTNzpF_aRl0ustDLmAFQgtTZen0O/view?usp=drive_link)
+  - Casos de uso: [parte 1](https://drive.google.com/file/d/1RK8GSxWsH-6iCzukaUSDmJg-Nn_iw4gX/view) e [parte 2](https://drive.google.com/file/
+  d/1ZX4xSTNzpF_aRl0ustDLmAFQgtTZen0O/view?usp=drive_link)
+  - [Protótipos de interface (prática com Proto-Typed)](https://ricardoadorno.github.io/proto-typed/)
 - [Teste de software](https://docs.google.com/presentation/d/1Lf4vam-jS95XKZNUfzNAjDZuQ4U35GzXlgFQ0RUxy9g/edit?slide=id.p#slide=id.p)
   - [Estratégias para criação de testes](https://docs.google.com/presentation/d/1iURDzF605wDMI8uIxFEH2aIEE0gy8EefcWak5k8xl14/edit?slide=id.gb33812c128_0_4)
   - [BDD](https://docs.google.com/presentation/d/14e4lDI3wGnl1RxnUT9zk2fmP3noXEoT-OiL75yJfMwM/edit?slide=id.g436303bbb9_0_5#slide=id.g436303bbb9_0_5)
