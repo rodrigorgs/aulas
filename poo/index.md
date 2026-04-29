@@ -33,7 +33,11 @@ features: []
 Acesse o [guia de laboratório](https://docs.google.com/document/d/1ijCP-ONUL9IJOrTGYhejdkp2pIxRodRHWdH8XkPJjn4/edit#)
  -->
 
-## Conteúdo
+## Conteúdo (em Java)
+
+[Slides de POO com Java](https://drive.google.com/drive/folders/1LBRt0DPnWLLG_uPR4MQiGKBc3X47_XXx?usp=sharing)
+
+## Conteúdo (em Python)
 
 <!-- 
 **Introdução: paradigmas de linguagens de programação e programação orientada a objetos**
