@@ -11,4 +11,4 @@ features: []
 Ver também: 
 
 - [Orientações sobre os exercícios](https://docs.google.com/document/d/1uvJav_YruWZzYERr16hyBpeR3WctfFqIWBESKRk1cfQ/edit)
-- [Resultado da correção dos exercícios](https://ezsubmission.app.ic.ufba.br/app/classrooms/12/submissions)
+- [Resultado da correção dos exercícios](https://ezsubmission.app.ic.ufba.br/app/classrooms/13/submissions)
