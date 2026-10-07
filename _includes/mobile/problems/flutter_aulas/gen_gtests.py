@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 directory = "lib"
 prefix = "g_"
@@ -74,7 +75,10 @@ void main() {
 ''')
 
 def generate_goldens(filename):
-    os.system(f"flutter test --update-goldens test/{filename}_test.dart")
+    subprocess.run(
+        ["flutter", "test", "--update-goldens", f"test/{filename}_test.dart"],
+        check=True,
+    )
 
 if __name__ == "__main__":
     files = [file.replace('.dart', '') for file in os.listdir(directory) if file.startswith(prefix) and not '__draft' in file]
