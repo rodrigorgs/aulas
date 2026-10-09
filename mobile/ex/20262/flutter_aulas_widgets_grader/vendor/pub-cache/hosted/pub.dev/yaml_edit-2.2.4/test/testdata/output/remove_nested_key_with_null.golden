@@ -1,7 +1,0 @@
-A: true
-B:
-  foo:
----
-A: true
-B:
-  {}

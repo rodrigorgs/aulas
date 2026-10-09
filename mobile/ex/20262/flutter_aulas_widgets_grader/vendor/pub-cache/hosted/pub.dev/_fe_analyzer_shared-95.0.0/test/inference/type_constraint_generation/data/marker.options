@@ -1,3 +1,0 @@
-cfe=pkg/front_end/test/id_tests/type_constraint_generation_test.dart
-analyzer=pkg/analyzer/test/id_tests/type_constraint_generation_test.dart
-

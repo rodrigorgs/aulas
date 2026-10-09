@@ -1,7 +1,0 @@
-name: empty_dart_app
-environment:
-  sdk: '>=3.0.0'
-
-dependencies:
-  package_with_extensions:
-    path: ../package_with_extensions

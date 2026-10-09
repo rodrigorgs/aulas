@@ -1,9 +1,0 @@
-# Initial comment
-string: 'hello world' # Comment
-map:
- foo: 42 # Best number
- bar: 'baz'
-list: # Great starter list
- - 1
- - 2
- - 3

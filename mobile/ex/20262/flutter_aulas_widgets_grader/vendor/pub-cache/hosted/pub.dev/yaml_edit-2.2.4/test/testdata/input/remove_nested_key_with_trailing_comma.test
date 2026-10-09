@@ -1,7 +1,0 @@
-REMOVE NESTED KEY FROM MAP WITH TRAILING COMMA
----
-A: true
-B:
-  bar: false # remove this comment
----
-- [remove, [B, bar]]
