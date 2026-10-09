@@ -1,0 +1,216 @@
+// Copyright (c) 2014, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:_fe_analyzer_shared/src/scanner/error_token.dart';
+import 'package:analyzer/dart/analysis/features.dart';
+import 'package:analyzer/dart/ast/token.dart';
+import 'package:analyzer/error/listener.dart';
+import 'package:analyzer/source/line_info.dart';
+import 'package:analyzer/src/dart/scanner/scanner.dart';
+import 'package:analyzer/src/string_source.dart';
+import 'package:analyzer_testing/resource_provider_mixin.dart';
+import 'package:test/test.dart';
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import 'test_support.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(LineInfoTest);
+    defineReflectiveTests(ScannerTest);
+  });
+}
+
+@reflectiveTest
+class LineInfoTest {
+  final featureSet = FeatureSet.latestLanguageVersion();
+
+  void test_lineInfo_multilineComment() {
+    String source = "/*\r\n *\r\n */";
+    _assertLineInfo(source, [
+      ScannerTest_ExpectedLocation(0, 1, 1),
+      ScannerTest_ExpectedLocation(5, 2, 2),
+      ScannerTest_ExpectedLocation(source.length - 1, 3, 3),
+    ]);
+  }
+
+  void test_lineInfo_multilineString() {
+    String source = "'''a\r\nbc\r\nd'''";
+    _assertLineInfo(source, [
+      ScannerTest_ExpectedLocation(0, 1, 1),
+      ScannerTest_ExpectedLocation(7, 2, 2),
+      ScannerTest_ExpectedLocation(source.length - 1, 3, 4),
+    ]);
+  }
+
+  void test_lineInfo_multilineString_raw() {
+    String source = "var a = r'''\nblah\n''';\n\nfoo";
+    _assertLineInfo(source, [
+      ScannerTest_ExpectedLocation(0, 1, 1),
+      ScannerTest_ExpectedLocation(14, 2, 2),
+      ScannerTest_ExpectedLocation(source.length - 2, 5, 2),
+    ]);
+  }
+
+  void test_lineInfo_simpleClass() {
+    String source =
+        "class Test {\r\n    String s = '...';\r\n    int get x => s.MISSING_GETTER;\r\n}";
+    _assertLineInfo(source, [
+      ScannerTest_ExpectedLocation(0, 1, 1),
+      ScannerTest_ExpectedLocation(source.indexOf("MISSING_GETTER"), 3, 20),
+      ScannerTest_ExpectedLocation(source.length - 1, 4, 1),
+    ]);
+  }
+
+  void test_lineInfo_slashN() {
+    String source = "class Test {\n}";
+    _assertLineInfo(source, [
+      ScannerTest_ExpectedLocation(0, 1, 1),
+      ScannerTest_ExpectedLocation(source.indexOf("}"), 2, 1),
+    ]);
+  }
+
+  void test_linestarts() {
+    String source = "var\r\ni\n=\n1;\n";
+    GatheringDiagnosticListener listener = GatheringDiagnosticListener();
+    Scanner scanner =
+        Scanner(source, DiagnosticReporter(listener, TestSource()))
+          ..configureFeatures(
+            featureSetForOverriding: featureSet,
+            featureSet: featureSet,
+          );
+    var token = scanner.tokenize();
+    expect(token.lexeme, 'var');
+    var lineStarts = scanner.lineStarts;
+    expect(lineStarts, orderedEquals([0, 5, 7, 9, 12]));
+  }
+
+  void test_translate_missing_closing_gt_error() {
+    // Ensure that the UnmatchedToken error for missing '>' is translated
+    // to the correct analyzer error code.
+    // See https://github.com/dart-lang/sdk/issues/30320
+    String source = '<!-- @Component(';
+    GatheringDiagnosticListener listener = GatheringDiagnosticListener();
+    Scanner scanner =
+        Scanner(source, DiagnosticReporter(listener, TestSource()))
+          ..configureFeatures(
+            featureSetForOverriding: featureSet,
+            featureSet: featureSet,
+          );
+    Token token = scanner.tokenize(reportScannerErrors: false);
+    expect(token, TypeMatcher<UnmatchedToken>());
+    token = token.next!;
+    expect(token, TypeMatcher<UnmatchedToken>());
+    token = token.next!;
+    expect(token, isNot(TypeMatcher<ErrorToken>()));
+  }
+
+  void _assertLineInfo(
+    String source,
+    List<ScannerTest_ExpectedLocation> expectedLocations,
+  ) {
+    GatheringDiagnosticListener listener = GatheringDiagnosticListener();
+    _scanWithListener(source, listener);
+    listener.assertNoErrors();
+    LineInfo info = listener.getLineInfo(TestSource())!;
+    expect(info, isNotNull);
+    int count = expectedLocations.length;
+    for (int i = 0; i < count; i++) {
+      ScannerTest_ExpectedLocation expectedLocation = expectedLocations[i];
+      var location = info.getLocation(expectedLocation._offset);
+      expect(
+        location.lineNumber,
+        expectedLocation._lineNumber,
+        reason: 'Line number in location $i',
+      );
+      expect(
+        location.columnNumber,
+        expectedLocation._columnNumber,
+        reason: 'Column number in location $i',
+      );
+    }
+  }
+
+  Token _scanWithListener(String source, GatheringDiagnosticListener listener) {
+    Scanner scanner =
+        Scanner(source, DiagnosticReporter(listener, TestSource()))
+          ..configureFeatures(
+            featureSetForOverriding: featureSet,
+            featureSet: featureSet,
+          );
+    Token result = scanner.tokenize();
+    LineInfo lineInfo = LineInfo(scanner.lineStarts);
+    listener.setLineInfo(TestSource(), lineInfo);
+    return result;
+  }
+}
+
+@reflectiveTest
+class ScannerTest with ResourceProviderMixin {
+  test_featureSet() {
+    var scanner = _createScanner(r'''
+// @dart = 2.0
+''');
+    var defaultFeatureSet = FeatureSet.latestLanguageVersion();
+    expect(defaultFeatureSet.isEnabled(Feature.extension_methods), isTrue);
+
+    scanner.configureFeatures(
+      featureSetForOverriding: FeatureSet.latestLanguageVersion(),
+      featureSet: FeatureSet.latestLanguageVersion(),
+    );
+    scanner.tokenize();
+
+    var featureSet = scanner.featureSet;
+    expect(featureSet.isEnabled(Feature.extension_methods), isFalse);
+  }
+
+  test_featureSet_majorOverflow() {
+    var scanner = _createScanner(r'''
+// @dart = 99999999999999999999999999999999.0
+''');
+    var featureSet = FeatureSet.latestLanguageVersion();
+    scanner.configureFeatures(
+      featureSetForOverriding: featureSet,
+      featureSet: featureSet,
+    );
+    scanner.tokenize();
+    // Don't check features, but should not crash.
+  }
+
+  test_featureSet_minorOverflow() {
+    var scanner = _createScanner(r'''
+// @dart = 3.99999999999999999999999999999999
+''');
+    var featureSet = FeatureSet.latestLanguageVersion();
+    scanner.configureFeatures(
+      featureSetForOverriding: featureSet,
+      featureSet: featureSet,
+    );
+    scanner.tokenize();
+    // Don't check features, but should not crash.
+  }
+
+  Scanner _createScanner(String content) {
+    var path = convertPath('/test/lib/a.dart');
+    var source = StringSource(content, path);
+    var diagnosticCollector = RecordingDiagnosticListener();
+    return Scanner(content, DiagnosticReporter(diagnosticCollector, source));
+  }
+}
+
+/// An `ExpectedLocation` encodes information about the expected location of a
+/// given offset in source code.
+class ScannerTest_ExpectedLocation {
+  final int _offset;
+
+  final int _lineNumber;
+
+  final int _columnNumber;
+
+  ScannerTest_ExpectedLocation(
+    this._offset,
+    this._lineNumber,
+    this._columnNumber,
+  );
+}

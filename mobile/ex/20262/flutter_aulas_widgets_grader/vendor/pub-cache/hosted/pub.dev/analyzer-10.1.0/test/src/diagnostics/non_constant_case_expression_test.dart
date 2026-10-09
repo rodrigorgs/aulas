@@ -1,0 +1,73 @@
+// Copyright (c) 2020, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(NonConstantCaseExpressionTest);
+    defineReflectiveTests(NonConstantCaseExpressionTest_Language219);
+  });
+}
+
+@reflectiveTest
+class NonConstantCaseExpressionTest extends PubPackageResolutionTest
+    with NonConstantCaseExpressionTestCases {}
+
+@reflectiveTest
+class NonConstantCaseExpressionTest_Language219 extends PubPackageResolutionTest
+    with WithLanguage219Mixin, NonConstantCaseExpressionTestCases {
+  test_parameter() async {
+    await assertErrorsInCode(
+      r'''
+void f(var e, int a) {
+  switch (e) {
+    case 3 + a:
+      break;
+  }
+}
+''',
+      [error(diag.nonConstantCaseExpression, 51, 1)],
+    );
+  }
+}
+
+mixin NonConstantCaseExpressionTestCases on PubPackageResolutionTest {
+  test_constField() async {
+    await assertNoErrorsInCode(r'''
+void f(C e) {
+  switch (e) {
+    case C.zero:
+      break;
+    default:
+      break;
+  }
+}
+
+class C {
+  static const zero = C(0);
+
+  final int a;
+  const C(this.a);
+}
+''');
+  }
+
+  test_typeLiteral() async {
+    await assertNoErrorsInCode(r'''
+void f(e) {
+  switch (e) {
+    case bool:
+    case int:
+      break;
+    default:
+      break;
+  }
+}
+''');
+  }
+}

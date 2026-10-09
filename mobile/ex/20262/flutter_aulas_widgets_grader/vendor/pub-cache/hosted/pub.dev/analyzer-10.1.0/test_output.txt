@@ -1,0 +1,86 @@
+00:00 +0: loading test/generated/invalid_code_test.dart
+00:00 +0: InvalidCodeTest | test_fuzz_10
+00:00 +0 -1: InvalidCodeTest | test_fuzz_10 [E]
+  Null check operator used on a null value
+  #0      ResolutionVisitor._defineLocalVariables (package:analyzer/src/dart/resolver/resolution_visitor.dart:1089:50)
+  #1      ResolutionVisitor._buildLocalElements (package:analyzer/src/dart/resolver/resolution_visitor.dart:1075:9)
+  #2      ResolutionVisitor.visitBlock (package:analyzer/src/dart/resolver/resolution_visitor.dart:182:7)
+  #3      BlockImpl.accept (package:analyzer/src/dart/ast/ast.dart:2700:50)
+  #4      BlockFunctionBodyImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:2618:11)
+  #5      RecursiveAstVisitor.visitBlockFunctionBody (package:analyzer/dart/ast/visitor.g.dart:862:10)
+  #6      BlockFunctionBodyImpl.accept (package:analyzer/src/dart/ast/ast.dart:2609:50)
+  #7      ResolutionVisitor.visitFunctionExpression.<anonymous closure> (package:analyzer/src/dart/resolver/resolution_visitor.dart:537:19)
+  #8      ResolutionVisitor._withScope (package:analyzer/src/dart/resolver/resolution_visitor.dart:1398:8)
+  #9      ResolutionVisitor._withTypeParameterScope (package:analyzer/src/dart/resolver/resolution_visitor.dart:1409:5)
+  #10     ResolutionVisitor.visitFunctionExpression (package:analyzer/src/dart/resolver/resolution_visitor.dart:529:5)
+  #11     FunctionExpressionImpl.accept (package:analyzer/src/dart/ast/ast.dart:13425:50)
+  #12     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:20653:20)
+  #13     ArgumentListImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:1091:15)
+  #14     RecursiveAstVisitor.visitArgumentList (package:analyzer/dart/ast/visitor.g.dart:802:10)
+  #15     ArgumentListImpl.accept (package:analyzer/src/dart/ast/ast.dart:1086:50)
+  #16     AnnotationImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:458:16)
+  #17     RecursiveAstVisitor.visitAnnotation (package:analyzer/dart/ast/visitor.g.dart:775:10)
+  #18     ResolutionVisitor.visitAnnotation (package:analyzer/src/dart/resolver/resolution_visitor.dart:136:11)
+  #19     AnnotationImpl.accept (package:analyzer/src/dart/ast/ast.dart:450:50)
+  #20     AstResolver.resolveAnnotation (package:analyzer/src/summary2/ast_resolver.dart:79:10)
+  #21     MetadataResolver.visitAnnotation (package:analyzer/src/summary2/metadata_resolver.dart:38:19)
+  #22     AnnotationImpl.accept (package:analyzer/src/dart/ast/ast.dart:450:50)
+  #23     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:20653:20)
+  #24     MetadataResolver.visitTypeParameter (package:analyzer/src/summary2/metadata_resolver.dart:282:19)
+  #25     TypeParameterImpl.accept (package:analyzer/src/dart/ast/ast.dart:29180:50)
+  #26     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:20653:20)
+  #27     MetadataResolver.visitTypeParameterList (package:analyzer/src/summary2/metadata_resolver.dart:287:25)
+  #28     TypeParameterListImpl.accept (package:analyzer/src/dart/ast/ast.dart:29291:50)
+  #29     MetadataResolver.visitFunctionExpression (package:analyzer/src/summary2/metadata_resolver.dart:174:26)
+  #30     FunctionExpressionImpl.accept (package:analyzer/src/dart/ast/ast.dart:13425:50)
+  #31     MetadataResolver.visitFunctionDeclaration (package:analyzer/src/summary2/metadata_resolver.dart:169:29)
+  #32     FunctionDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:13162:50)
+  #33     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:20653:20)
+  #34     MetadataResolver.visitCompilationUnit (package:analyzer/src/summary2/metadata_resolver.dart:73:23)
+  #35     CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:5030:50)
+  #36     LibraryBuilder.resolveMetadata (package:analyzer/src/summary2/library_builder.dart:361:24)
+  #37     Linker._resolveMetadata (package:analyzer/src/summary2/link.dart:401:15)
+  #38     Linker._buildOutlines (package:analyzer/src/summary2/link.dart:267:5)
+  #39     Linker.link.<anonymous closure> (package:analyzer/src/summary2/link.dart:127:7)
+  #40     OperationPerformanceImpl.run (package:analyzer/src/util/performance/operation_performance.dart:201:23)
+  #41     Linker.link (package:analyzer/src/summary2/link.dart:126:17)
+  #42     link (package:analyzer/src/summary2/link.dart:44:10)
+  #43     LibraryContext._loadBundle.<anonymous closure> (package:analyzer/src/dart/analysis/library_context.dart:301:20)
+  #44     OperationPerformanceImpl.run (package:analyzer/src/util/performance/operation_performance.dart:201:23)
+  #45     LibraryContext._loadBundle (package:analyzer/src/dart/analysis/library_context.dart:300:40)
+  #46     LibraryContext.load.<anonymous closure> (package:analyzer/src/dart/analysis/library_context.dart:145:7)
+  #47     OperationPerformanceImpl.run (package:analyzer/src/util/performance/operation_performance.dart:201:23)
+  #48     LibraryContext.load (package:analyzer/src/dart/analysis/library_context.dart:144:17)
+  #49     AnalysisDriver._analyzeFileImpl.<anonymous closure>.<anonymous closure> (package:analyzer/src/dart/analysis/driver.dart:1344:26)
+  #50     OperationPerformanceImpl.run (package:analyzer/src/util/performance/operation_performance.dart:201:23)
+  #51     AnalysisDriver._analyzeFileImpl.<anonymous closure> (package:analyzer/src/dart/analysis/driver.dart:1343:21)
+  #52     PerformanceLog.run (package:analyzer/src/dart/analysis/performance_logger.dart:38:15)
+  #53     AnalysisDriver._analyzeFileImpl (package:analyzer/src/dart/analysis/driver.dart:1331:20)
+  #54     AnalysisDriver._analyzeFile.<anonymous closure> (package:analyzer/src/dart/analysis/driver.dart:1312:7)
+  #55     OperationPerformanceImpl.run (package:analyzer/src/util/performance/operation_performance.dart:201:23)
+  #56     AnalysisDriver._analyzeFile (package:analyzer/src/dart/analysis/driver.dart:1311:38)
+  #57     AnalysisDriver.performWork (package:analyzer/src/dart/analysis/driver.dart:1185:7)
+  #58     AnalysisDriverScheduler._run (package:analyzer/src/dart/analysis/driver.dart:2755:24)
+  <asynchronous suspension>
+  
+  
+  package:analyzer/src/dart/analysis/library_context.dart 466:5            LibraryContext._throwLibraryCycleLinkException
+  package:analyzer/src/dart/analysis/library_context.dart 338:9            LibraryContext._loadBundle
+  package:analyzer/src/dart/analysis/library_context.dart 145:7            LibraryContext.load.<fn>
+  package:analyzer/src/util/performance/operation_performance.dart 201:23  OperationPerformanceImpl.run
+  package:analyzer/src/dart/analysis/library_context.dart 144:17           LibraryContext.load
+  package:analyzer/src/dart/analysis/driver.dart 1344:26                   AnalysisDriver._analyzeFileImpl.<fn>.<fn>
+  package:analyzer/src/util/performance/operation_performance.dart 201:23  OperationPerformanceImpl.run
+  package:analyzer/src/dart/analysis/driver.dart 1343:21                   AnalysisDriver._analyzeFileImpl.<fn>
+  package:analyzer/src/dart/analysis/performance_logger.dart 38:15         PerformanceLog.run
+  package:analyzer/src/dart/analysis/driver.dart 1331:20                   AnalysisDriver._analyzeFileImpl
+  package:analyzer/src/dart/analysis/driver.dart 1312:7                    AnalysisDriver._analyzeFile.<fn>
+  package:analyzer/src/util/performance/operation_performance.dart 201:23  OperationPerformanceImpl.run
+  package:analyzer/src/dart/analysis/driver.dart 1311:38                   AnalysisDriver._analyzeFile
+  package:analyzer/src/dart/analysis/driver.dart 1185:7                    AnalysisDriver.performWork
+  package:analyzer/src/dart/analysis/driver.dart 2755:24                   AnalysisDriverScheduler._run
+  
+00:00 +0 -1: Some tests failed.
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

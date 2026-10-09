@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the VmService class from the vm_service library, for the Dart programming language.">
+  <title>VmService class - vm_service library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service.dart</a></li>
+    <li class="self-crumb">VmService class</li>
+  </ol>
+  <div class="self-name">VmService</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="vm_service&#47;vm_service-library-sidebar.html"
+    data-below-sidebar="vm_service&#47;VmService-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">VmService</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+        
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="../vm_service/DartIOExtension.html">DartIOExtension</a></li>
+  </ul></dd>
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="VmService.new" class="callable">
+          <span class="name"><a href="../vm_service/VmService/VmService.html">VmService</a></span><span class="signature">(<span class="parameter" id="param-inStream"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a></span> <span class="parameter-name">inStream</span>, </span><span class="parameter" id="param-writeMessage"><span class="type-annotation">void</span> <span class="parameter-name">writeMessage</span>(<span class="parameter" id="param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span></span>), {</span><span class="parameter" id="param-log"><span class="type-annotation"><a href="../vm_service/Log-class.html">Log</a>?</span> <span class="parameter-name">log</span>, </span><span class="parameter" id="param-disposeHandler"><span class="type-annotation"><a href="../vm_service/DisposeHandler.html">DisposeHandler</a>?</span> <span class="parameter-name">disposeHandler</span>, </span><span class="parameter" id="param-streamClosed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a>?</span> <span class="parameter-name">streamClosed</span>, </span><span class="parameter" id="param-wsUri"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">wsUri</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onDebugEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onDebugEvent.html">onDebugEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onDone" class="property">
+  <span class="name"><a href="../vm_service/VmService/onDone.html">onDone</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onExtensionEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onExtensionEvent.html">onExtensionEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onGCEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onGCEvent.html">onGCEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onHeapSnapshotEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onHeapSnapshotEvent.html">onHeapSnapshotEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onIsolateEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onIsolateEvent.html">onIsolateEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onLoggingEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onLoggingEvent.html">onLoggingEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onProfilerEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onProfilerEvent.html">onProfilerEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onReceive" class="property">
+  <span class="name"><a href="../vm_service/VmService/onReceive.html">onReceive</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onSend" class="property">
+  <span class="name"><a href="../vm_service/VmService/onSend.html">onSend</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onServiceEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onServiceEvent.html">onServiceEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onStderrEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onStderrEvent.html">onStderrEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onStdoutEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onStdoutEvent.html">onStdoutEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onTimelineEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onTimelineEvent.html">onTimelineEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onTimerEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onTimerEvent.html">onTimerEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="onVMEvent" class="property">
+  <span class="name"><a href="../vm_service/VmService/onVMEvent.html">onVMEvent</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="wsUri" class="property">
+  <span class="name"><a href="../vm_service/VmService/wsUri.html">wsUri</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The web socket URI pointing to the target VM service instance.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addBreakpoint" class="callable">
+  <span class="name"><a href="../vm_service/VmService/addBreakpoint.html">addBreakpoint</a></span><span class="signature">(<wbr><span class="parameter" id="addBreakpoint-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="addBreakpoint-param-scriptId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">scriptId</span>, </span><span class="parameter" id="addBreakpoint-param-line"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">line</span>, {</span><span class="parameter" id="addBreakpoint-param-column"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">column</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>addBreakpoint</code> RPC is used to add a breakpoint at a specific line of
+some script.
+  
+
+</dd>
+
+        <dt id="addBreakpointAtEntry" class="callable">
+  <span class="name"><a href="../vm_service/VmService/addBreakpointAtEntry.html">addBreakpointAtEntry</a></span><span class="signature">(<wbr><span class="parameter" id="addBreakpointAtEntry-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="addBreakpointAtEntry-param-functionId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">functionId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>addBreakpointAtEntry</code> RPC is used to add a breakpoint at the
+entrypoint of some function.
+  
+
+</dd>
+
+        <dt id="addBreakpointWithScriptUri" class="callable">
+  <span class="name"><a href="../vm_service/VmService/addBreakpointWithScriptUri.html">addBreakpointWithScriptUri</a></span><span class="signature">(<wbr><span class="parameter" id="addBreakpointWithScriptUri-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="addBreakpointWithScriptUri-param-scriptUri"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">scriptUri</span>, </span><span class="parameter" id="addBreakpointWithScriptUri-param-line"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">line</span>, {</span><span class="parameter" id="addBreakpointWithScriptUri-param-column"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">column</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>addBreakpoint</code> RPC is used to add a breakpoint at a specific line of
+some script. This RPC is useful when a script has not yet been assigned an
+id, for example, if a script is in a deferred library which has not yet
+been loaded.
+  
+
+</dd>
+
+        <dt id="callMethod" class="callable">
+  <span class="name"><a href="../vm_service/VmService/callMethod.html">callMethod</a></span><span class="signature">(<wbr><span class="parameter" id="callMethod-param-method"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">method</span>, {</span><span class="parameter" id="callMethod-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="callMethod-param-args"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">args</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Call an arbitrary service protocol method. This allows clients to call
+methods not explicitly exposed by this library.
+  
+
+</dd>
+
+        <dt id="callServiceExtension" class="callable">
+  <span class="name"><a href="../vm_service/VmService/callServiceExtension.html">callServiceExtension</a></span><span class="signature">(<wbr><span class="parameter" id="callServiceExtension-param-method"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">method</span>, {</span><span class="parameter" id="callServiceExtension-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="callServiceExtension-param-args"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">args</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Invoke a specific service protocol extension method.
+  
+
+</dd>
+
+        <dt id="clearCpuSamples" class="callable">
+  <span class="name"><a href="../vm_service/VmService/clearCpuSamples.html">clearCpuSamples</a></span><span class="signature">(<wbr><span class="parameter" id="clearCpuSamples-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Clears all CPU profiling samples.
+  
+
+</dd>
+
+        <dt id="clearHttpProfile" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/clearHttpProfile.html">clearHttpProfile</a></span><span class="signature">(<wbr><span class="parameter" id="clearHttpProfile-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>clearHttpProfile</code> RPC is used to clear previously recorded HTTP
+requests from the HTTP profiler state. Requests still in-flight after
+clearing the profiler state will be ignored by the profiler.
+  
+
+</dd>
+
+        <dt id="clearSocketProfile" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/clearSocketProfile.html">clearSocketProfile</a></span><span class="signature">(<wbr><span class="parameter" id="clearSocketProfile-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  Removes all statistics associated with prior and current sockets.
+  
+
+</dd>
+
+        <dt id="clearVMTimeline" class="callable">
+  <span class="name"><a href="../vm_service/VmService/clearVMTimeline.html">clearVMTimeline</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Clears all VM timeline events.
+  
+
+</dd>
+
+        <dt id="createIdZone" class="callable">
+  <span class="name"><a href="../vm_service/VmService/createIdZone.html">createIdZone</a></span><span class="signature">(<wbr><span class="parameter" id="createIdZone-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="createIdZone-param-backingBufferKind"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">backingBufferKind</span>, </span><span class="parameter" id="createIdZone-param-idAssignmentPolicy"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">idAssignmentPolicy</span>, {</span><span class="parameter" id="createIdZone-param-capacity"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">capacity</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/IdZone-class.html">IdZone</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>createIdZone</code> RPC is used to create a new ID zone where temporary IDs
+for instances in the specified isolate may be allocated. See <code>IDs and
+Names</code> for more information about ID zones.
+  
+
+</dd>
+
+        <dt id="deleteIdZone" class="callable">
+  <span class="name"><a href="../vm_service/VmService/deleteIdZone.html">deleteIdZone</a></span><span class="signature">(<wbr><span class="parameter" id="deleteIdZone-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="deleteIdZone-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">idZoneId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>deleteIdZone</code> RPC frees the buffer that backs the specified ID zone,
+and makes that zone unusable for the remainder of the program's execution.
+For performance reasons, clients should aim to call <a href="../vm_service/VmService/invalidateIdZone.html">invalidateIdZone</a> and
+reuse existing zones as much as possible instead of deleting zones and
+then creating new ones.
+  
+
+</dd>
+
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="../vm_service/VmService/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="evaluate" class="callable">
+  <span class="name"><a href="../vm_service/VmService/evaluate.html">evaluate</a></span><span class="signature">(<wbr><span class="parameter" id="evaluate-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="evaluate-param-targetId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="evaluate-param-expression"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">expression</span>, {</span><span class="parameter" id="evaluate-param-scope"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">scope</span>, </span><span class="parameter" id="evaluate-param-disableBreakpoints"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">disableBreakpoints</span>, </span><span class="parameter" id="evaluate-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>evaluate</code> RPC is used to evaluate an expression in the context of
+some target.
+  
+
+</dd>
+
+        <dt id="evaluateInFrame" class="callable">
+  <span class="name"><a href="../vm_service/VmService/evaluateInFrame.html">evaluateInFrame</a></span><span class="signature">(<wbr><span class="parameter" id="evaluateInFrame-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="evaluateInFrame-param-frameIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">frameIndex</span>, </span><span class="parameter" id="evaluateInFrame-param-expression"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">expression</span>, {</span><span class="parameter" id="evaluateInFrame-param-scope"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">scope</span>, </span><span class="parameter" id="evaluateInFrame-param-disableBreakpoints"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">disableBreakpoints</span>, </span><span class="parameter" id="evaluateInFrame-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>evaluateInFrame</code> RPC is used to evaluate an expression in the context
+of a particular stack frame. <code>frameIndex</code> is the index of the desired
+<a href="../vm_service/Frame-class.html">Frame</a>, with an index of <code>0</code> indicating the top (most recent) frame.
+  
+
+</dd>
+
+        <dt id="getAllocationProfile" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getAllocationProfile.html">getAllocationProfile</a></span><span class="signature">(<wbr><span class="parameter" id="getAllocationProfile-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="getAllocationProfile-param-reset"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">reset</span>, </span><span class="parameter" id="getAllocationProfile-param-gc"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">gc</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/AllocationProfile-class.html">AllocationProfile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getAllocationProfile</code> RPC is used to retrieve allocation information
+for a given isolate.
+  
+
+</dd>
+
+        <dt id="getAllocationTraces" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getAllocationTraces.html">getAllocationTraces</a></span><span class="signature">(<wbr><span class="parameter" id="getAllocationTraces-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="getAllocationTraces-param-timeOriginMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeOriginMicros</span>, </span><span class="parameter" id="getAllocationTraces-param-timeExtentMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeExtentMicros</span>, </span><span class="parameter" id="getAllocationTraces-param-classId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">classId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/CpuSamples-class.html">CpuSamples</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getAllocationTraces</code> RPC allows for the retrieval of allocation
+traces for objects of a specific set of types (see
+<a href="../vm_service/VmService/setTraceClassAllocation.html">VmService.setTraceClassAllocation</a>). Only samples collected in the time
+range <code>[timeOriginMicros, timeOriginMicros + timeExtentMicros]</code> will be
+reported.
+  
+
+</dd>
+
+        <dt id="getClassList" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getClassList.html">getClassList</a></span><span class="signature">(<wbr><span class="parameter" id="getClassList-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/ClassList-class.html">ClassList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getClassList</code> RPC is used to retrieve a <code>ClassList</code> containing all
+classes for an isolate based on the isolate's <code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="getCpuSamples" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getCpuSamples.html">getCpuSamples</a></span><span class="signature">(<wbr><span class="parameter" id="getCpuSamples-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getCpuSamples-param-timeOriginMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timeOriginMicros</span>, </span><span class="parameter" id="getCpuSamples-param-timeExtentMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">timeExtentMicros</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/CpuSamples-class.html">CpuSamples</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getCpuSamples</code> RPC is used to retrieve samples collected by the CPU
+profiler. See <a href="../vm_service/CpuSamples-class.html">CpuSamples</a> for a detailed description of the response.
+  
+
+</dd>
+
+        <dt id="getDartIOVersion" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getDartIOVersion.html">getDartIOVersion</a></span><span class="signature">(<wbr><span class="parameter" id="getDartIOVersion-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Version-class.html">Version</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getDartIOVersion</code> RPC returns the available version of the dart:io
+service protocol extensions.
+  
+
+</dd>
+
+        <dt id="getFlagList" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getFlagList.html">getFlagList</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/FlagList-class.html">FlagList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getFlagList</code> RPC returns a list of all command line flags in the VM
+along with their current values.
+  
+
+</dd>
+
+        <dt id="getHttpProfile" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getHttpProfile.html">getHttpProfile</a></span><span class="signature">(<wbr><span class="parameter" id="getHttpProfile-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="getHttpProfile-param-updatedSince"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">updatedSince</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/HttpProfile-class.html">HttpProfile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getHttpProfile</code> RPC is used to retrieve HTTP profiling information
+for requests made via <code>dart:io</code>'s <code>HttpClient</code>.
+  
+
+</dd>
+
+        <dt id="getHttpProfileRequest" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getHttpProfileRequest.html">getHttpProfileRequest</a></span><span class="signature">(<wbr><span class="parameter" id="getHttpProfileRequest-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getHttpProfileRequest-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/HttpProfileRequest-class.html">HttpProfileRequest</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getHttpProfileRequest</code> RPC is used to retrieve an instance of
+<a href="../vm_service/HttpProfileRequest-class.html">HttpProfileRequest</a>, which includes request and response body data.
+  
+
+</dd>
+
+        <dt id="getInboundReferences" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getInboundReferences.html">getInboundReferences</a></span><span class="signature">(<wbr><span class="parameter" id="getInboundReferences-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getInboundReferences-param-targetId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="getInboundReferences-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span>, {</span><span class="parameter" id="getInboundReferences-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/InboundReferences-class.html">InboundReferences</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a set of inbound references to the object specified by <code>targetId</code>.
+Up to <code>limit</code> references will be returned.
+  
+
+</dd>
+
+        <dt id="getInstances" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getInstances.html">getInstances</a></span><span class="signature">(<wbr><span class="parameter" id="getInstances-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getInstances-param-objectId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">objectId</span>, </span><span class="parameter" id="getInstances-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span>, {</span><span class="parameter" id="getInstances-param-includeSubclasses"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">includeSubclasses</span>, </span><span class="parameter" id="getInstances-param-includeImplementers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">includeImplementers</span>, </span><span class="parameter" id="getInstances-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/InstanceSet-class.html">InstanceSet</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getInstances</code> RPC is used to retrieve a set of instances which are of
+a specific class.
+  
+
+</dd>
+
+        <dt id="getInstancesAsList" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getInstancesAsList.html">getInstancesAsList</a></span><span class="signature">(<wbr><span class="parameter" id="getInstancesAsList-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getInstancesAsList-param-objectId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">objectId</span>, {</span><span class="parameter" id="getInstancesAsList-param-includeSubclasses"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">includeSubclasses</span>, </span><span class="parameter" id="getInstancesAsList-param-includeImplementers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">includeImplementers</span>, </span><span class="parameter" id="getInstancesAsList-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getInstancesAsList</code> RPC is used to retrieve a set of instances which
+are of a specific class. This RPC returns an <code>InstanceRef</code> corresponding
+to a Dart <code>List&lt;dynamic&gt;</code> that contains the requested instances. This
+<code>List</code> is not growable, but it is otherwise mutable. The response type is
+what distinguishes this RPC from <code>getInstances</code>, which returns an
+<code>InstanceSet</code>.
+  
+
+</dd>
+
+        <dt id="getIsolate" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getIsolate.html">getIsolate</a></span><span class="signature">(<wbr><span class="parameter" id="getIsolate-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Isolate-class.html">Isolate</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getIsolate</code> RPC is used to lookup an <code>Isolate</code> object by its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getIsolateGroup" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getIsolateGroup.html">getIsolateGroup</a></span><span class="signature">(<wbr><span class="parameter" id="getIsolateGroup-param-isolateGroupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateGroupId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/IsolateGroup-class.html">IsolateGroup</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getIsolateGroup</code> RPC is used to lookup an <code>IsolateGroup</code> object by
+its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getIsolateGroupMemoryUsage" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getIsolateGroupMemoryUsage.html">getIsolateGroupMemoryUsage</a></span><span class="signature">(<wbr><span class="parameter" id="getIsolateGroupMemoryUsage-param-isolateGroupId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateGroupId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/MemoryUsage-class.html">MemoryUsage</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getIsolateGroupMemoryUsage</code> RPC is used to lookup an isolate group's
+memory usage statistics by its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getIsolatePauseEvent" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getIsolatePauseEvent.html">getIsolatePauseEvent</a></span><span class="signature">(<wbr><span class="parameter" id="getIsolatePauseEvent-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getIsolatePauseEvent</code> RPC is used to lookup an isolate's pause event
+by its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getMemoryUsage" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getMemoryUsage.html">getMemoryUsage</a></span><span class="signature">(<wbr><span class="parameter" id="getMemoryUsage-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/MemoryUsage-class.html">MemoryUsage</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getMemoryUsage</code> RPC is used to lookup an isolate's memory usage
+statistics by its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getObject" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getObject.html">getObject</a></span><span class="signature">(<wbr><span class="parameter" id="getObject-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getObject-param-objectId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">objectId</span>, {</span><span class="parameter" id="getObject-param-offset"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">offset</span>, </span><span class="parameter" id="getObject-param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">count</span>, </span><span class="parameter" id="getObject-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Obj-class.html">Obj</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getObject</code> RPC is used to lookup an <code>object</code> from some isolate by its
+<code>id</code>.
+  
+
+</dd>
+
+        <dt id="getOpenFileById" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getOpenFileById.html">getOpenFileById</a></span><span class="signature">(<wbr><span class="parameter" id="getOpenFileById-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getOpenFileById-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/OpenFile-class.html">OpenFile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getOpenFileById</code> RPC is used to retrieve information about files
+currently opened by <code>dart:io</code> from a given isolate.
+  
+
+</dd>
+
+        <dt id="getOpenFiles" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getOpenFiles.html">getOpenFiles</a></span><span class="signature">(<wbr><span class="parameter" id="getOpenFiles-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/OpenFileList-class.html">OpenFileList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getOpenFiles</code> RPC is used to retrieve the list of files currently
+opened files by <code>dart:io</code> from a given isolate.
+  
+
+</dd>
+
+        <dt id="getPerfettoCpuSamples" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getPerfettoCpuSamples.html">getPerfettoCpuSamples</a></span><span class="signature">(<wbr><span class="parameter" id="getPerfettoCpuSamples-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="getPerfettoCpuSamples-param-timeOriginMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeOriginMicros</span>, </span><span class="parameter" id="getPerfettoCpuSamples-param-timeExtentMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeExtentMicros</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/PerfettoCpuSamples-class.html">PerfettoCpuSamples</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getPerfettoCpuSamples</code> RPC is used to retrieve samples collected by
+the CPU profiler, serialized in Perfetto's proto format. See
+<a href="../vm_service/PerfettoCpuSamples-class.html">PerfettoCpuSamples</a> for a detailed description of the response.
+  
+
+</dd>
+
+        <dt id="getPerfettoVMTimeline" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getPerfettoVMTimeline.html">getPerfettoVMTimeline</a></span><span class="signature">(<wbr>{<span class="parameter" id="getPerfettoVMTimeline-param-timeOriginMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeOriginMicros</span>, </span><span class="parameter" id="getPerfettoVMTimeline-param-timeExtentMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeExtentMicros</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/PerfettoTimeline-class.html">PerfettoTimeline</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getPerfettoVMTimeline</code> RPC is used to retrieve an object which
+contains a VM timeline trace represented in Perfetto's proto format. See
+<a href="../vm_service/PerfettoTimeline-class.html">PerfettoTimeline</a> for a detailed description of the response.
+  
+
+</dd>
+
+        <dt id="getPorts" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getPorts.html">getPorts</a></span><span class="signature">(<wbr><span class="parameter" id="getPorts-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/PortList-class.html">PortList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getPorts</code> RPC is used to retrieve the list of <code>ReceivePort</code> instances
+for a given isolate.
+  
+
+</dd>
+
+        <dt id="getProcessMemoryUsage" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getProcessMemoryUsage.html">getProcessMemoryUsage</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/ProcessMemoryUsage-class.html">ProcessMemoryUsage</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a description of major uses of memory known to the VM.
+  
+
+</dd>
+
+        <dt id="getQueuedMicrotasks" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getQueuedMicrotasks.html">getQueuedMicrotasks</a></span><span class="signature">(<wbr><span class="parameter" id="getQueuedMicrotasks-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/QueuedMicrotasks-class.html">QueuedMicrotasks</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getQueuedMicrotasks</code> RPC returns a snapshot containing information
+about the microtasks that were queued in the specified isolate when the
+snapshot was taken.
+  
+
+</dd>
+
+        <dt id="getRetainingPath" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getRetainingPath.html">getRetainingPath</a></span><span class="signature">(<wbr><span class="parameter" id="getRetainingPath-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getRetainingPath-param-targetId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="getRetainingPath-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span>, {</span><span class="parameter" id="getRetainingPath-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/RetainingPath-class.html">RetainingPath</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getRetainingPath</code> RPC is used to lookup a path from an object
+specified by <code>targetId</code> to a GC root (i.e., the object which is preventing
+this object from being garbage collected).
+  
+
+</dd>
+
+        <dt id="getScripts" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getScripts.html">getScripts</a></span><span class="signature">(<wbr><span class="parameter" id="getScripts-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/ScriptList-class.html">ScriptList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getScripts</code> RPC is used to retrieve a <code>ScriptList</code> containing all
+scripts for an isolate based on the isolate's <code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="getSocketProfile" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getSocketProfile.html">getSocketProfile</a></span><span class="signature">(<wbr><span class="parameter" id="getSocketProfile-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/SocketProfile-class.html">SocketProfile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getSocketProfile</code> RPC is used to retrieve socket statistics collected
+by the socket profiler. Only samples collected after the initial
+<a href="../vm_service/DartIOExtension/socketProfilingEnabled.html">socketProfilingEnabled</a> call or the last call to <a href="../vm_service/DartIOExtension/clearSocketProfile.html">clearSocketProfile</a>
+will be reported.
+  
+
+</dd>
+
+        <dt id="getSourceReport" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getSourceReport.html">getSourceReport</a></span><span class="signature">(<wbr><span class="parameter" id="getSourceReport-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getSourceReport-param-reports"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">reports</span>, {</span><span class="parameter" id="getSourceReport-param-scriptId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">scriptId</span>, </span><span class="parameter" id="getSourceReport-param-tokenPos"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">tokenPos</span>, </span><span class="parameter" id="getSourceReport-param-endTokenPos"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">endTokenPos</span>, </span><span class="parameter" id="getSourceReport-param-forceCompile"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">forceCompile</span>, </span><span class="parameter" id="getSourceReport-param-reportLines"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">reportLines</span>, </span><span class="parameter" id="getSourceReport-param-libraryFilters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">libraryFilters</span>, </span><span class="parameter" id="getSourceReport-param-librariesAlreadyCompiled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">librariesAlreadyCompiled</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/SourceReport-class.html">SourceReport</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getSourceReport</code> RPC is used to generate a set of reports tied to
+source locations in an isolate.
+  
+
+</dd>
+
+        <dt id="getSpawnedProcessById" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getSpawnedProcessById.html">getSpawnedProcessById</a></span><span class="signature">(<wbr><span class="parameter" id="getSpawnedProcessById-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="getSpawnedProcessById-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/SpawnedProcess-class.html">SpawnedProcess</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getSpawnedProcessById</code> RPC is used to retrieve information about a process
+spawned by <code>dart:io</code> from a given isolate.
+  
+
+</dd>
+
+        <dt id="getSpawnedProcesses" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/getSpawnedProcesses.html">getSpawnedProcesses</a></span><span class="signature">(<wbr><span class="parameter" id="getSpawnedProcesses-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/SpawnedProcessList-class.html">SpawnedProcessList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>getSpawnedProcesses</code> RPC is used to retrieve the list of processed opened
+by <code>dart:io</code> from a given isolate
+  
+
+</dd>
+
+        <dt id="getStack" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getStack.html">getStack</a></span><span class="signature">(<wbr><span class="parameter" id="getStack-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="getStack-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">limit</span>, </span><span class="parameter" id="getStack-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Stack-class.html">Stack</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getStack</code> RPC is used to retrieve the current execution stack and
+message queue for an isolate. The isolate does not need to be paused.
+  
+
+</dd>
+
+        <dt id="getSupportedProtocols" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getSupportedProtocols.html">getSupportedProtocols</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/ProtocolList-class.html">ProtocolList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getSupportedProtocols</code> RPC is used to determine which protocols are
+supported by the current server.
+  
+
+</dd>
+
+        <dt id="getVersion" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getVersion.html">getVersion</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Version-class.html">Version</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getVersion</code> RPC is used to determine what version of the Service
+Protocol is served by a VM.
+  
+
+</dd>
+
+        <dt id="getVM" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getVM.html">getVM</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/VM-class.html">VM</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getVM</code> RPC returns global information about a Dart virtual machine.
+  
+
+</dd>
+
+        <dt id="getVMTimeline" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getVMTimeline.html">getVMTimeline</a></span><span class="signature">(<wbr>{<span class="parameter" id="getVMTimeline-param-timeOriginMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeOriginMicros</span>, </span><span class="parameter" id="getVMTimeline-param-timeExtentMicros"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timeExtentMicros</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Timeline-class.html">Timeline</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getVMTimeline</code> RPC is used to retrieve an object which contains VM
+timeline events. See <a href="../vm_service/Timeline-class.html">Timeline</a> for a detailed description of the
+response.
+  
+
+</dd>
+
+        <dt id="getVMTimelineFlags" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getVMTimelineFlags.html">getVMTimelineFlags</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/TimelineFlags-class.html">TimelineFlags</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getVMTimelineFlags</code> RPC returns information about the current VM
+timeline configuration.
+  
+
+</dd>
+
+        <dt id="getVMTimelineMicros" class="callable">
+  <span class="name"><a href="../vm_service/VmService/getVMTimelineMicros.html">getVMTimelineMicros</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Timestamp-class.html">Timestamp</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>getVMTimelineMicros</code> RPC returns the current time stamp from the
+clock used by the timeline, similar to <code>Timeline.now</code> in <code>dart:developer</code>
+and <code>Dart_TimelineGetMicros</code> in the VM embedding API.
+  
+
+</dd>
+
+        <dt id="httpEnableTimelineLogging" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/httpEnableTimelineLogging.html">httpEnableTimelineLogging</a></span><span class="signature">(<wbr><span class="parameter" id="httpEnableTimelineLogging-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, [</span><span class="parameter" id="httpEnableTimelineLogging-param-enabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enabled</span></span>])
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/HttpTimelineLoggingState-class.html">HttpTimelineLoggingState</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <code>httpEnableTimelineLogging</code> RPC is used to set and inspect the value of
+<code>HttpClient.enableTimelineLogging</code>, which determines if HTTP client requests
+should be logged to the timeline. If <code>enabled</code> is provided, the state of
+<code>HttpClient.enableTimelineLogging</code> will be updated to the value of <code>enabled</code>.
+  
+
+</dd>
+
+        <dt id="invalidateIdZone" class="callable">
+  <span class="name"><a href="../vm_service/VmService/invalidateIdZone.html">invalidateIdZone</a></span><span class="signature">(<wbr><span class="parameter" id="invalidateIdZone-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="invalidateIdZone-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">idZoneId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>invalidateIdZone</code> RPC is used to invalidate all the IDs that have
+been allocated in a certain ID zone. Invaliding the IDs makes them expire.
+See <code>IDs and Names</code> for more information.
+  
+
+</dd>
+
+        <dt id="invoke" class="callable">
+  <span class="name"><a href="../vm_service/VmService/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="invoke-param-targetId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">targetId</span>, </span><span class="parameter" id="invoke-param-selector"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">selector</span>, </span><span class="parameter" id="invoke-param-argumentIds"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">argumentIds</span>, {</span><span class="parameter" id="invoke-param-disableBreakpoints"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">disableBreakpoints</span>, </span><span class="parameter" id="invoke-param-idZoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idZoneId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>invoke</code> RPC is used to perform regular method invocation on some
+receiver, as if by dart:mirror's ObjectMirror.invoke. Note this does not
+provide a way to perform getter, setter or constructor invocation.
+  
+
+</dd>
+
+        <dt id="isHttpProfilingAvailable" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/isHttpProfilingAvailable.html">isHttpProfilingAvailable</a></span><span class="signature">(<wbr><span class="parameter" id="isHttpProfilingAvailable-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  Whether HTTP profiling is available for the given <code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="isHttpTimelineLoggingAvailable" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/isHttpTimelineLoggingAvailable.html">isHttpTimelineLoggingAvailable</a></span><span class="signature">(<wbr><span class="parameter" id="isHttpTimelineLoggingAvailable-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  Whether HTTP timeline logging is available for the given <code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="isSocketProfilingAvailable" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/isSocketProfilingAvailable.html">isSocketProfilingAvailable</a></span><span class="signature">(<wbr><span class="parameter" id="isSocketProfilingAvailable-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  Whether socket profiling is available for the given <code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="kill" class="callable">
+  <span class="name"><a href="../vm_service/VmService/kill.html">kill</a></span><span class="signature">(<wbr><span class="parameter" id="kill-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>kill</code> RPC is used to kill an isolate as if by dart:isolate's
+<code>Isolate.kill(IMMEDIATE)</code>.
+  
+
+</dd>
+
+        <dt id="lookupPackageUris" class="callable">
+  <span class="name"><a href="../vm_service/VmService/lookupPackageUris.html">lookupPackageUris</a></span><span class="signature">(<wbr><span class="parameter" id="lookupPackageUris-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="lookupPackageUris-param-uris"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">uris</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/UriList-class.html">UriList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>lookupPackageUris</code> RPC is used to convert a list of URIs to their
+unresolved paths. For example, URIs passed to this RPC are mapped in the
+following ways:
+  
+
+</dd>
+
+        <dt id="lookupResolvedPackageUris" class="callable">
+  <span class="name"><a href="../vm_service/VmService/lookupResolvedPackageUris.html">lookupResolvedPackageUris</a></span><span class="signature">(<wbr><span class="parameter" id="lookupResolvedPackageUris-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="lookupResolvedPackageUris-param-uris"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">uris</span>, {</span><span class="parameter" id="lookupResolvedPackageUris-param-local"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">local</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/UriList-class.html">UriList</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>lookupResolvedPackageUris</code> RPC is used to convert a list of URIs to
+their resolved (or absolute) paths. For example, URIs passed to this RPC
+are mapped in the following ways:
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onEvent" class="callable">
+  <span class="name"><a href="../vm_service/VmService/onEvent.html">onEvent</a></span><span class="signature">(<wbr><span class="parameter" id="onEvent-param-streamId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">streamId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="pause" class="callable">
+  <span class="name"><a href="../vm_service/VmService/pause.html">pause</a></span><span class="signature">(<wbr><span class="parameter" id="pause-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>pause</code> RPC is used to interrupt a running isolate. The RPC enqueues
+the interrupt request and potentially returns before the isolate is
+paused.
+  
+
+</dd>
+
+        <dt id="registerService" class="callable">
+  <span class="name"><a href="../vm_service/VmService/registerService.html">registerService</a></span><span class="signature">(<wbr><span class="parameter" id="registerService-param-service"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">service</span>, </span><span class="parameter" id="registerService-param-alias"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">alias</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Registers a service that can be invoked by other VM service clients, where
+<code>service</code> is the name of the service to advertise and <code>alias</code> is an
+alternative name for the registered service.
+  
+
+</dd>
+
+        <dt id="registerServiceCallback" class="callable">
+  <span class="name"><a href="../vm_service/VmService/registerServiceCallback.html">registerServiceCallback</a></span><span class="signature">(<wbr><span class="parameter" id="registerServiceCallback-param-service"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">service</span>, </span><span class="parameter" id="registerServiceCallback-param-cb"><span class="type-annotation"><a href="../vm_service/ServiceCallback.html">ServiceCallback</a></span> <span class="parameter-name">cb</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Register a service for invocation.
+  
+
+</dd>
+
+        <dt id="reloadSources" class="callable">
+  <span class="name"><a href="../vm_service/VmService/reloadSources.html">reloadSources</a></span><span class="signature">(<wbr><span class="parameter" id="reloadSources-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="reloadSources-param-force"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">force</span>, </span><span class="parameter" id="reloadSources-param-pause"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">pause</span>, </span><span class="parameter" id="reloadSources-param-rootLibUri"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rootLibUri</span>, </span><span class="parameter" id="reloadSources-param-packagesUri"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">packagesUri</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/ReloadReport-class.html">ReloadReport</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>reloadSources</code> RPC is used to perform a hot reload of the sources of
+all isolates in the same isolate group as the isolate specified by
+<code>isolateId</code>.
+  
+
+</dd>
+
+        <dt id="removeBreakpoint" class="callable">
+  <span class="name"><a href="../vm_service/VmService/removeBreakpoint.html">removeBreakpoint</a></span><span class="signature">(<wbr><span class="parameter" id="removeBreakpoint-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="removeBreakpoint-param-breakpointId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">breakpointId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>removeBreakpoint</code> RPC is used to remove a breakpoint by its <code>id</code>.
+  
+
+</dd>
+
+        <dt id="requestHeapSnapshot" class="callable">
+  <span class="name"><a href="../vm_service/VmService/requestHeapSnapshot.html">requestHeapSnapshot</a></span><span class="signature">(<wbr><span class="parameter" id="requestHeapSnapshot-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Requests a dump of the Dart heap of the given isolate.
+  
+
+</dd>
+
+        <dt id="resume" class="callable">
+  <span class="name"><a href="../vm_service/VmService/resume.html">resume</a></span><span class="signature">(<wbr><span class="parameter" id="resume-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="resume-param-step"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">step</span>, </span><span class="parameter" id="resume-param-frameIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">frameIndex</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>resume</code> RPC is used to resume execution of a paused isolate.
+  
+
+</dd>
+
+        <dt id="setBreakpointState" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setBreakpointState.html">setBreakpointState</a></span><span class="signature">(<wbr><span class="parameter" id="setBreakpointState-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="setBreakpointState-param-breakpointId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">breakpointId</span>, </span><span class="parameter" id="setBreakpointState-param-enable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enable</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setBreakpointState</code> RPC allows for breakpoints to be enabled or
+disabled, without requiring for the breakpoint to be completely removed.
+  
+
+</dd>
+
+        <dt id="setExceptionPauseMode" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="../vm_service/VmService/setExceptionPauseMode.html">setExceptionPauseMode</a></span><span class="signature">(<wbr><span class="parameter" id="setExceptionPauseMode-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="setExceptionPauseMode-param-mode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mode</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setExceptionPauseMode</code> RPC is used to control if an isolate pauses
+when an exception is thrown.
+  
+
+</dd>
+
+        <dt id="setFlag" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setFlag.html">setFlag</a></span><span class="signature">(<wbr><span class="parameter" id="setFlag-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="setFlag-param-value"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Response-class.html">Response</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setFlag</code> RPC is used to set a VM flag at runtime. Returns an error if
+the named flag does not exist, the flag may not be set at runtime, or the
+value is of the wrong type for the flag.
+  
+
+</dd>
+
+        <dt id="setIsolatePauseMode" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setIsolatePauseMode.html">setIsolatePauseMode</a></span><span class="signature">(<wbr><span class="parameter" id="setIsolatePauseMode-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, {</span><span class="parameter" id="setIsolatePauseMode-param-exceptionPauseMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">exceptionPauseMode</span>, </span><span class="parameter" id="setIsolatePauseMode-param-shouldPauseOnExit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">shouldPauseOnExit</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setIsolatePauseMode</code> RPC is used to control if or when an isolate
+will pause due to a change in execution state.
+  
+
+</dd>
+
+        <dt id="setLibraryDebuggable" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setLibraryDebuggable.html">setLibraryDebuggable</a></span><span class="signature">(<wbr><span class="parameter" id="setLibraryDebuggable-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="setLibraryDebuggable-param-libraryId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">libraryId</span>, </span><span class="parameter" id="setLibraryDebuggable-param-isDebuggable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDebuggable</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setLibraryDebuggable</code> RPC is used to enable or disable whether
+breakpoints and stepping work for a given library.
+  
+
+</dd>
+
+        <dt id="setName" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setName.html">setName</a></span><span class="signature">(<wbr><span class="parameter" id="setName-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="setName-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setName</code> RPC is used to change the debugging name for an isolate.
+  
+
+</dd>
+
+        <dt id="setTraceClassAllocation" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setTraceClassAllocation.html">setTraceClassAllocation</a></span><span class="signature">(<wbr><span class="parameter" id="setTraceClassAllocation-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, </span><span class="parameter" id="setTraceClassAllocation-param-classId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">classId</span>, </span><span class="parameter" id="setTraceClassAllocation-param-enable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enable</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setTraceClassAllocation</code> RPC allows for enabling or disabling
+allocation tracing for a specific type of object. Allocation traces can be
+retrieved with the <code>getAllocationTraces</code> RPC.
+  
+
+</dd>
+
+        <dt id="setVMName" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setVMName.html">setVMName</a></span><span class="signature">(<wbr><span class="parameter" id="setVMName-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setVMName</code> RPC is used to change the debugging name for the vm.
+  
+
+</dd>
+
+        <dt id="setVMTimelineFlags" class="callable">
+  <span class="name"><a href="../vm_service/VmService/setVMTimelineFlags.html">setVMTimelineFlags</a></span><span class="signature">(<wbr><span class="parameter" id="setVMTimelineFlags-param-recordedStreams"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">recordedStreams</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>setVMTimelineFlags</code> RPC is used to set which timeline streams are
+enabled.
+  
+
+</dd>
+
+        <dt id="socketProfilingEnabled" class="callable">
+  <span class="name"><a href="../vm_service/DartIOExtension/socketProfilingEnabled.html">socketProfilingEnabled</a></span><span class="signature">(<wbr><span class="parameter" id="socketProfilingEnabled-param-isolateId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span>, [</span><span class="parameter" id="socketProfilingEnabled-param-enabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enabled</span></span>])
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/SocketProfilingState-class.html">SocketProfilingState</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../vm_service/VmService-class.html">VmService</a>,
+        provided by the <a href="../vm_service/DartIOExtension.html">DartIOExtension</a> extension</span>
+      </p>
+  The <em>socketProfilingEnabled</em> RPC is used to enable/disable the socket profiler
+and query its current state. If <code>enabled</code> is provided, the profiler state will
+be updated to reflect the value of <code>enabled</code>.
+  
+
+</dd>
+
+        <dt id="streamCancel" class="callable">
+  <span class="name"><a href="../vm_service/VmService/streamCancel.html">streamCancel</a></span><span class="signature">(<wbr><span class="parameter" id="streamCancel-param-streamId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">streamId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>streamCancel</code> RPC cancels a stream subscription in the VM.
+  
+
+</dd>
+
+        <dt id="streamCpuSamplesWithUserTag" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="../vm_service/VmService/streamCpuSamplesWithUserTag.html">streamCpuSamplesWithUserTag</a></span><span class="signature">(<wbr><span class="parameter" id="streamCpuSamplesWithUserTag-param-userTags"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">userTags</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>streamCpuSamplesWithUserTag</code> RPC is deprecated and calling it will
+cause no effect. The RPC will return a <code>Success</code> object when called with
+any <code>string[]</code> as the <code>userTags</code> argument, and will return an <a href="../vm_service/RPCError-class.html">RPCError</a>
+when called with any other <code>userTags</code> argument.
+  
+
+</dd>
+
+        <dt id="streamListen" class="callable">
+  <span class="name"><a href="../vm_service/VmService/streamListen.html">streamListen</a></span><span class="signature">(<wbr><span class="parameter" id="streamListen-param-streamId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">streamId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The <code>streamListen</code> RPC subscribes to a stream in the VM. Once subscribed,
+the client will begin receiving events from the stream.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="wrapFuture" class="callable">
+  <span class="name"><a href="../vm_service/VmService/wrapFuture.html">wrapFuture</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="wrapFuture-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="wrapFuture-param-future"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">future</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  When overridden, this method wraps <code>future</code> with logic.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="defaultFactory" class="callable">
+  <span class="name"><a href="../vm_service/VmService/defaultFactory.html">defaultFactory</a></span><span class="signature">(<wbr>{<span class="parameter" id="defaultFactory-param-inStream"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a></span> <span class="parameter-name">inStream</span>, </span><span class="parameter" id="defaultFactory-param-writeMessage"><span>required</span> <span class="type-annotation">void</span> <span class="parameter-name">writeMessage</span>(<span class="parameter" id="param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span></span>), </span><span class="parameter" id="defaultFactory-param-log"><span class="type-annotation"><a href="../vm_service/Log-class.html">Log</a>?</span> <span class="parameter-name">log</span>, </span><span class="parameter" id="defaultFactory-param-disposeHandler"><span class="type-annotation"><a href="../vm_service/DisposeHandler.html">DisposeHandler</a>?</span> <span class="parameter-name">disposeHandler</span>, </span><span class="parameter" id="defaultFactory-param-streamClosed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a>?</span> <span class="parameter-name">streamClosed</span>, </span><span class="parameter" id="defaultFactory-param-wsUri"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">wsUri</span></span>})
+    <span class="returntype parameter">&#8594; <a href="../vm_service/VmService-class.html">VmService</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service</a></li>
+    <li class="self-crumb">VmService class</li>
+</ol>
+
+    <h5>vm_service library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    vm_service
+      15.1.0
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

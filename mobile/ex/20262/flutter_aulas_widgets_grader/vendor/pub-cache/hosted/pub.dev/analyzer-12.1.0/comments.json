@@ -1,0 +1,305 @@
+{
+  "/PATCHSET_LEVEL": [
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": false,
+      "patch_set": 3,
+      "id": "0b2f9255_a8c9a1ff",
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "After you've restored the definition of `mixinClassDeclaresConstructor`, please add Connie as a reviewer for the new documentation.\n\nAssuming that my comments are addressed and that review has been done, the server, linter, and messages.yaml changes lgtm.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    },
+    {
+      "author": {
+        "_account_id": 5045,
+        "name": "Paul Berry",
+        "email": "paulberry@google.com",
+        "avatars": [
+          {
+            "url": "https://lh5.googleusercontent.com/-DFHOFj4V100/AAAAAAAAAAI/AAAAAAAAAAA/5F_pFQi8VgA/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh5.googleusercontent.com/-DFHOFj4V100/AAAAAAAAAAI/AAAAAAAAAAA/5F_pFQi8VgA/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh5.googleusercontent.com/-DFHOFj4V100/AAAAAAAAAAI/AAAAAAAAAAA/5F_pFQi8VgA/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh5.googleusercontent.com/-DFHOFj4V100/AAAAAAAAAAI/AAAAAAAAAAA/5F_pFQi8VgA/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "7ccab88e46480b5f98f137a20d14495e56a6798b",
+      "unresolved": false,
+      "patch_set": 3,
+      "id": "2f315231_7c400872",
+      "updated": "2026-04-01 18:36:38.000000000",
+      "message": "Language test changes lgtm.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    }
+  ],
+  "pkg/analyzer/messages.yaml": [
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "fbccbfc0_416cea19",
+      "side": "PARENT",
+      "line": 11526,
+      "range": {
+        "start_line": 11526,
+        "start_character": 2,
+        "end_line": 11526,
+        "end_character": 31
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "We can't remove the old diagnostic code from this file because older versions of the SDK will still use that code and point users to the published docs. We need to mark the diagnostic as removed but leave the definition so that the documentation will continued to be published until such time as we no longer need to support older versions.",
+      "commit_id": "963b12e48a3d5dfca0e7ea50f7d45a0d12856e3e"
+    },
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "81d4f54f_79de5b9a",
+      "line": 11532,
+      "range": {
+        "start_line": 11532,
+        "start_character": 22,
+        "end_line": 11532,
+        "end_character": 27
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "Was this a mistake? The documentation has been published at https://dart.dev/tools/diagnostics/mixin_class_declaration_extends_not_object.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    },
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "1dfceda5_ca376426",
+      "line": 11594,
+      "range": {
+        "start_line": 11594,
+        "start_character": 51,
+        "end_line": 11594,
+        "end_character": 64
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "I'd remove the backticks from around the phrase \"mixin class\". While it does appear in the code, I believe that in this case it's being used as a noun phrase, not as a code snippet. This applies here and in the rest of the text in this documentation.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    },
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "0ab398d4_4179a7a4",
+      "line": 11596,
+      "range": {
+        "start_line": 11596,
+        "start_character": 55,
+        "end_line": 11596,
+        "end_character": 62
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "\"are not\" --> \"aren't\" to conform to the more casual tone we use in our docs.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    },
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "eb42c8ca_4da35a75",
+      "line": 11605,
+      "range": {
+        "start_line": 11605,
+        "start_character": 8,
+        "end_line": 11605,
+        "end_character": 16
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "Consider removing the space as it more closely matches standard formatting.",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    },
+    {
+      "author": {
+        "_account_id": 5089,
+        "name": "Brian Wilkerson",
+        "email": "brianwilkerson@google.com",
+        "avatars": [
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s32-p/photo.jpg",
+            "height": 32
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s56-p/photo.jpg",
+            "height": 56
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s100-p/photo.jpg",
+            "height": 100
+          },
+          {
+            "url": "https://lh4.googleusercontent.com/-cXKL1wqGngI/AAAAAAAAAAI/AAAAAAAAAAA/D78Ol08YZdY/s120-p/photo.jpg",
+            "height": 120
+          }
+        ]
+      },
+      "change_message_id": "aa8dc37649ae8daa7a9d700b899d2a3a2877261f",
+      "unresolved": true,
+      "patch_set": 3,
+      "id": "46bc579d_d2880117",
+      "line": 11620,
+      "range": {
+        "start_line": 11620,
+        "start_character": 25,
+        "end_line": 11620,
+        "end_character": 31
+      },
+      "updated": "2026-04-01 15:06:18.000000000",
+      "message": "\"cannot\" --> \"can't\"",
+      "commit_id": "e195e40f8866a75fb07c870abb8cbdc33b583e90"
+    }
+  ]
+}

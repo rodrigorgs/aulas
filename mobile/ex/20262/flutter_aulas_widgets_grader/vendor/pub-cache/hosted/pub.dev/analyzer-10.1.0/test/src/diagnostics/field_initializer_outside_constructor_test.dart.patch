@@ -1,0 +1,20 @@
+--- pkg/analyzer/test/src/diagnostics/field_initializer_outside_constructor_test.dart
++++ pkg/analyzer/test/src/diagnostics/field_initializer_outside_constructor_test.dart
+@@ -85,4 +85,16 @@
+       [error(diag.fieldInitializerOutsideConstructor, 2, 9)],
+     );
+   }
++
++  test_localFunction_positionalArgument() async {
++    await assertErrorsInCode(
++      r'''
++main() {
++  f(this.x) {}
++  f(0);
++}
++''',
++      [error(diag.fieldInitializerOutsideConstructor, 13, 6),
++       error(diag.extraPositionalArguments, 26, 1)],
++    );
++  }
+ }

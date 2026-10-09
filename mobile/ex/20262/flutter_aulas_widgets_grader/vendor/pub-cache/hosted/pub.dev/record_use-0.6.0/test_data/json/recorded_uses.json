@@ -1,0 +1,171 @@
+{
+  "$schema": "../../doc/schema/record_use.schema.json",
+  "constants": [
+    {
+      "type": "non_constant"
+    },
+    {
+      "message": "MethodTearoff",
+      "type": "unsupported"
+    },
+    {
+      "type": "null"
+    },
+    {
+      "type": "bool",
+      "value": false
+    },
+    {
+      "type": "int",
+      "value": 42
+    },
+    {
+      "type": "double",
+      "value": {
+        "type": "number",
+        "value": 3.14
+      }
+    },
+    {
+      "type": "string",
+      "value": "42"
+    },
+    {
+      "type": "string",
+      "value": "h"
+    },
+    {
+      "type": "list",
+      "value": [
+        4
+      ]
+    },
+    {
+      "type": "set",
+      "value": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "map",
+      "value": [
+        {
+          "key": 7,
+          "value": 3
+        }
+      ]
+    },
+    {
+      "named": {
+        "a": 6
+      },
+      "positional": [
+        4
+      ],
+      "type": "record"
+    },
+    {
+      "definition_index": 0,
+      "index": 0,
+      "name": "red",
+      "type": "enum",
+      "value": {
+        "hex": 4
+      }
+    },
+    {
+      "definition_index": 2,
+      "type": "instance",
+      "value": {
+        "i": 4
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "path": [
+        {
+          "kind": "enum",
+          "name": "Color"
+        }
+      ],
+      "uri": "package:record_use_test/color.dart"
+    },
+    {
+      "path": [
+        {
+          "kind": "class",
+          "name": "OtherClass"
+        },
+        {
+          "disambiguators": [
+            "static"
+          ],
+          "kind": "method",
+          "name": "generate"
+        }
+      ],
+      "uri": "package:record_use_test/complex.dart"
+    },
+    {
+      "path": [
+        {
+          "kind": "class",
+          "name": "MyClass"
+        }
+      ],
+      "uri": "package:record_use_test/instance_class.dart"
+    }
+  ],
+  "loading_units": [
+    {
+      "name": "1"
+    }
+  ],
+  "uses": {
+    "instances": [
+      {
+        "definition_index": 2,
+        "uses": [
+          {
+            "constant_index": 13,
+            "loading_unit_index": 0,
+            "type": "constant"
+          }
+        ]
+      }
+    ],
+    "static_calls": [
+      {
+        "definition_index": 1,
+        "uses": [
+          {
+            "loading_unit_index": 0,
+            "named": {
+              "a": 6,
+              "b": 3,
+              "c": 4,
+              "d": 0
+            },
+            "positional": [
+              6,
+              10,
+              2,
+              0,
+              4,
+              13,
+              8,
+              1,
+              11,
+              12,
+              5,
+              9
+            ],
+            "type": "with_arguments"
+          }
+        ]
+      }
+    ]
+  }
+}

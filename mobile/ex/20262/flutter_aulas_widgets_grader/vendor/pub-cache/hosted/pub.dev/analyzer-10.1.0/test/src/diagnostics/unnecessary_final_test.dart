@@ -1,0 +1,69 @@
+// Copyright (c) 2022, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(UnnecessaryFinalTest);
+  });
+}
+
+@reflectiveTest
+class UnnecessaryFinalTest extends PubPackageResolutionTest {
+  test_final() async {
+    await assertNoErrorsInCode('''
+// @dart = 3.10
+class C {
+  C(final int value);
+}
+''');
+  }
+
+  test_positional() async {
+    await assertErrorsInCode(
+      '''
+// @dart = 3.10
+class C {
+  C([final this.value = 0]);
+  int value;
+}
+''',
+      [error(diag.unnecessaryFinal, 31, 5)],
+    );
+  }
+
+  test_super() async {
+    await assertErrorsInCode(
+      '''
+// @dart = 3.10
+class A {
+  A(this.value);
+  int value;
+}
+
+class B extends A {
+  B(final super.value);
+}
+''',
+      [error(diag.unnecessaryFinal, 83, 5)],
+    );
+  }
+
+  test_this() async {
+    await assertErrorsInCode(
+      '''
+// @dart = 3.10
+class C {
+  C(final this.value);
+  int value;
+}
+''',
+      [error(diag.unnecessaryFinal, 30, 5)],
+    );
+  }
+}

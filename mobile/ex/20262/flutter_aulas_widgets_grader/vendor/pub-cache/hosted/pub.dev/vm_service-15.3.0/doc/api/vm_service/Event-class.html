@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Event class from the vm_service library, for the Dart programming language.">
+  <title>Event class - vm_service library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service.dart</a></li>
+    <li class="self-crumb">Event class</li>
+  </ol>
+  <div class="self-name">Event</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="vm_service&#47;vm_service-library-sidebar.html"
+    data-below-sidebar="vm_service&#47;Event-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Event</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An <code>Event</code> is an asynchronous notification from the VM. It is delivered only
+when the client has subscribed to an event stream using the <code>streamListen</code>
+RPC.</p>
+<p>For more information, see <code>events</code>.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../vm_service/Response-class.html">Response</a></li>
+      <li>Event</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+        
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="Event.new" class="callable">
+          <span class="name"><a href="../vm_service/Event/Event.html">Event</a></span><span class="signature">({<span class="parameter" id="param-kind"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">kind</span>, </span><span class="parameter" id="param-timestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">timestamp</span>, </span><span class="parameter" id="param-isolateGroup"><span class="type-annotation"><a href="../vm_service/IsolateGroupRef-class.html">IsolateGroupRef</a>?</span> <span class="parameter-name">isolateGroup</span>, </span><span class="parameter" id="param-isolate"><span class="type-annotation"><a href="../vm_service/IsolateRef-class.html">IsolateRef</a>?</span> <span class="parameter-name">isolate</span>, </span><span class="parameter" id="param-vm"><span class="type-annotation"><a href="../vm_service/VMRef-class.html">VMRef</a>?</span> <span class="parameter-name">vm</span>, </span><span class="parameter" id="param-breakpoint"><span class="type-annotation"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a>?</span> <span class="parameter-name">breakpoint</span>, </span><span class="parameter" id="param-pauseBreakpoints"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span>?</span> <span class="parameter-name">pauseBreakpoints</span>, </span><span class="parameter" id="param-topFrame"><span class="type-annotation"><a href="../vm_service/Frame-class.html">Frame</a>?</span> <span class="parameter-name">topFrame</span>, </span><span class="parameter" id="param-exception"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">exception</span>, </span><span class="parameter" id="param-bytes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">bytes</span>, </span><span class="parameter" id="param-inspectee"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">inspectee</span>, </span><span class="parameter" id="param-gcType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">gcType</span>, </span><span class="parameter" id="param-extensionRPC"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">extensionRPC</span>, </span><span class="parameter" id="param-extensionKind"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">extensionKind</span>, </span><span class="parameter" id="param-extensionData"><span class="type-annotation"><a href="../vm_service/ExtensionData-class.html">ExtensionData</a>?</span> <span class="parameter-name">extensionData</span>, </span><span class="parameter" id="param-timelineEvents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/TimelineEvent-class.html">TimelineEvent</a></span>&gt;</span>?</span> <span class="parameter-name">timelineEvents</span>, </span><span class="parameter" id="param-updatedStreams"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">updatedStreams</span>, </span><span class="parameter" id="param-atAsyncSuspension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">atAsyncSuspension</span>, </span><span class="parameter" id="param-status"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">status</span>, </span><span class="parameter" id="param-reloadFailureReason"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reloadFailureReason</span>, </span><span class="parameter" id="param-logRecord"><span class="type-annotation"><a href="../vm_service/LogRecord-class.html">LogRecord</a>?</span> <span class="parameter-name">logRecord</span>, </span><span class="parameter" id="param-details"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">details</span>, </span><span class="parameter" id="param-service"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">service</span>, </span><span class="parameter" id="param-method"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">method</span>, </span><span class="parameter" id="param-alias"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">alias</span>, </span><span class="parameter" id="param-flag"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">flag</span>, </span><span class="parameter" id="param-newValue"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">newValue</span>, </span><span class="parameter" id="param-last"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">last</span>, </span><span class="parameter" id="param-updatedTag"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">updatedTag</span>, </span><span class="parameter" id="param-previousTag"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">previousTag</span>, </span><span class="parameter" id="param-cpuSamples"><span class="type-annotation"><a href="../vm_service/CpuSamplesEvent-class.html">CpuSamplesEvent</a>?</span> <span class="parameter-name">cpuSamples</span>, </span><span class="parameter" id="param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/ByteData-class.html">ByteData</a>?</span> <span class="parameter-name">data</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="alias" class="property">
+  <span class="name"><a href="../vm_service/Event/alias.html">alias</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The alias of the registered service.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="atAsyncSuspension" class="property">
+  <span class="name"><a href="../vm_service/Event/atAsyncSuspension.html">atAsyncSuspension</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Is the isolate paused at an await, yield, or yield* statement?
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="breakpoint" class="property">
+  <span class="name"><a href="../vm_service/Event/breakpoint.html">breakpoint</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/Breakpoint-class.html">Breakpoint</a>?</span>
+  
+
+</dt>
+<dd>
+  The breakpoint which was added, removed, or resolved.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="bytes" class="property">
+  <span class="name"><a href="../vm_service/Event/bytes.html">bytes</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  An array of bytes, encoded as a base64 string.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="cpuSamples" class="property">
+  <span class="name"><a href="../vm_service/Event/cpuSamples.html">cpuSamples</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/CpuSamplesEvent-class.html">CpuSamplesEvent</a>?</span>
+  
+
+</dt>
+<dd>
+  A CPU profile containing recent samples.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="data" class="property">
+  <span class="name"><a href="../vm_service/Event/data.html">data</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-typed_data/ByteData-class.html">ByteData</a>?</span>
+  
+
+</dt>
+<dd>
+  Binary data associated with the event.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="details" class="property">
+  <span class="name"><a href="../vm_service/Event/details.html">details</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Details about this event.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="exception" class="property">
+  <span class="name"><a href="../vm_service/Event/exception.html">exception</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The exception associated with this event, if this is a PauseException
+event.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="extensionData" class="property">
+  <span class="name"><a href="../vm_service/Event/extensionData.html">extensionData</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ExtensionData-class.html">ExtensionData</a>?</span>
+  
+
+</dt>
+<dd>
+  The extension event data.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="extensionKind" class="property">
+  <span class="name"><a href="../vm_service/Event/extensionKind.html">extensionKind</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The extension event kind.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="extensionRPC" class="property">
+  <span class="name"><a href="../vm_service/Event/extensionRPC.html">extensionRPC</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The RPC name of the extension that was added.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="flag" class="property">
+  <span class="name"><a href="../vm_service/Event/flag.html">flag</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The name of the changed flag.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="gcType" class="property">
+  <span class="name"><a href="../vm_service/Event/gcType.html">gcType</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The garbage collection (GC) operation performed.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="inspectee" class="property">
+  <span class="name"><a href="../vm_service/Event/inspectee.html">inspectee</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The argument passed to dart:developer.inspect.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isolate" class="property">
+  <span class="name"><a href="../vm_service/Event/isolate.html">isolate</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/IsolateRef-class.html">IsolateRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The isolate with which this event is associated.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isolateGroup" class="property">
+  <span class="name"><a href="../vm_service/Event/isolateGroup.html">isolateGroup</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/IsolateGroupRef-class.html">IsolateGroupRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The isolate group with which this event is associated.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="json" class="property inherited">
+  <span class="name"><a href="../vm_service/Response/json.html">json</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="kind" class="property">
+  <span class="name"><a href="../vm_service/Event/kind.html">kind</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  What kind of event is this?
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="last" class="property">
+  <span class="name"><a href="../vm_service/Event/last.html">last</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Specifies whether this event is the last of a group of events.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="logRecord" class="property">
+  <span class="name"><a href="../vm_service/Event/logRecord.html">logRecord</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/LogRecord-class.html">LogRecord</a>?</span>
+  
+
+</dt>
+<dd>
+  LogRecord data.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="method" class="property">
+  <span class="name"><a href="../vm_service/Event/method.html">method</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The RPC method that should be used to invoke the service.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="newValue" class="property">
+  <span class="name"><a href="../vm_service/Event/newValue.html">newValue</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The new value of the changed flag.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="pauseBreakpoints" class="property">
+  <span class="name"><a href="../vm_service/Event/pauseBreakpoints.html">pauseBreakpoints</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Breakpoint-class.html">Breakpoint</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The list of breakpoints at which we are currently paused for a
+PauseBreakpoint event.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="previousTag" class="property">
+  <span class="name"><a href="../vm_service/Event/previousTag.html">previousTag</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The previous UserTag label.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="reloadFailureReason" class="property">
+  <span class="name"><a href="../vm_service/Event/reloadFailureReason.html">reloadFailureReason</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The reason why reloading the sources in the isolate group associated with
+this event failed.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="service" class="property">
+  <span class="name"><a href="../vm_service/Event/service.html">service</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The service identifier.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="status" class="property">
+  <span class="name"><a href="../vm_service/Event/status.html">status</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The status (success or failure) related to the event. This is provided for
+the event kinds:
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="timelineEvents" class="property">
+  <span class="name"><a href="../vm_service/Event/timelineEvents.html">timelineEvents</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/TimelineEvent-class.html">TimelineEvent</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  An array of TimelineEvents
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="timestamp" class="property">
+  <span class="name"><a href="../vm_service/Event/timestamp.html">timestamp</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The timestamp (in milliseconds since the epoch) associated with this
+event. For some isolate pause events, the timestamp is from when the
+isolate was paused. For other events, the timestamp is from when the event
+was created.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="topFrame" class="property">
+  <span class="name"><a href="../vm_service/Event/topFrame.html">topFrame</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/Frame-class.html">Frame</a>?</span>
+  
+
+</dt>
+<dd>
+  The top stack frame associated with this event, if applicable.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../vm_service/Event/type.html">type</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="updatedStreams" class="property">
+  <span class="name"><a href="../vm_service/Event/updatedStreams.html">updatedStreams</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The new set of recorded timeline streams.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="updatedTag" class="property">
+  <span class="name"><a href="../vm_service/Event/updatedTag.html">updatedTag</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The current UserTag label.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="vm" class="property">
+  <span class="name"><a href="../vm_service/Event/vm.html">vm</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/VMRef-class.html">VMRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The vm with which this event is associated.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toJson" class="callable">
+  <span class="name"><a href="../vm_service/Event/toJson.html">toJson</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="../vm_service/Event/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="parse" class="callable">
+  <span class="name"><a href="../vm_service/Event/parse.html">parse</a></span><span class="signature">(<wbr><span class="parameter" id="parse-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">json</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../vm_service/Event-class.html">Event</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service</a></li>
+    <li class="self-crumb">Event class</li>
+</ol>
+
+    <h5>vm_service library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    vm_service
+      15.1.0
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

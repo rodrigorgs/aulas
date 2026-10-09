@@ -1,0 +1,207 @@
+// Copyright (c) 2019, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(MissingEnumConstantInSwitchTest);
+    defineReflectiveTests(MissingEnumConstantInSwitchTest_Language219);
+  });
+}
+
+@reflectiveTest
+class MissingEnumConstantInSwitchTest extends PubPackageResolutionTest
+    with MissingEnumConstantInSwitchTestCases {
+  @override
+  bool get _arePatternsEnabled => true;
+}
+
+@reflectiveTest
+class MissingEnumConstantInSwitchTest_Language219
+    extends PubPackageResolutionTest
+    with WithLanguage219Mixin, MissingEnumConstantInSwitchTestCases {
+  @override
+  bool get _arePatternsEnabled => false;
+}
+
+mixin MissingEnumConstantInSwitchTestCases on PubPackageResolutionTest {
+  bool get _arePatternsEnabled;
+
+  test_all_enhanced() async {
+    await assertNoErrorsInCode('''
+enum E {
+  one, two;
+
+  static const x = 0;
+}
+
+void f(E e) {
+  switch (e) {
+    case E.one:
+      break;
+    case E.two:
+      break;
+  }
+}
+''');
+  }
+
+  test_default() async {
+    await assertNoErrorsInCode('''
+enum E { one, two, three }
+
+void f(E e) {
+  switch (e) {
+    case E.one:
+      break;
+    default:
+      break;
+  }
+}
+''');
+  }
+
+  test_first() async {
+    await assertErrorsInCode(
+      '''
+enum E { one, two, three }
+
+void f(E e) {
+  switch (e) {
+    case E.two:
+    case E.three:
+      break;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled)
+          error(diag.missingEnumConstantInSwitch, 44, 10)
+        else
+          error(diag.nonExhaustiveSwitchStatement, 44, 6),
+      ],
+    );
+  }
+
+  test_last() async {
+    await assertErrorsInCode(
+      '''
+enum E { one, two, three }
+
+void f(E e) {
+  switch (e) {
+    case E.one:
+    case E.two:
+      break;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled)
+          error(diag.missingEnumConstantInSwitch, 44, 10)
+        else
+          error(diag.nonExhaustiveSwitchStatement, 44, 6),
+      ],
+    );
+  }
+
+  test_middle() async {
+    await assertErrorsInCode(
+      '''
+enum E { one, two, three }
+
+void f(E e) {
+  switch (e) {
+    case E.one:
+    case E.three:
+      break;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled)
+          error(diag.missingEnumConstantInSwitch, 44, 10)
+        else
+          error(diag.nonExhaustiveSwitchStatement, 44, 6),
+      ],
+    );
+  }
+
+  test_nullable() async {
+    await assertErrorsInCode(
+      '''
+enum E { one, two }
+
+void f(E? e) {
+  switch (e) {
+    case E.one:
+    case E.two:
+      break;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled)
+          error(diag.missingEnumConstantInSwitch, 38, 10)
+        else
+          error(diag.nonExhaustiveSwitchStatement, 38, 6),
+      ],
+    );
+  }
+
+  test_nullable_default() async {
+    await assertNoErrorsInCode('''
+enum E { one, two }
+
+void f(E? e) {
+  switch (e) {
+    case E.one:
+      break;
+    default:
+      break;
+  }
+}
+''');
+  }
+
+  test_nullable_null() async {
+    await assertNoErrorsInCode('''
+enum E { one, two }
+
+void f(E? e) {
+  switch (e) {
+    case E.one:
+      break;
+    case E.two:
+      break;
+    case null:
+      break;
+  }
+}
+''');
+  }
+
+  test_parenthesized() async {
+    // TODO(johnniwinther): Re-enable this test for the patterns feature.
+    if (_arePatternsEnabled) return;
+    await assertNoErrorsInCode('''
+enum E { one, two, three }
+
+void f(E e) {
+  switch (e) {
+    case (E.one):
+      break;
+    case (E.two):
+      break;
+    case (E.three):
+      break;
+  }
+}
+''');
+  }
+}

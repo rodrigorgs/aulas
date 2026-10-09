@@ -1,0 +1,176 @@
+00:00 +0: loading test/src/dart/resolution/for_element_test.dart
+00:00 +0: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithDeclaration | test_async_loopVariable_var_stream
+00:00 +1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_async_loopVariable_var_stream
+00:00 +2: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithDeclaration | test_sync_loopVariable_var_iterable
+00:00 +3: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_async_scope_afterLoop_uses_outer_despite_loopVariable
+00:00 +4: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_async_scope_afterLoop_uses_outer_despite_loopVariable
+00:00 +5: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_topLevelVariable
+-------- Full diff ---------
++ ForElement
++   forKeyword: for
++   leftParenthesis: (
++   forLoopParts: ForEachPartsWithIdentifier
++     identifier: SimpleIdentifier
++       token: v
++       element: <testLibrary>::@setter::v
++       staticType: int
++     inKeyword: in
++     iterable: ListLiteral
++       leftBracket: [
++       elements
++         IntegerLiteral
++           literal: 1
++           staticType: int
++         IntegerLiteral
++           literal: 2
++           staticType: int
++         IntegerLiteral
++           literal: 3
++           staticType: int
++       rightBracket: ]
++       staticType: List<int>
++   rightParenthesis: )
++   body: SimpleIdentifier
++     token: v
++     element: <testLibrary>::@getter::v
++     staticType: int
+  
+---------- Actual ----------
+ForElement
+  forKeyword: for
+  leftParenthesis: (
+  forLoopParts: ForEachPartsWithIdentifier
+    identifier: SimpleIdentifier
+      token: v
+      element: <testLibrary>::@setter::v
+      staticType: int
+    inKeyword: in
+    iterable: ListLiteral
+      leftBracket: [
+      elements
+        IntegerLiteral
+          literal: 1
+          staticType: int
+        IntegerLiteral
+          literal: 2
+          staticType: int
+        IntegerLiteral
+          literal: 3
+          staticType: int
+      rightBracket: ]
+      staticType: List<int>
+  rightParenthesis: )
+  body: SimpleIdentifier
+    token: v
+    element: <testLibrary>::@getter::v
+    staticType: int
+----------------------------
+00:00 +5 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_async_scope_loopVariable_shadows_numType
+00:00 +5 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_topLevelVariable [E]
+  See the difference above.
+  package:matcher                                                    fail
+  test/src/dart/resolution/resolution.dart 306:7                     ResolutionTest.assertResolvedNodeText
+  test/src/dart/resolution/for_element_test.dart 128:5               ForElementResolutionTest_ForEachPartsWithIdentifier.test_sync_identifier_topLevelVariable
+  ===== asynchronous gap ===========================
+  package:test_reflective_loader/test_reflective_loader.dart 281:5   _runTest
+  ===== asynchronous gap ===========================
+  package:test_reflective_loader/test_reflective_loader.dart 164:19  _addTestsIfTopLevelSuite.runTests.<fn>
+  
+00:00 +6 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_dynamic
+00:00 +7 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_iterable_contextType
+00:00 +8 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_setter_downwardContext
+00:00 +9 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_setter_downwardContext
+00:00 +10 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_setter_downwardContext
+00:00 +11 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_iterable_nullable
+00:00 +12 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_topLevelSetter_downwardContext
+00:00 +13 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_iterable_object
+00:00 +14 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithIdentifier | test_sync_iterable_super
+00:00 +15 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_iterable_super
+00:00 +16 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_iterable_super
+00:00 +17 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_contextType_patternVariable_typed
+00:00 +18 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_loopVariable_dynamic
+00:00 +19 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_contextType_patternVariable_untyped
+00:00 +20 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_loopVariable_var_genericFunction
+00:00 +21 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_dynamic
+00:00 +22 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_dynamic
+00:00 +23 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_loopVariable_var_list
+00:00 +24 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_list
+00:00 +25 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_scope_afterLoop_uses_outer_despite_loopVariable
+00:00 +26 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_object
+00:00 +27 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_scope_body_shadows_loopVariable
+00:00 +28 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_scope_body_shadows_loopVariable
+00:00 +29 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_pattern_patternVariable_typed
+00:00 +30 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_scope_iterable_uses_outer
+00:00 +31 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_topLevelVariableInitializer
+00:00 +32 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_scope_loopVariable_shadows_numType
+00:00 +33 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern | test_sync_topLevelVariableInitializer_scope
+00:00 +34 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithDeclaration | test_sync_type_genericFunctionType
+00:00 +35 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_iterable_contextType_patternVariable_typed
+00:00 +36 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_async_identifier_stream
+00:00 +37 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_iterable_contextType_patternVariable_untyped
+00:00 +38 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_dynamic
+00:00 +39 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_iterable_dynamic
+00:00 +40 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_setter_downwardContext
+00:00 +41 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_iterable_object
+00:00 +42 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_identifier_topLevelSetter_downwardContext
+00:00 +43 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_iterable_stream
+00:00 +44 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_iterable_super
+00:00 +45 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_iterable_super
+00:00 +46 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForEachPartsWithPattern_await | test_async_pattern_patternVariable_typed
+00:00 +47 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_scope_afterLoop_identifier_uses_outer
+00:00 +48 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_condition_rewrite
+00:00 +49 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_condition_rewrite
+00:00 +50 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithIdentifier | test_sync_scope_header_iterable_identifier_uses_outer
+00:00 +51 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_scope_initializerVariable_visibleInBody
+00:00 +52 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_iterable_contextType_patternVariable_typed
+00:00 +53 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_scope_variables_initializer_uses_outer_sameName
+00:00 +54 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_scope_variables_initializer_uses_outer_sameName
+00:00 +55 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_iterable_dynamic
+00:00 +56 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_scope_variables_uses_outer
+00:00 +57 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_iterable_object
+00:00 +58 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithDeclarations | test_scope_variables_visibleInNextVariableInitializer
+00:00 +59 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_iterable_stream
+00:00 +60 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithExpression | test_initialization_patternAssignment
+00:00 +61 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithExpression | test_initialization_patternAssignment
+00:00 +62 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_keyword_final_patternVariable
+00:00 +63 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_keyword_final_patternVariable
+00:00 +64 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_body_uses_outer
+00:00 +65 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_body_uses_outer
+00:00 +66 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_body_uses_outer
+00:00 +67 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_scope_body_shadows_patternVariable
+00:00 +68 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_patternVariables
+00:00 +69 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_async_scope_iterable_uses_outer_patternVariable
+00:00 +70 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_patternVariables_shadows_outer_in_expression
+00:00 +71 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_contextType_patternVariable_typed
+00:00 +72 -1: test/src/dart/resolution/for_element_test.dart: ForElementResolutionTest_ForPartsWithPattern | test_scope_variables_uses_outer
+00:00 +73 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_contextType_patternVariable_untyped
+00:00 +74 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_dynamic
+00:00 +75 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_list
+00:00 +76 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_list_wildcard
+00:00 +77 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_object
+00:00 +78 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_iterable_super
+00:00 +79 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_keyword_final_patternVariable
+00:00 +80 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_pattern_patternVariable_typed
+00:00 +81 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_scope_afterLoop_uses_outer_despite_patternVariable
+00:01 +82 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_scope_body_shadows_patternVariable
+00:01 +83 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForEachPartsWithPattern | test_sync_scope_iterable_uses_outer_patternVariable
+00:01 +84 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithExpression | test_condition_rewrite
+00:01 +85 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithExpression | test_initialization_patternAssignment
+00:01 +86 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithExpression | test_scope_body_shadows_outer
+00:01 +87 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithExpression | test_update_super
+00:01 +88 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_afterLoop_uses_outer_despite_initializerVariable
+00:01 +89 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_body_shadows_loopVariable
+00:01 +90 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_initializerVariable_visibleInBody
+00:01 +91 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_variables_initializer_uses_outer_sameName
+00:01 +92 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_variables_uses_outer
+00:01 +93 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithDeclarations | test_scope_variables_visibleInNextVariableInitializer
+00:01 +94 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_afterLoop_uses_outer_despite_patternVariable
+00:01 +95 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_body_shadows_patternVariable
+00:01 +96 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_body_uses_outer
+00:01 +97 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_patternVariables
+00:01 +98 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_patternVariables_shadows_outer_in_expression
+00:01 +99 -1: test/src/dart/resolution/for_statement_test.dart: ForStatementResolutionTest_ForPartsWithPattern | test_scope_variables_uses_outer
+00:01 +100 -1: Some tests failed.
+
+Consider enabling the flag chain-stack-traces to receive more detailed exceptions.
+For example, 'dart test --chain-stack-traces'.

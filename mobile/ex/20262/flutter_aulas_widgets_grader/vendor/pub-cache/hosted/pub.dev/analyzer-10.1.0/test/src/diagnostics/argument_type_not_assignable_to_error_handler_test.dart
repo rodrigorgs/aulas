@@ -1,0 +1,619 @@
+// Copyright (c) 2021, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(
+      ArgumentTypeNotAssignableToErrorHandler_FutureCatchErrorTest,
+    );
+    defineReflectiveTests(
+      ArgumentTypeNotAssignableToErrorHandler_FutureThenTest,
+    );
+    defineReflectiveTests(
+      ArgumentTypeNotAssignableToErrorHandler_StreamHandleErrorTest,
+    );
+    defineReflectiveTests(
+      ArgumentTypeNotAssignableToErrorHandler_StreamListenTest,
+    );
+    defineReflectiveTests(
+      ArgumentTypeNotAssignableToErrorHandler_StreamSubscriptionOnErrorTest,
+    );
+  });
+}
+
+@reflectiveTest
+class ArgumentTypeNotAssignableToErrorHandler_FutureCatchErrorTest
+    extends PubPackageResolutionTest {
+  void test_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Future<int> future, Future<int> Function(dynamic a) callback) {
+  future.catchError(callback);
+}
+''');
+  }
+
+  void test_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function({Object a}) callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 92, 8)],
+    );
+  }
+
+  void test_firstParameterIsOptional() async {
+    await assertNoErrorsInCode('''
+void f(Future<int> future, Future<int> Function([Object a]) callback) {
+  future.catchError(callback);
+}
+''');
+  }
+
+  void test_functionExpression_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((dynamic a) {});
+}
+''');
+  }
+
+  void test_functionExpression_firstParameterIsImplicit() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((a) {});
+}
+''');
+  }
+
+  void test_functionExpression_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError(({Object a = 1}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 19)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNullableObject() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((Object? a) {});
+}
+''');
+  }
+
+  void test_functionExpression_firstParameterIsOptional() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError(([Object a = 1]) {});
+}
+''');
+  }
+
+  void test_functionExpression_firstParameterIsUntyped() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((a) {});
+}
+''');
+  }
+
+  void test_functionExpression_noParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError(() {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 5)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((Object a, dynamic b) {});
+}
+''');
+  }
+
+  void test_functionExpression_secondParameterIsImplicit() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((Object a, b) {});
+}
+''');
+  }
+
+  void test_functionExpression_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError((Object a, {required StackTrace b}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 38)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNullableStackTrace() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((Object a, StackTrace? b) {});
+}
+''');
+  }
+
+  void test_functionExpression_secondParameterIsUntyped() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.catchError((Object a, b) {});
+}
+''');
+  }
+
+  void test_functionExpression_tooManyParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError((a, b, c) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 12)],
+    );
+  }
+
+  void test_functionExpression_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError((String a) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 13)],
+    );
+  }
+
+  void test_functionExpression_wrongSecondParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.catchError((Object a, String b) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 50, 23)],
+    );
+  }
+
+  void test_noParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function() callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 82, 8)],
+    );
+  }
+
+  void test_okType() async {
+    await assertNoErrorsInCode('''
+void f(Future<int> future, Future<int> Function(Object, StackTrace) callback) {
+  future.catchError(callback);
+}
+''');
+  }
+
+  void test_secondParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Future<int> future, Future<int> Function(Object a, dynamic b) callback) {
+  future.catchError(callback);
+}
+''');
+  }
+
+  void test_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function(Object a, {StackTrace b}) callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 106, 8)],
+    );
+  }
+
+  void test_tooManyParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function(int, int, int) callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 95, 8)],
+    );
+  }
+
+  void test_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function(String) callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 88, 8)],
+    );
+  }
+
+  void test_wrongSecondParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<int> future, Future<int> Function(Object, String) callback) {
+  future.catchError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 96, 8)],
+    );
+  }
+}
+
+@reflectiveTest
+class ArgumentTypeNotAssignableToErrorHandler_FutureThenTest
+    extends PubPackageResolutionTest {
+  void test_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future, void Function(dynamic a) callback) {
+  future.then((_) {}, onError: callback);
+}
+''');
+  }
+
+  void test_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future, Future<int> Function({Object a}) callback) {
+  future.then((_) {}, onError: callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 95, 17)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.then((_) {}, onError: ({Object a = 1}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 52, 28)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNullableObject() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.then((_) {}, onError: (Object? a) {});
+}
+''');
+  }
+
+  void test_functionExpression_noParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.then((_) {}, onError: () {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 52, 14)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.then((_) {}, onError: (Object a, {StackTrace? b}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 52, 39)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNullableStackTrace() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future) {
+  future.then((_) {}, onError: (Object a, StackTrace? b) {});
+}
+''');
+  }
+
+  void test_functionExpression_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Future<void> future) {
+  future.then((_) {}, onError: (String a) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 52, 22)],
+    );
+  }
+
+  void test_functionType() async {
+    await assertNoErrorsInCode('''
+void f(Future<void> future, Function callback) {
+  future.then((_) {}, onError: callback);
+}
+''');
+  }
+}
+
+@reflectiveTest
+class ArgumentTypeNotAssignableToErrorHandler_StreamHandleErrorTest
+    extends PubPackageResolutionTest {
+  void test_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream, void Function(dynamic a) callback) {
+  stream.handleError(callback);
+}
+''');
+  }
+
+  void test_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream, Future<int> Function({Object a}) callback) {
+  stream.handleError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 94, 8)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.handleError(({Object a = 1}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 51, 19)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNullableObject() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream) {
+  stream.handleError((Object? a) {});
+}
+''');
+  }
+
+  void test_functionExpression_noParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.handleError(() {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 51, 5)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.handleError((Object a, {StackTrace? b}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 51, 30)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNullableStackTrace() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream) {
+  stream.handleError((Object a, StackTrace? b) {});
+}
+''');
+  }
+
+  void test_functionExpression_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.handleError((String a) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 51, 13)],
+    );
+  }
+}
+
+@reflectiveTest
+class ArgumentTypeNotAssignableToErrorHandler_StreamListenTest
+    extends PubPackageResolutionTest {
+  void test_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream, void Function(dynamic a) callback) {
+  stream.listen((_) {}, onError: callback);
+}
+''');
+  }
+
+  void test_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream, Future<int> Function({Object a}) callback) {
+  stream.listen((_) {}, onError: callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 97, 17)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: ({Object a = 1}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 54, 28)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNullableObject() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: (Object? a) {});
+}
+''');
+  }
+
+  void test_functionExpression_noParameters() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: () {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 54, 14)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: (Object a, {StackTrace? b}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 54, 39)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNullableStackTrace() async {
+    await assertNoErrorsInCode('''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: (Object a, StackTrace? b) {});
+}
+''');
+  }
+
+  void test_functionExpression_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+void f(Stream<void> stream) {
+  stream.listen((_) {}, onError: (String a) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 54, 22)],
+    );
+  }
+}
+
+@reflectiveTest
+class ArgumentTypeNotAssignableToErrorHandler_StreamSubscriptionOnErrorTest
+    extends PubPackageResolutionTest {
+  void test_firstParameterIsDynamic() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+void f(
+    StreamSubscription<void> subscription, void Function(dynamic a) callback) {
+  subscription.onError(callback);
+}
+''');
+  }
+
+  void test_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+void f(
+    StreamSubscription<void> subscription,
+    Future<int> Function({Object a}) callback) {
+  subscription.onError(callback);
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 144, 8)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError(({Object a = 1}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 92, 19)],
+    );
+  }
+
+  void test_functionExpression_firstParameterIsNullableObject() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError((Object? a) {});
+}
+''');
+  }
+
+  void test_functionExpression_noParameters() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError(() {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 92, 5)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNamed() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError((Object a, {StackTrace? b}) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 92, 30)],
+    );
+  }
+
+  void test_functionExpression_secondParameterIsNullableStackTrace() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError((Object a, StackTrace? b) {});
+}
+''');
+  }
+
+  void test_functionExpression_wrongFirstParameterType() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+void f(StreamSubscription<void> subscription) {
+  subscription.onError((String a) {});
+}
+''',
+      [error(diag.argumentTypeNotAssignableToErrorHandler, 92, 13)],
+    );
+  }
+}

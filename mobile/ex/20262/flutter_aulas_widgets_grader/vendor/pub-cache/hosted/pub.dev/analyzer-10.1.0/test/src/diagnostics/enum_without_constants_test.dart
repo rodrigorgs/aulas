@@ -1,0 +1,58 @@
+// Copyright (c) 2024, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(EnumWithoutConstantsTest);
+  });
+}
+
+@reflectiveTest
+class EnumWithoutConstantsTest extends PubPackageResolutionTest {
+  @SkippedTest() // TODO(scheglov): implement augmentation
+  test_hasConstants_inAugmentation() async {
+    newFile('$testPackageLibPath/a.dart', r'''
+part of 'test.dart';
+augment enum E {
+  v
+}
+''');
+
+    await assertNoErrorsInCode('''
+part 'a.dart';
+enum E {}
+''');
+  }
+
+  test_noConstants() async {
+    await assertErrorsInCode(
+      '''
+enum E {}
+''',
+      [error(diag.enumWithoutConstants, 5, 1)],
+    );
+  }
+
+  @SkippedTest() // TODO(scheglov): implement augmentation
+  test_noConstants_hasAugmentation() async {
+    var a = newFile('$testPackageLibPath/a.dart', r'''
+part 'b.dart';
+enum E {}
+''');
+
+    var b = newFile('$testPackageLibPath/b.dart', r'''
+part of 'a.dart';
+augment enum E {}
+''');
+
+    await assertErrorsInFile2(a, [error(diag.enumWithoutConstants, 20, 1)]);
+
+    await assertErrorsInFile2(b, []);
+  }
+}

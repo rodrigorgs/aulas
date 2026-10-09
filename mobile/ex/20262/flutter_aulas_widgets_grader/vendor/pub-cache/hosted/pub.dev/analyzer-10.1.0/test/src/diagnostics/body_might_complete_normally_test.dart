@@ -1,0 +1,506 @@
+// Copyright (c) 2020, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(BodyMayCompleteNormallyTest);
+    defineReflectiveTests(BodyMayCompleteNormallyTest_Language219);
+  });
+}
+
+@reflectiveTest
+class BodyMayCompleteNormallyTest extends PubPackageResolutionTest
+    with BodyMayCompleteNormallyTestCases {
+  @override
+  bool get _arePatternsEnabled => true;
+}
+
+@reflectiveTest
+class BodyMayCompleteNormallyTest_Language219 extends PubPackageResolutionTest
+    with WithLanguage219Mixin, BodyMayCompleteNormallyTestCases {
+  @override
+  bool get _arePatternsEnabled => false;
+}
+
+mixin BodyMayCompleteNormallyTestCases on PubPackageResolutionTest {
+  bool get _arePatternsEnabled;
+
+  test_enum_method_nonNullable_blockBody_switchStatement_notNullable_exhaustive() async {
+    await assertNoErrorsInCode(r'''
+enum E {
+  a;
+
+  static const b = 0;
+  static final c = 0;
+
+  int get value {
+    switch (this) {
+      case a:
+        return 0;
+    }
+  }
+}
+''');
+  }
+
+  test_enum_method_nonNullable_blockBody_switchStatement_notNullable_notExhaustive() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  a, b;
+
+  int get value {
+    switch (this) {
+      case a:
+        return 0;
+    }
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled) ...[
+          error(diag.bodyMightCompleteNormally, 28, 5),
+          error(diag.missingEnumConstantInSwitch, 40, 13),
+        ] else
+          error(diag.nonExhaustiveSwitchStatement, 40, 6),
+      ],
+    );
+  }
+
+  test_factoryConstructor_named_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  factory A.named() {}
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 20, 7)],
+    );
+  }
+
+  test_factoryConstructor_unnamed_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  factory A() {}
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 20, 1)],
+    );
+  }
+
+  test_function_future_int_blockBody_async() async {
+    await assertErrorsInCode(
+      r'''
+Future<int> foo() async {}
+''',
+      [error(diag.bodyMightCompleteNormally, 12, 3)],
+    );
+  }
+
+  test_function_future_void_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+Future<void> foo() {}
+''',
+      [error(diag.bodyMightCompleteNormally, 13, 3)],
+    );
+  }
+
+  test_function_future_void_blockBody_async() async {
+    await assertNoErrorsInCode(r'''
+Future<void> foo() async {}
+''');
+  }
+
+  test_function_nonNullable_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+int foo() {}
+''',
+      [error(diag.bodyMightCompleteNormally, 4, 3)],
+    );
+  }
+
+  test_function_nonNullable_blockBody_generator_async() async {
+    await assertNoErrorsInCode(r'''
+Stream<int> foo() async* {}
+''');
+  }
+
+  test_function_nonNullable_blockBody_generator_sync() async {
+    await assertNoErrorsInCode(r'''
+Iterable<int> foo() sync* {}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_notNullable_exhaustive() async {
+    await assertNoErrorsInCode(r'''
+enum Foo { a, b }
+
+int f(Foo foo) {
+  switch (foo) {
+    case Foo.a:
+      return 0;
+    case Foo.b:
+      return 1;
+  }
+}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_notNullable_exhaustive_enhanced() async {
+    await assertNoErrorsInCode(r'''
+enum E {
+  a;
+
+  static const b = 0;
+  static final c = 0;
+}
+
+int f(E e) {
+  switch (e) {
+    case E.a:
+      return 0;
+  }
+}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_notNullable_exhaustive_parenthesis() async {
+    // TODO(johnniwinther): Re-enable this test for the patterns feature.
+    if (_arePatternsEnabled) return;
+    await assertNoErrorsInCode(r'''
+enum Foo { a, b }
+
+int f(Foo foo) {
+  switch (foo) {
+    case (Foo.a):
+      return 0;
+    case (Foo.b):
+      return 1;
+  }
+}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_notNullable_notExhaustive() async {
+    await assertErrorsInCode(
+      r'''
+enum Foo { a, b }
+
+int f(Foo foo) {
+  switch (foo) {
+    case Foo.a:
+      return 0;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled) ...[
+          error(diag.bodyMightCompleteNormally, 23, 1),
+          error(diag.missingEnumConstantInSwitch, 38, 12),
+        ] else
+          error(diag.nonExhaustiveSwitchStatement, 38, 6),
+      ],
+    );
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_notNullable_notExhaustive_enhanced() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  a, b;
+
+  static const c = 0;
+}
+
+int f(E e) {
+  switch (e) {
+    case E.a:
+      return 0;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled) ...[
+          error(diag.bodyMightCompleteNormally, 47, 1),
+          error(diag.missingEnumConstantInSwitch, 58, 10),
+        ] else
+          error(diag.nonExhaustiveSwitchStatement, 58, 6),
+      ],
+    );
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_nullable_exhaustive_default() async {
+    await assertNoErrorsInCode(r'''
+enum Foo { a, b }
+
+int f(Foo? foo) {
+  switch (foo) {
+    case Foo.a:
+      return 0;
+    case Foo.b:
+      return 1;
+    default:
+      return 2;
+  }
+}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_nullable_exhaustive_null() async {
+    await assertNoErrorsInCode(r'''
+enum Foo { a, b }
+
+int f(Foo? foo) {
+  switch (foo) {
+    case null:
+      return 0;
+    case Foo.a:
+      return 1;
+    case Foo.b:
+      return 2;
+  }
+}
+''');
+  }
+
+  test_function_nonNullable_blockBody_switchStatement_nullable_notExhaustive_null() async {
+    await assertErrorsInCode(
+      r'''
+enum Foo { a, b }
+
+int f(Foo? foo) {
+  switch (foo) {
+    case Foo.a:
+      return 0;
+    case Foo.b:
+      return 1;
+  }
+}
+''',
+      [
+        if (!_arePatternsEnabled) ...[
+          error(diag.bodyMightCompleteNormally, 23, 1),
+          error(diag.missingEnumConstantInSwitch, 39, 12),
+        ] else
+          error(diag.nonExhaustiveSwitchStatement, 39, 6),
+      ],
+    );
+  }
+
+  test_function_nullable_blockBody() async {
+    await assertNoErrorsInCode(r'''
+int foo() {
+  return 0;
+}
+''');
+  }
+
+  test_functionExpression_future_int_blockBody_async() async {
+    await assertErrorsInCode(
+      r'''
+void f() {
+  Future<int> Function() foo = () async {};
+  foo;
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 51, 1)],
+    );
+  }
+
+  test_functionExpression_future_void_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+void f() {
+  Future<void> Function() foo = () {};
+  foo;
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 46, 1)],
+    );
+  }
+
+  test_functionExpression_future_void_blockBody_async() async {
+    await assertNoErrorsInCode(r'''
+main() {
+  Future<void> Function() foo = () async {};
+  foo;
+}
+''');
+  }
+
+  test_functionExpression_notNullable_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+void f() {
+  int Function() foo = () {
+  };
+  foo;
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 37, 1)],
+    );
+  }
+
+  test_functionExpression_notNullable_blockBody_return() async {
+    await assertNoErrorsInCode(r'''
+main() {
+  int Function() foo = () {
+    return 0;
+  };
+  foo;
+}
+''');
+  }
+
+  test_generativeConstructor_blockBody() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A() {}
+}
+''');
+  }
+
+  test_generativeConstructor_emptyBody() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A();
+}
+''');
+  }
+
+  test_method_future_int_blockBody_async() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  Future<int> foo() async {}
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 24, 3)],
+    );
+  }
+
+  test_method_future_void_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  Future<void> foo() {}
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 25, 3)],
+    );
+  }
+
+  test_method_future_void_blockBody_async() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  Future<void> foo() async {}
+}
+''');
+  }
+
+  test_method_nonNullable_blockBody() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  int foo() {}
+}
+''',
+      [error(diag.bodyMightCompleteNormally, 16, 3)],
+    );
+  }
+
+  test_method_nonNullable_blockBody_generator_async() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  Stream<int> foo() async* {
+    yield 0;
+  }
+}
+''');
+  }
+
+  test_method_nonNullable_blockBody_generator_sync() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  Iterable<int> foo() sync* {
+    yield 0;
+  }
+}
+''');
+  }
+
+  test_method_nonNullable_blockBody_return() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  int foo() {
+    return 0;
+  }
+}
+''');
+  }
+
+  test_method_nonNullable_blockBody_throw() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  int foo() {
+    throw 0;
+  }
+}
+''');
+  }
+
+  test_method_nonNullable_emptyBody() async {
+    await assertNoErrorsInCode(r'''
+abstract class A {
+  int foo();
+}
+''');
+  }
+
+  test_method_nonNullable_expressionBody() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  int foo() => 0;
+}
+''');
+  }
+
+  test_method_nonNullable_expressionBody_throw() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  int foo() => throw 0;
+}
+''');
+  }
+
+  test_method_nullable_blockBody_return() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  int? foo() {
+    return 0;
+  }
+}
+''');
+  }
+
+  test_setter() async {
+    // Even though this code has an illegal return type for a setter, do not
+    // use the invalid return type to report BODY_MIGHT_COMPLETE_NORMALLY for
+    // setters.
+    await assertErrorsInCode(
+      r'''
+bool set s(int value) {}
+''',
+      [error(diag.nonVoidReturnForSetter, 0, 4)],
+    );
+  }
+}

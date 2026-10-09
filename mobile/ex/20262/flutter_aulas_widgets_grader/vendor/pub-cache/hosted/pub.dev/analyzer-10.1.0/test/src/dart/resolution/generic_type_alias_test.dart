@@ -1,0 +1,283 @@
+// Copyright (c) 2018, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/dart/element/type.dart';
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test/test.dart';
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import 'context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(GenericTypeAliasResolutionTest);
+    defineReflectiveTests(
+      GenericTypeAliasResolutionTest_WithoutGenericMetadata,
+    );
+  });
+}
+
+@reflectiveTest
+class GenericTypeAliasResolutionTest extends PubPackageResolutionTest
+    with GenericTypeAliasResolutionTestCases {
+  test_genericFunctionTypeCannotBeTypeArgument_def_class() async {
+    await assertNoErrorsInCode(r'''
+class C<T> {}
+
+typedef G = Function<S>();
+
+C<G>? x;
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_class() async {
+    await assertNoErrorsInCode(r'''
+class C<T> {}
+
+C<Function<S>()>? x;
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_function() async {
+    await assertNoErrorsInCode(r'''
+void f<T>(T) {}
+
+main() {
+  f<Function<S>()>(null);
+}
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_functionType() async {
+    await assertNoErrorsInCode(r'''
+late T Function<T>(T?) f;
+
+main() {
+  f<Function<S>()>(null);
+}
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_method() async {
+    await assertNoErrorsInCode(r'''
+class C {
+  void f<T>(T) {}
+}
+
+main() {
+  new C().f<Function<S>()>(null);
+}
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_typedef() async {
+    await assertNoErrorsInCode(r'''
+typedef T F<T>(T t);
+
+F<Function<S>()>? x;
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_optOutOfGenericMetadata() async {
+    newFile('$testPackageLibPath/a.dart', '''
+typedef G = Function<S>();
+''');
+    await assertErrorsInCode(
+      '''
+// @dart=2.12
+import 'a.dart';
+class C<T> {}
+C<G>? x;
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 47, 1)],
+    );
+  }
+}
+
+@reflectiveTest
+class GenericTypeAliasResolutionTest_WithoutGenericMetadata
+    extends PubPackageResolutionTest
+    with GenericTypeAliasResolutionTestCases {
+  test_genericFunctionTypeCannotBeTypeArgument_def_class() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+class C<T> {}
+
+typedef G = Function<S>();
+
+C<G>? x;
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 59, 1)],
+    );
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_class() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+class C<T> {}
+
+C<Function<S>()>? x;
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 31, 13)],
+    );
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_function() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+void f<T>(T) {}
+
+main() {
+  f<Function<S>()>(null);
+}
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 44, 13)],
+    );
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_functionType() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+late T Function<T>(T?) f;
+
+main() {
+  f<Function<S>()>(null);
+}
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 54, 13)],
+    );
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_method() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+class C {
+  void f<T>(T) {}
+}
+
+main() {
+  new C().f<Function<S>()>(null);
+}
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 66, 13)],
+    );
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_literal_typedef() async {
+    await assertErrorsInCode(
+      r'''
+// @dart=2.12
+typedef T F<T>(T t);
+
+F<Function<S>()>? x;
+''',
+      [error(diag.genericFunctionTypeCannotBeTypeArgument, 38, 13)],
+    );
+  }
+}
+
+mixin GenericTypeAliasResolutionTestCases on PubPackageResolutionTest {
+  test_genericFunctionTypeCannotBeTypeArgument_OK_def_class() async {
+    await assertNoErrorsInCode(r'''
+class C<T> {}
+
+typedef G = Function();
+
+C<G> x = C();
+''');
+  }
+
+  test_genericFunctionTypeCannotBeTypeArgument_OK_literal_class() async {
+    await assertNoErrorsInCode(r'''
+class C<T> {}
+
+C<Function()> x = C();
+''');
+  }
+
+  test_missingGenericFunction() async {
+    await assertErrorsInCode(
+      r'''
+typedef F<T> = ;
+
+void f() {
+  F.a;
+}
+''',
+      [error(diag.expectedTypeName, 15, 1), error(diag.undefinedGetter, 33, 1)],
+    );
+  }
+
+  test_missingGenericFunction_imported_withPrefix() async {
+    newFile('$testPackageLibPath/a.dart', r'''
+typedef F<T> = ;
+''');
+    await assertErrorsInCode(
+      r'''
+import 'a.dart' as p;
+
+void f() {
+  p.F.a;
+}
+''',
+      [error(diag.undefinedGetter, 40, 1)],
+    );
+  }
+
+  test_type_element() async {
+    await assertNoErrorsInCode(r'''
+G<int>? g;
+
+typedef G<T> = T Function(double);
+''');
+
+    var node = findNode.namedType('G<int>');
+    assertResolvedNodeText(node, r'''
+NamedType
+  name: G
+  typeArguments: TypeArgumentList
+    leftBracket: <
+    arguments
+      NamedType
+        name: int
+        element: dart:core::@class::int
+        type: int
+    rightBracket: >
+  question: ?
+  element: <testLibrary>::@typeAlias::G
+  type: int Function(double)?
+    alias: <testLibrary>::@typeAlias::G
+      typeArguments
+        int
+''');
+  }
+
+  test_typeParameters() async {
+    await assertNoErrorsInCode(r'''
+class A {}
+
+class B {}
+
+typedef F<T extends A> = B Function<U extends B>(T a, U b);
+''');
+    var f = findElement2.typeAlias('F');
+    expect(f.typeParameters, hasLength(1));
+
+    var t = f.typeParameters[0];
+    expect(t.name, 'T');
+    assertType(t.bound, 'A');
+
+    var ff = f.aliasedType as FunctionType;
+    expect(ff.typeParameters, hasLength(1));
+
+    var u = ff.typeParameters[0];
+    expect(u.name, 'U');
+    assertType(u.bound, 'B');
+  }
+}

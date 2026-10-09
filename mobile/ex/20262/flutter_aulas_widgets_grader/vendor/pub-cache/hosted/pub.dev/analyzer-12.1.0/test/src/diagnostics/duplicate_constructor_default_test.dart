@@ -1,0 +1,350 @@
+// Copyright (c) 2022, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(DuplicateConstructorDefaultTest);
+  });
+}
+
+@reflectiveTest
+class DuplicateConstructorDefaultTest extends PubPackageResolutionTest {
+  @SkippedTest() // TODO(scheglov): implement augmentation
+  test_class_augmentation_augments() async {
+    newFile(testFile.path, r'''
+part 'a.dart';
+
+class A {
+  A();
+}
+''');
+
+    var a = newFile('$testPackageLibPath/a.dart', r'''
+part of 'test.dart';
+
+augment class A {
+  augment A();
+}
+''');
+
+    await resolveFile2(testFile);
+    assertNoErrorsInResult();
+
+    await resolveFile2(a);
+    assertNoErrorsInResult();
+  }
+
+  @SkippedTest() // TODO(scheglov): implement augmentation
+  test_class_augmentation_declares() async {
+    newFile(testFile.path, r'''
+part 'a.dart';
+
+class A {
+  A();
+}
+''');
+
+    var a = newFile('$testPackageLibPath/a.dart', r'''
+part of 'test.dart';
+
+augment class A {
+  A();
+}
+''');
+
+    await resolveFile2(testFile);
+    assertNoErrorsInResult();
+
+    await resolveFile2(a);
+    assertErrorsInResult([error(diag.duplicateConstructorDefault, 42, 1)]);
+  }
+
+  test_class_primary_unnamed_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+class C() {
+  C.new() : this();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 14, 5)],
+    );
+  }
+
+  test_class_typeName_new_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  C.new();
+  C.new();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 23, 5)],
+    );
+  }
+
+  test_class_typeName_new_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  C.new();
+  C();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 23, 1)],
+    );
+  }
+
+  test_class_typeName_unnamed_factoryHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  factory C() => throw 0;
+  factory () => throw 0;
+}
+''',
+      [error(diag.duplicateConstructorDefault, 38, 7)],
+    );
+  }
+
+  test_class_typeName_unnamed_newHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  C();
+  new ();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 19, 3)],
+    );
+  }
+
+  test_class_typeName_unnamed_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  C();
+  C.new();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 19, 5)],
+    );
+  }
+
+  test_class_typeName_unnamed_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+class C {
+  C();
+  C();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 19, 1)],
+    );
+  }
+
+  test_class_wrongTypeName_unnamed_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  factory B.new() => throw 0;
+  A();
+}
+''',
+      [error(diag.invalidFactoryNameNotAClass, 20, 1)],
+    );
+  }
+
+  test_enum_newHead_unnamed_newHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const new ();
+  const new ();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 38, 3)],
+    );
+  }
+
+  test_enum_primary_unnamed_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+enum E() {
+  v;
+  factory E.new() => v;
+}
+''',
+      [error(diag.duplicateConstructorDefault, 26, 5)],
+    );
+  }
+
+  test_enum_typeName_new_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E.new();
+  const E.new();
+}
+''',
+      [
+        error(diag.duplicateConstructorDefault, 39, 5),
+        error(diag.unusedElement, 41, 3),
+      ],
+    );
+  }
+
+  test_enum_typeName_new_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E.new();
+  const E();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 39, 1)],
+    );
+  }
+
+  test_enum_typeName_unnamed_factoryHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E();
+  factory () => v;
+}
+''',
+      [error(diag.duplicateConstructorDefault, 29, 7)],
+    );
+  }
+
+  test_enum_typeName_unnamed_newHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E();
+  const new ();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 35, 3)],
+    );
+  }
+
+  test_enum_typeName_unnamed_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E();
+  const E.new();
+}
+''',
+      [
+        error(diag.duplicateConstructorDefault, 35, 5),
+        error(diag.unusedElement, 37, 3),
+      ],
+    );
+  }
+
+  test_enum_typeName_unnamed_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v;
+  const E();
+  const E();
+}
+''',
+      [error(diag.duplicateConstructorDefault, 35, 1)],
+    );
+  }
+
+  test_extensionType_primary_new_secondary_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+extension type A.new(int it) {
+  A.new(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 33, 5)],
+    );
+  }
+
+  test_extensionType_primary_new_secondary_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+extension type A.new(int it) {
+  A(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 33, 1)],
+    );
+  }
+
+  test_extensionType_primary_unnamed_secondary_newHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+extension type A(int it) {
+  new(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 29, 3)],
+    );
+  }
+
+  test_extensionType_primary_unnamed_secondary_typeName_new() async {
+    await assertErrorsInCode(
+      r'''
+extension type A(int it) {
+  A.new(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 29, 5)],
+    );
+  }
+
+  test_extensionType_primary_unnamed_secondary_typeName_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+extension type A(int it) {
+  A(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 29, 1)],
+    );
+  }
+
+  test_extensionType_secondary_factoryHead_unnamed_factoryHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+extension type A.named(int it) {
+  factory (int it) => A.named(it);
+  factory (int it) => A.named(it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 70, 7)],
+    );
+  }
+
+  test_extensionType_secondary_newHead_unnamed_newHead_unnamed() async {
+    await assertErrorsInCode(
+      r'''
+extension type A.named(int it) {
+  new(this.it);
+  new(this.it);
+}
+''',
+      [error(diag.duplicateConstructorDefault, 51, 3)],
+    );
+  }
+}

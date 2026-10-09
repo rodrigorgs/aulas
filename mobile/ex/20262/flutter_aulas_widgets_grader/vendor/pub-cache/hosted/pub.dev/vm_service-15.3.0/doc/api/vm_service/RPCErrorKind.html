@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RPCErrorKind enum from the vm_service library, for the Dart programming language.">
+  <title>RPCErrorKind enum - vm_service library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service.dart</a></li>
+    <li class="self-crumb">RPCErrorKind enum</li>
+  </ol>
+  <div class="self-name">RPCErrorKind</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="vm_service&#47;vm_service-library-sidebar.html"
+    data-below-sidebar="vm_service&#47;RPCErrorKind-enum-sidebar.html">
+    <div>
+
+      <h1>
+        <span class="kind-enum">RPCErrorKind</span>
+        enum 
+ 
+
+      </h1>
+    </div>
+
+    
+
+
+      <section>
+        <dl class="dl-horizontal">
+          
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark eNum-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="https://api.flutter.dev/flutter/dart-core/Enum-class.html">Enum</a></li>
+      <li>RPCErrorKind</li>
+    </ul>
+  </dd>
+
+          
+          
+          
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/EnumName.html">EnumName</a></li>
+  </ul></dd>
+          
+
+
+        </dl>
+      </section>
+
+      <section class="summary offset-anchor" id="values">
+        <h2>Values</h2>
+        <dl class="properties">
+            <dt id="kServerError" class="constant">
+    <span class="name ">kServerError</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Application specific error code.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32000, message: &#39;Application error&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kConnectionDisposed" class="constant">
+    <span class="name ">kConnectionDisposed</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Service connection disposed.</p>
+<p>This may indicate the connection was closed while a request was in-flight.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32010, message: &#39;Service connection disposed&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kInvalidRequest" class="constant">
+    <span class="name ">kInvalidRequest</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The JSON sent is not a valid Request object.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32600, message: &#39;Invalid request object&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kMethodNotFound" class="constant">
+    <span class="name ">kMethodNotFound</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The method does not exist or is not available.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32601, message: &#39;Method not found&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kInvalidParams" class="constant">
+    <span class="name ">kInvalidParams</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Invalid method parameter(s), such as a mismatched type.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32602, message: &#39;Invalid method parameters&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kInternalError" class="constant">
+    <span class="name ">kInternalError</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Internal JSON-RPC error.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: -32603, message: &#39;Internal JSON-RPC error&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kFeatureDisabled" class="constant">
+    <span class="name ">kFeatureDisabled</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The requested feature is disabled.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 100, message: &#39;Feature is disabled&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kVmMustBePaused" class="constant">
+    <span class="name ">kVmMustBePaused</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The VM must be paused when performing this operation.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 101, message: &#39;The VM must be paused&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kCannotAddBreakpoint" class="constant">
+    <span class="name ">kCannotAddBreakpoint</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Unable to add a breakpoint at the specified line or function.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 102, message: &#39;Unable to add breakpoint at specified line or function&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kStreamAlreadySubscribed" class="constant">
+    <span class="name ">kStreamAlreadySubscribed</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The stream has already been subscribed to.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 103, message: &#39;Stream already subscribed&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kStreamNotSubscribed" class="constant">
+    <span class="name ">kStreamNotSubscribed</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The stream has not been subscribed to.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 104, message: &#39;Stream not subscribed&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateMustBeRunnable" class="constant">
+    <span class="name ">kIsolateMustBeRunnable</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Isolate must first be runnable.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 105, message: &#39;Isolate must be runnable&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateMustBePaused" class="constant">
+    <span class="name ">kIsolateMustBePaused</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Isolate must first be paused.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 106, message: &#39;Isolate must be paused&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateCannotBeResumed" class="constant">
+    <span class="name ">kIsolateCannotBeResumed</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The isolate could not be resumed.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 107, message: &#39;The isolate could not be resumed&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateIsReloading" class="constant">
+    <span class="name ">kIsolateIsReloading</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The isolate is currently reloading.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 108, message: &#39;The isolate is currently reloading&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateCannotReload" class="constant">
+    <span class="name ">kIsolateCannotReload</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The isolate could not be reloaded due to an unhandled exception.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 109, message: &#39;The isolate could not be reloaded&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kIsolateNoReloadChangesApplied" class="constant">
+    <span class="name ">kIsolateNoReloadChangesApplied</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The isolate reload resulted in no changes being applied.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 110, message: &#39;No reload changes applied&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kServiceAlreadyRegistered" class="constant">
+    <span class="name ">kServiceAlreadyRegistered</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The service has already been registered.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 111, message: &#39;Service already registered&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kServiceDisappeared" class="constant">
+    <span class="name ">kServiceDisappeared</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The service no longer exists.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 112, message: &#39;Service has disappeared&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kExpressionCompilationError" class="constant">
+    <span class="name ">kExpressionCompilationError</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>There was an error in the expression compiler.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 113, message: &#39;Expression compilation error&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kInvalidTimelineRequest" class="constant">
+    <span class="name ">kInvalidTimelineRequest</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The timeline related request could not be completed due to the current configuration.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 114, message: &#39;Invalid timeline request for the current timeline configuration&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kCannotGetQueuedMicrotasks" class="constant">
+    <span class="name ">kCannotGetQueuedMicrotasks</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>Information about the microtasks queued in the specified isolate cannot be
+retrieved.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 115, message: &#39;Cannot get queued microtasks&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kCustomStreamDoesNotExist" class="constant">
+    <span class="name ">kCustomStreamDoesNotExist</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The custom stream does not exist.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 130, message: &#39;Custom stream does not exist&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kCoreStreamNotAllowed" class="constant">
+    <span class="name ">kCoreStreamNotAllowed</span>
+  <span class="signature">&#8594; const <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>
+  
+
+</dt>
+<dd>
+  <p>The core stream is not allowed.</p>
+  
+
+    <div>
+      <span class="signature"><code>const RPCErrorKind(code: 131, message: &#39;Core streams are not allowed&#39;)</code></span>
+    </div>
+</dd>
+
+        </dl>
+      </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="code" class="property">
+  <span class="name"><a href="../vm_service/RPCErrorKind/code.html">code</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="index" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Enum/index.html">index</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A numeric identifier for the enumerated value.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="message" class="property">
+  <span class="name"><a href="../vm_service/RPCErrorKind/message.html">message</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="name" class="property">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/EnumName/name.html">name</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="https://api.flutter.dev/flutter/dart-core/Enum-class.html">Enum</a>,
+        provided by the <a href="https://api.flutter.dev/flutter/dart-core/EnumName.html">EnumName</a> extension</span>
+      </p>
+  The name of the enum value.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="fromCode" class="callable">
+  <span class="name"><a href="../vm_service/RPCErrorKind/fromCode.html">fromCode</a></span><span class="signature">(<wbr><span class="parameter" id="fromCode-param-code"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">code</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+    <dl class="properties">
+        <dt id="values" class="constant">
+    <span class="name "><a href="../vm_service/RPCErrorKind/values-constant.html">values</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/RPCErrorKind.html">RPCErrorKind</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A constant List of the values in this enum, in order of their declaration.
+  
+
+</dd>
+
+    </dl>
+  </section>
+</div><!-- /.main-content -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service</a></li>
+    <li class="self-crumb">RPCErrorKind enum</li>
+</ol>
+
+  <h5>vm_service library</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div>
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!-- /.sidebar-offcanvas -->
+</main>
+<footer>
+  <span class="no-break">
+    vm_service
+      15.1.0
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

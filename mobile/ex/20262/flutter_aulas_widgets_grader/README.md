@@ -1,16 +1,18 @@
-# flutter_aulas
+# Flutter widgets assignment grader
 
-A new Flutter project.
+This archive grades the four questions at:
 
-## Getting Started
+https://rodrigorgs.github.io/aulas/mobile/ex/20262/widgets
 
-This project is a starting point for a Flutter application.
+The ezsubmission runner passes a zero-based question index as the container's
+first argument and the student's complete Dart source on standard input.
 
-A few resources to get you started if this is your first Flutter project:
+| Index | Submitted file |
+| ---: | --- |
+| 0 | `lib/widget_like.dart` |
+| 1 | `lib/widget_like2.dart` |
+| 2 | `lib/navega.dart` |
+| 3 | `lib/on_off.dart` |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The container runs only the test associated with the selected question. Exit
+status zero means the answer passed; any other test result means it failed.

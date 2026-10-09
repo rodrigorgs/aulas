@@ -1,0 +1,814 @@
+// Copyright (c) 2023, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(NonExhaustiveSwitchExpressionTest);
+    defineReflectiveTests(NonExhaustiveSwitchStatementTest);
+  });
+}
+
+@reflectiveTest
+class NonExhaustiveSwitchExpressionTest extends PubPackageResolutionTest {
+  test_bool_true() async {
+    await assertErrorsInCode(
+      r'''
+Object f(bool x) {
+  return switch (x) {
+    true => 0,
+  };
+}
+''',
+      [error(diag.nonExhaustiveSwitchExpression, 28, 6)],
+    );
+  }
+
+  test_bool_true_false() async {
+    await assertNoErrorsInCode(r'''
+Object f(bool x) {
+  return switch (x) {
+    true => 1,
+    false => 0,
+  };
+}
+''');
+  }
+
+  test_class_int_wildcard() async {
+    await assertNoErrorsInCode(r'''
+Object f(int x) {
+  return switch (x) {
+    0 => 0,
+    _ => 1,
+  };
+}
+''');
+  }
+
+  test_class_withField_wildcard() async {
+    await assertNoErrorsInCode(r'''
+Object f(int x) {
+  return switch (x) {
+    int(isEven: true) => 0,
+    _ => 1,
+  };
+}
+''');
+  }
+
+  test_enum_2at2_hasWhen() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  a, b
+}
+
+Object f(E x) {
+  return switch (x) {
+    E.a when 1 == 0 => 0,
+    E.b => 1,
+  };
+}
+''',
+      [
+        error(
+          diag.nonExhaustiveSwitchExpression,
+          44,
+          6,
+          correctionContains: 'E.a',
+        ),
+      ],
+    );
+  }
+
+  test_invalidType_empty() async {
+    await assertErrorsInCode(
+      r'''
+void f(Unresolved x) => switch (x) {};
+''',
+      [error(diag.undefinedClass, 7, 10)],
+    );
+  }
+
+  test_private_enum() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum _E { a, b }
+_E e() => _E.a;
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+Object f() {
+  return switch (e()) {
+  };
+}
+''',
+      [error(diag.nonExhaustiveSwitchExpressionPrivate, 51, 6)],
+    );
+  }
+
+  test_private_enum_sameLibrary() async {
+    await assertErrorsInCode(
+      '''
+enum _E { a, b }
+
+Object f(_E e) {
+  return switch (e) {
+  };
+}
+''',
+      [
+        error(diag.unusedField, 10, 1),
+        error(diag.unusedField, 13, 1),
+        error(diag.nonExhaustiveSwitchExpression, 44, 6),
+      ],
+    );
+  }
+
+  test_private_enumConstant() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum E { a, b, _c }
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+Object f(E e) {
+  return switch (e) {
+    E.a => 0,
+  };
+}
+''',
+      [error(diag.nonExhaustiveSwitchExpression, 54, 6)],
+    );
+  }
+
+  test_private_enumConstant_only() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum E { a, b, _c }
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+Object f(E e) {
+  return switch (e) {
+    E.a => 0,
+    E.b => 1,
+  };
+}
+''',
+      [error(diag.nonExhaustiveSwitchExpressionPrivate, 54, 6)],
+    );
+  }
+
+  test_private_enumConstant_sameLibrary() async {
+    await assertErrorsInCode(
+      '''
+enum E { a, b, _c }
+Object f(E e) {
+  return switch (e) {
+    E.a => 0,
+    E.b => 1,
+  };
+}
+''',
+      [
+        error(diag.unusedField, 15, 2),
+        error(diag.nonExhaustiveSwitchExpression, 45, 6),
+      ],
+    );
+  }
+
+  test_private_sealed() async {
+    newFile(join(testPackageLibPath, 'private_sealed.dart'), r'''
+sealed class _A {}
+class B extends _A {}
+_A a() => B();
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_sealed.dart';
+
+Object f() {
+  return switch (a()) {
+  };
+}
+''',
+      [error(diag.nonExhaustiveSwitchExpression, 53, 6)],
+    );
+  }
+}
+
+@reflectiveTest
+class NonExhaustiveSwitchStatementTest extends PubPackageResolutionTest {
+  test_alwaysExhaustive_bool_true() async {
+    await assertErrorsInCode(
+      r'''
+void f(bool x) {
+  switch (x) {
+    case true:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 19, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_bool_true_false() async {
+    await assertNoErrorsInCode(r'''
+void f(bool x) {
+  switch (x) {
+    case true:
+    case false:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_bool_wildcard_typed_bool() async {
+    await assertNoErrorsInCode(r'''
+void f(bool x) {
+  switch (x) {
+    case bool _:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_bool_wildcard_typed_int() async {
+    await assertErrorsInCode(
+      r'''
+void f(bool x) {
+  switch (x) {
+    case int _:
+      break;
+  }
+}
+''',
+      [
+        error(diag.nonExhaustiveSwitchStatement, 19, 6),
+        error(diag.patternNeverMatchesValueType, 41, 3),
+      ],
+    );
+  }
+
+  test_alwaysExhaustive_bool_wildcard_untyped() async {
+    await assertNoErrorsInCode(r'''
+void f(bool x) {
+  switch (x) {
+    case _:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_boolNullable_true_false() async {
+    await assertErrorsInCode(
+      r'''
+void f(bool? x) {
+  switch (x) {
+    case true:
+    case false:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 20, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_boolNullable_true_false_null() async {
+    await assertNoErrorsInCode(r'''
+void f(bool? x) {
+  switch (x) {
+    case true:
+    case false:
+    case null:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_enum_2at1() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  a, b
+}
+
+void f(E x) {
+  switch (x) {
+    case E.a:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 35, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_enum_2at2_cases() async {
+    await assertNoErrorsInCode(r'''
+enum E {
+  a, b
+}
+
+void f(E x) {
+  switch (x) {
+    case E.a:
+    case E.b:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_enum_2at2_hasWhen() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  a, b
+}
+
+void f(E x) {
+  switch (x) {
+    case E.a when 1 == 0:
+    case E.b:
+      break;
+  }
+}
+''',
+      [
+        error(
+          diag.nonExhaustiveSwitchStatement,
+          35,
+          6,
+          correctionContains: 'E.a',
+        ),
+      ],
+    );
+  }
+
+  test_alwaysExhaustive_enum_2at2_logicalOr() async {
+    await assertNoErrorsInCode(r'''
+enum E {
+  a, b
+}
+
+void f(E x) {
+  switch (x) {
+    case E.a || E.b:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_enum_cannotCompute() async {
+    await assertErrorsInCode(
+      r'''
+enum E {
+  v1(v2), v2(v1);
+  const E(Object f);
+}
+
+void f(E x) {
+  switch (x) {
+    case E.v1:
+    case E.v2:
+      break;
+  }
+}
+''',
+      [
+        error(diag.recursiveCompileTimeConstant, 11, 2),
+        error(diag.recursiveCompileTimeConstant, 19, 2),
+      ],
+    );
+  }
+
+  test_alwaysExhaustive_Null_hasError() async {
+    await assertErrorsInCode(
+      r'''
+void f(Null x) {
+  switch (x) {}
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 19, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_Null_noError() async {
+    await assertNoErrorsInCode(r'''
+void f(Null x) {
+  switch (x) {
+    case null:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_recordType_bool_bool_4at4() async {
+    await assertNoErrorsInCode(r'''
+void f((bool, bool) x) {
+  switch (x) {
+    case (false, false):
+    case (false, true):
+    case (true, false):
+    case (true, true):
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_2at1() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+class B extends A {}
+class C extends A {}
+
+void f(A x) {
+  switch (x) {
+    case B():
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 77, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_2at2() async {
+    await assertNoErrorsInCode(r'''
+sealed class A {}
+class B extends A {}
+class C extends A {}
+
+void f(A x) {
+  switch (x) {
+    case B():
+      break;
+    case C():
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_2at2_wildcard() async {
+    await assertNoErrorsInCode(r'''
+sealed class A {}
+class B extends A {}
+class C extends A {}
+
+void f(A x) {
+  switch (x) {
+    case B():
+      break;
+    case _:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_constraintsMixin() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+
+class B extends A {}
+
+mixin M on A {}
+
+void f(A x) {
+  switch (x) {
+    case B _:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 74, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_hasExtensionType_1of1() async {
+    await assertNoErrorsInCode(r'''
+sealed class A {}
+class B extends A {}
+extension type EA(A it) implements A {}
+
+void f(A x) {
+  switch (x) {
+    case B():
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_hasExtensionType_1of2() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+class B extends A {}
+class C extends A {}
+extension type EA(A it) implements A {}
+
+void f(A x) {
+  switch (x) {
+    case B():
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 117, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_implementedByEnum_3at2() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+
+class B implements A {}
+
+enum E implements A {
+  a, b
+}
+
+void f(A x) {
+  switch (x) {
+    case B _:
+    case E.a:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 92, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_implementedByEnum_3at3() async {
+    await assertNoErrorsInCode(r'''
+sealed class A {}
+
+class B implements A {}
+
+enum E implements A {
+  a, b
+}
+
+void f(A x) {
+  switch (x) {
+    case B _:
+    case E.a:
+    case E.b:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_implementedByMixin_2at1() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+
+class B implements A {}
+
+mixin M implements A {}
+
+void f(A x) {
+  switch (x) {
+    case B _:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 85, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_implementedByMixin_2at2() async {
+    await assertNoErrorsInCode(r'''
+sealed class A {}
+
+class B implements A {}
+
+mixin M implements A {}
+
+void f(A x) {
+  switch (x) {
+    case B _:
+    case M _:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_sealedClass_unresolvedIdentifier() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+class B extends A {}
+
+void f(A x) {
+  switch (x) {
+    case unresolved:
+      break;
+  }
+}
+''',
+      [error(diag.undefinedIdentifier, 78, 10)],
+    );
+  }
+
+  test_alwaysExhaustive_sealedClass_unresolvedObject() async {
+    await assertErrorsInCode(
+      r'''
+sealed class A {}
+class B extends A {}
+
+void f(A x) {
+  switch (x) {
+    case Unresolved():
+      break;
+  }
+}
+''',
+      [error(diag.undefinedClass, 78, 10)],
+    );
+  }
+
+  test_alwaysExhaustive_typeVariable_bound_bool_true() async {
+    await assertErrorsInCode(
+      r'''
+void f<T extends bool>(T x) {
+  switch (x) {
+    case true:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 32, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_typeVariable_bound_bool_true_false() async {
+    await assertNoErrorsInCode(r'''
+void f<T extends bool>(T x) {
+  switch (x) {
+    case true:
+    case false:
+      break;
+  }
+}
+''');
+  }
+
+  test_alwaysExhaustive_typeVariable_promoted_bool_true() async {
+    await assertErrorsInCode(
+      r'''
+void f<T>(T x) {
+  if (x is bool) {
+    switch (x) {
+      case true:
+        break;
+    }
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 40, 6)],
+    );
+  }
+
+  test_alwaysExhaustive_typeVariable_promoted_bool_true_false() async {
+    await assertNoErrorsInCode(r'''
+void f<T>(T x) {
+  if (x is bool) {
+    switch (x) {
+      case true:
+      case false:
+        break;
+    }
+  }
+}
+''');
+  }
+
+  test_invalidType_empty() async {
+    await assertErrorsInCode(
+      r'''
+void f(Unresolved x) {
+  switch (x) {}
+}
+''',
+      [error(diag.undefinedClass, 7, 10)],
+    );
+  }
+
+  test_notAlwaysExhaustive_int() async {
+    await assertNoErrorsInCode(r'''
+void f(int x) {
+  switch (x) {
+    case 0:
+      break;
+  }
+}
+''');
+  }
+
+  test_private_enum() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum _E { a, b }
+_E e() => _E.a;
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+void f() {
+  switch (e()) {
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatementPrivate, 42, 6)],
+    );
+  }
+
+  test_private_enumConstant() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum E { a, b, _c }
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+void f(E e) {
+  switch (e) {
+    case E.a:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 45, 6)],
+    );
+  }
+
+  test_private_enumConstant_only() async {
+    newFile(join(testPackageLibPath, 'private_enum.dart'), r'''
+enum E { a, b, _c }
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_enum.dart';
+
+void f(E e) {
+  switch (e) {
+    case E.a:
+    case E.b:
+      break;
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatementPrivate, 45, 6)],
+    );
+  }
+
+  test_private_sealed() async {
+    newFile(join(testPackageLibPath, 'private_sealed.dart'), r'''
+sealed class _A {}
+class B extends _A {}
+_A a() => B();
+''');
+    await assertErrorsInCode(
+      '''
+import 'private_sealed.dart';
+
+Object f() {
+  switch (a()) {
+  }
+}
+''',
+      [error(diag.nonExhaustiveSwitchStatement, 46, 6)],
+    );
+  }
+}

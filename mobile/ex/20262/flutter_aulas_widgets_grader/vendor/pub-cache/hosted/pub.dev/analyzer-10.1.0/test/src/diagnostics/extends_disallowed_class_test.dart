@@ -1,0 +1,208 @@
+// Copyright (c) 2019, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(ExtendsDisallowedClassTest);
+  });
+}
+
+@reflectiveTest
+class ExtendsDisallowedClassTest extends PubPackageResolutionTest {
+  test_class_bool() async {
+    await assertErrorsInCode(
+      '''
+class A extends bool {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 4)],
+    );
+  }
+
+  test_class_double() async {
+    await assertErrorsInCode(
+      '''
+class A extends double {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 6)],
+    );
+  }
+
+  test_class_FutureOr() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+class A extends FutureOr {}
+''',
+      [error(diag.extendsDisallowedClass, 37, 8)],
+    );
+  }
+
+  test_class_FutureOr_typeArgument() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+class A extends FutureOr<int> {}
+''',
+      [error(diag.extendsDisallowedClass, 37, 13)],
+    );
+  }
+
+  test_class_FutureOr_typedef() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+typedef F = FutureOr<void>;
+class A extends F {}
+''',
+      [error(diag.extendsDisallowedClass, 65, 1)],
+    );
+  }
+
+  test_class_FutureOr_typeVariable() async {
+    await assertErrorsInCode(
+      '''
+import 'dart:async';
+class A<T> extends FutureOr<T> {}
+''',
+      [error(diag.extendsDisallowedClass, 40, 11)],
+    );
+  }
+
+  test_class_int() async {
+    await assertErrorsInCode(
+      '''
+class A extends int {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 3)],
+    );
+  }
+
+  test_class_Null() async {
+    await assertErrorsInCode(
+      '''
+class A extends Null {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 4)],
+    );
+  }
+
+  test_class_num() async {
+    await assertErrorsInCode(
+      '''
+class A extends num {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 3)],
+    );
+  }
+
+  test_class_Record() async {
+    await assertErrorsInCode(
+      '''
+class A extends Record {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 6)],
+    );
+  }
+
+  test_class_String() async {
+    await assertErrorsInCode(
+      '''
+class A extends String {}
+''',
+      [error(diag.extendsDisallowedClass, 16, 6)],
+    );
+  }
+
+  @SkippedTest() // TODO(scheglov): implement augmentation
+  test_class_String_inAugmentation() async {
+    var a = newFile('$testPackageLibPath/a.dart', r'''
+part 'b.dart';
+class A {}
+''');
+
+    var b = newFile('$testPackageLibPath/b.dart', r'''
+part of 'a.dart';
+augment class A extends String {}
+''');
+
+    await assertErrorsInFile2(a, []);
+    await assertErrorsInFile2(b, [error(diag.extendsDisallowedClass, 42, 6)]);
+  }
+
+  test_classTypeAlias_bool() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = bool with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 4)],
+    );
+  }
+
+  test_classTypeAlias_double() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = double with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 6)],
+    );
+  }
+
+  test_classTypeAlias_FutureOr() async {
+    await assertErrorsInCode(
+      r'''
+import 'dart:async';
+class M {}
+class C = FutureOr with M;
+''',
+      [error(diag.extendsDisallowedClass, 42, 8)],
+    );
+  }
+
+  test_classTypeAlias_int() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = int with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 3)],
+    );
+  }
+
+  test_classTypeAlias_Null() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = Null with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 4)],
+    );
+  }
+
+  test_classTypeAlias_num() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = num with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 3)],
+    );
+  }
+
+  test_classTypeAlias_String() async {
+    await assertErrorsInCode(
+      r'''
+class M {}
+class C = String with M;
+''',
+      [error(diag.extendsDisallowedClass, 21, 6)],
+    );
+  }
+}

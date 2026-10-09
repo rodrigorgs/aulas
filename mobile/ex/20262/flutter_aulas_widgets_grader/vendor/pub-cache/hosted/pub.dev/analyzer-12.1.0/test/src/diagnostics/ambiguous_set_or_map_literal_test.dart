@@ -1,0 +1,128 @@
+// Copyright (c) 2019, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(AmbiguousSetOrMapLiteralBothTest);
+    defineReflectiveTests(AmbiguousSetOrMapLiteralEitherTest);
+  });
+}
+
+@reflectiveTest
+class AmbiguousSetOrMapLiteralBothTest extends PubPackageResolutionTest {
+  test_map() async {
+    await assertNoErrorsInCode('''
+f(Map<int, int> map) {
+  return {...map};
+}
+''');
+  }
+
+  test_map_dynamic() async {
+    await assertNoErrorsInCode('''
+f(Map map) {
+  return {...map};
+}
+''');
+  }
+
+  test_map_keyNonNullable_valueNullable() async {
+    await assertNoErrorsInCode('''
+f(Map<int, int?> map) {
+  return {...map};
+}
+''');
+  }
+
+  test_map_keyNullable_valueNonNullable() async {
+    await assertNoErrorsInCode('''
+f(Map<int?, int> map) {
+  return {...map};
+}
+''');
+  }
+
+  test_map_keyNullable_valueNullable() async {
+    await assertNoErrorsInCode('''
+f(Map<int?, int?> map) {
+  return {...map};
+}
+''');
+  }
+
+  test_set() async {
+    await assertNoErrorsInCode('''
+f(Set<int> set) {
+  return {...set};
+}
+''');
+  }
+
+  test_set_dynamic() async {
+    await assertNoErrorsInCode('''
+f(Set set) {
+  return {...set};
+}
+''');
+  }
+
+  test_set_elementNullable() async {
+    await assertNoErrorsInCode('''
+f(Set<int?> set) {
+  return {...set};
+}
+''');
+  }
+
+  test_setAndMap() async {
+    await assertErrorsInCode(
+      '''
+f(Map<int, int> map, Set<int> set) {
+  return {...set, ...map};
+}
+''',
+      [error(diag.ambiguousSetOrMapLiteralBoth, 46, 16)],
+    );
+  }
+
+  test_setAndMap_nullable() async {
+    await assertErrorsInCode(
+      '''
+f(Map<int?, int> map, Set<int?> set) {
+  return {...set, ...map};
+}
+''',
+      [error(diag.ambiguousSetOrMapLiteralBoth, 48, 16)],
+    );
+  }
+}
+
+@reflectiveTest
+class AmbiguousSetOrMapLiteralEitherTest extends PubPackageResolutionTest {
+  test_invalidPrefixOperator() async {
+    // Guard against an exception being thrown.
+    await assertErrorsInCode(
+      '''
+union(a, b) => !{...a, ...b};
+''',
+      [error(diag.ambiguousSetOrMapLiteralEither, 16, 12)],
+    );
+  }
+
+  test_setAndMap() async {
+    await assertErrorsInCode(
+      '''
+var map;
+var set;
+var c = {...set, ...map};
+''',
+      [error(diag.ambiguousSetOrMapLiteralEither, 26, 16)],
+    );
+  }
+}

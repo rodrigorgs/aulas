@@ -8,12 +8,11 @@ WORKDIR /opt/grader
 
 COPY pubspec.yaml pubspec.lock ./
 COPY vendor/pub-cache /opt/pub-cache
-COPY assets ./assets
 COPY lib ./lib
 COPY test ./test
 
-# The runner builds with networking disabled, so the exact packages required by
-# the pinned Flutter image are included in vendor/pub-cache.
+# Both the application and Flutter tool dependencies are bundled so the
+# ezsubmission runner can build with networking disabled.
 RUN cd /sdks/flutter/packages/flutter_tools \
     && /sdks/flutter/bin/cache/dart-sdk/bin/dart pub get --offline \
     && cd /opt/grader \

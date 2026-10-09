@@ -1,0 +1,1164 @@
+// Copyright (c) 2019, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import '../dart/resolution/context_collection_resolution.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(InvalidAssignment_ImplicitCallReferenceTest);
+    defineReflectiveTests(InvalidAssignmentTest);
+    defineReflectiveTests(InvalidAssignmentWithStrictCastsTest);
+  });
+}
+
+@reflectiveTest
+class InvalidAssignment_ImplicitCallReferenceTest
+    extends PubPackageResolutionTest {
+  test_invalid_genericBoundedCall_nonGenericContext() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  T call<T extends num>(T t) => t;
+}
+
+String Function(String) f = C();
+''',
+      [error(diag.invalidAssignment, 76, 3)],
+    );
+  }
+
+  test_invalid_genericCall_genericEnclosingClass_nonGenericContext() async {
+    await assertErrorsInCode(
+      '''
+class C<T> {
+  C(T a);
+  void call<U>(T t, U u) {}
+}
+
+void Function(bool, String) f = C(7);
+''',
+      [
+        // The type arguments of the instance of `C` should be accurate and be
+        // taken into account when evaluating the assignment of the implicit call
+        // reference.
+        error(diag.invalidAssignment, 86, 4),
+      ],
+    );
+  }
+
+  test_invalid_genericCall_nonGenericContext() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  T call<T>(T t) => t;
+}
+
+void Function() f = C();
+''',
+      [error(diag.invalidAssignment, 56, 3)],
+    );
+  }
+
+  test_invalid_genericCall_nonGenericContext_withoutConstructorTearoffs() async {
+    await assertErrorsInCode(
+      '''
+// @dart=2.12
+class C {
+  T call<T>(T t) => t;
+}
+
+int Function(int) f = C();
+''',
+      [error(diag.invalidAssignment, 72, 3)],
+    );
+  }
+
+  test_invalid_interfaceType_enum_interfaces() async {
+    await assertErrorsInCode(
+      '''
+class I {}
+class J {}
+enum E implements J {
+  v
+}
+I x = E.v;
+''',
+      [error(diag.invalidAssignment, 56, 3)],
+    );
+  }
+
+  test_invalid_message_preferTypeAlias_functionType() async {
+    await assertErrorsInCode(
+      '''
+typedef A<T> = T Function();
+
+void f(A<int> a) {
+  A<String> b = a;
+}
+''',
+      [
+        error(diag.unusedLocalVariable, 61, 1),
+        error(
+          diag.invalidAssignment,
+          65,
+          1,
+          messageContains: ['A<int>', 'A<String>'],
+        ),
+      ],
+    );
+  }
+
+  test_invalid_message_preferTypeAlias_interfaceType() async {
+    await assertErrorsInCode(
+      '''
+typedef A<T> = List<T>;
+
+void f(A<int> a) {
+  A<String> b = a;
+}
+''',
+      [
+        error(diag.unusedLocalVariable, 56, 1),
+        error(
+          diag.invalidAssignment,
+          60,
+          1,
+          messageContains: ['A<int>', 'A<String>'],
+        ),
+      ],
+    );
+  }
+
+  test_invalid_message_preferTypeAlias_recordType() async {
+    await assertErrorsInCode(
+      '''
+typedef A<T> = (T, T);
+
+void f(A<int> a) {
+  A<String> b = a;
+}
+''',
+      [
+        error(diag.unusedLocalVariable, 55, 1),
+        error(
+          diag.invalidAssignment,
+          59,
+          1,
+          messageContains: ['A<int>', 'A<String>'],
+        ),
+      ],
+    );
+  }
+
+  test_invalid_noCall_functionContext() async {
+    await assertErrorsInCode(
+      '''
+class C {}
+
+Function f = C();
+''',
+      [error(diag.invalidAssignment, 25, 3)],
+    );
+  }
+
+  test_invalid_noCall_functionTypeContext() async {
+    await assertErrorsInCode(
+      '''
+class C {}
+
+String Function(String) f = C();
+''',
+      [error(diag.invalidAssignment, 40, 3)],
+    );
+  }
+
+  test_invalid_nonGenericCall() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  void call(int a) {}
+}
+
+void Function(String) f = C();
+''',
+      [error(diag.invalidAssignment, 61, 3)],
+    );
+  }
+
+  test_invalid_nonGenericCall_typeVariableExtendsFunctionContext() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  void call(int a) {}
+}
+class D<U extends Function> {
+  U f = C();
+}
+''',
+      [error(diag.invalidAssignment, 72, 3)],
+    );
+  }
+
+  test_invalid_nonGenericCall_typeVariableExtendsFunctionTypeContext() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  void call(int a) {}
+}
+class D<U extends void Function(int)> {
+  U f = C();
+}
+''',
+      [error(diag.invalidAssignment, 82, 3)],
+    );
+  }
+
+  test_valid_genericBoundedCall_nonGenericContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T extends num>(T t) => t;
+}
+
+int Function(int) f = C();
+''');
+  }
+
+  test_valid_genericCall_functionContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+Function f = C();
+''');
+  }
+
+  test_valid_genericCall_futureOrFunctionContext() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+class C {
+  T call<T>(T t) => t;
+}
+
+FutureOr<Function> f = C();
+''');
+  }
+
+  test_valid_genericCall_futureOrFunctionTypeContext_generic() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+class C {
+  T call<T>(T t) => t;
+}
+
+FutureOr<T Function<T>(T)> f = C();
+''');
+  }
+
+  test_valid_genericCall_futureOrFunctionTypeContext_nonGeneric() async {
+    await assertNoErrorsInCode('''
+import 'dart:async';
+class C {
+  T call<T>(T t) => t;
+}
+
+FutureOr<int Function(int)> f = C();
+''');
+  }
+
+  test_valid_genericCall_genericContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+T Function<T>(T) f = C();
+''');
+  }
+
+  test_valid_genericCall_genericEnclosingClass_nonGenericContext() async {
+    await assertNoErrorsInCode('''
+class C<T> {
+  C(T a);
+  void call<U>(T t, U u) {}
+}
+
+void Function(int, String) f = C(7);
+''');
+  }
+
+  test_valid_genericCall_genericTypedefContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+typedef Fn<T> = T Function(T);
+class D<U> {
+  Fn<U> f = C();
+}
+
+''');
+  }
+
+  test_valid_genericCall_nonGenericContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+int Function(int) f = C();
+''');
+  }
+
+  test_valid_genericCall_nullableFunctionContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+Function? f = C();
+''');
+  }
+
+  test_valid_genericCall_nullableNonGenericContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+int Function(int)? f = C();
+''');
+  }
+
+  test_valid_genericCall_typedefOfGenericContext() async {
+    await assertNoErrorsInCode('''
+class C {
+  T call<T>(T t) => t;
+}
+
+typedef Fn = T Function<T>(T);
+
+Fn f = C();
+''');
+  }
+
+  test_valid_interfaceType_enum_interfaces() async {
+    await assertNoErrorsInCode('''
+class I {}
+enum E implements I {
+  v
+}
+I x = E.v;
+''');
+  }
+
+  test_valid_nonGenericCall() async {
+    await assertNoErrorsInCode('''
+class C {
+  void call(int a) {}
+}
+
+void Function(int) f = C();
+''');
+  }
+
+  test_valid_nonGenericCall_declaredOnMixin() async {
+    await assertNoErrorsInCode('''
+mixin M {
+  void call(int a) {}
+}
+class C with M {}
+
+Function f = C();
+''');
+  }
+
+  test_valid_nonGenericCall_inCascade() async {
+    await assertNoErrorsInCode('''
+class C {
+  void call(int a) {}
+}
+class D {
+  late void Function(int) f;
+}
+
+void foo() {
+  D()..f = C();
+}
+''');
+  }
+
+  test_valid_nonGenericCall_subTypeViaParameter() async {
+    await assertNoErrorsInCode('''
+class C {
+  void call(num a) {}
+}
+
+void Function(int) f = C();
+''');
+  }
+
+  test_valid_nonGenericCall_subTypeViaReturnType() async {
+    await assertNoErrorsInCode('''
+class C {
+  int call() => 7;
+}
+
+num Function() f = C();
+''');
+  }
+}
+
+@reflectiveTest
+class InvalidAssignmentTest extends PubPackageResolutionTest {
+  test_assignment_to_dynamic() async {
+    await assertErrorsInCode(
+      r'''
+f() {
+  var g;
+  g = () => 0;
+}
+''',
+      [error(diag.unusedLocalVariable, 12, 1)],
+    );
+  }
+
+  test_cascadeExpression() async {
+    await assertErrorsInCode(
+      r'''
+void f(int a) {
+  // ignore:unused_local_variable
+  String v = (a)..isEven;
+}
+''',
+      [error(diag.invalidAssignment, 64, 1)],
+    );
+  }
+
+  test_compoundAssignment() async {
+    await assertErrorsInCode(
+      r'''
+class byte {
+  int _value;
+  byte(this._value);
+  byte operator +(int val) { return this; }
+}
+
+void main() {
+  byte b = new byte(52);
+  b += 3;
+}
+''',
+      [error(diag.unusedField, 19, 6), error(diag.unusedLocalVariable, 116, 1)],
+    );
+  }
+
+  test_constructorTearoff_inferredTypeArgs() async {
+    await assertNoErrorsInCode('''
+class C<T> {
+  C(T a);
+}
+
+var g = C<int>.new;
+''');
+  }
+
+  test_constructorTearoff_withExplicitTypeArgs() async {
+    await assertNoErrorsInCode('''
+class C<T> {
+  C(T a);
+}
+
+C Function(int) g = C<int>.new;
+''');
+  }
+
+  test_constructorTearoff_withExplicitTypeArgs_invalid() async {
+    await assertErrorsInCode(
+      '''
+class C<T> {
+  C(T a);
+}
+
+C Function(String) g = C<int>.new;
+''',
+      [error(diag.invalidAssignment, 49, 10)],
+    );
+  }
+
+  test_defaultValue_named() async {
+    await assertErrorsInCode(
+      r'''
+f({String x = 0}) {
+}
+''',
+      [error(diag.invalidAssignment, 14, 1)],
+    );
+  }
+
+  test_defaultValue_named_sameType() async {
+    await assertNoErrorsInCode(r'''
+f({String x = '0'}) {
+}''');
+  }
+
+  test_defaultValue_optional() async {
+    await assertErrorsInCode(
+      r'''
+f([String x = 0]) {
+}''',
+      [error(diag.invalidAssignment, 14, 1)],
+    );
+  }
+
+  test_defaultValue_optional_sameType() async {
+    await assertNoErrorsInCode(r'''
+f([String x = '0']) {
+}
+''');
+  }
+
+  test_functionExpressionInvocation() async {
+    await assertErrorsInCode(
+      '''
+class C {
+  String x = (() => 5)();
+}
+''',
+      [error(diag.invalidAssignment, 23, 11)],
+    );
+  }
+
+  test_functionInstantiation_topLevelVariable_genericContext_assignable() async {
+    await assertNoErrorsInCode('''
+T f<T>(T a) => a;
+U Function<U>(U) foo = f;
+''');
+  }
+
+  test_functionInstantiation_topLevelVariable_genericContext_nonAssignable() async {
+    await assertErrorsInCode(
+      '''
+T f<T>(T a) => a;
+U Function<U>(U, int) foo = f;
+''',
+      [error(diag.invalidAssignment, 46, 1)],
+    );
+  }
+
+  test_functionInstantiation_topLevelVariable_nonGenericContext_assignable() async {
+    await assertNoErrorsInCode('''
+T f<T>(T a) => a;
+int Function(int) foo = f;
+''');
+  }
+
+  test_functionInstantiation_topLevelVariable_nonGenericContext_nonAssignable() async {
+    await assertErrorsInCode(
+      '''
+T f<T>(T a) => a;
+int Function(int, int) foo = f;
+''',
+      [error(diag.invalidAssignment, 47, 1)],
+    );
+  }
+
+  test_functionTearoff_genericInstantiation() async {
+    await assertNoErrorsInCode('''
+int Function() foo(int Function<T extends int>() f) {
+  return f;
+}
+''');
+
+    assertResolvedNodeText(findNode.functionReference('f;'), r'''
+FunctionReference
+  function: SimpleIdentifier
+    token: f
+    element: <testLibrary>::@function::foo::@formalParameter::f
+    staticType: int Function<T extends int>()
+  staticType: int Function()
+  typeArgumentTypes
+    int
+''');
+  }
+
+  test_functionTearoff_inferredTypeArgs() async {
+    await assertNoErrorsInCode('''
+void f<T>(T a) {}
+
+var g = f<int>;
+''');
+  }
+
+  test_functionTearoff_withExplicitTypeArgs() async {
+    await assertNoErrorsInCode('''
+void f<T>(T a) {}
+
+void Function(int) g = f<int>;
+''');
+  }
+
+  test_functionTearoff_withExplicitTypeArgs_invalid() async {
+    await assertErrorsInCode(
+      '''
+void f<T>(T a) {}
+
+void Function(String) g = f<int>;
+''',
+      [error(diag.invalidAssignment, 45, 6)],
+    );
+  }
+
+  test_ifNullAssignment() async {
+    await assertErrorsInCode(
+      '''
+void f(int i) {
+  double? d;
+  d ??= i;
+}
+''',
+      [error(diag.invalidAssignment, 37, 1)],
+    );
+  }
+
+  test_ifNullAssignment_sameType() async {
+    await assertNoErrorsInCode('''
+void f(int i) {
+  int? j;
+  j ??= i;
+}
+''');
+  }
+
+  test_ifNullAssignment_superType() async {
+    await assertNoErrorsInCode('''
+void f(int i) {
+  num? n;
+  n ??= i;
+}
+''');
+  }
+
+  test_implicitlyImplementFunctionViaCall_1() async {
+    // issue 18341
+    //
+    // This test and
+    // 'test_invalidAssignment_implicitlyImplementFunctionViaCall_2()' are
+    // closely related: here we see that 'I' checks as a subtype of 'IntToInt'.
+    await assertNoErrorsInCode(r'''
+class I {
+  int call(int x) => 0;
+}
+class C implements I {
+  noSuchMethod(_) => null;
+}
+typedef int IntToInt(int x);
+IntToInt f = new I();
+''');
+  }
+
+  test_implicitlyImplementFunctionViaCall_2() async {
+    // issue 18341
+    //
+    // Here 'C' checks as a subtype of 'I', but 'C' does not check as a subtype
+    // of 'IntToInt'. Together with
+    // 'test_invalidAssignment_implicitlyImplementFunctionViaCall_1()' we see
+    // that subtyping is not transitive here.
+    await assertNoErrorsInCode(r'''
+class I {
+  int call(int x) => 0;
+}
+class C implements I {
+  noSuchMethod(_) => null;
+}
+typedef int IntToInt(int x);
+IntToInt f = new C();
+''');
+  }
+
+  test_implicitlyImplementFunctionViaCall_3() async {
+    // issue 18341
+    //
+    // Like 'test_invalidAssignment_implicitlyImplementFunctionViaCall_2()', but
+    // uses type 'Function' instead of more precise type 'IntToInt' for 'f'.
+    await assertNoErrorsInCode(r'''
+class I {
+  int call(int x) => 0;
+}
+class C implements I {
+  noSuchMethod(_) => null;
+}
+typedef int IntToInt(int x);
+Function f = new C();
+''');
+  }
+
+  test_implicitlyImplementFunctionViaCall_4() async {
+    // issue 18341
+    //
+    // Like 'test_invalidAssignment_implicitlyImplementFunctionViaCall_2()', but
+    // uses type 'VoidToInt' instead of more precise type 'IntToInt' for 'f'.
+    //
+    // Here 'C <: IntToInt <: VoidToInt', but the spec gives no transitivity
+    // rule for '<:'. However, many of the :/tools/test.py tests assume this
+    // transitivity for 'JsBuilder' objects, assigning them to
+    // '(String) -> dynamic'. The declared type of 'JsBuilder.call' is
+    // '(String, [dynamic]) -> Expression'.
+    await assertNoErrorsInCode(r'''
+class I {
+  int call([int x = 7]) => 0;
+}
+class C implements I {
+  noSuchMethod(_) => null;
+}
+typedef int VoidToInt();
+VoidToInt f = new C();
+''');
+  }
+
+  test_instanceVariable() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  int x = 7;
+}
+f(y) {
+  A a = A();
+  if (y is String) {
+    a.x = y;
+  }
+}
+''',
+      [error(diag.invalidAssignment, 76, 1)],
+    );
+  }
+
+  test_invalidAssignment() async {
+    await assertErrorsInCode(
+      r'''
+f() {
+  var x;
+  var y;
+  x = y;
+}
+''',
+      [error(diag.unusedLocalVariable, 12, 1)],
+    );
+  }
+
+  test_localLevelVariable_never_null() async {
+    await assertErrorsInCode(
+      '''
+void f(Never x) {
+  x = null;
+}
+''',
+      [error(diag.invalidAssignment, 24, 4)],
+    );
+  }
+
+  test_localVariable() async {
+    await assertErrorsInCode(
+      r'''
+f() {
+  int x;
+  x = '0';
+}
+''',
+      [
+        error(diag.unusedLocalVariable, 12, 1),
+        error(diag.invalidAssignment, 21, 3),
+      ],
+    );
+  }
+
+  test_localVariable_promotion() async {
+    await assertErrorsInCode(
+      r'''
+f(y) {
+  if (y is String) {
+    int x = y;
+    print(x);
+  }
+}
+''',
+      [error(diag.invalidAssignment, 40, 1)],
+    );
+  }
+
+  test_parenthesizedExpression() async {
+    await assertErrorsInCode(
+      r'''
+void f(int a) {
+  // ignore:unused_local_variable
+  String v = (a);
+}
+''',
+      [error(diag.invalidAssignment, 64, 1)],
+    );
+  }
+
+  test_postfixExpression_localVariable() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  B operator+(_) => new B();
+}
+
+class B {}
+
+f(A a) {
+  a++;
+}
+''',
+      [error(diag.invalidAssignment, 65, 3)],
+    );
+  }
+
+  test_postfixExpression_localVariable_sameType() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A operator+(_) => this;
+}
+
+f(A a) {
+  a++;
+}
+''');
+  }
+
+  test_postfixExpression_property() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  B operator+(_) => new B();
+}
+
+class B {}
+
+class C {
+  A a = A();
+}
+
+f(C c) {
+  c.a++;
+}
+''',
+      [error(diag.invalidAssignment, 91, 5)],
+    );
+  }
+
+  test_postfixExpression_property_sameType() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A operator+(_) => this;
+}
+
+class C {
+  A a = A();
+}
+
+f(C c) {
+  c.a++;
+}
+''');
+  }
+
+  test_prefixExpression_localVariable() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  B operator+(_) => new B();
+}
+
+class B {}
+
+f(A a) {
+  ++a;
+}
+''',
+      [error(diag.invalidAssignment, 65, 3)],
+    );
+  }
+
+  test_prefixExpression_localVariable_sameType() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A operator+(_) => this;
+}
+
+f(A a) {
+  ++a;
+}
+''');
+  }
+
+  test_prefixExpression_property() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  B operator+(_) => new B();
+}
+
+class B {}
+
+class C {
+  A a = A();
+}
+
+f(C c) {
+  ++c.a;
+}
+''',
+      [error(diag.invalidAssignment, 91, 5)],
+    );
+  }
+
+  test_prefixExpression_property_sameType() async {
+    await assertNoErrorsInCode(r'''
+class A {
+  A operator+(_) => this;
+}
+
+class C {
+  A a = A();
+}
+
+f(C c) {
+  ++c.a;
+}
+''');
+  }
+
+  test_promotedTypeParameter_regress35306() async {
+    await assertErrorsInCode(
+      r'''
+class A {}
+class B extends A {}
+class C extends D {}
+class D {}
+
+void f<X extends A, Y extends B>(X x) {
+  if (x is Y) {
+    A a = x;
+    B b = x;
+    X x2 = x;
+    Y y = x;
+  }
+}
+''',
+      [
+        error(diag.unusedLocalVariable, 127, 1),
+        error(diag.unusedLocalVariable, 140, 1),
+        error(diag.unusedLocalVariable, 153, 2),
+        error(diag.unusedLocalVariable, 167, 1),
+      ],
+    );
+  }
+
+  void test_recordType_localVariable_initializer() async {
+    await assertErrorsInCode(
+      '''
+void f() {
+  (int, int) r = (a: 1, b: 2);
+  print(r);
+}
+''',
+      [error(diag.invalidAssignment, 28, 12)],
+    );
+  }
+
+  void test_recordType_parameter() async {
+    await assertErrorsInCode(
+      '''
+void f((int a, int b) r) {
+  r = (a: 1, b: 2);
+}
+''',
+      [error(diag.invalidAssignment, 33, 12)],
+    );
+  }
+
+  void test_recordType_setter() async {
+    await assertErrorsInCode(
+      '''
+void f(C c) {
+  c.r = (a: 1, b: 2);
+}
+class C {
+  (int, int)? r;
+}
+''',
+      [error(diag.invalidAssignment, 22, 12)],
+    );
+  }
+
+  test_regressionInIssue18468Fix() async {
+    // https://code.google.com/p/dart/issues/detail?id=18628
+    await assertErrorsInCode(
+      r'''
+class C<T> {
+  T t = int;
+}
+''',
+      [error(diag.invalidAssignment, 21, 3)],
+    );
+  }
+
+  test_staticVariable() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  static int x = 1;
+}
+f() {
+  A.x = '0';
+}
+''',
+      [error(diag.invalidAssignment, 46, 3)],
+    );
+  }
+
+  test_staticVariable_promoted() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  static int x = 7;
+}
+f(y) {
+  if (y is String) {
+    A.x = y;
+  }
+}
+''',
+      [error(diag.invalidAssignment, 70, 1)],
+    );
+  }
+
+  test_topLevelVariable_never_null() async {
+    await assertErrorsInCode(
+      '''
+Never x = throw 0;
+
+void f() {
+  x = null;
+}
+''',
+      [error(diag.invalidAssignment, 37, 4)],
+    );
+  }
+
+  test_topLevelVariableDeclaration() async {
+    await assertErrorsInCode(
+      '''
+int x = 'string';
+''',
+      [error(diag.invalidAssignment, 8, 8)],
+    );
+  }
+
+  test_typeParameter() async {
+    // https://github.com/dart-lang/sdk/issues/14221
+    await assertErrorsInCode(
+      r'''
+class B<T> {
+  T? value;
+  void test(num n) {
+    value = n;
+  }
+}
+''',
+      [error(diag.invalidAssignment, 58, 1)],
+    );
+  }
+
+  test_typeParameterRecursion_regress35306() async {
+    await assertErrorsInCode(
+      r'''
+class A {}
+class B extends A {}
+class C extends D {}
+class D {}
+
+void f<X extends A, Y extends B>(X x) {
+  if (x is Y) {
+    D d = x;
+    print(d);
+  }
+}
+''',
+      [error(diag.invalidAssignment, 131, 1)],
+    );
+  }
+
+  test_variableDeclaration() async {
+    await assertErrorsInCode(
+      r'''
+class A {
+  int x = 'string';
+}
+''',
+      [error(diag.invalidAssignment, 20, 8)],
+    );
+  }
+
+  test_variableDeclaration_overriddenOperator() async {
+    // https://github.com/dart-lang/sdk/issues/17971
+    await assertErrorsInCode(
+      r'''
+class Point {
+  final num x, y;
+  Point(this.x, this.y);
+  Point operator +(Point other) {
+    return new Point(x+other.x, y+other.y);
+  }
+}
+main() {
+  var p1 = new Point(0, 0);
+  var p2 = new Point(10, 10);
+  int n = p1 + p2;
+  print(n);
+}
+''',
+      [error(diag.invalidAssignment, 218, 7)],
+    );
+  }
+}
+
+@reflectiveTest
+class InvalidAssignmentWithStrictCastsTest extends PubPackageResolutionTest
+    with WithStrictCastsMixin {
+  test_functionType() async {
+    await assertErrorsWithStrictCasts(
+      '''
+dynamic a;
+void Function(int i) f = a;
+''',
+      [error(diag.invalidAssignment, 36, 1)],
+    );
+  }
+
+  test_interfaceType() async {
+    await assertErrorsWithStrictCasts(
+      '''
+dynamic a;
+int b = a;
+''',
+      [error(diag.invalidAssignment, 19, 1)],
+    );
+  }
+
+  test_recordType() async {
+    await assertErrorsWithStrictCasts(
+      '''
+dynamic a;
+(int i, ) r = a;
+''',
+      [error(diag.invalidAssignment, 25, 1)],
+    );
+  }
+}

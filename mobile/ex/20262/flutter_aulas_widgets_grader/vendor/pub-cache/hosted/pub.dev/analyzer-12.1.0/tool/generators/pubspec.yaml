@@ -1,0 +1,17 @@
+name: ast_generator
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  analysis_server_client: any
+  analyzer: any
+  collection: any
+  path: any
+  analyzer_testing: any
+  analyzer_utilities:
+    path: ../../../analyzer_utilities
+
+dependency_overrides:
+  analyzer: any
+
+

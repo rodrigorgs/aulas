@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Instance class from the vm_service library, for the Dart programming language.">
+  <title>Instance class - vm_service library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service.dart</a></li>
+    <li class="self-crumb">Instance class</li>
+  </ol>
+  <div class="self-name">Instance</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="vm_service&#47;vm_service-library-sidebar.html"
+    data-below-sidebar="vm_service&#47;Instance-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Instance</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An <code>Instance</code> represents an instance of the Dart language class <code>Obj</code>.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../vm_service/Response-class.html">Response</a></li>
+        <li><a href="../vm_service/Obj-class.html">Obj</a></li>
+      <li>Instance</li>
+    </ul>
+  </dd>
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="../vm_service/InstanceRef-class.html">InstanceRef</a></li>
+    </ul>
+  </dd>
+        
+
+          <dt>Implementers</dt>
+          <dd><ul class="comma-separated clazz-relationships">
+              <li><a href="../vm_service/NullVal-class.html">NullVal</a></li>
+          </ul></dd>
+
+        
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="Instance.new" class="callable">
+          <span class="name"><a href="../vm_service/Instance/Instance.html">Instance</a></span><span class="signature">({<span class="parameter" id="param-kind"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">kind</span>, </span><span class="parameter" id="param-identityHashCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">identityHashCode</span>, </span><span class="parameter" id="param-classRef"><span class="type-annotation"><a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span> <span class="parameter-name">classRef</span>, </span><span class="parameter" id="param-id"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">id</span>, </span><span class="parameter" id="param-valueAsString"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">valueAsString</span>, </span><span class="parameter" id="param-valueAsStringIsTruncated"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">valueAsStringIsTruncated</span>, </span><span class="parameter" id="param-length"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">length</span>, </span><span class="parameter" id="param-offset"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">offset</span>, </span><span class="parameter" id="param-count"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">count</span>, </span><span class="parameter" id="param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="param-typeClass"><span class="type-annotation"><a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span> <span class="parameter-name">typeClass</span>, </span><span class="parameter" id="param-parameterizedClass"><span class="type-annotation"><a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span> <span class="parameter-name">parameterizedClass</span>, </span><span class="parameter" id="param-returnType"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">returnType</span>, </span><span class="parameter" id="param-parameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Parameter-class.html">Parameter</a></span>&gt;</span>?</span> <span class="parameter-name">parameters</span>, </span><span class="parameter" id="param-typeParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a></span>&gt;</span>?</span> <span class="parameter-name">typeParameters</span>, </span><span class="parameter" id="param-fields"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/BoundField-class.html">BoundField</a></span>&gt;</span>?</span> <span class="parameter-name">fields</span>, </span><span class="parameter" id="param-elements"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a>?</span> <span class="parameter-name">elements</span>, </span><span class="parameter" id="param-associations"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/MapAssociation-class.html">MapAssociation</a></span>&gt;</span>?</span> <span class="parameter-name">associations</span>, </span><span class="parameter" id="param-bytes"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">bytes</span>, </span><span class="parameter" id="param-mirrorReferent"><span class="type-annotation"><a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span> <span class="parameter-name">mirrorReferent</span>, </span><span class="parameter" id="param-pattern"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">pattern</span>, </span><span class="parameter" id="param-closureFunction"><span class="type-annotation"><a href="../vm_service/FuncRef-class.html">FuncRef</a>?</span> <span class="parameter-name">closureFunction</span>, </span><span class="parameter" id="param-closureContext"><span class="type-annotation"><a href="../vm_service/ContextRef-class.html">ContextRef</a>?</span> <span class="parameter-name">closureContext</span>, </span><span class="parameter" id="param-closureReceiver"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">closureReceiver</span>, </span><span class="parameter" id="param-isCaseSensitive"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isCaseSensitive</span>, </span><span class="parameter" id="param-isMultiLine"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isMultiLine</span>, </span><span class="parameter" id="param-propertyKey"><span class="type-annotation"><a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span> <span class="parameter-name">propertyKey</span>, </span><span class="parameter" id="param-propertyValue"><span class="type-annotation"><a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span> <span class="parameter-name">propertyValue</span>, </span><span class="parameter" id="param-target"><span class="type-annotation"><a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span> <span class="parameter-name">target</span>, </span><span class="parameter" id="param-typeArguments"><span class="type-annotation"><a href="../vm_service/TypeArgumentsRef-class.html">TypeArgumentsRef</a>?</span> <span class="parameter-name">typeArguments</span>, </span><span class="parameter" id="param-parameterIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">parameterIndex</span>, </span><span class="parameter" id="param-targetType"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">targetType</span>, </span><span class="parameter" id="param-bound"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">bound</span>, </span><span class="parameter" id="param-portId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">portId</span>, </span><span class="parameter" id="param-allocationLocation"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">allocationLocation</span>, </span><span class="parameter" id="param-debugName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">debugName</span>, </span><span class="parameter" id="param-label"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">label</span>, </span><span class="parameter" id="param-callback"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="param-callbackAddress"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">callbackAddress</span>, </span><span class="parameter" id="param-allEntries"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">allEntries</span>, </span><span class="parameter" id="param-value"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">value</span>, </span><span class="parameter" id="param-token"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">token</span>, </span><span class="parameter" id="param-detach"><span class="type-annotation"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span> <span class="parameter-name">detach</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="allEntries" class="property">
+  <span class="name"><a href="../vm_service/Instance/allEntries.html">allEntries</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The entries for a (Native)Finalizer instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="allocationLocation" class="property">
+  <span class="name"><a href="../vm_service/Instance/allocationLocation.html">allocationLocation</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The stack trace associated with the allocation of a ReceivePort.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="associations" class="property">
+  <span class="name"><a href="../vm_service/Instance/associations.html">associations</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/MapAssociation-class.html">MapAssociation</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The elements of a Map instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="bound" class="property">
+  <span class="name"><a href="../vm_service/Instance/bound.html">bound</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The bound of a TypeParameter or BoundedType.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="bytes" class="property">
+  <span class="name"><a href="../vm_service/Instance/bytes.html">bytes</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The bytes of a TypedData instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="callback" class="property">
+  <span class="name"><a href="../vm_service/Instance/callback.html">callback</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The callback for a Finalizer instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="callbackAddress" class="property">
+  <span class="name"><a href="../vm_service/Instance/callbackAddress.html">callbackAddress</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The callback for a NativeFinalizer instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="classRef" class="property">
+  <span class="name"><a href="../vm_service/Instance/classRef.html">classRef</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span>
+  
+
+</dt>
+<dd>
+  Instance references always include their class.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="closureContext" class="property">
+  <span class="name"><a href="../vm_service/Instance/closureContext.html">closureContext</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ContextRef-class.html">ContextRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The context associated with a Closure instance.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="closureFunction" class="property">
+  <span class="name"><a href="../vm_service/Instance/closureFunction.html">closureFunction</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/FuncRef-class.html">FuncRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The function associated with a Closure instance.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="closureReceiver" class="property">
+  <span class="name"><a href="../vm_service/Instance/closureReceiver.html">closureReceiver</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The receiver captured by tear-off Closure instance.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="count" class="property">
+  <span class="name"><a href="../vm_service/Instance/count.html">count</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The number of elements or associations or codeunits returned. This is only
+provided when it is less than length.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="debugName" class="property">
+  <span class="name"><a href="../vm_service/Instance/debugName.html">debugName</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  A name associated with a ReceivePort used for debugging purposes.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="detach" class="property">
+  <span class="name"><a href="../vm_service/Instance/detach.html">detach</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The detach key for a FinalizerEntry instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="elements" class="property">
+  <span class="name"><a href="../vm_service/Instance/elements.html">elements</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a>?</span>
+  
+
+</dt>
+<dd>
+  The elements of a List or Set instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="fields" class="property">
+  <span class="name"><a href="../vm_service/Instance/fields.html">fields</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/BoundField-class.html">BoundField</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The (non-static) fields of this Instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="fixedId" class="property inherited">
+  <span class="name"><a href="../vm_service/Obj/fixedId.html">fixedId</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  Provided and set to true if the id of an Object is fixed. If true, the id
+of an Object is guaranteed not to change or expire. The object may,
+however, still be <em>Collected</em>.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../vm_service/Instance/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="id" class="property inherited">
+  <span class="name"><a href="../vm_service/Obj/id.html">id</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  A unique identifier for an Object. Passed to the getObject RPC to reload
+this Object.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="identityHashCode" class="property">
+  <span class="name"><a href="../vm_service/Instance/identityHashCode.html">identityHashCode</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The identityHashCode assigned to the allocated object. This hash code is
+the same as the hash code provided in HeapSnapshot and CpuSample's
+returned by getAllocationTraces().
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="isCaseSensitive" class="property">
+  <span class="name"><a href="../vm_service/Instance/isCaseSensitive.html">isCaseSensitive</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Whether this regular expression is case sensitive.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isMultiLine" class="property">
+  <span class="name"><a href="../vm_service/Instance/isMultiLine.html">isMultiLine</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Whether this regular expression matches multiple lines.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="json" class="property inherited">
+  <span class="name"><a href="../vm_service/Response/json.html">json</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="kind" class="property">
+  <span class="name"><a href="../vm_service/Instance/kind.html">kind</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  What kind of instance is this?
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="label" class="property">
+  <span class="name"><a href="../vm_service/Instance/label.html">label</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The label associated with a UserTag.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="length" class="property">
+  <span class="name"><a href="../vm_service/Instance/length.html">length</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The number of (non-static) fields of a PlainInstance, or the length of a
+List, or the number of associations in a Map, or the number of codeunits
+in a String, or the total number of fields (positional and named) in a
+Record.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="mirrorReferent" class="property">
+  <span class="name"><a href="../vm_service/Instance/mirrorReferent.html">mirrorReferent</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The referent of a MirrorReference instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="name" class="property">
+  <span class="name"><a href="../vm_service/Instance/name.html">name</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The name of a Type instance.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="offset" class="property">
+  <span class="name"><a href="../vm_service/Instance/offset.html">offset</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The index of the first element or association or codeunit returned. This
+is only provided when it is non-zero.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="parameterIndex" class="property">
+  <span class="name"><a href="../vm_service/Instance/parameterIndex.html">parameterIndex</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The index of a TypeParameter instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="parameterizedClass" class="property">
+  <span class="name"><a href="../vm_service/Instance/parameterizedClass.html">parameterizedClass</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The parameterized class of a type parameter:
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="parameters" class="property">
+  <span class="name"><a href="../vm_service/Instance/parameters.html">parameters</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/Parameter-class.html">Parameter</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The list of parameter types for a function.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="pattern" class="property">
+  <span class="name"><a href="../vm_service/Instance/pattern.html">pattern</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The pattern of a RegExp instance.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="portId" class="property">
+  <span class="name"><a href="../vm_service/Instance/portId.html">portId</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  The port ID for a ReceivePort.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="propertyKey" class="property">
+  <span class="name"><a href="../vm_service/Instance/propertyKey.html">propertyKey</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The key for a WeakProperty instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="propertyValue" class="property">
+  <span class="name"><a href="../vm_service/Instance/propertyValue.html">propertyValue</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The key for a WeakProperty instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="returnType" class="property">
+  <span class="name"><a href="../vm_service/Instance/returnType.html">returnType</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The return type of a function.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="size" class="property inherited">
+  <span class="name"><a href="../vm_service/Obj/size.html">size</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  The size of this object in the heap.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="target" class="property">
+  <span class="name"><a href="../vm_service/Instance/target.html">target</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ObjRef-class.html">ObjRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The target for a WeakReference instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="targetType" class="property">
+  <span class="name"><a href="../vm_service/Instance/targetType.html">targetType</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The type bounded by a BoundedType instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="token" class="property">
+  <span class="name"><a href="../vm_service/Instance/token.html">token</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The token passed to the finalizer callback for a FinalizerEntry instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../vm_service/Instance/type.html">type</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="typeArguments" class="property">
+  <span class="name"><a href="../vm_service/Instance/typeArguments.html">typeArguments</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/TypeArgumentsRef-class.html">TypeArgumentsRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The type arguments for this type.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="typeClass" class="property">
+  <span class="name"><a href="../vm_service/Instance/typeClass.html">typeClass</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/ClassRef-class.html">ClassRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The corresponding Class if this Type is canonical.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="typeParameters" class="property">
+  <span class="name"><a href="../vm_service/Instance/typeParameters.html">typeParameters</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../vm_service/InstanceRef-class.html">InstanceRef</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  The type parameters for a function.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="value" class="property">
+  <span class="name"><a href="../vm_service/Instance/value.html">value</a></span>
+  <span class="signature">&#8596; <a href="../vm_service/InstanceRef-class.html">InstanceRef</a>?</span>
+  
+
+</dt>
+<dd>
+  The value being watched for finalization for a FinalizerEntry instance.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="valueAsString" class="property">
+  <span class="name"><a href="../vm_service/Instance/valueAsString.html">valueAsString</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The value of this instance as a string.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="valueAsStringIsTruncated" class="property">
+  <span class="name"><a href="../vm_service/Instance/valueAsStringIsTruncated.html">valueAsStringIsTruncated</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  The valueAsString for String references may be truncated. If so, this
+property is added with the value 'true'.
+  <div class="features"><span class="feature">getter/setter pair</span><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toJson" class="callable">
+  <span class="name"><a href="../vm_service/Instance/toJson.html">toJson</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="../vm_service/Instance/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../vm_service/Instance/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="parse" class="callable">
+  <span class="name"><a href="../vm_service/Instance/parse.html">parse</a></span><span class="signature">(<wbr><span class="parameter" id="parse-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">json</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../vm_service/Instance-class.html">Instance</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vm_service</a></li>
+    <li><a href="../vm_service/">vm_service</a></li>
+    <li class="self-crumb">Instance class</li>
+</ol>
+
+    <h5>vm_service library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    vm_service
+      15.1.0
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

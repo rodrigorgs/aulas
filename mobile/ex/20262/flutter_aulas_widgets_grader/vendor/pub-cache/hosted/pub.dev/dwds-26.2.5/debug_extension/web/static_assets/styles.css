@@ -1,0 +1,177 @@
+iframe {
+  border: 0pt none;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.dark-theme {
+  background-color: #262626;
+  color: #eeeeee;
+}
+
+.dark-theme .mdl-layout__header {
+  background-color: #303030;
+  color: #eeeeee;
+}
+
+.dark-theme .mdl-card__supporting-text {
+  color: #eeeeee;
+}
+
+.dark-theme .mdl-card {
+  background: #303030;
+}
+
+.light-theme {
+  background-color: #eeeeee;
+  color: #595959;
+}
+
+.light-theme .mdl-layout__header {
+  background-color: #fafafa;
+  color: #595959;
+}
+
+.light-theme .mdl-card__supporting-text {
+  color: #595959;
+}
+
+.light-theme .mdl-card {
+  background: #fafafa;
+}
+
+.dart-card {
+  margin-top: 15px;
+}
+
+.mdl-list {
+  padding-bottom: 0;
+}
+
+.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
+  background-color: #0091ea;
+}
+
+.list-footer {
+  background-color: lightgrey;
+}
+
+.dart-card.mdl-card {
+  min-height: 150px;
+  width: 505px;
+}
+
+.debugger-card > .mdl-card__title {
+  background: url("debugger_settings.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.inspector-card > .mdl-card__title {
+  background: url("inspect_widget.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+h6 {
+  margin: 8px 0px 12px;
+}
+
+.snackbar {
+  bottom: 0px;
+  color: #eeeeee;
+  font-family:  Roboto, 'Helvetica Neue', sans-serif;
+  left: 0px;
+  padding: 16px;
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.snackbar > a {
+  color: #eeeeee;
+  font-weight: bold;
+}
+
+.snackbar--info {
+  background-color: #303030;
+}
+
+.snackbar--warning {
+  background-color: #b00020;
+}
+
+.show {
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+  visibility: visible;
+}
+
+.hidden {
+  visibility: none;
+}
+
+.small-padding {
+  margin: 0 16px;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+.spinner-overlay {
+  background: #ffffff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.spinner:before {
+  animation: spinner 0.9s linear infinite;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: #4489ff;
+  box-sizing: border-box;
+  content: "";
+  height: 50px;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

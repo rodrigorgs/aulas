@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "packageRules": [
+    {
+      "matchBaseBranches": ["main"],
+      "groupName": "All"
+    }
+  ]
+}

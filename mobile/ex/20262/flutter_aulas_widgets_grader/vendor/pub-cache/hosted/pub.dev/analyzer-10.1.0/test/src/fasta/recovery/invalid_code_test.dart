@@ -1,0 +1,149 @@
+// Copyright (c) 2017, the Dart project authors. Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:analyzer/src/diagnostic/diagnostic.dart' as diag;
+import 'package:test_reflective_loader/test_reflective_loader.dart';
+
+import 'recovery_test_support.dart';
+
+main() {
+  defineReflectiveSuite(() {
+    defineReflectiveTests(InvalidCodeTest);
+    defineReflectiveTests(MisplacedCodeTest);
+  });
+}
+
+@reflectiveTest
+class InvalidCodeTest extends AbstractRecoveryTest {
+  @failingTest
+  void test_const_mistyped() {
+    // https://github.com/dart-lang/sdk/issues/9714
+    testRecovery(
+      '''
+List<String> fruits = cont <String>['apples', 'bananas', 'pears'];
+''',
+      [],
+      '''
+List<String> fruits = const <String>['apples', 'bananas', 'pears'];
+''',
+    );
+  }
+
+  void test_default_asVariableName() {
+    testRecovery(
+      '''
+const default = const Object();
+''',
+      [diag.expectedIdentifierButGotKeyword],
+      '''
+const default = const Object();
+''',
+      expectedDiagnosticsInValidCode: [diag.expectedIdentifierButGotKeyword],
+    );
+  }
+
+  void test_expressionInPlaceOfTypeName() {
+    // https://github.com/dart-lang/sdk/issues/30370
+    testRecovery(
+      '''
+f() {
+  return <g('')>[0, 1, 2];
+}
+''',
+      [diag.expectedToken],
+      '''
+f() {
+  return <g>[0, 1, 2];
+}
+''',
+    );
+  }
+
+  void test_expressionInPlaceOfTypeName2() {
+    // https://github.com/dart-lang/sdk/issues/30370
+    testRecovery(
+      '''
+f() {
+  return <test('', (){})>[0, 1, 2];
+}
+''',
+      [diag.expectedToken],
+      '''
+f() {
+  return <test>[0, 1, 2];
+}
+''',
+    );
+  }
+
+  @failingTest
+  void test_functionInPlaceOfTypeName() {
+    // https://github.com/dart-lang/sdk/issues/30370
+    // TODO(danrubel): Improve recovery. Currently, the fasta scanner
+    // does not associate `<` with `>` in this situation.
+    testRecovery(
+      '''
+f() {
+  return <test('', (){});>[0, 1, 2];
+}
+''',
+      [diag.unexpectedToken],
+      '''
+f() {
+  return _s_ < test('', (){}); _s_ > [0, 1, 2];
+}
+''',
+    );
+  }
+
+  void test_with_asArgumentName() {
+    testRecovery(
+      '''
+f() {}
+g() {
+  f(with: 3);
+}
+''',
+      [diag.expectedIdentifierButGotKeyword],
+      '''
+f() {}
+g() {
+  f(with: 3);
+}
+''',
+      expectedDiagnosticsInValidCode: [diag.expectedIdentifierButGotKeyword],
+    );
+  }
+
+  @failingTest
+  void test_with_asParameterName() {
+    testRecovery(
+      '''
+f({int with: 0}) {}
+''',
+      [],
+      '''
+f({int _s_}) {}
+''',
+    );
+  }
+}
+
+@reflectiveTest
+class MisplacedCodeTest extends AbstractRecoveryTest {
+  @failingTest
+  void test_const_mistyped() {
+    // https://github.com/dart-lang/sdk/issues/10554
+    testRecovery(
+      '''
+var allValues = [];
+allValues.forEach((enum) {});
+''',
+      [],
+      '''
+var allValues = [];
+''',
+    );
+  }
+}
